@@ -1,6 +1,7 @@
 import numpy as np
 import csv
-from itertools import product
+from itertools import product # Computes the Cartesian product of input iterables (useful 
+# for generating all combinations of parameters)
 import itertools
 import tensorflow.compat.v1 as tf 
 tf.compat.v1.disable_eager_execution()
@@ -191,6 +192,15 @@ def m_instance( sample, sens_params, conf):
         m_sample.append(temp)
     return np.array(m_sample)
 
+def m_instance_real_counterfactual(sample, sens_params, conf):
+    # TODO:
+    # Input: sample- that we need to get the counterfactual of, sens_params(protected) - sec, age, race
+
+    # LLM
+
+    # Should return array of counterfactuals, for example return for different ages 
+    pass
+
 def global_sample_select(clus_dic, sens_params):
     leng = 0
     for key in clus_dic.keys():
@@ -371,6 +381,10 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
                 if time.time()-time1 > timeout :
                     break
                 m_sample = m_instance( np.array(sample) , sens_params, data_config[dataset] )
+                # TODO:
+                print(np.array(sample), sens_params, data_config[dataset])
+                # Run the initial test to see what m_instance receives so I can use it for the ML model
+                continue
                 pred = pred_prob( sess, x, preds, m_sample , input_shape )
                 clus_dic = clustering( pred, m_sample, sens_params, epsillon )
 
