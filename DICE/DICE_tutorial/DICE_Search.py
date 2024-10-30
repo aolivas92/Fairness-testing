@@ -382,9 +382,7 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
                     break
                 m_sample = m_instance( np.array(sample) , sens_params, data_config[dataset] )
                 # TODO:
-                print(np.array(sample), sens_params, data_config[dataset])
                 # Run the initial test to see what m_instance receives so I can use it for the ML model
-                continue
                 pred = pred_prob( sess, x, preds, m_sample , input_shape )
                 clus_dic = clustering( pred, m_sample, sens_params, epsillon )
 
