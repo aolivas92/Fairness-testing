@@ -3,7 +3,7 @@ import transformers
 import torch
 from huggingface_hub import login
 
-login(token='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')
+login(token='')
 
 
 # Original Prompt
