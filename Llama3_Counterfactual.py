@@ -2,6 +2,7 @@ from transformers import file_utils
 import transformers
 import torch
 from huggingface_hub import login
+import time
 
 login(token='')
 
@@ -141,11 +142,17 @@ def generate_counterfactual(messages, pipeline):
     print(outputs[0]["generated_text"][len(prompt):])
 
 if __name__ == '__main__':
+    start_time = time.time()
     pipeline = setup_model()
+    setup_time = time.time() - start_time
+    print(f'Set up time: {setup_time}')
 
+    start_time = time.time()
     # for sys_message in sys_messages:
     #     for user_message in user_messages:
     #         message = [sys_message, user_message]
 
     message = [sys_messages[1], user_messages[0]]
     generate_counterfactual(messages=message, pipeline=pipeline)
+    generation_time = time.time() - start_time
+    print(f'Generation time: {generation_time}')
