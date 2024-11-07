@@ -3,8 +3,9 @@ import transformers
 import torch
 from huggingface_hub import login
 import time
+import ollama
 
-login(token='')
+login(token='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')
 
 
 # Original Prompt
@@ -62,7 +63,8 @@ sys_messages += [
     origin, with options like United States, Germany, Japan, etc. When generating a counterfactual, simply alter the \
     attributes as requested by the user (e.g., adjusting age, changing occupation, or modifying marital status) and \
     provide the counterpart based on these new attributes. Do not explain your calculations—focus on delivering concise, \
-    realistic responses that align with the altered criteria provided by the user."}
+    realistic responses that align with the altered criteria provided by the user. Give the response as a list with no\
+    numbers nor bullets and in the same order that I described the attributes in."}
 ]
 
 
@@ -96,6 +98,24 @@ but a capital loss of 500, working 50 hours per week. I have an Assoc-acdm degre
 relationship status of 'Husband.' I work in Farming-fishing, am White, and am originally from Germany. What would my \
 counterpart be if I were Female?"}]
 
+# Age
+user_messages += [{'role': 'user', 'content': "I am a 40-year-old Male, working in the federal government, with no capital gain \
+but a capital loss of 500, working 50 hours per week. I have an Assoc-acdm degree, am married-civ-spouse, with a \
+relationship status of 'Husband.' I work in Farming-fishing, am White, and am originally from Germany. What would my \
+counterpart be if I were 30 years old?"}]
+
+# Sex: Male, Husband
+user_messages += [{'role': 'user', 'content': "I am a 40-year-old Male, working in the federal government, with no capital gain \
+but a capital loss of 500, working 50 hours per week. I have an Assoc-acdm degree, am married-civ-spouse, with a \
+relationship status of 'Husband.' I work in Farming-fishing, am White, and am originally from Germany. What would my \
+counterpart be if I were Female?"}]
+
+# Age, career, location
+user_messages += [{'role': 'user', 'content': "I am a 37-year-old Male, working in the private sector, with a capital gain of \
+3000 and a capital loss of 0, working 45 hours per week. I have a Bachelor's degree, am married-civ-spouse, and my relationship\
+ status is 'Husband.' I work as an Exec-managerial, identify as Black, and my native country is the United States. What would \
+my counterfactual look like if I were 35, working in Sales, and had moved to Canada?"}]
+
 
 #-------------------------------Define Model and Dataset-------------------------------#
 def setup_model():
@@ -117,6 +137,7 @@ def setup_model():
 
 #-------------------------------Generate Output-------------------------------#
 def generate_counterfactual(messages, pipeline):
+    start_time = time.time()
     # Converts the conversation in messages into a single text prompt to give to the llm
     prompt = pipeline.tokenizer.apply_chat_template(
             messages,
@@ -130,7 +151,6 @@ def generate_counterfactual(messages, pipeline):
     ]
 
     # Generates the prompts response.
-    print('Starting generation......')
     outputs = pipeline(
         prompt,
         max_new_tokens=512,
@@ -139,20 +159,97 @@ def generate_counterfactual(messages, pipeline):
         temperature=0.1,
         top_p=0.99,
     )
+    print('GENERATED TEXT:')
     print(outputs[0]["generated_text"][len(prompt):])
+    end_time = time.time() - start_time
+    print(f'Time for message above: {end_time}')
 
 if __name__ == '__main__':
-    start_time = time.time()
-    pipeline = setup_model()
-    setup_time = time.time() - start_time
-    print(f'Set up time: {setup_time}')
+    # start_time = time.time()
+    # pipeline = setup_model()
+    # setup_time = time.time() - start_time
+    # print(f'Set up time: {setup_time}')
 
     start_time = time.time()
-    # for sys_message in sys_messages:
-    #     for user_message in user_messages:
-    #         message = [sys_message, user_message]
+    print('Starting genretation...')
+    num_prompt = 0
 
-    message = [sys_messages[1], user_messages[0]]
-    generate_counterfactual(messages=message, pipeline=pipeline)
-    generation_time = time.time() - start_time
-    print(f'Generation time: {generation_time}')
+#    for sys_message in sys_messages:
+#        print(f'SYSTEM MESSAGE: {sys_message}')
+#        start_sys_message_time = time.time()
+#        for user_message in user_messages:
+#            start_generation_time = time.time()
+#            print(f'USER MESSAGE: {user_message}')
+#            message = [sys_message, user_message]
+            # generate_counterfactual(messages=message, pipeline=pipeline)
+
+#            response = ollama.chat(model='llama3:8b', messages=message)
+#            print('GENERATED TEXT:')
+#            print(response['message']['content'])
+#            end_generation_time = time.time() - start_generation_time
+#            print(f'Time for message above: {end_generation_time}\n')
+
+#            num_prompt += 1
+#        end_sys_message_time = time.time() - start_sys_message_time
+#        print('Time to generate these prompts for these message with this sys message:', end_sys_message_time, '\n')
+
+
+
+    # UPDATE CODE TO WATCH OUT FOR ERRORS IN BAD FORMATIING RESPONSES OPTIONS ARE BELOW
+        # ONE STRATEGY IS TO CHECK EACH RESPONSE TO VERIFY IT'S IN THE RIGHT FORMAT
+        # ANOTHER STRATEGY IS TO GIVE THE LLM A DICTIONARY WITH THE FEATURES AND VALUES AND ASK IT TO SIMPLY REPLACE THE VALUES WITH THE COUNTERFACTUALS.
+
+    system_message = sys_messages[2]
+    print(f'SYSTEM MESSAGE: {system_message}')
+
+    for user_message in user_messages:
+        start_generation_time = time.time()
+        print(f'USER MESSAGE: {user_message}')
+        message = [system_message, user_message]
+
+        response  = ollama.chat(model='llama3:8b', messages=message)
+        print('GENERATED TEXT:')
+        print(response['message']['content'])
+
+        end_generation_time = time.time() - start_generation_time
+        print(f'Time for message above: {end_generation_time}\n')
+
+        num_prompt += 1
+
+    for user_message in user_messages:
+        start_generation_time = time.time()
+        print(f'USER MESSAGE: {user_message}')
+        message = [system_message, user_message]
+
+        response  = ollama.chat(model='llama3:8b', messages=message)
+        print('GENERATED TEXT:')
+        print(response['message']['content'])
+
+        end_generation_time = time.time() - start_generation_time
+        print(f'Time for message above: {end_generation_time}\n')
+
+        num_prompt += 1
+
+    for user_message in user_messages:
+        start_generation_time = time.time()
+        print(f'USER MESSAGE: {user_message}')
+        message = [system_message, user_message]
+
+        response  = ollama.chat(model='llama3:8b', messages=message)
+        print('GENERATED TEXT:')
+        print(response['message']['content'])
+
+        end_generation_time = time.time() - start_generation_time
+        print(f'Time for message above: {end_generation_time}\n')
+
+        num_prompt += 1
+
+    total_generation_time = time.time() - start_time
+    print(f'Generation finished, Total Time: {total_generation_time}')
+    average_time = total_generation_time / num_prompt
+    print(f'Average Generation time for {num_prompt} prompt(s) was: {average_time}')
+
+    #message = [sys_messages[1], user_messages[0]]
+    #generate_counterfactual(messages=message, pipeline=pipeline)
+    #generation_time = time.time() - start_time
+    #print(f'Generation time: {generation_time}')
