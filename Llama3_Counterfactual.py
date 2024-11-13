@@ -216,34 +216,6 @@ if __name__ == '__main__':
 
         num_prompt += 1
 
-    for user_message in user_messages:
-        start_generation_time = time.time()
-        print(f'USER MESSAGE: {user_message}')
-        message = [system_message, user_message]
-
-        response  = ollama.chat(model='llama3:8b', messages=message)
-        print('GENERATED TEXT:')
-        print(response['message']['content'])
-
-        end_generation_time = time.time() - start_generation_time
-        print(f'Time for message above: {end_generation_time}\n')
-
-        num_prompt += 1
-
-    for user_message in user_messages:
-        start_generation_time = time.time()
-        print(f'USER MESSAGE: {user_message}')
-        message = [system_message, user_message]
-
-        response  = ollama.chat(model='llama3:8b', messages=message)
-        print('GENERATED TEXT:')
-        print(response['message']['content'])
-
-        end_generation_time = time.time() - start_generation_time
-        print(f'Time for message above: {end_generation_time}\n')
-
-        num_prompt += 1
-
     total_generation_time = time.time() - start_time
     print(f'Generation finished, Total Time: {total_generation_time}')
     average_time = total_generation_time / num_prompt

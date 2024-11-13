@@ -193,6 +193,13 @@ def m_instance( sample, sens_params, conf):
     return np.array(m_sample)
 
 def m_instance_real_counterfactual(sample, sens_params, conf):
+
+    print('\n\nSAMPLE:', sample, '\n\n')
+    
+    print('\n\nSENS_PARAM:', sens_params, '\n\n')
+
+    print('\n\nCONF:', conf, '\n\n')
+
     # TODO:
     # Input: sample- that we need to get the counterfactual of, sens_params(protected) - sec, age, race
 
@@ -380,9 +387,11 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
             for iter in range( max_iter + 1 ):            
                 if time.time()-time1 > timeout :
                     break
-                m_sample = m_instance( np.array(sample) , sens_params, data_config[dataset] )
+                # m_sample = m_instance( np.array(sample) , sens_params, data_config[dataset] )
+                m_sample = m_instance_real_counterfactual(np.array(sample), sens_params, data_config[dataset])
                 # TODO:
                 # Run the initial test to see what m_instance receives so I can use it for the ML model
+                continue
                 pred = pred_prob( sess, x, preds, m_sample , input_shape )
                 clus_dic = clustering( pred, m_sample, sens_params, epsillon )
 
