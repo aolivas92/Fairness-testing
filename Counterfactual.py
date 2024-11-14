@@ -39,5 +39,9 @@ for msg in data['messages']:
 
 # Prompt llama3:8b to generate the counterfactuals
 for user_message in user_messages:
-    message = [system_message, user_message]
+    user_message_content = json.dumps(user_message['content'])
+    message = [
+        {'role': 'system', 'content': system_message['content']},
+        {'role': 'user', 'content': user_message_content}
+    ]
     llama3_8b_generator(message=message)
