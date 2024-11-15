@@ -1,0 +1,7 @@
+{
+    "messages": [
+        "{\"Age\": 40, \"Sex\": \"Female\", \"Employment Sector\": \"Federal government\", \"Capital Gain\": 0, \"Capital Loss\": 500, \"Hours per Week\": 50, \"Education\": \"Assoc-acdm\", \"Marital Status\": \"married-civ-spouse\", \"Relationship Status\": \"Wife\", \"Occupation\": \"Farming-fishing\", \"Race\": \"White\", \"Native Country\": \"Germany\", \"Income\": \">50K\"}"
+    ]
+}{
+    "messages": "{\"Age\": 40, \"Sex\": \"Female\", \"Employment Sector\": \"Private\", \"Capital Gain\": 0, \"Capital Loss\": 500, \"Hours per Week\": 50, \"Education\": \"Assoc-acdm\", \"Marital Status\": \"Never-married\", \"Relationship Status\": \"Own-child\", \"Occupation\": \"Healthcare-practitioner\", \"Race\": \"White\", \"Native Country\": \"United States\", \"Income\": \">50K\"}"
+}
