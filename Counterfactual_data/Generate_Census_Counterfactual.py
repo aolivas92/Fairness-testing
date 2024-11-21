@@ -1,3 +1,4 @@
+import sys
 import time
 import ollama
 import json
@@ -12,7 +13,7 @@ num_errors = 0
 num_max_retries = 0
 max_retries = 5
 
-def main():
+def main(model):
     global num_retries
     global num_format_errors
     global num_errors
@@ -47,16 +48,32 @@ def main():
         print(user_message_content)
 
         # Message for llama and gpt
-        message = [
-            {'role': 'system', 'content': system_message['content']},
-            {'role': 'user', 'content': user_message_content}
-        ]
+        message = None
+        if model != 'claude':
+            message = [
+                {'role': 'system', 'content': system_message['content']},
+                {'role': 'user', 'content': user_message_content}
+            ]
+        else:
+            message = [
+                {'role': 'user', 'content': user_message_content},
+            ]
+
 
         # Call the different LLM's
-        # response = llama3_8b_generator(message=message)
-        # response = llama31_8b_generator(message=message)
-        # response = gpt_4o_mini_generator(message=message)
-        response = gpt_4o_generator(message=message)
+        response = None
+        if model == 'llama3':
+            response = llama3_8b_generator(message=message)
+        elif model == 'llama3.1':
+            response = llama31_8b_generator(message=message)
+        elif model == 'claude':
+            response = claude3_generator(message=message, system_message=system_message['content'])
+        elif model == 'gpt-4o-mini':
+            response = gpt_4o_mini_generator(message=message)
+        elif model == 'gpt-4o':
+            response = gpt_4o_generator(message=message)
+        else:
+            break
 
         # Extra for CLAUDE
         # message = [
@@ -306,4 +323,17 @@ def export_data(data, file_path):
         json.dump(data, file, indent=4)
 
 if __name__ == '__main__':
-    main()
+    models = ['llama3', 'llama3.1', 'claude', 'gpt-4o-mini', 'gpt-4o']
+    
+    model = None
+    try:
+        model = sys.argv[1]
+    except IndexError:
+        print('ERROR no model argument provided')   
+        sys.exit() 
+
+    if model in models:
+        main(model)
+    else:
+        print(f'MODEL INCORRECT OR NOT PROVIDED, models: \n{models}')
+        sys.exit()
