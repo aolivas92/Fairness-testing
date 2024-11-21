@@ -53,8 +53,9 @@ def main():
 
         # Call the different LLM's
         # response = llama3_8b_generator(message=message)
-        response = llama31_8b_generator(message=message)
+        # response = llama31_8b_generator(message=message)
         # response = gpt_4o_mini_generator(message=message)
+        response = gpt_4o_generator(message=message)
 
         # Extra for CLAUDE
         # message = [
@@ -72,7 +73,7 @@ def main():
     print(f'Number of unkown errors = {num_errors}')
     print(f'Number of max retries hit = {num_max_retries}')
     # Upload the generated data to a file
-    output_data = {'model': 'claude-3-haiku-20240307','messages': assistant_responses}
+    output_data = {'model': '','messages': assistant_responses}
     export_data(output_data, output_file)
 
 def llama3_8b_generator(message):
@@ -146,6 +147,49 @@ def gpt_4o_mini_generator(message):
     while not valid_response and retries != max_retries:
         response = openai.chat.completions.create(
             model='gpt-4o-mini',
+            messages=message,
+            # temperature=temperature,
+        )
+        try:
+            converted_response = json.loads(response.choices[0].message.content)
+            valid_response = check_response(converted_response, dictionary=False)
+        except json.decoder.JSONDecodeError:
+            print("ERROR: response not complete and JSON can't convert it")
+            num_format_errors +=1
+        except Exception as e:
+            print("ERROR: ", e)
+            num_errors += 1
+
+        retries += 1
+    
+    if not valid_response:
+        print('MAX RETRIES HIT\n')
+        num_max_retries += 1
+        return 'error retries ran out'
+
+    print('GENERATD TEXT:')
+    print(converted_response)
+    
+    end_generation_time = time.time() - start_generation_time
+    print(f'Time for message above: {end_generation_time}\n')
+
+    return converted_response
+
+def gpt_4o_generator(message):
+    global num_format_errors
+    global num_errors
+    global num_max_retries
+    global max_retries
+    start_generation_time = time.time()
+    valid_response = False
+    retries = 0
+
+    openai.api_key = ''
+    temperature=0.7
+
+    while not valid_response and retries != max_retries:
+        response = openai.chat.completions.create(
+            model='gpt-4o',
             messages=message,
             # temperature=temperature,
         )
