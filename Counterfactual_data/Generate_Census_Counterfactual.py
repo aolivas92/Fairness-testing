@@ -141,7 +141,9 @@ def gpt_4o_mini_generator(message):
     valid_response = False
     retries = 0
 
-    openai.api_key = ''
+    keyfile = open('gpt_key.txt', 'r')
+    openai.api_key = keyfile.readline().rstrip()
+    keyfile.close()
     temperature=0.7
 
     while not valid_response and retries != max_retries:
@@ -184,7 +186,9 @@ def gpt_4o_generator(message):
     valid_response = False
     retries = 0
 
-    openai.api_key = ''
+    keyfile = open('gpt_key.txt', 'r')
+    openai.api_key = keyfile.readline().rstrip()
+    keyfile.close()
     temperature=0.7
 
     while not valid_response and retries != max_retries:
@@ -227,7 +231,9 @@ def claude3_generator(message, system_message):
     valid_response = False
     retries = 0
 
-    api_key = ''
+    keyfile = open('claude_key.txt', 'r')
+    api_key = keyfile.readline().rstrip()
+    keyfile.close()
     client = anthropic.Anthropic(api_key=api_key)
 
     while not valid_response and retries != max_retries:
