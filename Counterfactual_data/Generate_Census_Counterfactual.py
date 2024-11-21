@@ -17,6 +17,7 @@ def main():
     global num_format_errors
     global num_errors
     global num_max_retries
+    too_many_reties = 100
     print("Loading data...\n")
     data = load_data(input_file)
 
@@ -38,7 +39,7 @@ def main():
     assistant_responses.append({'role': 'system', 'content': system_message['content']})
 
     total_generation_time = time.time()
-    for user_message in user_messages:
+    for i, user_message in enumerate(user_messages):
         assistant_responses.append({'role': 'user', 'content': user_message['content']})
         # Convert the user message content to a string
         user_message_content = json.dumps(user_message['content'])
@@ -66,6 +67,11 @@ def main():
         # Add the extra information that was missing
         data = {'role': 'user', 'content': response}
         assistant_responses.append(data)
+
+        if num_retries >= too_many_reties:
+            print(f'\nMAX NUMBER OF TOTAL RETRIES ALLOWED HIT AT PROMPT: {i} \n')
+            break
+
 
     print(f'Total Generation Time = {time.time()-total_generation_time}')
     print(f'Number of retries = {num_retries}')
