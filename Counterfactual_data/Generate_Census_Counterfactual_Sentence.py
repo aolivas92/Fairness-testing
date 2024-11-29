@@ -5,8 +5,8 @@ import json
 import openai
 import anthropic
 
-input_file = './3_Census_Counterfactual.json'
-output_file = './Generated_Counterfactuals.json'
+input_file = './2_Census_Counterfactual.json'
+output_file = './2_Generated_Counterfactuals.json'
 num_retries = 0
 num_format_errors = 0
 num_errors = 0
@@ -135,11 +135,15 @@ def llama31_8b_generator(message):
     valid_response = False
 
     start_generation_time = time.time()
+    attribute_missed = None
 
     while not valid_response and retries != max_retries:
+        if attribute_missed:
+            pass
+
         response = ollama.chat(model='llama3.1:8b', messages=message, format='json')
         converted_response = json.loads(response['message']['content'])
-        valid_response, attribute_missed = check_response(converted_response)
+        valid_response = check_response(converted_response)
 
         retries += 1
         print('\n\nMESSAGE:', message['user']['content'], '\n\n')
@@ -311,11 +315,9 @@ def check_response(converted_response, dictionary=True):
     
     if not valid:
         print('RESPONSE FAILED VERIFICATION WITH:', attribute)
-        print("RESPONSE:")
-        print(converted_response)
         num_retries += 1
-        return False, attribute
-    return True, None
+        return False
+    return True
 
 def load_data(file_name):
     with open(file_name, 'r') as file:
