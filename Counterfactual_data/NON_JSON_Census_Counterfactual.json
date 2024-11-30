@@ -2,447 +2,87 @@
     "messages": [
         {
             "role": "system",
-            "content": "You are a counterfactual estimator trained to generate hypothetical scenarios based on census-style data attributes, assisting users in exploring alternative realities; your task is to adjust one or more specified attributes in the user-provided input data to create a realistic counterfactual estimate while maintaining logical consistency; each user input contains a JSON dictionary with detailed demographic, socioeconomic, and occupational attributes of a real-world individual, and ensuring logical consistency when adjusting attributes (e.g., education level should align with age and occupation, sex should align with relationship, consider interdependencies between other features); return a JSON dictionary formatted exactly like the input, with only the specified attributes altered, and do not add explanations, comments, or any additional information beyond the altered JSON data; the data attributes include: Age (continuous numerical value), Workclass (employment category such as 'Private', 'Federal-gov', 'Self-employed', or 'Without-pay'), fnlwgt (Census Bureau-assigned weight indicating demographic characteristics), Education (highest education level completed, e.g., 'HS-grad', 'Bachelor's', 'Doctorate'), Education.num (numerical representation of education level, e.g., 'HS-grad=9', 'Bachelor's=13'), Marital Status (e.g., 'Married', 'Divorced', 'Separated'), Occupation (e.g., 'Tech-support', 'Sales', 'Exec-managerial', 'Craft-repair'), Relationship (e.g., 'Husband', 'Wife', 'Own-child', 'Unmarried'), Race (e.g., 'White', 'Black', 'Asian-Pac-Islander'), Sex ('Male' or 'Female'), Capital Gain (continuous numerical value for gains from investments), Capital Loss (continuous numerical value for losses from investments), Hours per Week (average weekly work hours), Native Country (e.g., 'United States', 'Germany', 'Japan'), and Income (income category, either '<=50K' or '>50K'); attributes must align logically (e.g., a 'Doctorate' education level implies a higher age range and professional occupation, and a 'Part-time' work schedule should reflect lower 'Hours per Week'); respond only with the adjusted data in JSON format, formatted exactly as follows with double quotes: {\"Index\": ..., \"Age\": ..., \"Sex\": ..., \"Employment Sector\": ..., \"Capital Gain\": ..., \"Capital Loss\": ..., \"Hours per Week\": ..., \"Education\": ..., \"Marital Status\": ..., \"Relationship Status\": ..., \"Occupation\": ..., \"Race\": ..., \"Native Country\": ..., \"Counterfactual Request\": ...}, and focus on delivering concise, realistic outputs that align with the user's request."
+            "content": "You are a counterfactual estimator trained to generate hypothetical scenarios based on census-style data attributes, assisting users in exploring alternative realities; your task is to adjust one or more specified attributes in the user-provided input data to create a realistic counterfactual estimate while maintaining logical consistency; each user input contains a JSON dictionary with detailed demographic, socioeconomic, and occupational attributes of a real-world individual, and ensuring logical consistency when adjusting attributes (e.g., education level should align with age and occupation, sex should align with relationship, consider interdependencies between other features); return a JSON dictionary formatted exactly like the input, with only the specified attributes altered, and do not add explanations, comments, or any additional information beyond the altered JSON data; the data attributes include: Age (continuous numerical value), Workclass (employment category such as 'Private', 'Federal-gov', 'Self-employed', or 'Without-pay'), fnlwgt (Census Bureau-assigned weight indicating demographic characteristics), Education (highest education level completed, e.g., 'HS-grad', 'Bachelor's', 'Doctorate'), Education.num (numerical representation of education level, e.g., 'HS-grad=9', 'Bachelor's=13'), Marital Status (e.g., 'Married', 'Divorced', 'Separated'), Occupation (e.g., 'Tech-support', 'Sales', 'Exec-managerial', 'Craft-repair'), Relationship (e.g., 'Husband', 'Wife', 'Own-child', 'Unmarried'), Race (e.g., 'White', 'Black', 'Asian-Pac-Islander'), Sex ('Male' or 'Female'), Capital Gain (continuous numerical value for gains from investments), Capital Loss (continuous numerical value for losses from investments), Hours per Week (average weekly work hours), Native Country (e.g., 'United States', 'Germany', 'Japan'), and Income (income category, either '<=50K' or '>50K'); attributes must align logically (e.g., a 'Doctorate' education level implies a higher age range and professional occupation, and a 'Part-time' work schedule should reflect lower 'Hours per Week'); respond only with the adjusted data in JSON format, formatted exactly as follows: {'Index':..., 'Age': ..., 'Sex': ..., 'Employment Sector': ..., 'Capital Gain': ..., 'Capital Loss': ..., 'Hours per Week': ..., 'Education': ..., 'Marital Status': ..., 'Relationship Status': ..., 'Occupation': ..., 'Race': ..., 'Native Country': ..., 'Counterfactual Request': '...' }, and focus on delivering concise, realistic outputs that align with the user's request."
         },
         {
             "role": "user",
-            "content": {
-                "Index": 1,
-                "Age": 47,
-                "Workclass": "Self-emp-not-inc",
-                "fnlwgt": 145290,
-                "Education": "HS-grad",
-                "Education.num": 9,
-                "Marital.status": "Married-civ-spouse",
-                "Occupation": "Exec-managerial",
-                "Relationship": "Husband",
-                "Race": "White",
-                "Sex": "Male",
-                "Capital.gain": "0",
-                "Capital.loss": "2415",
-                "Hours.per.week": "50",
-                "Native.country": "United-States",
-                "Income": ">50K",
-                "Counterfactual.request": "sex"
-            }
+            "content": "Index 1 represents a 47-year-old White Male from the United States who is married (Marital.status: Married-civ-spouse) and is in a husband relationship (Relationship: Husband); he is self-employed but not incorporated (Workclass: Self-emp-not-inc), works as an executive manager (Occupation: Exec-managerial), has a high school education (Education: HS-grad) with 9 years of schooling (Education.num: 9), a final weight of 145290 (fnlwgt: 145290), works 50 hours per week (Hours.per.week: 50), has a capital gain of 0 (Capital.gain: 0) and a capital loss of 2415 (Capital.loss: 2415), earns an income greater than 50K (Income: >50K), and there is a counterfactual request regarding sex (Counterfactual.request: sex)."
         },
         {
             "role": "user",
-            "content": {
-                "Index": 2,
-                "Age": 41,
-                "Workclass": "Local-gov",
-                "fnlwgt": 297248,
-                "Education": "Prof-school",
-                "Education.num": 15,
-                "Marital.status": "Married-civ-spouse",
-                "Occupation": "Prof-specialty",
-                "Relationship": "Husband",
-                "Race": "White",
-                "Sex": "Male",
-                "Capital.gain": "0",
-                "Capital.loss": "2415",
-                "Hours.per.week": "45",
-                "Native.country": "United-States",
-                "Income": ">50K",
-                "Counterfactual.request": "sex"
-            }
+            "content": "Index 2 represents a 41-year-old White Male from the United States who is married (Marital.status: Married-civ-spouse) and is in a husband relationship (Relationship: Husband); he works for local government (Workclass: Local-gov), is a professional in a specialty occupation (Occupation: Prof-specialty), has a professional school education (Education: Prof-school) with 15 years of schooling (Education.num: 15), a final weight of 297248 (fnlwgt: 297248), works 45 hours per week (Hours.per.week: 45), has a capital gain of 0 (Capital.gain: 0) and a capital loss of 2415 (Capital.loss: 2415), earns an income greater than 50K (Income: >50K), and there is a counterfactual request regarding sex (Counterfactual.request: sex)."
         },
         {
             "role": "user",
-            "content": {
-                "Index": 3,
-                "Age": 42,
-                "Workclass": "Private",
-                "fnlwgt": 154374,
-                "Education": "Bachelors",
-                "Education.num": 13,
-                "Marital.status": "Married-civ-spouse",
-                "Occupation": "Exec-managerial",
-                "Relationship": "Husband",
-                "Race": "White",
-                "Sex": "Male",
-                "Capital.gain": "0",
-                "Capital.loss": "2415",
-                "Hours.per.week": "60",
-                "Native.country": "United-States",
-                "Income": ">50K",
-                "Counterfactual.request": "sex"
-            }
+            "content": "Index 3 represents a 42-year-old White Male from the United States who is married (Marital.status: Married-civ-spouse) and is in a husband relationship (Relationship: Husband); he works in the private sector (Workclass: Private), holds an executive managerial position (Occupation: Exec-managerial), has a bachelor's degree (Education: Bachelors) with 13 years of schooling (Education.num: 13), a final weight of 154374 (fnlwgt: 154374), works 60 hours per week (Hours.per.week: 60), has a capital gain of 0 (Capital.gain: 0) and a capital loss of 2415 (Capital.loss: 2415), earns an income greater than 50K (Income: >50K), and there is a counterfactual request regarding sex (Counterfactual.request: sex)."
         },
         {
             "role": "user",
-            "content": {
-                "Index": 4,
-                "Age": 49,
-                "Workclass": "Private",
-                "fnlwgt": 199029,
-                "Education": "Bachelors",
-                "Education.num": 13,
-                "Marital.status": "Married-civ-spouse",
-                "Occupation": "Sales",
-                "Relationship": "Husband",
-                "Race": "White",
-                "Sex": "Male",
-                "Capital.gain": "0",
-                "Capital.loss": "2415",
-                "Hours.per.week": "55",
-                "Native.country": "United-States",
-                "Income": "",
-                "Counterfactual.request": "sex"
-            }
+            "content": "Index 4 represents a 49-year-old White Male from the United States who is married (Marital.status: Married-civ-spouse) and is in a husband relationship (Relationship: Husband); he works in the private sector (Workclass: Private), is employed in sales (Occupation: Sales), has a bachelor's degree (Education: Bachelors) with 13 years of schooling (Education.num: 13), a final weight of 199029 (fnlwgt: 199029), works 55 hours per week (Hours.per.week: 55), has a capital gain of 0 (Capital.gain: 0) and a capital loss of 2415 (Capital.loss: 2415), the income information is missing (Income: >50k), and there is a counterfactual request regarding sex (Counterfactual.request: sex)."
         },
         {
             "role": "user",
-            "content": {
-                "Index": 5,
-                "Age": 46,
-                "Workclass": "Private",
-                "fnlwgt": 326857,
-                "Education": "Masters",
-                "Education.num": 14,
-                "Marital.status": "Married-civ-spouse",
-                "Occupation": "Sales",
-                "Relationship": "Husband",
-                "Race": "White",
-                "Sex": "Male",
-                "Capital.gain": "0",
-                "Capital.loss": "2415",
-                "Hours.per.week": "65",
-                "Native.country": "United-States",
-                "Income": ">50K",
-                "Counterfactual.request": "sex"
-            }
+            "content": "Index 5 represents a 46-year-old White Male from the United States who is married (Marital.status: Married-civ-spouse) and is in a husband relationship (Relationship: Husband); he works in the private sector (Workclass: Private), is employed in sales (Occupation: Sales), holds a master's degree (Education: Masters) with 14 years of schooling (Education.num: 14), a final weight of 326857 (fnlwgt: 326857), works 65 hours per week (Hours.per.week: 65), has a capital gain of 0 (Capital.gain: 0) and a capital loss of 2415 (Capital.loss: 2415), earns an income greater than 50K (Income: >50K), and there is a counterfactual request regarding sex (Counterfactual.request: sex)."
         },
         {
             "role": "user",
-            "content": {
-                "Index": 6,
-                "Age": 40,
-                "Workclass": "Private",
-                "fnlwgt": 160369,
-                "Education": "Masters",
-                "Education.num": 14,
-                "Marital.status": "Married-civ-spouse",
-                "Occupation": "Exec-managerial",
-                "Relationship": "Husband",
-                "Race": "White",
-                "Sex": "Male",
-                "Capital.gain": "0",
-                "Capital.loss": "2415",
-                "Hours.per.week": "45",
-                "Native.country": "United-States",
-                "Income": ">50K",
-                "Counterfactual.request": "sex"
-            }
+            "content": "Index 6 represents a 40-year-old White Male from the United States who is married (Marital.status: Married-civ-spouse) and is in a husband relationship (Relationship: Husband); he works in the private sector (Workclass: Private), holds an executive managerial position (Occupation: Exec-managerial), has a master's degree (Education: Masters) with 14 years of schooling (Education.num: 14), a final weight of 160369 (fnlwgt: 160369), works 45 hours per week (Hours.per.week: 45), has a capital gain of 0 (Capital.gain: 0) and a capital loss of 2415 (Capital.loss: 2415), earns an income greater than 50K (Income: >50K), and there is a counterfactual request regarding sex (Counterfactual.request: sex)."
         },
         {
             "role": "user",
-            "content": {
-                "Index": 7,
-                "Age": 41,
-                "Workclass": "Self-emp-inc",
-                "fnlwgt": 151089,
-                "Education": "Some-college",
-                "Education.num": 10,
-                "Marital.status": "Married-civ-spouse",
-                "Occupation": "Exec-managerial",
-                "Relationship": "Husband",
-                "Race": "White",
-                "Sex": "Male",
-                "Capital.gain": "0",
-                "Capital.loss": "2415",
-                "Hours.per.week": "55",
-                "Native.country": "United-States",
-                "Income": ">50K",
-                "Counterfactual.request": "sex"
-            }
+            "content": "Index 7 represents a 41-year-old White Male from the United States who is married (Marital.status: Married-civ-spouse) and is in a husband relationship (Relationship: Husband); he is self-employed and incorporated (Workclass: Self-emp-inc), works in an executive managerial role (Occupation: Exec-managerial), has some college education (Education: Some-college) with 10 years of schooling (Education.num: 10), a final weight of 151089 (fnlwgt: 151089), works 55 hours per week (Hours.per.week: 55), has a capital gain of 0 (Capital.gain: 0) and a capital loss of 2415 (Capital.loss: 2415), earns an income greater than 50K (Income: >50K), and there is a counterfactual request regarding sex (Counterfactual.request: sex)."
         },
         {
             "role": "user",
-            "content": {
-                "Index": 8,
-                "Age": 35,
-                "Workclass": "Private",
-                "fnlwgt": 192923,
-                "Education": "HS-grad",
-                "Education.num": 9,
-                "Marital.status": "Married-civ-spouse",
-                "Occupation": "Craft-repair",
-                "Relationship": "Husband",
-                "Race": "White",
-                "Sex": "Male",
-                "Capital.gain": "0",
-                "Capital.loss": "2377",
-                "Hours.per.week": "40",
-                "Native.country": "United-States",
-                "Income": "<=50K",
-                "Counterfactual.request": "sex"
-            }
+            "content": "Index 8 represents a 35-year-old White Male from the United States who is married (Marital.status: Married-civ-spouse) and is in a husband relationship (Relationship: Husband); he works in the private sector (Workclass: Private), is employed in craft and repair (Occupation: Craft-repair), has a high school education (Education: HS-grad) with 9 years of schooling (Education.num: 9), a final weight of 192923 (fnlwgt: 192923), works 40 hours per week (Hours.per.week: 40), has a capital gain of 0 (Capital.gain: 0) and a capital loss of 2377 (Capital.loss: 2377), earns an income less than or equal to 50K (Income: <=50K), and there is a counterfactual request regarding sex (Counterfactual.request: sex)."
         },
         {
             "role": "user",
-            "content": {
-                "Index": 9,
-                "Age": 61,
-                "Workclass": "Self-emp-not-inc",
-                "fnlwgt": 36671,
-                "Education": "HS-grad",
-                "Education.num": 9,
-                "Marital.status": "Married-civ-spouse",
-                "Occupation": "Farming-fishing",
-                "Relationship": "Husband",
-                "Race": "White",
-                "Sex": "Male",
-                "Capital.gain": "0",
-                "Capital.loss": "2352",
-                "Hours.per.week": "50",
-                "Native.country": "United-States",
-                "Income": "<=50K",
-                "Counterfactual.request": "sex"
-            }
+            "content": "Index 9 represents a 61-year-old White Male from the United States who is married (Marital.status: Married-civ-spouse) and is in a husband relationship (Relationship: Husband); he is self-employed but not incorporated (Workclass: Self-emp-not-inc), works in farming and fishing (Occupation: Farming-fishing), has a high school education (Education: HS-grad) with 9 years of schooling (Education.num: 9), a final weight of 36671 (fnlwgt: 36671), works 50 hours per week (Hours.per.week: 50), has a capital gain of 0 (Capital.gain: 0) and a capital loss of 2352 (Capital.loss: 2352), earns an income less than or equal to 50K (Income: <=50K), and there is a counterfactual request regarding sex (Counterfactual.request: sex)."
         },
         {
             "role": "user",
-            "content": {
-                "Index": 10,
-                "Age": 66,
-                "Workclass": "Local-gov",
-                "fnlwgt": 36364,
-                "Education": "HS-grad",
-                "Education.num": 9,
-                "Marital.status": "Married-civ-spouse",
-                "Occupation": "Craft-repair",
-                "Relationship": "Husband",
-                "Race": "White",
-                "Sex": "Male",
-                "Capital.gain": "0",
-                "Capital.loss": "2267",
-                "Hours.per.week": "40",
-                "Native.country": "United-States",
-                "Income": "<=50K",
-                "Counterfactual.request": "sex"
-            }
+            "content": "Index 10 represents a 66-year-old White Male from the United States who is married (Marital.status: Married-civ-spouse) and is in a husband relationship (Relationship: Husband); he works for local government (Workclass: Local-gov), is employed in craft and repair (Occupation: Craft-repair), has a high school education (Education: HS-grad) with 9 years of schooling (Education.num: 9), a final weight of 36364 (fnlwgt: 36364), works 40 hours per week (Hours.per.week: 40), has a capital gain of 0 (Capital.gain: 0) and a capital loss of 2267 (Capital.loss: 2267), earns an income less than or equal to 50K (Income: <=50K), and there is a counterfactual request regarding sex (Counterfactual.request: sex)."
         },
         {
             "role": "user",
-            "content": {
-                "Index": 11,
-                "Age": 69,
-                "Workclass": "Private",
-                "fnlwgt": 124930,
-                "Education": "5th-6th",
-                "Education.num": 3,
-                "Marital.status": "Married-civ-spouse",
-                "Occupation": "Machine-op-inspct",
-                "Relationship": "Husband",
-                "Race": "White",
-                "Sex": "Male",
-                "Capital.gain": "0",
-                "Capital.loss": "2267",
-                "Hours.per.week": "40",
-                "Native.country": "United-States",
-                "Income": "<=50K",
-                "Counterfactual.request": "sex"
-            }
+            "content": "Index 11 represents a 69-year-old White Male from the United States who is married (Marital.status: Married-civ-spouse) and is in a husband relationship (Relationship: Husband); he works in the private sector (Workclass: Private), is employed as a machine operator and inspector (Occupation: Machine-op-inspct), has an education level of 5th-6th grade (Education: 5th-6th) with 3 years of schooling (Education.num: 3), a final weight of 124930 (fnlwgt: 124930), works 40 hours per week (Hours.per.week: 40), has a capital gain of 0 (Capital.gain: 0) and a capital loss of 2267 (Capital.loss: 2267), earns an income less than or equal to 50K (Income: <=50K), and there is a counterfactual request regarding sex (Counterfactual.request: sex)."
         },
         {
             "role": "user",
-            "content": {
-                "Index": 12,
-                "Age": 28,
-                "Workclass": "Private",
-                "fnlwgt": 166481,
-                "Education": "7th-8th",
-                "Education.num": 4,
-                "Marital.status": "Married-civ-spouse",
-                "Occupation": "Handlers-cleaners",
-                "Relationship": "Husband",
-                "Race": "Other",
-                "Sex": "Male",
-                "Capital.gain": "0",
-                "Capital.loss": "2179",
-                "Hours.per.week": "40",
-                "Native.country": "Puerto-Rico",
-                "Income": "<=50K",
-                "Counterfactual.request": "sex"
-            }
+            "content": "Index 12 represents a 28-year-old Male of Other race from Puerto Rico who is married (Marital.status: Married-civ-spouse) and is in a husband relationship (Relationship: Husband); he works in the private sector (Workclass: Private), is employed in handlers and cleaners (Occupation: Handlers-cleaners), has an education level of 7th-8th grade (Education: 7th-8th) with 4 years of schooling (Education.num: 4), a final weight of 166481 (fnlwgt: 166481), works 40 hours per week (Hours.per.week: 40), has a capital gain of 0 (Capital.gain: 0) and a capital loss of 2179 (Capital.loss: 2179), earns an income less than or equal to 50K (Income: <=50K), and there is a counterfactual request regarding sex (Counterfactual.request: sex)."
         },
         {
             "role": "user",
-            "content": {
-                "Index": 13,
-                "Age": 41,
-                "Workclass": "Self-emp-inc",
-                "fnlwgt": 139916,
-                "Education": "Assoc-voc",
-                "Education.num": 11,
-                "Marital.status": "Married-civ-spouse",
-                "Occupation": "Sales",
-                "Relationship": "Husband",
-                "Race": "Other",
-                "Sex": "Male",
-                "Capital.gain": "0",
-                "Capital.loss": "2179",
-                "Hours.per.week": "84",
-                "Native.country": "Mexico",
-                "Income": "<=50K",
-                "Counterfactual.request": "sex"
-            }
+            "content": "Index 13 represents a 41-year-old Male of Other race from Mexico who is married (Marital.status: Married-civ-spouse) and is in a husband relationship (Relationship: Husband); he is self-employed and incorporated (Workclass: Self-emp-inc), works in sales (Occupation: Sales), has an associate vocational degree (Education: Assoc-voc) with 11 years of schooling (Education.num: 11), a final weight of 139916 (fnlwgt: 139916), works 84 hours per week (Hours.per.week: 84), has a capital gain of 0 (Capital.gain: 0) and a capital loss of 2179 (Capital.loss: 2179), earns an income less than or equal to 50K (Income: <=50K), and there is a counterfactual request regarding sex (Counterfactual.request: sex)."
         },
         {
             "role": "user",
-            "content": {
-                "Index": 14,
-                "Age": 43,
-                "Workclass": "Self-emp-inc",
-                "fnlwgt": 188436,
-                "Education": "Masters",
-                "Education.num": 14,
-                "Marital.status": "Married-civ-spouse",
-                "Occupation": "Exec-managerial",
-                "Relationship": "Husband",
-                "Race": "White",
-                "Sex": "Male",
-                "Capital.gain": "5013",
-                "Capital.loss": "0",
-                "Hours.per.week": "45",
-                "Native.country": "United-States",
-                "Income": "<=50K",
-                "Counterfactual.request": "sex"
-            }
+            "content": "Index 14 represents a 43-year-old White Male from the United States who is married (Marital.status: Married-civ-spouse) and is in a husband relationship (Relationship: Husband); he is self-employed and incorporated (Workclass: Self-emp-inc), holds an executive managerial position (Occupation: Exec-managerial), has a master's degree (Education: Masters) with 14 years of schooling (Education.num: 14), a final weight of 188436 (fnlwgt: 188436), works 45 hours per week (Hours.per.week: 45), has a capital gain of 5013 (Capital.gain: 5013) and a capital loss of 0 (Capital.loss: 0), earns an income less than or equal to 50K (Income: <=50K), and there is a counterfactual request regarding sex (Counterfactual.request: sex)."
         },
         {
             "role": "user",
-            "content": {
-                "Index": 15,
-                "Age": 54,
-                "Workclass": "Private",
-                "fnlwgt": 398212,
-                "Education": "HS-grad",
-                "Education.num": 9,
-                "Marital.status": "Married-civ-spouse",
-                "Occupation": "Transport-moving",
-                "Relationship": "Husband",
-                "Race": "Black",
-                "Sex": "Male",
-                "Capital.gain": "5013",
-                "Capital.loss": "0",
-                "Hours.per.week": "40",
-                "Native.country": "United-States",
-                "Income": "<=50K",
-                "Counterfactual.request": "sex"
-            }
+            "content": "Index 15 represents a 54-year-old Black Male from the United States who is married (Marital.status: Married-civ-spouse) and is in a husband relationship (Relationship: Husband); he works in the private sector (Workclass: Private), is employed in transport and moving (Occupation: Transport-moving), has a high school education (Education: HS-grad) with 9 years of schooling (Education.num: 9), a final weight of 398212 (fnlwgt: 398212), works 40 hours per week (Hours.per.week: 40), has a capital gain of 5013 (Capital.gain: 5013) and a capital loss of 0 (Capital.loss: 0), earns an income less than or equal to 50K (Income: <=50K), and there is a counterfactual request regarding sex (Counterfactual.request: sex)."
         },
         {
             "role": "user",
-            "content": {
-                "Index": 16,
-                "Age": 45,
-                "Workclass": "Self-emp-not-inc",
-                "fnlwgt": 256866,
-                "Education": "Some-college",
-                "Education.num": 10,
-                "Marital.status": "Married-civ-spouse",
-                "Occupation": "Sales",
-                "Relationship": "Husband",
-                "Race": "White",
-                "Sex": "Male",
-                "Capital.gain": "5013",
-                "Capital.loss": "0",
-                "Hours.per.week": "40",
-                "Native.country": "United-States",
-                "Income": "<=50K",
-                "Counterfactual.request": "sex"
-            }
+            "content": "Index 16 represents a 45-year-old White Male from the United States who is married (Marital.status: Married-civ-spouse) and is in a husband relationship (Relationship: Husband); he is self-employed but not incorporated (Workclass: Self-emp-not-inc), works in sales (Occupation: Sales), has some college education (Education: Some-college) with 10 years of schooling (Education.num: 10), a final weight of 256866 (fnlwgt: 256866), works 40 hours per week (Hours.per.week: 40), has a capital gain of 5013 (Capital.gain: 5013) and a capital loss of 0 (Capital.loss: 0), earns an income less than or equal to 50K (Income: <=50K), and there is a counterfactual request regarding sex (Counterfactual.request: sex)."
         },
         {
             "role": "user",
-            "content": {
-                "Index": 17,
-                "Age": 47,
-                "Workclass": "Private",
-                "fnlwgt": 326857,
-                "Education": "Assoc-voc",
-                "Education.num": 11,
-                "Marital.status": "Married-civ-spouse",
-                "Occupation": "Craft-repair",
-                "Relationship": "Husband",
-                "Race": "White",
-                "Sex": "Male",
-                "Capital.gain": "5013",
-                "Capital.loss": "0",
-                "Hours.per.week": "40",
-                "Native.country": "United-States",
-                "Income": "<=50K",
-                "Counterfactual.request": "sex"
-            }
+            "content": "Index 17 represents a 47-year-old White Male from the United States who is married (Marital.status: Married-civ-spouse) and is in a husband relationship (Relationship: Husband); he works in the private sector (Workclass: Private), is employed in craft and repair (Occupation: Craft-repair), has an associate vocational degree (Education: Assoc-voc) with 11 years of schooling (Education.num: 11), a final weight of 326857 (fnlwgt: 326857), works 40 hours per week (Hours.per.week: 40), has a capital gain of 5013 (Capital.gain: 5013) and a capital loss of 0 (Capital.loss: 0), earns an income less than or equal to 50K (Income: <=50K), and there is a counterfactual request regarding sex (Counterfactual.request: sex)."
         },
         {
             "role": "user",
-            "content": {
-                "Index": 18,
-                "Age": 65,
-                "Workclass": "Self-emp-inc",
-                "fnlwgt": 81413,
-                "Education": "HS-grad",
-                "Education.num": 9,
-                "Marital.status": "Married-civ-spouse",
-                "Occupation": "Farming-fishing",
-                "Relationship": "Husband",
-                "Race": "White",
-                "Sex": "Male",
-                "Capital.gain": "0",
-                "Capital.loss": "2352",
-                "Hours.per.week": "65",
-                "Native.country": "United-States",
-                "Income": "<=50K",
-                "Counterfactual.request": "sex"
-            }
+            "content": "Index 18 represents a 65-year-old White Male from the United States who is married (Marital.status: Married-civ-spouse) and is in a husband relationship (Relationship: Husband); he is self-employed and incorporated (Workclass: Self-emp-inc), works in farming and fishing (Occupation: Farming-fishing), has a high school education (Education: HS-grad) with 9 years of schooling (Education.num: 9), a final weight of 81413 (fnlwgt: 81413), works 65 hours per week (Hours.per.week: 65), has a capital gain of 0 (Capital.gain: 0) and a capital loss of 2352 (Capital.loss: 2352), earns an income less than or equal to 50K (Income: <=50K), and there is a counterfactual request regarding sex (Counterfactual.request: sex)."
         },
         {
             "role": "user",
-            "content": {
-                "Index": 19,
-                "Age": 66,
-                "Workclass": "Local-gov",
-                "fnlwgt": 36364,
-                "Education": "HS-grad",
-                "Education.num": 9,
-                "Marital.status": "Married-civ-spouse",
-                "Occupation": "Craft-repair",
-                "Relationship": "Husband",
-                "Race": "White",
-                "Sex": "Male",
-                "Capital.gain": "0",
-                "Capital.loss": "2267",
-                "Hours.per.week": "40",
-                "Native.country": "United-States",
-                "Income": "<=50K",
-                "Counterfactual.request": "sex"
-            }
+            "content": "Index 19 represents a 66-year-old White Male from the United States who is married (Marital.status: Married-civ-spouse) and is in a husband relationship (Relationship: Husband); he works for local government (Workclass: Local-gov), is employed in craft and repair (Occupation: Craft-repair), has a high school education (Education: HS-grad) with 9 years of schooling (Education.num: 9), a final weight of 36364 (fnlwgt: 36364), works 40 hours per week (Hours.per.week: 40), has a capital gain of 0 (Capital.gain: 0) and a capital loss of 2267 (Capital.loss: 2267), earns an income less than or equal to 50K (Income: <=50K), and there is a counterfactual request regarding sex (Counterfactual.request: sex)."
         },
         {
             "role": "user",
-            "content": {
-                "Index": 20,
-                "Age": 69,
-                "Workclass": "Private",
-                "fnlwgt": 124930,
-                "Education": "5th-6th",
-                "Education.num": 3,
-                "Marital.status": "Married-civ-spouse",
-                "Occupation": "Machine-op-inspct",
-                "Relationship": "Husband",
-                "Race": "White",
-                "Sex": "Male",
-                "Capital.gain": "0",
-                "Capital.loss": "2267",
-                "Hours.per.week": "40",
-                "Native.country": "United-States",
-                "Income": "<=50K",
-                "Counterfactual.request": "sex"
-            }
+            "content": "Index 20 represents a 69-year-old White Male from the United States who is married (Marital.status: Married-civ-spouse) and is in a husband relationship (Relationship: Husband); he works in the private sector (Workclass: Private), is employed as a machine operator and inspector (Occupation: Machine-op-inspct), has an education level of 5th-6th grade (Education: 5th-6th) with 3 years of schooling (Education.num: 3), a final weight of 124930 (fnlwgt: 124930), works 40 hours per week (Hours.per.week: 40), has a capital gain of 0 (Capital.gain: 0) and a capital loss of 2267 (Capital.loss: 2267), earns an income less than or equal to 50K (Income: <=50K), and there is a counterfactual request regarding sex (Counterfactual.request: sex)."
         },
         {
             "role": "user",

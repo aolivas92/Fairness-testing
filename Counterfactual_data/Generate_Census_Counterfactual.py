@@ -5,8 +5,8 @@ import json
 import openai
 import anthropic
 
-input_file = './2_Census_Counterfactual.json'
-output_file = './Generated_Counterfactuals.json'
+input_file = './4_Census_Counterfactual.json'
+output_file = './gpt_4o_mini/3_prompt4_Generated_Counterfactuals.json'
 num_retries = 0
 num_format_errors = 0
 num_errors = 0
@@ -38,9 +38,6 @@ def main(model):
     print(system_message['content'], end='\n\n')
     assistant_responses = []
     assistant_responses.append({'role': 'system', 'content': system_message['content']})
-
-    # TODO: Remove temporary code
-    count = 0
 
     total_generation_time = time.time()
     for i, user_message in enumerate(user_messages):
@@ -85,10 +82,6 @@ def main(model):
         if num_retries >= too_many_reties:
             print(f'\nMAX NUMBER OF TOTAL RETRIES ALLOWED HIT AT PROMPT: {i} \n')
             break
-
-        if count >= 20:
-            break
-        count += 1
 
 
     print(f'Total Generation Time = {time.time()-total_generation_time}')
@@ -265,13 +258,14 @@ def claude3_generator(message, system_message):
             model='claude-3-haiku-20240307',
             system=system_message,
             messages=message,
-            max_tokens=1000,
+            max_tokens=2000,
         )
         try:
                 converted_response = json.loads(response.content[0].text)
                 valid_response = check_response(converted_response, dictionary=False)
         except json.decoder.JSONDecodeError:
             print("ERROR: response not complete and JSON can't convert it")
+            print(response.content[0].text)
             num_format_errors +=1
         except Exception as e:
             print("ERROR: ", e)

@@ -1,4 +1,5 @@
 {
+    "model": "",
     "messages": [
         {
             "role": "system",
@@ -29,6 +30,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 1,
+                "Age": 47,
+                "Workclass": "Self-emp-not-inc",
+                "fnlwgt": 145290,
+                "Education": "HS-grad",
+                "Education.num": 9,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Admin-clerical",
+                "Relationship": "Wife",
+                "Race": "White",
+                "Sex": "Female",
+                "Capital.gain": "0",
+                "Capital.loss": "2415",
+                "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": "<=50K",
+                "Counterfactual.request": "sex"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 2,
                 "Age": 41,
                 "Workclass": "Local-gov",
@@ -43,6 +66,28 @@
                 "Capital.gain": "0",
                 "Capital.loss": "2415",
                 "Hours.per.week": "45",
+                "Native.country": "United-States",
+                "Income": ">50K",
+                "Counterfactual.request": "sex"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 2,
+                "Age": 41,
+                "Sex": "Female",
+                "Workclass": "Local-gov",
+                "fnlwgt": 297248,
+                "Education": "Prof-school",
+                "Education.num": 15,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Prof-specialty",
+                "Relationship": "Wife",
+                "Race": "White",
+                "Capital.gain": "0",
+                "Capital.loss": "2415",
+                "Hours.per.week": "40",
                 "Native.country": "United-States",
                 "Income": ">50K",
                 "Counterfactual.request": "sex"
@@ -73,6 +118,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 3,
+                "Age": 42,
+                "Workclass": "Private",
+                "fnlwgt": 154374,
+                "Education": "Bachelors",
+                "Education.num": 13,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Exec-managerial",
+                "Relationship": "Wife",
+                "Race": "White",
+                "Sex": "Female",
+                "Capital.gain": "0",
+                "Capital.loss": "2415",
+                "Hours.per.week": "50",
+                "Native.country": "United-States",
+                "Income": ">50K",
+                "Counterfactual.request": "sex"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 4,
                 "Age": 49,
                 "Workclass": "Private",
@@ -95,6 +162,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 4,
+                "Age": 49,
+                "Sex": "Female",
+                "Workclass": "Private",
+                "fnlwgt": 199029,
+                "Education": "Bachelors",
+                "Education.num": 13,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Sales",
+                "Relationship": "Wife",
+                "Race": "White",
+                "Capital.gain": "0",
+                "Capital.loss": "2415",
+                "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": ">50K",
+                "Counterfactual.request": "sex"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 5,
                 "Age": 46,
                 "Workclass": "Private",
@@ -109,6 +198,28 @@
                 "Capital.gain": "0",
                 "Capital.loss": "2415",
                 "Hours.per.week": "65",
+                "Native.country": "United-States",
+                "Income": ">50K",
+                "Counterfactual.request": "sex"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 5,
+                "Age": 46,
+                "Workclass": "Private",
+                "fnlwgt": 326857,
+                "Education": "Masters",
+                "Education.num": 14,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Sales",
+                "Relationship": "Wife",
+                "Race": "White",
+                "Sex": "Female",
+                "Capital.gain": "0",
+                "Capital.loss": "2415",
+                "Hours.per.week": "50",
                 "Native.country": "United-States",
                 "Income": ">50K",
                 "Counterfactual.request": "sex"
@@ -139,6 +250,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 6,
+                "Age": 40,
+                "Workclass": "Private",
+                "fnlwgt": 160369,
+                "Education": "Masters",
+                "Education.num": 14,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Exec-managerial",
+                "Relationship": "Wife",
+                "Race": "White",
+                "Sex": "Female",
+                "Capital.gain": "0",
+                "Capital.loss": "2415",
+                "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": ">50K",
+                "Counterfactual.request": "sex"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 7,
                 "Age": 41,
                 "Workclass": "Self-emp-inc",
@@ -153,6 +286,28 @@
                 "Capital.gain": "0",
                 "Capital.loss": "2415",
                 "Hours.per.week": "55",
+                "Native.country": "United-States",
+                "Income": ">50K",
+                "Counterfactual.request": "sex"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 7,
+                "Age": 41,
+                "Workclass": "Self-emp-inc",
+                "fnlwgt": 151089,
+                "Education": "Some-college",
+                "Education.num": 10,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Exec-managerial",
+                "Relationship": "Wife",
+                "Race": "White",
+                "Sex": "Female",
+                "Capital.gain": "0",
+                "Capital.loss": "2415",
+                "Hours.per.week": "45",
                 "Native.country": "United-States",
                 "Income": ">50K",
                 "Counterfactual.request": "sex"
@@ -183,6 +338,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 8,
+                "Age": 35,
+                "Workclass": "Private",
+                "fnlwgt": 192923,
+                "Education": "HS-grad",
+                "Education.num": 9,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Craft-repair",
+                "Relationship": "Wife",
+                "Race": "White",
+                "Sex": "Female",
+                "Capital.gain": "0",
+                "Capital.loss": "2377",
+                "Hours.per.week": "30",
+                "Native.country": "United-States",
+                "Income": "<=50K",
+                "Counterfactual.request": "sex"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 9,
                 "Age": 61,
                 "Workclass": "Self-emp-not-inc",
@@ -197,6 +374,28 @@
                 "Capital.gain": "0",
                 "Capital.loss": "2352",
                 "Hours.per.week": "50",
+                "Native.country": "United-States",
+                "Income": "<=50K",
+                "Counterfactual.request": "sex"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 9,
+                "Age": 61,
+                "Workclass": "Self-emp-not-inc",
+                "fnlwgt": 36671,
+                "Education": "HS-grad",
+                "Education.num": 9,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Farming-fishing",
+                "Relationship": "Wife",
+                "Race": "White",
+                "Sex": "Female",
+                "Capital.gain": "0",
+                "Capital.loss": "2352",
+                "Hours.per.week": "30",
                 "Native.country": "United-States",
                 "Income": "<=50K",
                 "Counterfactual.request": "sex"
@@ -227,6 +426,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 10,
+                "Age": 66,
+                "Sex": "Female",
+                "Workclass": "Local-gov",
+                "fnlwgt": 36364,
+                "Education": "HS-grad",
+                "Education.num": 9,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Sales",
+                "Relationship": "Wife",
+                "Race": "White",
+                "Capital.gain": "0",
+                "Capital.loss": "2267",
+                "Hours.per.week": "30",
+                "Native.country": "United-States",
+                "Income": "<=50K",
+                "Counterfactual.request": "sex"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 11,
                 "Age": 69,
                 "Workclass": "Private",
@@ -241,6 +462,28 @@
                 "Capital.gain": "0",
                 "Capital.loss": "2267",
                 "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": "<=50K",
+                "Counterfactual.request": "sex"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 11,
+                "Age": 69,
+                "Workclass": "Private",
+                "fnlwgt": 124930,
+                "Education": "5th-6th",
+                "Education.num": 3,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Machine-op-inspct",
+                "Relationship": "Wife",
+                "Race": "White",
+                "Sex": "Female",
+                "Capital.gain": "0",
+                "Capital.loss": "2267",
+                "Hours.per.week": "30",
                 "Native.country": "United-States",
                 "Income": "<=50K",
                 "Counterfactual.request": "sex"
@@ -271,6 +514,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 12,
+                "Age": 28,
+                "Sex": "Female",
+                "Workclass": "Private",
+                "fnlwgt": 166481,
+                "Education": "7th-8th",
+                "Education.num": 4,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Handlers-cleaners",
+                "Relationship": "Wife",
+                "Race": "Other",
+                "Capital.gain": "0",
+                "Capital.loss": "2179",
+                "Hours.per.week": "36",
+                "Native.country": "Puerto-Rico",
+                "Income": "<=50K",
+                "Counterfactual Request": "sex"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 13,
                 "Age": 41,
                 "Workclass": "Self-emp-inc",
@@ -285,6 +550,28 @@
                 "Capital.gain": "0",
                 "Capital.loss": "2179",
                 "Hours.per.week": "84",
+                "Native.country": "Mexico",
+                "Income": "<=50K",
+                "Counterfactual.request": "sex"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 13,
+                "Age": 41,
+                "Workclass": "Self-emp-inc",
+                "fnlwgt": 139916,
+                "Education": "Assoc-voc",
+                "Education.num": 11,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Sales",
+                "Relationship": "Wife",
+                "Race": "Other",
+                "Sex": "Female",
+                "Capital.gain": "0",
+                "Capital.loss": "2179",
+                "Hours.per.week": "36",
                 "Native.country": "Mexico",
                 "Income": "<=50K",
                 "Counterfactual.request": "sex"
@@ -315,6 +602,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 14,
+                "Age": 43,
+                "Workclass": "Self-emp-inc",
+                "fnlwgt": 188436,
+                "Education": "Masters",
+                "Education.num": 14,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Exec-managerial",
+                "Relationship": "Wife",
+                "Race": "White",
+                "Sex": "Female",
+                "Capital.gain": "1500",
+                "Capital.loss": "0",
+                "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": "<=50K",
+                "Counterfactual.request": "sex"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 15,
                 "Age": 54,
                 "Workclass": "Private",
@@ -329,6 +638,28 @@
                 "Capital.gain": "5013",
                 "Capital.loss": "0",
                 "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": "<=50K",
+                "Counterfactual.request": "sex"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 15,
+                "Age": 54,
+                "Sex": "Female",
+                "Workclass": "Private",
+                "fnlwgt": 398212,
+                "Education": "HS-grad",
+                "Education.num": 9,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Sales",
+                "Relationship": "Wife",
+                "Race": "Black",
+                "Capital.gain": "0",
+                "Capital.loss": "0",
+                "Hours.per.week": "35",
                 "Native.country": "United-States",
                 "Income": "<=50K",
                 "Counterfactual.request": "sex"
@@ -359,6 +690,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 16,
+                "Age": 45,
+                "Workclass": "Self-emp-not-inc",
+                "fnlwgt": 256866,
+                "Education": "Some-college",
+                "Education.num": 10,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Sales",
+                "Relationship": "Wife",
+                "Race": "White",
+                "Sex": "Female",
+                "Capital.gain": "0",
+                "Capital.loss": "0",
+                "Hours.per.week": "30",
+                "Native.country": "United-States",
+                "Income": "<=50K",
+                "Counterfactual.request": "sex"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 17,
                 "Age": 47,
                 "Workclass": "Private",
@@ -373,6 +726,28 @@
                 "Capital.gain": "5013",
                 "Capital.loss": "0",
                 "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": "<=50K",
+                "Counterfactual.request": "sex"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 17,
+                "Age": 47,
+                "Workclass": "Private",
+                "fnlwgt": 326857,
+                "Education": "Assoc-voc",
+                "Education.num": 11,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Craft-repair",
+                "Relationship": "Wife",
+                "Race": "White",
+                "Sex": "Female",
+                "Capital.gain": "0",
+                "Capital.loss": "0",
+                "Hours.per.week": "36",
                 "Native.country": "United-States",
                 "Income": "<=50K",
                 "Counterfactual.request": "sex"
@@ -403,6 +778,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 18,
+                "Age": 65,
+                "Sex": "Female",
+                "Workclass": "Self-emp-inc",
+                "fnlwgt": 81413,
+                "Education": "HS-grad",
+                "Education.num": 9,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Farming-fishing",
+                "Relationship": "Wife",
+                "Race": "White",
+                "Capital.gain": "0",
+                "Capital.loss": "2352",
+                "Hours.per.week": "30",
+                "Native.country": "United-States",
+                "Income": "<=50K",
+                "Counterfactual.request": "sex"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 19,
                 "Age": 66,
                 "Workclass": "Local-gov",
@@ -417,6 +814,28 @@
                 "Capital.gain": "0",
                 "Capital.loss": "2267",
                 "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": "<=50K",
+                "Counterfactual.request": "sex"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 19,
+                "Age": 66,
+                "Workclass": "Local-gov",
+                "fnlwgt": 36364,
+                "Education": "HS-grad",
+                "Education.num": 9,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Craft-repair",
+                "Relationship": "Wife",
+                "Race": "White",
+                "Sex": "Female",
+                "Capital.gain": "0",
+                "Capital.loss": "2267",
+                "Hours.per.week": "30",
                 "Native.country": "United-States",
                 "Income": "<=50K",
                 "Counterfactual.request": "sex"
@@ -447,6 +866,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 20,
+                "Age": 69,
+                "Sex": "Female",
+                "Workclass": "Private",
+                "fnlwgt": 124930,
+                "Education": "5th-6th",
+                "Education.num": 3,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Machine-op-inspct",
+                "Relationship": "Wife",
+                "Race": "White",
+                "Capital.gain": "0",
+                "Capital.loss": "2267",
+                "Hours.per.week": "30",
+                "Native.country": "United-States",
+                "Income": "<=50K",
+                "Counterfactual.Request": "sex"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 21,
                 "Age": 64,
                 "Workclass": "Private",
@@ -461,6 +902,28 @@
                 "Capital.gain": "0",
                 "Capital.loss": "2179",
                 "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": "<=50K",
+                "Counterfactual.request": "sex"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 21,
+                "Age": 64,
+                "Workclass": "Private",
+                "fnlwgt": 181232,
+                "Education": "11th",
+                "Education.num": 7,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Craft-repair",
+                "Relationship": "Wife",
+                "Race": "White",
+                "Sex": "Female",
+                "Capital.gain": "0",
+                "Capital.loss": "2179",
+                "Hours.per.week": "32",
                 "Native.country": "United-States",
                 "Income": "<=50K",
                 "Counterfactual.request": "sex"
@@ -491,6 +954,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 22,
+                "Age": 28,
+                "Sex": "Female",
+                "Workclass": "Private",
+                "fnlwgt": 166481,
+                "Education": "7th-8th",
+                "Education.num": 4,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Handlers-cleaners",
+                "Relationship": "Wife",
+                "Race": "Other",
+                "Capital.gain": "0",
+                "Capital.loss": "2179",
+                "Hours.per.week": "36",
+                "Native.country": "Puerto-Rico",
+                "Income": "<=50K",
+                "Counterfactual Request": "sex"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 23,
                 "Age": 41,
                 "Workclass": "Self-emp-inc",
@@ -513,6 +998,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 23,
+                "Age": 41,
+                "Workclass": "Self-emp-inc",
+                "fnlwgt": 139916,
+                "Education": "Assoc-voc",
+                "Education.num": 11,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Sales",
+                "Relationship": "Wife",
+                "Race": "Other",
+                "Sex": "Female",
+                "Capital.gain": "0",
+                "Capital.loss": "2179",
+                "Hours.per.week": "38",
+                "Native.country": "Mexico",
+                "Income": "<=50K",
+                "Counterfactual.request": "sex"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 1,
                 "Age": 41,
                 "Workclass": "Self-emp-not-inc",
@@ -523,6 +1030,28 @@
                 "Occupation": "Craft-repair",
                 "Relationship": "Husband",
                 "Race": "White",
+                "Sex": "Male",
+                "Capital.gain": "0",
+                "Capital.loss": "2179",
+                "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": "<=50K",
+                "Counterfactual.request": "race"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 1,
+                "Age": 41,
+                "Workclass": "Self-emp-not-inc",
+                "fnlwgt": 144594,
+                "Education": "7th-8th",
+                "Education.num": 4,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Craft-repair",
+                "Relationship": "Husband",
+                "Race": "Black",
                 "Sex": "Male",
                 "Capital.gain": "0",
                 "Capital.loss": "2179",
@@ -557,6 +1086,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 2,
+                "Age": 27,
+                "Sex": "Male",
+                "Workclass": "Private",
+                "fnlwgt": 116358,
+                "Education": "Some-college",
+                "Education.num": 10,
+                "Marital.status": "Never-married",
+                "Occupation": "Craft-repair",
+                "Relationship": "Own-child",
+                "Race": "White",
+                "Capital.gain": "0",
+                "Capital.loss": "1980",
+                "Hours.per.week": "40",
+                "Native.country": "Philippines",
+                "Income": "<=50K",
+                "Counterfactual Request": "race"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 3,
                 "Age": 21,
                 "Workclass": "Private",
@@ -579,6 +1130,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 3,
+                "Age": 21,
+                "Workclass": "Private",
+                "fnlwgt": 109414,
+                "Education": "Some-college",
+                "Education.num": 10,
+                "Marital.status": "Never-married",
+                "Occupation": "Prof-specialty",
+                "Relationship": "Own-child",
+                "Race": "White",
+                "Sex": "Male",
+                "Capital.gain": "0",
+                "Capital.loss": "1974",
+                "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": "<=50K",
+                "Counterfactual Request": "race"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 4,
                 "Age": 27,
                 "Workclass": "Private",
@@ -594,6 +1167,28 @@
                 "Capital.loss": "1876",
                 "Hours.per.week": "45",
                 "Native.country": "Cambodia",
+                "Income": "<=50K",
+                "Counterfactual.request": "race"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 4,
+                "Age": 27,
+                "Workclass": "Private",
+                "fnlwgt": 292472,
+                "Education": "Some-college",
+                "Education.num": 10,
+                "Marital.status": "Never-married",
+                "Occupation": "Craft-repair",
+                "Relationship": "Not-in-family",
+                "Race": "White",
+                "Sex": "Male",
+                "Capital.gain": "0",
+                "Capital.loss": "1876",
+                "Hours.per.week": "40",
+                "Native.country": "United States",
                 "Income": "<=50K",
                 "Counterfactual.request": "race"
             }
@@ -623,6 +1218,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 5,
+                "Age": 38,
+                "Workclass": "Local-gov",
+                "fnlwgt": 123983,
+                "Education": "Bachelors",
+                "Education.num": 13,
+                "Marital.status": "Never-married",
+                "Occupation": "Exec-managerial",
+                "Relationship": "Unmarried",
+                "Race": "White",
+                "Sex": "Male",
+                "Capital.gain": "0",
+                "Capital.loss": "1741",
+                "Hours.per.week": "40",
+                "Native.country": "Vietnam",
+                "Income": "<=50K",
+                "Counterfactual Request": "race"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 6,
                 "Age": 46,
                 "Workclass": "Private",
@@ -633,6 +1250,28 @@
                 "Occupation": "Other-service",
                 "Relationship": "Husband",
                 "Race": "Asian-Pac-Islander",
+                "Sex": "Male",
+                "Capital.gain": "0",
+                "Capital.loss": "1651",
+                "Hours.per.week": "40",
+                "Native.country": "China",
+                "Income": "<=50K",
+                "Counterfactual.request": "race"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 6,
+                "Age": 46,
+                "Workclass": "Private",
+                "fnlwgt": 138370,
+                "Education": "7th-8th",
+                "Education.num": 4,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Other-service",
+                "Relationship": "Husband",
+                "Race": "White",
                 "Sex": "Male",
                 "Capital.gain": "0",
                 "Capital.loss": "1651",
@@ -667,6 +1306,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 7,
+                "Age": 51,
+                "Workclass": "Federal-gov",
+                "fnlwgt": 223206,
+                "Education": "Doctorate",
+                "Education.num": 16,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Prof-specialty",
+                "Relationship": "Husband",
+                "Race": "White",
+                "Sex": "Male",
+                "Capital.gain": "15024",
+                "Capital.loss": "0",
+                "Hours.per.week": "40",
+                "Native.country": "United States",
+                "Income": ">50K",
+                "Counterfactual.request": "race"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 8,
                 "Age": 23,
                 "Workclass": "Private",
@@ -684,6 +1345,28 @@
                 "Native.country": "Vietnam",
                 "Income": ">50K",
                 "Counterfactual.request": "race"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 8,
+                "Age": 23,
+                "Workclass": "Private",
+                "fnlwgt": 106957,
+                "Education": "11th",
+                "Education.num": 7,
+                "Marital.status": "Never-married",
+                "Occupation": "Craft-repair",
+                "Relationship": "Own-child",
+                "Race": "White",
+                "Sex": "Male",
+                "Capital.gain": "14344",
+                "Capital.loss": "0",
+                "Hours.per.week": "40",
+                "Native.country": "Vietnam",
+                "Income": ">50K",
+                "Counterfactual.Request": "race"
             }
         },
         {
@@ -711,6 +1394,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 9,
+                "Age": 34,
+                "Workclass": "Private",
+                "fnlwgt": 160261,
+                "Education": "HS-grad",
+                "Education.num": 9,
+                "Marital.status": "Never-married",
+                "Occupation": "Tech-support",
+                "Relationship": "Own-child",
+                "Race": "White",
+                "Sex": "Male",
+                "Capital.gain": "14084",
+                "Capital.loss": "0",
+                "Hours.per.week": "38",
+                "Native.country": "United States",
+                "Income": ">50K",
+                "Counterfactual.request": "race"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 10,
                 "Age": 40,
                 "Workclass": "Private",
@@ -721,6 +1426,28 @@
                 "Occupation": "Prof-specialty",
                 "Relationship": "Not-in-family",
                 "Race": "Asian-Pac-Islander",
+                "Sex": "Male",
+                "Capital.gain": "13550",
+                "Capital.loss": "0",
+                "Hours.per.week": "40",
+                "Native.country": "Cambodia",
+                "Income": ">50K",
+                "Counterfactual.request": "race"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 10,
+                "Age": 40,
+                "Workclass": "Private",
+                "fnlwgt": 121956,
+                "Education": "Bachelors",
+                "Education.num": 13,
+                "Marital.status": "Married-spouse-absent",
+                "Occupation": "Prof-specialty",
+                "Relationship": "Not-in-family",
+                "Race": "White",
                 "Sex": "Male",
                 "Capital.gain": "13550",
                 "Capital.loss": "0",
@@ -755,6 +1482,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 11,
+                "Age": 27,
+                "Workclass": "Private",
+                "fnlwgt": 186454,
+                "Education": "Bachelors",
+                "Education.num": 13,
+                "Marital.status": "Never-married",
+                "Occupation": "Prof-specialty",
+                "Relationship": "Not-in-family",
+                "Race": "White",
+                "Sex": "Male",
+                "Capital.gain": "13550",
+                "Capital.loss": "0",
+                "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": ">50K",
+                "Counterfactual.Request": "race"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 12,
                 "Age": 34,
                 "Workclass": "Private",
@@ -772,6 +1521,28 @@
                 "Native.country": "United-States",
                 "Income": ">50K",
                 "Counterfactual.request": "race"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 12,
+                "Age": 34,
+                "Workclass": "Private",
+                "fnlwgt": 96483,
+                "Education": "Assoc-acdm",
+                "Education.num": 12,
+                "Marital.status": "Never-married",
+                "Occupation": "Adm-clerical",
+                "Relationship": "Not-in-family",
+                "Race": "White",
+                "Sex": "Female",
+                "Capital.gain": "8614",
+                "Capital.loss": "0",
+                "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": ">50K",
+                "Counterfactual.Request": "race"
             }
         },
         {
@@ -799,6 +1570,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 13,
+                "Age": 24,
+                "Sex": "Male",
+                "Workclass": "Private",
+                "fnlwgt": 243190,
+                "Education": "Assoc-acdm",
+                "Education.num": 12,
+                "Marital.status": "Separated",
+                "Occupation": "Craft-repair",
+                "Relationship": "Unmarried",
+                "Race": "White",
+                "Capital.gain": "8614",
+                "Capital.loss": "0",
+                "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": ">50K",
+                "Counterfactual Request": "race"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 14,
                 "Age": 33,
                 "Workclass": "Private",
@@ -821,6 +1614,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 14,
+                "Age": 33,
+                "Workclass": "Private",
+                "fnlwgt": 274222,
+                "Education": "Bachelors",
+                "Education.num": 13,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Other-service",
+                "Relationship": "Husband",
+                "Race": "White",
+                "Sex": "Male",
+                "Capital.gain": "7688",
+                "Capital.loss": "0",
+                "Hours.per.week": "38",
+                "Native.country": "United-States",
+                "Income": ">50K",
+                "Counterfactual Request": "race"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 15,
                 "Age": 50,
                 "Workclass": "Self-emp-inc",
@@ -831,6 +1646,28 @@
                 "Occupation": "Prof-specialty",
                 "Relationship": "Husband",
                 "Race": "Asian-Pac-Islander",
+                "Sex": "Male",
+                "Capital.gain": "7688",
+                "Capital.loss": "0",
+                "Hours.per.week": "50",
+                "Native.country": "Philippines",
+                "Income": ">50K",
+                "Counterfactual.request": "race"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 15,
+                "Age": 50,
+                "Workclass": "Self-emp-inc",
+                "fnlwgt": 156623,
+                "Education": "Prof-school",
+                "Education.num": 15,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Prof-specialty",
+                "Relationship": "Husband",
+                "Race": "White",
                 "Sex": "Male",
                 "Capital.gain": "7688",
                 "Capital.loss": "0",
@@ -865,6 +1702,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 16,
+                "Age": 40,
+                "Workclass": "Private",
+                "fnlwgt": 177027,
+                "Education": "Bachelors",
+                "Education.num": 13,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Other-service",
+                "Relationship": "Wife",
+                "Race": "White",
+                "Sex": "Female",
+                "Capital.gain": "7688",
+                "Capital.loss": "0",
+                "Hours.per.week": "48",
+                "Native.country": "Japan",
+                "Income": ">50K",
+                "Counterfactual.request": "race"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 17,
                 "Age": 53,
                 "Workclass": "Self-emp-not-inc",
@@ -882,6 +1741,28 @@
                 "Native.country": "China",
                 "Income": ">50K",
                 "Counterfactual.request": "race"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 17,
+                "Age": 53,
+                "Sex": "Male",
+                "Workclass": "Self-emp-not-inc",
+                "fnlwgt": 135339,
+                "Education": "Bachelors",
+                "Education.num": 13,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Exec-managerial",
+                "Relationship": "Husband",
+                "Race": "White",
+                "Capital.gain": "7688",
+                "Capital.loss": "0",
+                "Hours.per.week": "20",
+                "Native.country": "China",
+                "Income": ">50K",
+                "Counterfactual Request": "race"
             }
         },
         {
@@ -909,6 +1790,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 18,
+                "Age": 38,
+                "Workclass": "State-gov",
+                "fnlwgt": 125499,
+                "Education": "Bachelors",
+                "Education.num": 13,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Prof-specialty",
+                "Relationship": "Husband",
+                "Race": "White",
+                "Sex": "Male",
+                "Capital.gain": "7688",
+                "Capital.loss": "0",
+                "Hours.per.week": "60",
+                "Native.country": "India",
+                "Income": ">50K",
+                "Counterfactual.Request": "race"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 19,
                 "Age": 34,
                 "Workclass": "Private",
@@ -926,6 +1829,28 @@
                 "Native.country": "Taiwan",
                 "Income": ">50K",
                 "Counterfactual.request": "race"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 19,
+                "Age": 34,
+                "Workclass": "Private",
+                "fnlwgt": 142897,
+                "Education": "Masters",
+                "Education.num": 14,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Exec-managerial",
+                "Relationship": "Husband",
+                "Race": "White",
+                "Sex": "Male",
+                "Capital.gain": "7298",
+                "Capital.loss": "0",
+                "Hours.per.week": "40",
+                "Native.country": "Taiwan",
+                "Income": ">50K",
+                "Counterfactual Request": "race"
             }
         },
         {
@@ -953,6 +1878,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 20,
+                "Age": 54,
+                "Workclass": "Private",
+                "fnlwgt": 225599,
+                "Education": "Masters",
+                "Education.num": 14,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Prof-specialty",
+                "Relationship": "Husband",
+                "Race": "White",
+                "Sex": "Male",
+                "Capital.gain": "7298",
+                "Capital.loss": "0",
+                "Hours.per.week": "40",
+                "Native.country": "India",
+                "Income": ">50K",
+                "Counterfactual.Request": "race"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 21,
                 "Age": 37,
                 "Workclass": "Federal-gov",
@@ -963,6 +1910,28 @@
                 "Occupation": "Adm-clerical",
                 "Relationship": "Husband",
                 "Race": "Asian-Pac-Islander",
+                "Sex": "Male",
+                "Capital.gain": "7298",
+                "Capital.loss": "0",
+                "Hours.per.week": "40",
+                "Native.country": "Philippines",
+                "Income": ">50K",
+                "Counterfactual.request": "race"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 21,
+                "Age": 37,
+                "Workclass": "Federal-gov",
+                "fnlwgt": 22201,
+                "Education": "Bachelors",
+                "Education.num": 13,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Adm-clerical",
+                "Relationship": "Husband",
+                "Race": "White",
                 "Sex": "Male",
                 "Capital.gain": "7298",
                 "Capital.loss": "0",
@@ -997,6 +1966,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 1,
+                "Age": 29,
+                "Workclass": "Private",
+                "fnlwgt": 358705,
+                "Education": "HS-grad",
+                "Education.num": 9,
+                "Marital.status": "Never-married",
+                "Occupation": "Sales",
+                "Relationship": "Not-in-family",
+                "Race": "White",
+                "Sex": "Male",
+                "Capital.gain": "500",
+                "Capital.loss": "0",
+                "Hours.per.week": "45",
+                "Native.country": "United-States",
+                "Income": ">50K",
+                "Counterfactual.request": "age"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 2,
                 "Age": 21,
                 "Workclass": "Private",
@@ -1019,8 +2010,52 @@
         {
             "role": "user",
             "content": {
+                "Index": 2,
+                "Age": 26,
+                "Workclass": "Private",
+                "fnlwgt": 216070,
+                "Education": "Assoc-acdm",
+                "Education.num": 12,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Adm-clerical",
+                "Relationship": "Wife",
+                "Race": "Amer-Indian-Eskimo",
+                "Sex": "Female",
+                "Capital.gain": "0",
+                "Capital.loss": "0",
+                "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": ">50K",
+                "Counterfactual.request": "age"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 3,
                 "Age": 21,
+                "Workclass": "Private",
+                "fnlwgt": 548303,
+                "Education": "HS-grad",
+                "Education.num": 9,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Prof-specialty",
+                "Relationship": "Own-child",
+                "Race": "White",
+                "Sex": "Male",
+                "Capital.gain": "0",
+                "Capital.loss": "0",
+                "Hours.per.week": "40",
+                "Native.country": "Mexico",
+                "Income": ">50K",
+                "Counterfactual.request": "age"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 3,
+                "Age": 25,
                 "Workclass": "Private",
                 "fnlwgt": 548303,
                 "Education": "HS-grad",
@@ -1063,6 +2098,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 4,
+                "Age": 37,
+                "Workclass": "Private",
+                "fnlwgt": 123456,
+                "Education": "Bachelors",
+                "Education.num": 13,
+                "Marital.status": "Divorced",
+                "Occupation": "Exec-managerial",
+                "Relationship": "Not-in-family",
+                "Race": "White",
+                "Sex": "Male",
+                "Capital.gain": "0",
+                "Capital.loss": "2258",
+                "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": ">50K",
+                "Counterfactual Request": "age"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 5,
                 "Age": 26,
                 "Workclass": "Private",
@@ -1077,6 +2134,28 @@
                 "Capital.gain": "0",
                 "Capital.loss": "2258",
                 "Hours.per.week": "45",
+                "Native.country": "United-States",
+                "Income": ">50K",
+                "Counterfactual.request": "age"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 5,
+                "Age": 36,
+                "Workclass": "Private",
+                "fnlwgt": 300000,
+                "Education": "Bachelors",
+                "Education.num": 13,
+                "Marital.status": "Married",
+                "Occupation": "Exec-managerial",
+                "Relationship": "Husband",
+                "Race": "White",
+                "Sex": "Male",
+                "Capital.gain": "5000",
+                "Capital.loss": "2258",
+                "Hours.per.week": "50",
                 "Native.country": "United-States",
                 "Income": ">50K",
                 "Counterfactual.request": "age"
@@ -1107,6 +2186,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 6,
+                "Age": 28,
+                "Workclass": "Private",
+                "fnlwgt": 102942,
+                "Education": "Bachelors",
+                "Education.num": 13,
+                "Marital.status": "Never-married",
+                "Occupation": "Prof-specialty",
+                "Relationship": "Own-child",
+                "Race": "White",
+                "Sex": "Female",
+                "Capital.gain": "5000",
+                "Capital.loss": "2258",
+                "Hours.per.week": "45",
+                "Native.country": "United-States",
+                "Income": ">50K",
+                "Counterfactual.request": "age"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 7,
                 "Age": 57,
                 "Workclass": "Private",
@@ -1129,8 +2230,52 @@
         {
             "role": "user",
             "content": {
+                "Index": 7,
+                "Age": 47,
+                "Workclass": "Private",
+                "fnlwgt": 121362,
+                "Education": "Some-college",
+                "Education.num": 10,
+                "Marital.status": "Widowed",
+                "Occupation": "Adm-clerical",
+                "Relationship": "Unmarried",
+                "Race": "White",
+                "Sex": "Female",
+                "Capital.gain": "0",
+                "Capital.loss": "1200",
+                "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": ">50K",
+                "Counterfactual.request": "age"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 8,
                 "Age": 44,
+                "Workclass": "Federal-gov",
+                "fnlwgt": 29591,
+                "Education": "Bachelors",
+                "Education.num": 13,
+                "Marital.status": "Divorced",
+                "Occupation": "Tech-support",
+                "Relationship": "Not-in-family",
+                "Race": "White",
+                "Sex": "Male",
+                "Capital.gain": "0",
+                "Capital.loss": "2258",
+                "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": ">50K",
+                "Counterfactual.request": "age"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 8,
+                "Age": 34,
                 "Workclass": "Federal-gov",
                 "fnlwgt": 29591,
                 "Education": "Bachelors",
@@ -1173,6 +2318,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 9,
+                "Age": 39,
+                "Workclass": "State-gov",
+                "fnlwgt": 269417,
+                "Education": "Doctorate",
+                "Education.num": 16,
+                "Marital.status": "Never-married",
+                "Occupation": "Exec-managerial",
+                "Relationship": "Not-in-family",
+                "Race": "White",
+                "Sex": "Female",
+                "Capital.gain": "0",
+                "Capital.loss": "2258",
+                "Hours.per.week": "45",
+                "Native.country": "United-States",
+                "Income": ">50K",
+                "Counterfactual.request": "age"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 10,
                 "Age": 67,
                 "Workclass": "Private",
@@ -1189,6 +2356,28 @@
                 "Hours.per.week": "5",
                 "Native.country": "United-States",
                 "Income": "<=50K",
+                "Counterfactual.request": "age"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 10,
+                "Age": 47,
+                "Workclass": "Private",
+                "fnlwgt": 118363,
+                "Education": "Bachelors",
+                "Education.num": 13,
+                "Marital.status": "Divorced",
+                "Occupation": "Exec-managerial",
+                "Relationship": "Not-in-family",
+                "Race": "White",
+                "Sex": "Female",
+                "Capital.gain": "0",
+                "Capital.loss": "1500",
+                "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": ">50K",
                 "Counterfactual.request": "age"
             }
         },
@@ -1217,10 +2406,54 @@
         {
             "role": "user",
             "content": {
+                "Index": 11,
+                "Age": 56,
+                "Workclass": "Local-gov",
+                "fnlwgt": 362165,
+                "Education": "Bachelors",
+                "Education.num": 13,
+                "Marital.status": "Widowed",
+                "Occupation": "Prof-specialty",
+                "Relationship": "Not-in-family",
+                "Race": "Black",
+                "Sex": "Female",
+                "Capital.gain": "0",
+                "Capital.loss": "2206",
+                "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": ">50K",
+                "Counterfactual.request": "age"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 12,
                 "Age": 44,
                 "Workclass": "Self-emp-not-inc",
                 "fnlwgt": 171424,
+                "Education": "Some-college",
+                "Education.num": 10,
+                "Marital.status": "Divorced",
+                "Occupation": "Machine-op-inspct",
+                "Relationship": "Not-in-family",
+                "Race": "White",
+                "Sex": "Male",
+                "Capital.gain": "0",
+                "Capital.loss": "2205",
+                "Hours.per.week": "35",
+                "Native.country": "United-States",
+                "Income": "<=50K",
+                "Counterfactual.request": "age"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 12,
+                "Age": 34,
+                "Workclass": "Self-emp-not-inc",
+                "fnlwgt": 158424,
                 "Education": "Some-college",
                 "Education.num": 10,
                 "Marital.status": "Divorced",
@@ -1261,6 +2494,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 13,
+                "Age": 25,
+                "Workclass": "Private",
+                "fnlwgt": 117801,
+                "Education": "Assoc-acdm",
+                "Education.num": 12,
+                "Marital.status": "Never-married",
+                "Occupation": "Other-service",
+                "Relationship": "Own-child",
+                "Race": "White",
+                "Sex": "Female",
+                "Capital.gain": "0",
+                "Capital.loss": "2205",
+                "Hours.per.week": "25",
+                "Native.country": "United-States",
+                "Income": "<=50K",
+                "Counterfactual.request": "age"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 14,
                 "Age": 39,
                 "Workclass": "Private",
@@ -1275,6 +2530,28 @@
                 "Capital.gain": "0",
                 "Capital.loss": "2205",
                 "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": "<=50K",
+                "Counterfactual.request": "age"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 14,
+                "Age": 29,
+                "Workclass": "Private",
+                "fnlwgt": 120000,
+                "Education": "Some-college",
+                "Education.num": 10,
+                "Marital.status": "Never-married",
+                "Occupation": "Other-service",
+                "Relationship": "Own-child",
+                "Race": "Black",
+                "Sex": "Female",
+                "Capital.gain": "0",
+                "Capital.loss": "1500",
+                "Hours.per.week": "35",
                 "Native.country": "United-States",
                 "Income": "<=50K",
                 "Counterfactual.request": "age"
@@ -1305,6 +2582,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 15,
+                "Age": 22,
+                "Workclass": "Private",
+                "fnlwgt": 27882,
+                "Education": "Some-college",
+                "Education.num": 10,
+                "Marital.status": "Never-married",
+                "Occupation": "Sales",
+                "Relationship": "Own-child",
+                "Race": "White",
+                "Sex": "Female",
+                "Capital.gain": "0",
+                "Capital.loss": "2205",
+                "Hours.per.week": "30",
+                "Native.country": "Holand-Netherlands",
+                "Income": "<=50K",
+                "Counterfactual.request": "age"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 16,
                 "Age": 42,
                 "Workclass": "Private",
@@ -1327,8 +2626,52 @@
         {
             "role": "user",
             "content": {
+                "Index": 16,
+                "Age": 52,
+                "Workclass": "Private",
+                "fnlwgt": 245000,
+                "Education": "9th",
+                "Education.num": 5,
+                "Marital.status": "Never-married",
+                "Occupation": "Handlers-cleaners",
+                "Relationship": "Not-in-family",
+                "Race": "Black",
+                "Sex": "Male",
+                "Capital.gain": "0",
+                "Capital.loss": "2205",
+                "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": "<=50K",
+                "Counterfactual.request": "age"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 17,
                 "Age": 64,
+                "Workclass": "Private",
+                "fnlwgt": 181232,
+                "Education": "11th",
+                "Education.num": 7,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Craft-repair",
+                "Relationship": "Husband",
+                "Race": "White",
+                "Sex": "Male",
+                "Capital.gain": "0",
+                "Capital.loss": "2179",
+                "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": "<=50K",
+                "Counterfactual.request": "age"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 17,
+                "Age": 54,
                 "Workclass": "Private",
                 "fnlwgt": 181232,
                 "Education": "11th",
@@ -1371,6 +2714,28 @@
         {
             "role": "user",
             "content": {
+                "Index": 18,
+                "Age": 38,
+                "Workclass": "Private",
+                "fnlwgt": 166481,
+                "Education": "9th",
+                "Education.num": 5,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Handlers-cleaners",
+                "Relationship": "Husband",
+                "Race": "Other",
+                "Sex": "Male",
+                "Capital.gain": "0",
+                "Capital.loss": "2179",
+                "Hours.per.week": "40",
+                "Native.country": "Puerto-Rico",
+                "Income": "<=50K",
+                "Counterfactual.request": "age"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 19,
                 "Age": 41,
                 "Workclass": "Self-emp-inc",
@@ -1393,8 +2758,52 @@
         {
             "role": "user",
             "content": {
+                "Index": 19,
+                "Age": 36,
+                "Workclass": "Self-emp-inc",
+                "fnlwgt": 139916,
+                "Education": "Assoc-voc",
+                "Education.num": 11,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Sales",
+                "Relationship": "Husband",
+                "Race": "Other",
+                "Sex": "Male",
+                "Capital.gain": "0",
+                "Capital.loss": "1500",
+                "Hours.per.week": "76",
+                "Native.country": "Mexico",
+                "Income": "<=50K",
+                "Counterfactual.request": "age"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
                 "Index": 20,
                 "Age": 41,
+                "Workclass": "Self-emp-not-inc",
+                "fnlwgt": 144594,
+                "Education": "7th-8th",
+                "Education.num": 4,
+                "Marital.status": "Married-civ-spouse",
+                "Occupation": "Craft-repair",
+                "Relationship": "Husband",
+                "Race": "White",
+                "Sex": "Male",
+                "Capital.gain": "0",
+                "Capital.loss": "2179",
+                "Hours.per.week": "40",
+                "Native.country": "United-States",
+                "Income": "<=50K",
+                "Counterfactual.request": "age"
+            }
+        },
+        {
+            "role": "user",
+            "content": {
+                "Index": 20,
+                "Age": 35,
                 "Workclass": "Self-emp-not-inc",
                 "fnlwgt": 144594,
                 "Education": "7th-8th",
