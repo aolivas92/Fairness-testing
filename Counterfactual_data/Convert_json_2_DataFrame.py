@@ -1,7 +1,7 @@
 import json
 import pandas as pd
 import numpy as np
-filename = './gpt_4o_mini/2_prompt3_Generated_Counterfactuals.json'
+filename = './claude_3_haiku/age_prompt3_Generated_Counterfactuals.json'
 f = open(filename)
 json_file = json.load(f)
 columns = json_file['messages'][1]['content'].keys()

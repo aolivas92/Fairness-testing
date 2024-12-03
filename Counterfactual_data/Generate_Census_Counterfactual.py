@@ -5,8 +5,8 @@ import json
 import openai
 import anthropic
 
-input_file = './4_Census_Counterfactual.json'
-output_file = './gpt_4o_mini/3_prompt4_Generated_Counterfactuals.json'
+input_file = './5_AGE_Census_Counterfactual.json'
+output_file = './claude_3_haiku/age_prompt3_Generated_Counterfactuals.json'
 num_retries = 0
 num_format_errors = 0
 num_errors = 0
