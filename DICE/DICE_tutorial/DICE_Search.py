@@ -226,7 +226,7 @@ def decode_sample(sample, label_encoders):
     }
 
     for col, indx in categorical_cols.items():
-        encoded_value = sample[0][indx]
+        encoded_value = int(sample[0][indx])
         decoded_value = label_encoders[col].inverse_transform([encoded_value])[0]
         print("DECODED_VALUE:", decoded_value, "\n\n\n")
         sample[0][indx] = decoded_value
