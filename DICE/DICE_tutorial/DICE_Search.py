@@ -223,7 +223,7 @@ def m_instance_real_counterfactual(sample, sens_params, conf, label_encoders):
 
     print('\n\nRESPONSE:', response, '\n\n')
 
-    encoded_sample = encode_sample(response)
+    encoded_sample = encode_sample(response, label_encoders)
 
     print('\n\nENCODED SAMPLE:', encoded_sample, '\n\n')
 
