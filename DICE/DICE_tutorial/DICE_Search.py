@@ -214,7 +214,7 @@ def m_instance_real_counterfactual(sample, sens_params, conf, label_encoders):
     print('\n\nDECODED SAMPLE:', decoded_sample, '\n\n')
 
     formatted_data = census_data_formatter(decoded_sample, sens_params)
-    json.dumps(formatted_data)
+    formatted_data = str(formatted_data)
 
     print('\n\nFORMATTED DATA:', formatted_data, '\n\n')
 
