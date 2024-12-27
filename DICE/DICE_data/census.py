@@ -106,6 +106,8 @@ def census_data2():
     input_shape = (None, X.shape[1])
     nb_classes = 2
 
+    print("1", X)
+
     return X, Y, input_shape, nb_classes, label_encoders
 
     # # TODO: Delete this, it's only for testing.

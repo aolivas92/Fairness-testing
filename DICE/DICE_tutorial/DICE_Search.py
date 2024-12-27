@@ -294,6 +294,7 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
     # prepare the testing data and model
     # TODO: Fix later, The label_encoders can be stored globally instead of this method.
     X, Y, input_shape, nb_classes, label_encoders = data[dataset]()
+    print("2", X)
     tf.set_random_seed(1234)
 
     config = tf.ConfigProto(device_count = {'GPU': 0})
