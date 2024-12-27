@@ -223,6 +223,12 @@ def m_instance_real_counterfactual(sample, sens_params, conf, label_encoders):
 
     print('\n\nRESPONSE:', response, '\n\n')
 
+    encoded_sample = encode_sample(response)
+
+    print('\n\nENCODED SAMPLE:', encoded_sample, '\n\n')
+
+    # return encoded_sample
+
     # TODO:
     # Input: sample- that we need to get the counterfactual of, sens_params(protected) - sec, age, race
 
@@ -246,6 +252,16 @@ def decode_sample(sample, label_encoders):
         decoded_sample[indx] = decoded_value
 
     return decoded_sample
+
+def encode_sample(sample, label_encoders):
+    encode_sample = sample.copy()
+
+    for col, encoder in label_encoders.items():
+        cat_value = [encode_sample[col]]
+        encoded_value = encoder.transform(cat_value)[0]
+        encode_sample[col] = encoded_value
+
+    return encode_sample
 
 def census_data_formatter(sample, sens_params):
     map = {
