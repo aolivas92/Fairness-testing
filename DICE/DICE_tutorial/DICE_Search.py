@@ -225,7 +225,7 @@ def decode_sample(sample, label_encoders):
     'sex': 9, 'native.country': 13, 'income': 14
     }
 
-    for col, indx in categorical_cols:
+    for col, indx in categorical_cols.items():
         le = label_encoders[col]
         sample[indx] = le.inverse_transform(sample[indx])
 
