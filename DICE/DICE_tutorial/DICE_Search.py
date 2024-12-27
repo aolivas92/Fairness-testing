@@ -239,9 +239,9 @@ def m_instance_real_counterfactual(sample, sens_params, conf, label_encoders):
 
 def decode_sample(sample, label_encoders):
     categorical_cols = {
-    'workclass': 1 , 'education': 3, 'marital.status': 5, 
-    'occupation': 6, 'relationship': 7, 'race': 8, 
-    'sex': 9, 'native.country': 13 #, 'income': 14 # INCOME NOT USED
+    'Workclass': 1 , 'Education': 3, 'Marital.status': 5, 
+    'Occupation': 6, 'Relationship': 7, 'Race': 8, 
+    'Sex': 9, 'Native.country': 13 #, 'income': 14 # INCOME NOT USED
     }
 
     decoded_sample = list(sample[0])

@@ -43,21 +43,21 @@ def census_data2():
     
     # List all the column names so you can define them.
     col_names = [
-    "age", # 0
-    "workclass", # 1 
+    "Age", # 0
+    "Workclass", # 1 
     "fnlwgt", # 2
-    "education", # 3
-    "education.num", # 4
-    "marital.status", # 5
-    "occupation", # 6
-    "relationship", # 7
-    "race", # 8 
-    "sex", # 9
-    "capital.gain", # 10
-    "capital.loss", # 11
-    "hours.per.week", # 12
-    "native.country", # 13
-    "income" # 14
+    "Education", # 3
+    "Education.num", # 4
+    "Marital.status", # 5
+    "Occupation", # 6
+    "Relationship", # 7
+    "Race", # 8 
+    "Sex", # 9
+    "Capital.gain", # 10
+    "Capital.loss", # 11
+    "Hours.per.week", # 12
+    "Native.country", # 13
+    "Income" # 14
     ]
 
     # Read the data and make a copy so you can leave one untouched.
@@ -71,9 +71,9 @@ def census_data2():
 
     # List out which columns needs to be transformed and which don't.
     categorical_cols = [
-    'workclass', 'education', 'marital.status', 
-    'occupation', 'relationship', 'race', 
-    'sex', 'native.country', 'income'
+    'Workclass', 'Education', 'Marital.status', 
+    'Occupation', 'Relationship', 'Race', 
+    'Sex', 'Native.country', 'Income'
     ]
 
     # Transform the categorical data into numerical data.
