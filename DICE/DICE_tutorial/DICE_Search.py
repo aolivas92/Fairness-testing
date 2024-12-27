@@ -225,13 +225,15 @@ def decode_sample(sample, label_encoders):
     'sex': 9, 'native.country': 13, 'income': 14
     }
 
+    decoded_sample = list(sample[0])
+
     for col, indx in categorical_cols.items():
         encoded_value = int(sample[0][indx])
         decoded_value = label_encoders[col].inverse_transform([encoded_value])[0]
         print("DECODED_VALUE:", decoded_value, "\n\n\n")
-        sample[0][indx] = decoded_value
+        decoded_sample[indx] = decoded_value
 
-    return sample
+    return decoded_sample
 
 def global_sample_select(clus_dic, sens_params):
     leng = 0
