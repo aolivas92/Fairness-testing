@@ -222,7 +222,7 @@ def decode_sample(sample, label_encoders):
     categorical_cols = {
     'workclass': 1 , 'education': 3, 'marital.status': 5, 
     'occupation': 6, 'relationship': 7, 'race': 8, 
-    'sex': 9, 'native.country': 13, 'income': 14
+    'sex': 9, 'native.country': 13 #, 'income': 14 # INCOME NOT USED
     }
 
     decoded_sample = list(sample[0])
