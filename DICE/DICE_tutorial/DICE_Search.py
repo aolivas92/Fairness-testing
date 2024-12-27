@@ -219,13 +219,15 @@ def m_instance_real_counterfactual(sample, sens_params, conf, label_encoders):
     pass
 
 def decode_sample(sample, label_encoders):
-    categorical_cols = [
-    1, 3, 5, 6, 7, 8, 9, 13, 14
-    ]
+    categorical_cols = {
+    'workclass': 1 , 'education': 3, 'marital.status': 5, 
+    'occupation': 6, 'relationship': 7, 'race': 8, 
+    'sex': 9, 'native.country': 13, 'income': 14
+    }
 
-    for col in categorical_cols:
+    for col, indx in categorical_cols:
         le = label_encoders[col]
-        sample[col] = le.inverse_transform(sample[col])
+        sample[indx] = le.inverse_transform(sample[indx])
 
     return sample
 
