@@ -197,13 +197,17 @@ census_mapping = {
     
 }
 
-def m_instance_real_counterfactual(sample, sens_params, conf):
-
+def m_instance_real_counterfactual(sample, sens_params, conf, label_encoders):
+    #TODO: Delete later, used for testing.
     print('\n\nSAMPLE:', sample, '\n\n')
-    
     print('\n\nSENS_PARAM:', sens_params, '\n\n')
-
     print('\n\nCONF:', conf, '\n\n')
+
+    # Convert the sample data back to categorical data.
+    decoded_sample = decode_sample(sample, label_encoders)
+
+    print(decoded_sample)
+    print(type(decoded_sample))
 
     # TODO:
     # Input: sample- that we need to get the counterfactual of, sens_params(protected) - sec, age, race
@@ -212,6 +216,19 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
 
     # Should return array of counterfactuals, for example return for different ages 
     pass
+
+def decode_sample(sample, label_encoders):
+    categorical_cols = [
+    'workclass', 'education', 'marital.status', 
+    'occupation', 'relationship', 'race', 
+    'sex', 'native.country', 'income'
+    ]
+
+    for col in categorical_cols:
+        le = label_encoders[col]
+        sample[col] = le.inverse_transform(sample[col])
+
+    return sample
 
 def global_sample_select(clus_dic, sens_params):
     leng = 0
@@ -292,6 +309,7 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
     data_config = {"census":census, "credit":credit, "bank":bank, "compas":compas, "default":default,
                   "heart":heart , "diabetes":diabetes,"students":students, "meps15":meps15, "meps16":meps16}
     # prepare the testing data and model
+    # TODO: Ask if it's an issue that the values in X are in scientific notation? Numpy switches to that by default.
     # TODO: Fix later, The label_encoders can be stored globally instead of this method.
     X, Y, input_shape, nb_classes, label_encoders = data[dataset]()
     tf.set_random_seed(1234)
@@ -395,7 +413,7 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
                 if time.time()-time1 > timeout :
                     break
                 # m_sample = m_instance( np.array(sample) , sens_params, data_config[dataset] )
-                m_sample = m_instance_real_counterfactual(np.array(sample), sens_params, data_config[dataset])
+                m_sample = m_instance_real_counterfactual(np.array(sample), sens_params, data_config[dataset], label_encoders)
                 # TODO:
                 # Run the initial test to see what m_instance receives so I can use it for the ML model
                 continue
