@@ -208,7 +208,11 @@ def m_instance_real_counterfactual(sample, sens_params, conf, label_encoders):
     decoded_sample = decode_sample(sample, label_encoders)
 
     print(decoded_sample)
-    print(type(decoded_sample))
+    print('\n\nDECODED SAMPLE:', decoded_sample, '\n\n')
+
+    formatted_data = census_data_formatter(decoded_sample, sens_params)
+
+    print('\n\nFORMATTED DATA:', formatted_data, '\n\n')
 
     # TODO:
     # Input: sample- that we need to get the counterfactual of, sens_params(protected) - sec, age, race
@@ -230,10 +234,57 @@ def decode_sample(sample, label_encoders):
     for col, indx in categorical_cols.items():
         encoded_value = int(sample[0][indx])
         decoded_value = label_encoders[col].inverse_transform([encoded_value])[0]
-        print("DECODED_VALUE:", decoded_value, "\n\n\n")
         decoded_sample[indx] = decoded_value
 
     return decoded_sample
+
+def census_data_formatter(sample, sens_params):
+    map = {
+        'Age': 0,
+        'Workclass': 1,
+        'fnlwgt': 2,
+        'Education': 3,
+        'Education.num': 4,
+        'Marital.status': 5,
+        'Occupation': 6,
+        'Relationship': 7,
+        'Race': 8,
+        'Sex': 9,
+        'Capital.gain': 10,
+        'Capital.loss': 11,
+        'Hours.per.week': 12,
+        'Native.country': 13
+    }
+
+    # Build a reverse mapping: index -> name
+    index_to_name = {v: k for k, v in map.items()}
+
+    # For each integer in sens_params, look up its string
+    cf_list = [index_to_name[val] for val in sens_params]
+
+    # Join into a single comma-separated string
+    counterfactuals = ",".join(cf_list)
+
+
+    formatted_data = {
+        'Age': int(sample[map['Age']]),
+        'Workclass': sample[map['Workclass']],
+        'fnlwgt': int(sample[map['fnlwgt']]),
+        'Education': sample[map['Education']],
+        'Education.num': int(sample[map['Education.num']]),
+        'Marital.status': sample[map['Marital.status']],
+        'Occupation': sample[map['Occupation']],
+        'Relationship': sample[map['Relationship']],
+        'Race': sample[map['Race']],
+        'Sex': sample[map['Sex']],
+        'Capital.gain': sample[map['Capital.gain']],
+        'Capital.loss': sample[map['Capital.loss']],
+        'Hours.per.week': sample[map['Hours.per.week']],
+        'Native.country': sample[map['Native.country']],
+        'Counterfactual.request': counterfactuals
+    }
+
+    return formatted_data
 
 def global_sample_select(clus_dic, sens_params):
     leng = 0
