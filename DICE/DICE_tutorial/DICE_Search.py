@@ -15,6 +15,7 @@ from scipy.stats import entropy
 import time
 
 from DICE_data.census import census_data
+from DICE_data.census import census_data2
 from DICE_data.credit import credit_data
 from DICE_data.compas import compas_data
 from DICE_data.default import default_data
@@ -192,6 +193,10 @@ def m_instance( sample, sens_params, conf):
         m_sample.append(temp)
     return np.array(m_sample)
 
+census_mapping = {
+    
+}
+
 def m_instance_real_counterfactual(sample, sens_params, conf):
 
     print('\n\nSAMPLE:', sample, '\n\n')
@@ -280,13 +285,18 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
     :param max_local: the maximum number of samples for local search
     :param max_iter: the maximum iteration of global perturbation
     """
-    data = {"census":census_data, "credit":credit_data, "bank":bank_data, "compas":compas_data, 
+    # TODO: Return the census_data to the original version.
+    data = {"census":census_data2, "credit":credit_data, "bank":bank_data, "compas":compas_data, 
             "default": default_data, "heart":heart_data, "diabetes":diabetes_data, 
             "students":students_data, "meps15":meps15_data, "meps16":meps16_data}
     data_config = {"census":census, "credit":credit, "bank":bank, "compas":compas, "default":default,
                   "heart":heart , "diabetes":diabetes,"students":students, "meps15":meps15, "meps16":meps16}
     # prepare the testing data and model
-    X, Y, input_shape, nb_classes = data[dataset]()
+    if data[dataset] == "census_data2":
+        # The label_encoders can be stored globally instead of this method.
+        X, Y, input_shape, nb_classes, label_encoders = data[dataset]()    
+    else:
+        X, Y, input_shape, nb_classes = data[dataset]()
     tf.set_random_seed(1234)
 
     config = tf.ConfigProto(device_count = {'GPU': 0})
