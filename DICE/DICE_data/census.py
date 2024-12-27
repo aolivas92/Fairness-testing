@@ -43,21 +43,21 @@ def census_data2():
     
     # List all the column names so you can define them.
     col_names = [
-    "age",
-    "workclass",
-    "fnlwgt",
-    "education",
-    "education.num",
-    "marital.status",
-    "occupation",
-    "relationship",
-    "race",
-    "sex",
-    "capital.gain",
-    "capital.loss",
-    "hours.per.week",
-    "native.country",
-    "income"
+    "age", # 0
+    "workclass", # 1 
+    "fnlwgt", # 2
+    "education", # 3
+    "education.num", # 4
+    "marital.status", # 5
+    "occupation", # 6
+    "relationship", # 7
+    "race", # 8 
+    "sex", # 9
+    "capital.gain", # 10
+    "capital.loss", # 11
+    "hours.per.week", # 12
+    "native.country", # 13
+    "income" # 14
     ]
 
     # Read the data and make a copy so you can leave one untouched.

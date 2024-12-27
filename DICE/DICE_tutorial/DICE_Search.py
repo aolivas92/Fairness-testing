@@ -13,6 +13,7 @@ from tensorflow.python.platform import flags
 from scipy.optimize import basinhopping
 from scipy.stats import entropy
 import time
+from sklearn.preprocessing import LabelEncoder
 
 from DICE_data.census import census_data
 from DICE_data.census import census_data2
@@ -219,9 +220,7 @@ def m_instance_real_counterfactual(sample, sens_params, conf, label_encoders):
 
 def decode_sample(sample, label_encoders):
     categorical_cols = [
-    'workclass', 'education', 'marital.status', 
-    'occupation', 'relationship', 'race', 
-    'sex', 'native.country', 'income'
+    1, 3, 5, 6, 7, 8, 9, 13, 14
     ]
 
     for col in categorical_cols:
