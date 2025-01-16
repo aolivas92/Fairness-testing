@@ -74,7 +74,7 @@ def bank_data2():
     # Get all the values that are possible for categorical columns
     categorical_unique_values = dict()
     for col in categorical_cols:
-        categorical_unique_values[col] = df[col].unique.tolist()
+        categorical_unique_values[col] = df[col].unique().tolist()
 
     # Transform the categorical data in numerical data.
     df_encoded = df.copy()
