@@ -279,6 +279,7 @@ def find_closest_regex_match(sample, choices, max_errors = 10):
             insertions, deletions, substitutions = match.fuzzy_counts
             total_errors = insertions + deletions + substitutions
             if total_errors == 0:
+                best_choice = choice
                 return best_choice
             elif total_errors < best_error_count:
                 best_error_count = total_errors
