@@ -17,6 +17,7 @@ from sklearn.preprocessing import LabelEncoder
 import ollama
 import json
 import anthropic
+import regex
 
 from DICE_data.census import census_data
 from DICE_data.census import census_data2
@@ -201,14 +202,14 @@ census_mapping = {
     
 }
 
-def m_instance_real_counterfactual(sample, sens_params, conf, label_encoders):
+def m_instance_real_counterfactual(sample, sens_params, conf, label_encoders, categorical_unique_values):
     #TODO: Delete later, used for testing.
     print('\n\nSAMPLE:', sample, '\n\n')
     print('\n\nSENS_PARAM:', sens_params, '\n\n')
     print('\n\nCONF:', conf, '\n\n')
 
     # Convert the sample data back to categorical data.
-    decoded_sample = decode_sample(sample, label_encoders)
+    decoded_sample = decode_sample(sample, label_encoders, categorical_unique_values)
 
     print(decoded_sample)
     print('\n\nDECODED SAMPLE:', decoded_sample, '\n\n')
@@ -223,7 +224,7 @@ def m_instance_real_counterfactual(sample, sens_params, conf, label_encoders):
 
     print('\n\nRESPONSE:', response, '\n\n')
 
-    encoded_sample = encode_sample(response, label_encoders)
+    encoded_sample = encode_sample(response, label_encoders, categorical_unique_values)
 
     print('\n\nENCODED SAMPLE:', encoded_sample, '\n\n')
 
@@ -237,12 +238,8 @@ def m_instance_real_counterfactual(sample, sens_params, conf, label_encoders):
     # Should return array of counterfactuals, for example return for different ages 
     pass
 
-def decode_sample(sample, label_encoders):
-    categorical_cols = {
-    'Workclass': 1 , 'Education': 3, 'Marital.status': 5, 
-    'Occupation': 6, 'Relationship': 7, 'Race': 8, 
-    'Sex': 9, 'Native.country': 13 #, 'income': 14 # INCOME NOT USED
-    }
+def decode_sample(sample, label_encoders, categorical_unique_values):
+    categorical_cols = categorical_unique_values.keys()
 
     decoded_sample = list(sample[0])
 
@@ -253,15 +250,40 @@ def decode_sample(sample, label_encoders):
 
     return decoded_sample
 
-def encode_sample(sample, label_encoders):
+def encode_sample(sample, label_encoders, categorical_unique_values):
+    # NOTE: Fails to encode a variable that it hasn't seen before.
     encode_sample = sample.copy()
 
     for col, encoder in label_encoders.items():
         cat_value = [encode_sample[col]]
-        encoded_value = encoder.transform(cat_value)[0]
+        closest_cat_value = find_closest_regex_match(cat_value, categorical_unique_values[col])
+        print('GENERATED CAT VALUE:', cat_value, 'CLOSEST_CAT_VALUE:', closest_cat_value)
+        encoded_value = encoder.transform(closest_cat_value)[0]
         encode_sample[col] = encoded_value
 
     return encode_sample
+
+def find_closest_regex_match(sample, choices, max_errors = 10):
+    # Fuzzy Patter Format: (patter){e<=max_errors}
+    fuzzy_pattern = f"({sample}){{e<={max_errors}}}"
+
+    # Compile the pattern
+    compiled_pattern = regex.compile(fuzzy_pattern)
+
+    best_choice = None
+    best_error_count = float("inf")
+
+    for choice in choices:
+        match = compiled_pattern.search(choice)
+        if match:
+            # fuzzy__counts -> (insertions, deletions, substitutions)
+            insertions, deletions, substitutions = match.fuzzy_counts
+            total_errors = insertions + deletions + substitutions
+            if total_errors < best_error_count:
+                best_error_count = total_errors
+                best_choice = choice
+
+    return best_choice
 
 def census_data_formatter(sample, sens_params):
     map = {
@@ -463,7 +485,7 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
     # prepare the testing data and model
     # TODO: Ask if it's an issue that the values in X are in scientific notation? Numpy switches to that by default.
     # TODO: Fix later, The label_encoders can be stored globally instead of this method.
-    X, Y, input_shape, nb_classes, label_encoders = data[dataset]()
+    X, Y, input_shape, nb_classes, label_encoders, categorical_unique_values = data[dataset]()
     tf.set_random_seed(1234)
 
     config = tf.ConfigProto(device_count = {'GPU': 0})
@@ -565,7 +587,7 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
                 if time.time()-time1 > timeout :
                     break
                 # m_sample = m_instance( np.array(sample) , sens_params, data_config[dataset] )
-                m_sample = m_instance_real_counterfactual(np.array(sample), sens_params, data_config[dataset], label_encoders)
+                m_sample = m_instance_real_counterfactual(np.array(sample), sens_params, data_config[dataset], label_encoders, categorical_unique_values)
                 # TODO:
                 # Run the initial test to see what m_instance receives so I can use it for the ML model
                 continue

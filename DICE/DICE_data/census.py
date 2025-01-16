@@ -106,7 +106,12 @@ def census_data2():
     input_shape = (None, X.shape[1])
     nb_classes = 2
 
-    return X, Y, input_shape, nb_classes, label_encoders
+    # Get all the values that are possible so we can encode the generated result.
+    categorical_unique_values = dict()
+    for col in categorical_cols:
+        categorical_unique_values[col] = df[col].unique().tolist()
+
+    return X, Y, input_shape, nb_classes, label_encoders, categorical_unique_values
 
     # # TODO: Delete this, it's only for testing.
     # print(df_encoded.iloc[60])
@@ -114,6 +119,10 @@ def census_data2():
     # for col in categorical_cols:
     #     le = label_encoders[col]
     #     df_encoded[col] = le.inverse_transform(df_encoded[col])
+
+    # print(categorical_unique_values)
+
+    # find_closest_regex_match("private-sector", categorical_unique_values['Workclass'], 10)
 
     # print(df_encoded.iloc[60])
     # print(df.iloc[60])
