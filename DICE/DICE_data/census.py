@@ -73,7 +73,7 @@ def census_data2():
     categorical_cols = [
     'Workclass', 'Education', 'Marital.status', 
     'Occupation', 'Relationship', 'Race', 
-    'Sex', 'Native.country', 'Income'
+    'Sex', 'Native.country'
     ]
 
     # Transform the categorical data into numerical data.
