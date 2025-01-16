@@ -287,9 +287,8 @@ def find_closest_regex_match(sample, choices, max_errors = 10):
 
     return best_choice
 
-# TODO: make this more dynamic    
 def census_data_formatter(sample, sens_params, col_names):
-    map = {value: index for index, value in enumerate(col_names[:-1])}
+    map = {value: index for index, value in enumerate(col_names)}
 
     # Build a reverse mapping: index -> name
     index_to_name = {v: k for k, v in map.items()}
@@ -360,10 +359,9 @@ def claude3_generator(system_message, user_message):
 
     return converted_response
 
-# TODO: Make this more dynamic     
 def check_response(converted_response, col_names, dictionary=True):
     valid = True
-    columns = set(col_names[:-1])
+    columns = set(col_names)
     
     # Verify the response has every attribute above
     for column in columns:

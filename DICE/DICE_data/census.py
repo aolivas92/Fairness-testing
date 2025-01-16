@@ -111,7 +111,7 @@ def census_data2():
     for col in categorical_cols:
         categorical_unique_values[col] = df[col].unique().tolist()
 
-    return X, Y, input_shape, nb_classes, label_encoders, categorical_unique_values, col_names
+    return X, Y, input_shape, nb_classes, label_encoders, categorical_unique_values, col_names[:-1]
 
     # # TODO: Delete this, it's only for testing.
     # print(df_encoded.iloc[60])
@@ -124,5 +124,11 @@ def census_data2():
 
     # find_closest_regex_match("private-sector", categorical_unique_values['Workclass'], 10)
 
+    # my_dict = {value: index for index, value in enumerate(col_names[:-1])}
+    # print(my_dict)
+
     # print(df_encoded.iloc[60])
     # print(df.iloc[60])
+
+
+# census_data2()
