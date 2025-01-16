@@ -214,13 +214,13 @@ def m_instance_real_counterfactual(sample, sens_params, conf, label_encoders, ca
     print(decoded_sample)
     print('\n\nDECODED SAMPLE:', decoded_sample, '\n\n')
 
-    formatted_data = census_data_formatter(decoded_sample, sens_params)
+    formatted_data = census_data_formatter(decoded_sample, sens_params, col_names)
     formatted_data = str(formatted_data)
 
     print('\n\nFORMATTED DATA:', formatted_data, '\n\n')
 
     system_message = "You are a counterfactual estimator trained to generate hypothetical scenarios based on census-style data attributes, assisting users in exploring alternative realities. Your task is to adjust one or more specified attributes in the user-provided input data to create a realistic counterfactual estimate while maintaining logical and statistical consistency. When altering the specified attributes, you should also adjust other related attributes to reflect realistic statistical patterns observed in the population. For example, when generating the counterfactual, not only adjust the specified attribute(s) but also modify other related attributes to create a realistic scenario based on demographic and occupational statistics. For instance, if the 'Sex' attribute changes from 'Male' to 'Female', consider that females may statistically work fewer hours per week, have different income levels, and occupy different occupations. Adjust 'Occupation' to reflect jobs more commonly held by females, 'Hours per Week' to represent average working hours for females, 'Income' to align with average earnings for females in similar roles, and other relevant attributes accordingly to maintain realism. Each user input contains a JSON dictionary with detailed demographic, socioeconomic, and occupational attributes of a real-world individual. Ensure logical and statistical consistency across all attributes when adjusting them (e.g., education level should align with age and occupation, sex should align with relationship, and consider interdependencies between features). Use knowledge of typical demographic patterns to adjust related attributes, creating a plausible and realistic counterfactual individual. Return a JSON dictionary formatted exactly like the input, with only the specified and related attributes altered to reflect realistic statistical adjustments. Do not add explanations, comments, or any additional information beyond the altered JSON data. The data attributes include: Age (continuous numerical value, if the user is younger than 40 then change the counterfactual age will be 50 and if the user is older than 40 than the counterfactual age will be 25), Workclass (employment category such as 'Private', 'Federal-gov', 'Self-employed', or 'Without-pay'), fnlwgt (Census Bureau-assigned weight indicating demographic characteristics), Education (highest education level completed, e.g., 'HS-grad', 'Bachelor's', 'Doctorate'), Education.num (numerical representation of education level, e.g., 'HS-grad=9', 'Bachelor's=13'), Marital Status (e.g., 'Married', 'Divorced', 'Separated'), Occupation (e.g., 'Tech-support', 'Sales', 'Exec-managerial', 'Craft-repair'), Relationship (e.g., 'Husband', 'Wife', 'Own-child', 'Unmarried'), Race (e.g., 'White', 'Black', 'Asian-Pac-Islander'), Sex ('Male' or 'Female'), Capital Gain (continuous numerical value for gains from investments), Capital Loss (continuous numerical value for losses from investments), Hours per Week (average weekly work hours), Native Country (e.g., 'United States', 'Germany', 'Japan'), and Income (income category, either '<=50K' or '>50K'); attributes must align logically (e.g., a 'Doctorate' education level implies a higher age range and professional occupation, and a 'Part-time' work schedule should reflect lower 'Hours per Week'). Respond only with the adjusted data in JSON format, formatted exactly as follows with double quotes: {\"Age\": ..., \"Workclass\": ..., \"fnlwgt\": ..., \"Education\": ..., \"Education.num\": ..., \"Marital.status\": ..., \"Occupation\": ..., \"Relationship\": ..., \"Race\": ..., \"Sex\": ..., \"Capital.gain\": ..., \"Capital.loss\": ..., \"Hours.per.week\": ..., \"Native.country\": ..., \"Counterfactual.request\": ...}. Focus on delivering concise, realistic outputs that align with the user's request and reflect statistical realities."
-    response = llama31_8b_generator(system_message, user_message=formatted_data)
+    response = llama31_8b_generator(system_message, user_message=formatted_data, col_names)
 
     print('\n\nRESPONSE:', response, '\n\n')
 
@@ -287,24 +287,9 @@ def find_closest_regex_match(sample, choices, max_errors = 10):
 
     return best_choice
 
-# TODO: make this more dynamic
-def census_data_formatter(sample, sens_params):
-    map = {
-        'Age': 0,
-        'Workclass': 1,
-        'fnlwgt': 2,
-        'Education': 3,
-        'Education.num': 4,
-        'Marital.status': 5,
-        'Occupation': 6,
-        'Relationship': 7,
-        'Race': 8,
-        'Sex': 9,
-        'Capital.gain': 10,
-        'Capital.loss': 11,
-        'Hours.per.week': 12,
-        'Native.country': 13
-    }
+# TODO: make this more dynamic    
+def census_data_formatter(sample, sens_params, col_names):
+    map = {value: index for index, value in enumerate(col_names[:-1])}
 
     # Build a reverse mapping: index -> name
     index_to_name = {v: k for k, v in map.items()}
@@ -315,6 +300,11 @@ def census_data_formatter(sample, sens_params):
     # Join into a single comma-separated string
     counterfactuals = ",".join(cf_list)
 
+    formatted_data = dict()
+    for category, indx in map.items():
+        formatted_data[category] = int(sample[indx])
+    
+    print('NEW FORMATTED DATA:', formatted_data)
 
     formatted_data = {
         'Age': int(sample[map['Age']]),
@@ -336,7 +326,7 @@ def census_data_formatter(sample, sens_params):
 
     return formatted_data
 
-def llama31_8b_generator(system_message, user_message):
+def llama31_8b_generator(system_message, user_message, col_names):
     retries = 0
     valid_response = False
 
@@ -348,7 +338,7 @@ def llama31_8b_generator(system_message, user_message):
     while not valid_response:
         response = ollama.chat(model='llama3.1:8b', messages=message, format='json')
         converted_response = json.loads(response['message']['content'])
-        valid_response = check_response(converted_response)
+        valid_response = check_response(converted_response, col_names)
 
         retries += 1
 
@@ -387,24 +377,23 @@ def claude3_generator(system_message, user_message):
 
     return converted_response
 
-# TODO: Make this more dynamic
-def check_response(converted_response, dictionary=True):
+# TODO: Make this more dynamic     
+def check_response(converted_response, col_names, dictionary=True):
     valid = True
-    attributes = {'Age', 'Workclass', 'fnlwgt', 'Education', 'Education.num', 'Marital.status',
-     'Occupation', 'Relationship', 'Race', 'Sex', 'Capital.gain', 'Capital.loss',
-     'Hours.per.week', 'Native.country'}
+    columns = set(col_names)
+    print('COLUMNS:', columns)
     
     # Verify the response has every attribute above
-    for attribute in attributes:
-        if dictionary and attribute not in converted_response.keys():
+    for column in columns:
+        if dictionary and column not in converted_response.keys():
             valid = False
             break
-        if not dictionary and attribute not in converted_response:
+        if not dictionary and column not in converted_response:
             valid = False
             break
     
     if not valid:
-        print('RESPONSE FAILED VERIFICATION WITH:', attribute)
+        print('RESPONSE FAILED VERIFICATION WITH:', column)
         return False
     return True
 
