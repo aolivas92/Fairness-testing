@@ -306,26 +306,6 @@ def census_data_formatter(sample, sens_params, col_names):
             formatted_data[category] = int(sample[indx])
         except Exception:
             formatted_data[category] = sample[indx]
-    
-    print('NEW FORMATTED DATA:', formatted_data)
-
-    formatted_data = {
-        'Age': int(sample[map['Age']]),
-        'Workclass': sample[map['Workclass']],
-        'fnlwgt': int(sample[map['fnlwgt']]),
-        'Education': sample[map['Education']],
-        'Education.num': int(sample[map['Education.num']]),
-        'Marital.status': sample[map['Marital.status']],
-        'Occupation': sample[map['Occupation']],
-        'Relationship': sample[map['Relationship']],
-        'Race': sample[map['Race']],
-        'Sex': sample[map['Sex']],
-        'Capital.gain': sample[map['Capital.gain']],
-        'Capital.loss': sample[map['Capital.loss']],
-        'Hours.per.week': sample[map['Hours.per.week']],
-        'Native.country': sample[map['Native.country']],
-        'Counterfactual.request': counterfactuals
-    }
 
     return formatted_data
 
@@ -384,7 +364,6 @@ def claude3_generator(system_message, user_message):
 def check_response(converted_response, col_names, dictionary=True):
     valid = True
     columns = set(col_names[:-1])
-    print('COLUMNS:', columns)
     
     # Verify the response has every attribute above
     for column in columns:
