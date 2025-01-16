@@ -209,7 +209,7 @@ def m_instance_real_counterfactual(sample, sens_params, conf, label_encoders, ca
     print('\n\nCONF:', conf, '\n\n')
 
     # Convert the sample data back to categorical data.
-    decoded_sample = decode_sample(sample, label_encoders, categorical_unique_values)
+    decoded_sample = decode_sample(sample, label_encoders, categorical_unique_values, col_names)
 
     print(decoded_sample)
     print('\n\nDECODED SAMPLE:', decoded_sample, '\n\n')
