@@ -254,8 +254,8 @@ def encode_sample(sample, label_encoders, categorical_unique_values):
     encode_sample = sample.copy()
 
     for col, encoder in label_encoders.items():
-        cat_value = [encode_sample[col]]
-        closest_cat_value = find_closest_regex_match(cat_value, categorical_unique_values[col])
+        cat_value = encode_sample[col]
+        closest_cat_value = [find_closest_regex_match(cat_value, categorical_unique_values[col])]
         print('GENERATED CAT VALUE:', cat_value, 'CLOSEST_CAT_VALUE:', closest_cat_value)
         encoded_value = encoder.transform(closest_cat_value)[0]
         encode_sample[col] = encoded_value
