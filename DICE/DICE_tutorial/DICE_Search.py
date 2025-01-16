@@ -239,11 +239,11 @@ def m_instance_real_counterfactual(sample, sens_params, conf, label_encoders, ca
     pass
 
 def decode_sample(sample, label_encoders, categorical_unique_values):
-    categorical_cols = categorical_unique_values.keys()
+    categorical_cols = list(categorical_unique_values.keys())
 
     decoded_sample = list(sample[0])
 
-    for col, indx in categorical_cols.items():
+    for indx, col in enumerate(categorical_cols):
         encoded_value = int(sample[0][indx])
         decoded_value = label_encoders[col].inverse_transform([encoded_value])[0]
         decoded_sample[indx] = decoded_value
