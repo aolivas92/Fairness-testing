@@ -25,6 +25,7 @@ from DICE_data.credit import credit_data
 from DICE_data.compas import compas_data
 from DICE_data.default import default_data
 from DICE_data.bank import bank_data
+from DICE_data.bank import bank_data2
 from DICE_data.heart import heart_data
 from DICE_data.diabetes import diabetes_data
 from DICE_data.students import students_data
@@ -450,7 +451,7 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
     :param max_iter: the maximum iteration of global perturbation
     """
     # TODO: Return the census_data to the original version.
-    data = {"census":census_data2, "credit":credit_data, "bank":bank_data, "compas":compas_data, 
+    data = {"census":census_data2, "credit":credit_data, "bank":bank_data2, "compas":compas_data, 
             "default": default_data, "heart":heart_data, "diabetes":diabetes_data, 
             "students":students_data, "meps15":meps15_data, "meps16":meps16_data}
     data_config = {"census":census, "credit":credit, "bank":bank, "compas":compas, "default":default,
