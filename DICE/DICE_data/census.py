@@ -111,7 +111,7 @@ def census_data2():
     for col in categorical_cols:
         categorical_unique_values[col] = df[col].unique().tolist()
 
-    return X, Y, input_shape, nb_classes, label_encoders, categorical_unique_values
+    return X, Y, input_shape, nb_classes, label_encoders, categorical_unique_values, col_names
 
     # # TODO: Delete this, it's only for testing.
     # print(df_encoded.iloc[60])

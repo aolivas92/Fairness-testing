@@ -202,7 +202,7 @@ census_mapping = {
     
 }
 
-def m_instance_real_counterfactual(sample, sens_params, conf, label_encoders, categorical_unique_values):
+def m_instance_real_counterfactual(sample, sens_params, conf, label_encoders, categorical_unique_values, col_names):
     #TODO: Delete later, used for testing.
     print('\n\nSAMPLE:', sample, '\n\n')
     print('\n\nSENS_PARAM:', sens_params, '\n\n')
@@ -238,15 +238,14 @@ def m_instance_real_counterfactual(sample, sens_params, conf, label_encoders, ca
     # Should return array of counterfactuals, for example return for different ages 
     pass
 
-def decode_sample(sample, label_encoders, categorical_unique_values):
-    categorical_cols = list(categorical_unique_values.keys())
-
+def decode_sample(sample, label_encoders, categorical_unique_values, col_names):
     decoded_sample = list(sample[0])
 
-    for indx, col in enumerate(categorical_cols):
-        encoded_value = int(sample[0][indx])
-        decoded_value = label_encoders[col].inverse_transform([encoded_value])[0]
-        decoded_sample[indx] = decoded_value
+    for indx, col in enumerate(col_names):
+        if col in categorical_unique_values.keys():
+            encoded_value = int(sample[0][indx])
+            decoded_value = label_encoders[col].inverse_transform([encoded_value])[0]
+            decoded_sample[indx] = decoded_value
 
     return decoded_sample
 
@@ -285,6 +284,7 @@ def find_closest_regex_match(sample, choices, max_errors = 10):
 
     return best_choice
 
+# TODO: make this more dynamic
 def census_data_formatter(sample, sens_params):
     map = {
         'Age': 0,
@@ -384,6 +384,7 @@ def claude3_generator(system_message, user_message):
 
     return converted_response
 
+# TODO: Make this more dynamic
 def check_response(converted_response, dictionary=True):
     valid = True
     attributes = {'Age', 'Workclass', 'fnlwgt', 'Education', 'Education.num', 'Marital.status',
@@ -485,7 +486,7 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
     # prepare the testing data and model
     # TODO: Ask if it's an issue that the values in X are in scientific notation? Numpy switches to that by default.
     # TODO: Fix later, The label_encoders can be stored globally instead of this method.
-    X, Y, input_shape, nb_classes, label_encoders, categorical_unique_values = data[dataset]()
+    X, Y, input_shape, nb_classes, label_encoders, categorical_unique_values, col_names = data[dataset]()
     tf.set_random_seed(1234)
 
     config = tf.ConfigProto(device_count = {'GPU': 0})
@@ -587,7 +588,7 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
                 if time.time()-time1 > timeout :
                     break
                 # m_sample = m_instance( np.array(sample) , sens_params, data_config[dataset] )
-                m_sample = m_instance_real_counterfactual(np.array(sample), sens_params, data_config[dataset], label_encoders, categorical_unique_values)
+                m_sample = m_instance_real_counterfactual(np.array(sample), sens_params, data_config[dataset], label_encoders, categorical_unique_values, col_names)
                 # TODO:
                 # Run the initial test to see what m_instance receives so I can use it for the ML model
                 continue
