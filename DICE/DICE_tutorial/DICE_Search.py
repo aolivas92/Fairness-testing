@@ -302,7 +302,10 @@ def census_data_formatter(sample, sens_params, col_names):
 
     formatted_data = dict()
     for category, indx in map.items():
-        formatted_data[category] = int(sample[indx])
+        try:
+            formatted_data[category] = int(sample[indx])
+        except Exception:
+            formatted_data[category] = sample[indx]
     
     print('NEW FORMATTED DATA:', formatted_data)
 
@@ -380,7 +383,7 @@ def claude3_generator(system_message, user_message):
 # TODO: Make this more dynamic     
 def check_response(converted_response, col_names, dictionary=True):
     valid = True
-    columns = set(col_names)
+    columns = set(col_names[:-1])
     print('COLUMNS:', columns)
     
     # Verify the response has every attribute above
