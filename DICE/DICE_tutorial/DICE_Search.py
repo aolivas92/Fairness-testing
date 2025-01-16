@@ -256,7 +256,7 @@ def encode_sample(sample, label_encoders, categorical_unique_values):
     for col, encoder in label_encoders.items():
         cat_value = encode_sample[col]
         closest_cat_value = [find_closest_regex_match(cat_value, categorical_unique_values[col])]
-        print('GENERATED CAT VALUE:', cat_value, 'CLOSEST_CAT_VALUE:', closest_cat_value)
+        print('GENERATED CAT VALUE:', cat_value, '\t\tCLOSEST_CAT_VALUE:', closest_cat_value)
         encoded_value = encoder.transform(closest_cat_value)[0]
         encode_sample[col] = encoded_value
 
@@ -278,7 +278,9 @@ def find_closest_regex_match(sample, choices, max_errors = 10):
             # fuzzy__counts -> (insertions, deletions, substitutions)
             insertions, deletions, substitutions = match.fuzzy_counts
             total_errors = insertions + deletions + substitutions
-            if total_errors < best_error_count:
+            if total_errors == 0:
+                return best_choice
+            elif total_errors < best_error_count:
                 best_error_count = total_errors
                 best_choice = choice
 
