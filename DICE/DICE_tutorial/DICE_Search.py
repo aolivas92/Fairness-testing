@@ -220,7 +220,7 @@ def m_instance_real_counterfactual(sample, sens_params, conf, system_message, la
     response = llama31_8b_generator(system_message, user_message=formatted_data, col_names=col_names)
     print('\n\nRESPONSE:', response, '\n\n')
 
-    encoded_sample = encode_sample(response, label_encoders, categorical_unique_values)
+    encoded_sample = json.dump(encode_sample(response, label_encoders, categorical_unique_values))
     print('\n\nENCODED SAMPLE:', encoded_sample, '\n\n')
 
     print(type(encode_sample))
