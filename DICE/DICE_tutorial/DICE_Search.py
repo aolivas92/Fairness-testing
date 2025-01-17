@@ -219,11 +219,9 @@ def m_instance_real_counterfactual(sample, sens_params, conf, system_message, la
 
     response = llama31_8b_generator(system_message, user_message=formatted_data, col_names=col_names)
     print('\n\nRESPONSE:', response, '\n\n')
-    print(type(response))
 
     encoded_sample = encode_sample(response, label_encoders, categorical_unique_values)
     print('\n\nENCODED SAMPLE:', encoded_sample, '\n\n')
-    print(type(encoded_sample))
 
     m_sample = [[list(encoded_sample.values())]]
     print('\n\nM SAMPLE:', m_sample, '\n\n')
@@ -561,7 +559,7 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
                 # m_sample = m_instance( np.array(sample) , sens_params, data_config[dataset] )
                 m_sample = m_instance_real_counterfactual(np.array(sample), sens_params, data_config[dataset], system_message, label_encoders, categorical_unique_values, col_names)
                 # TODO: Remove below, it was used for testing.
-                continue
+                # continue
                 pred = pred_prob( sess, x, preds, m_sample , input_shape )
                 clus_dic = clustering( pred, m_sample, sens_params, epsillon )
 
