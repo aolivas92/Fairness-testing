@@ -203,7 +203,7 @@ census_mapping = {
     
 }
 
-def m_instance_real_counterfactual(sample, sens_params, conf, label_encoders, categorical_unique_values, col_names):
+def m_instance_real_counterfactual(sample, sens_params, conf, system_message, label_encoders, categorical_unique_values, col_names):
     #TODO: Delete later, used for testing.
     print('\n\nSAMPLE:', sample, '\n\n')
     print('\n\nSENS_PARAM:', sens_params, '\n\n')
@@ -220,7 +220,6 @@ def m_instance_real_counterfactual(sample, sens_params, conf, label_encoders, ca
 
     print('\n\nFORMATTED DATA:', formatted_data, '\n\n')
 
-    system_message = "You are a counterfactual estimator trained to generate hypothetical scenarios based on census-style data attributes, assisting users in exploring alternative realities. Your task is to adjust one or more specified attributes in the user-provided input data to create a realistic counterfactual estimate while maintaining logical and statistical consistency. When altering the specified attributes, you should also adjust other related attributes to reflect realistic statistical patterns observed in the population. For example, when generating the counterfactual, not only adjust the specified attribute(s) but also modify other related attributes to create a realistic scenario based on demographic and occupational statistics. For instance, if the 'Sex' attribute changes from 'Male' to 'Female', consider that females may statistically work fewer hours per week, have different income levels, and occupy different occupations. Adjust 'Occupation' to reflect jobs more commonly held by females, 'Hours per Week' to represent average working hours for females, 'Income' to align with average earnings for females in similar roles, and other relevant attributes accordingly to maintain realism. Each user input contains a JSON dictionary with detailed demographic, socioeconomic, and occupational attributes of a real-world individual. Ensure logical and statistical consistency across all attributes when adjusting them (e.g., education level should align with age and occupation, sex should align with relationship, and consider interdependencies between features). Use knowledge of typical demographic patterns to adjust related attributes, creating a plausible and realistic counterfactual individual. Return a JSON dictionary formatted exactly like the input, with only the specified and related attributes altered to reflect realistic statistical adjustments. Do not add explanations, comments, or any additional information beyond the altered JSON data. The data attributes include: Age (continuous numerical value, if the user is younger than 40 then change the counterfactual age will be 50 and if the user is older than 40 than the counterfactual age will be 25), Workclass (employment category such as 'Private', 'Federal-gov', 'Self-employed', or 'Without-pay'), fnlwgt (Census Bureau-assigned weight indicating demographic characteristics), Education (highest education level completed, e.g., 'HS-grad', 'Bachelor's', 'Doctorate'), Education.num (numerical representation of education level, e.g., 'HS-grad=9', 'Bachelor's=13'), Marital Status (e.g., 'Married', 'Divorced', 'Separated'), Occupation (e.g., 'Tech-support', 'Sales', 'Exec-managerial', 'Craft-repair'), Relationship (e.g., 'Husband', 'Wife', 'Own-child', 'Unmarried'), Race (e.g., 'White', 'Black', 'Asian-Pac-Islander'), Sex ('Male' or 'Female'), Capital Gain (continuous numerical value for gains from investments), Capital Loss (continuous numerical value for losses from investments), Hours per Week (average weekly work hours), Native Country (e.g., 'United States', 'Germany', 'Japan'), and Income (income category, either '<=50K' or '>50K'); attributes must align logically (e.g., a 'Doctorate' education level implies a higher age range and professional occupation, and a 'Part-time' work schedule should reflect lower 'Hours per Week'). Respond only with the adjusted data in JSON format, formatted exactly as follows with double quotes: {\"Age\": ..., \"Workclass\": ..., \"fnlwgt\": ..., \"Education\": ..., \"Education.num\": ..., \"Marital.status\": ..., \"Occupation\": ..., \"Relationship\": ..., \"Race\": ..., \"Sex\": ..., \"Capital.gain\": ..., \"Capital.loss\": ..., \"Hours.per.week\": ..., \"Native.country\": ..., \"Counterfactual.request\": ...}. Focus on delivering concise, realistic outputs that align with the user's request and reflect statistical realities."
     response = llama31_8b_generator(system_message, user_message=formatted_data, col_names=col_names)
 
     print('\n\nRESPONSE:', response, '\n\n')
@@ -459,7 +458,7 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
     # prepare the testing data and model
     # TODO: Ask if it's an issue that the values in X are in scientific notation? Numpy switches to that by default.
     # TODO: Fix later, The label_encoders can be stored globally instead of this method.
-    X, Y, input_shape, nb_classes, label_encoders, categorical_unique_values, col_names = data[dataset]()
+    X, Y, input_shape, nb_classes, system_message, label_encoders, categorical_unique_values, col_names = data[dataset]()
     tf.set_random_seed(1234)
 
     config = tf.ConfigProto(device_count = {'GPU': 0})
@@ -561,7 +560,7 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
                 if time.time()-time1 > timeout :
                     break
                 # m_sample = m_instance( np.array(sample) , sens_params, data_config[dataset] )
-                m_sample = m_instance_real_counterfactual(np.array(sample), sens_params, data_config[dataset], label_encoders, categorical_unique_values, col_names)
+                m_sample = m_instance_real_counterfactual(np.array(sample), sens_params, data_config[dataset], system_message, label_encoders, categorical_unique_values, col_names)
                 # TODO:
                 # Run the initial test to see what m_instance receives so I can use it for the ML model
                 continue
