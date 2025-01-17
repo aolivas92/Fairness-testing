@@ -223,9 +223,9 @@ def m_instance_real_counterfactual(sample, sens_params, conf, system_message, la
 
     encoded_sample = encode_sample(response, label_encoders, categorical_unique_values)
     print('\n\nENCODED SAMPLE:', encoded_sample, '\n\n')
-    print(type(encode_sample))
+    print(type(encoded_sample))
 
-    m_sample = [[list(encode_sample.values())]]
+    m_sample = [[list(encoded_sample.values())]]
     print('\n\nM SAMPLE:', m_sample, '\n\n')
 
     return m_sample
