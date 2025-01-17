@@ -211,23 +211,22 @@ def m_instance_real_counterfactual(sample, sens_params, conf, system_message, la
 
     # Convert the sample data back to categorical data.
     decoded_sample = decode_sample(sample, label_encoders, categorical_unique_values, col_names)
-
     print('\n\nDECODED SAMPLE:', decoded_sample, '\n\n')
 
     formatted_data = data_formatter(decoded_sample, sens_params, col_names)
     formatted_data = str(formatted_data)
-
     print('\n\nFORMATTED DATA:', formatted_data, '\n\n')
 
     response = llama31_8b_generator(system_message, user_message=formatted_data, col_names=col_names)
-
     print('\n\nRESPONSE:', response, '\n\n')
 
     encoded_sample = encode_sample(response, label_encoders, categorical_unique_values)
-
     print('\n\nENCODED SAMPLE:', encoded_sample, '\n\n')
 
-    return encoded_sample
+    m_sample = [[list(encode_sample.values())]]
+    print('\n\nM SAMPLE:', m_sample, '\n\n')
+
+    return m_sample
 
     # TODO:
     # Input: sample- that we need to get the counterfactual of, sens_params(protected) - sec, age, race
@@ -557,10 +556,9 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
                 if time.time()-time1 > timeout :
                     break
                 m_sample = m_instance( np.array(sample) , sens_params, data_config[dataset] )
-                print(m_sample)
-                # m_sample = m_instance_real_counterfactual(np.array(sample), sens_params, data_config[dataset], system_message, label_encoders, categorical_unique_values, col_names)
+                m_sample = m_instance_real_counterfactual(np.array(sample), sens_params, data_config[dataset], system_message, label_encoders, categorical_unique_values, col_names)
                 # TODO: Remove below, it was used for testing.
-                continue
+                # continue
                 pred = pred_prob( sess, x, preds, m_sample , input_shape )
                 clus_dic = clustering( pred, m_sample, sens_params, epsillon )
 
