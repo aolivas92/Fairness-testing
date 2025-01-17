@@ -118,7 +118,4 @@ def bank_data2():
     input_shape = (None, X.shape[1])
     nb_classes = 2
 
-    # return X, Y, input_shape, nb_classes, system_message, label_encoders, categorical_unique_values, col_names[:-1]
-    print(col_names)
-
-bank_data2()
+    return X, Y, input_shape, nb_classes, system_message, label_encoders, categorical_unique_values, col_names[:-1]
