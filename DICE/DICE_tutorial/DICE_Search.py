@@ -212,7 +212,6 @@ def m_instance_real_counterfactual(sample, sens_params, conf, system_message, la
     # Convert the sample data back to categorical data.
     decoded_sample = decode_sample(sample, label_encoders, categorical_unique_values, col_names)
 
-    print(decoded_sample)
     print('\n\nDECODED SAMPLE:', decoded_sample, '\n\n')
 
     formatted_data = census_data_formatter(decoded_sample, sens_params, col_names)
@@ -456,8 +455,6 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
     data_config = {"census":census, "credit":credit, "bank":bank, "compas":compas, "default":default,
                   "heart":heart , "diabetes":diabetes,"students":students, "meps15":meps15, "meps16":meps16}
     # prepare the testing data and model
-    # TODO: Ask if it's an issue that the values in X are in scientific notation? Numpy switches to that by default.
-    # TODO: Fix later, The label_encoders can be stored globally instead of this method.
     X, Y, input_shape, nb_classes, system_message, label_encoders, categorical_unique_values, col_names = data[dataset]()
     tf.set_random_seed(1234)
 
@@ -561,9 +558,8 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
                     break
                 # m_sample = m_instance( np.array(sample) , sens_params, data_config[dataset] )
                 m_sample = m_instance_real_counterfactual(np.array(sample), sens_params, data_config[dataset], system_message, label_encoders, categorical_unique_values, col_names)
-                # TODO:
-                # Run the initial test to see what m_instance receives so I can use it for the ML model
-                continue
+                # TODO: Remove below, it was used for testing.
+                # continue
                 pred = pred_prob( sess, x, preds, m_sample , input_shape )
                 clus_dic = clustering( pred, m_sample, sens_params, epsillon )
 
