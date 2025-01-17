@@ -556,10 +556,11 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
             for iter in range( max_iter + 1 ):            
                 if time.time()-time1 > timeout :
                     break
-                # m_sample = m_instance( np.array(sample) , sens_params, data_config[dataset] )
-                m_sample = m_instance_real_counterfactual(np.array(sample), sens_params, data_config[dataset], system_message, label_encoders, categorical_unique_values, col_names)
+                m_sample = m_instance( np.array(sample) , sens_params, data_config[dataset] )
+                print(m_sample)
+                # m_sample = m_instance_real_counterfactual(np.array(sample), sens_params, data_config[dataset], system_message, label_encoders, categorical_unique_values, col_names)
                 # TODO: Remove below, it was used for testing.
-                # continue
+                continue
                 pred = pred_prob( sess, x, preds, m_sample , input_shape )
                 clus_dic = clustering( pred, m_sample, sens_params, epsillon )
 
