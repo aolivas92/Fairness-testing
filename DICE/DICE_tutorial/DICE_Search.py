@@ -214,7 +214,7 @@ def m_instance_real_counterfactual(sample, sens_params, conf, system_message, la
 
     print('\n\nDECODED SAMPLE:', decoded_sample, '\n\n')
 
-    formatted_data = census_data_formatter(decoded_sample, sens_params, col_names)
+    formatted_data = data_formatter(decoded_sample, sens_params, col_names)
     formatted_data = str(formatted_data)
 
     print('\n\nFORMATTED DATA:', formatted_data, '\n\n')
@@ -227,7 +227,7 @@ def m_instance_real_counterfactual(sample, sens_params, conf, system_message, la
 
     print('\n\nENCODED SAMPLE:', encoded_sample, '\n\n')
 
-    # return encoded_sample
+    return encoded_sample
 
     # TODO:
     # Input: sample- that we need to get the counterfactual of, sens_params(protected) - sec, age, race
@@ -286,7 +286,7 @@ def find_closest_regex_match(sample, choices, max_errors = 10):
 
     return best_choice
 
-def census_data_formatter(sample, sens_params, col_names):
+def data_formatter(sample, sens_params, col_names):
     map = {value: index for index, value in enumerate(col_names)}
 
     # Build a reverse mapping: index -> name
