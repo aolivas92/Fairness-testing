@@ -456,6 +456,7 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
                   "heart":heart , "diabetes":diabetes,"students":students, "meps15":meps15, "meps16":meps16}
     # prepare the testing data and model
     X, Y, input_shape, nb_classes, system_message, label_encoders, categorical_unique_values, col_names = data[dataset]()
+    #X, Y, input_shape = data[dataset]()
     tf.set_random_seed(1234)
 
     config = tf.ConfigProto(device_count = {'GPU': 0})
