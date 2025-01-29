@@ -217,13 +217,15 @@ def m_instance_real_counterfactual(sample, sens_params, conf, system_message, la
     formatted_data = str(formatted_data)
     print('\n\nFORMATTED DATA:', formatted_data, '\n\n')
 
-    response = llama31_8b_generator(system_message, user_message=formatted_data, col_names=col_names)
+    response = llama31_8b_generator(system_message, 
+                                    user_message=formatted_data, 
+                                    col_names=col_names, 
+                                    label_encoders=label_encoders, 
+                                    categorical_unique_values=categorical_unique_values)
     print('\n\nRESPONSE:', response, '\n\n')
 
-    encoded_sample = encode_sample(response, label_encoders, categorical_unique_values)
-    print('\n\nENCODED SAMPLE:', encoded_sample, '\n\n')
-
-    m_sample = [[list(encoded_sample.values())]]
+    # TODO: add the original sample.
+    m_sample = [[list(response.values())]]
     print('\n\nM SAMPLE:', m_sample, '\n\n')
 
     return m_sample
@@ -283,6 +285,9 @@ def find_closest_regex_match(sample, choices, max_errors = 10):
                 best_error_count = total_errors
                 best_choice = choice
 
+    if best_choice is None:
+        raise Exception(f"Failed to find a closest match for: {sample}")
+
     return best_choice
 
 def data_formatter(sample, sens_params, col_names):
@@ -306,7 +311,7 @@ def data_formatter(sample, sens_params, col_names):
 
     return formatted_data
 
-def llama31_8b_generator(system_message, user_message, col_names):
+def llama31_8b_generator(system_message, user_message, col_names, label_encoders, categorical_unique_values):
     # TODO: remove the retries if not using it.
     retries = 0
     valid_response = False
@@ -316,16 +321,29 @@ def llama31_8b_generator(system_message, user_message, col_names):
         {'role': 'user', 'content': user_message}
     ]
 
+    # Keep trying until all the column names appear in the response and all the responses can be converted.
     while not valid_response:
         response = ollama.chat(model='llama3.1:8b', messages=message, format='json')
         converted_response = json.loads(response['message']['content'])
-        valid_response = check_response(converted_response, col_names)
+        
+        # Verify that the generated response is valid.
+        try:
+            # Check that all the columns are included
+            valid_response = check_response(converted_response, col_names)
+            if not valid_response:
+                continue
 
+            # Encode the response
+            encoded_sample = encode_sample(converted_response, label_encoders, categorical_unique_values)
+            print('\n\nENCODED SAMPLE:', encoded_sample, '\n\n')
+        except Exception as e:
+            print('\n\nFAILED ENCODE SAMPLE:', e, '\n\n')
+            valid_response = False
+
+        # NOTE: MAX Retries removed since less fails were happening.
         retries += 1
-
-    # NOTE: MAX Retries removed since less fails were happening.
     
-    return converted_response
+    return encoded_sample
 
 def claude3_generator(system_message, user_message):
     valid_response = False
