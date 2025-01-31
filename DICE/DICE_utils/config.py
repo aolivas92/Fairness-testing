@@ -138,7 +138,79 @@ class bank:
 
     # specify the categorical features with their indices
     categorical_features = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-    
+
+class BankWithProperties:
+    """
+    A new class that replicates the data from the original `bank` class
+    but uses `@property` for getters and setters.
+    """
+
+    def __init__(self):
+        # the size of total features
+        self._params = 4
+
+        # the valid region (bounds) of each feature
+        self._input_bounds = [[1,2,3,4,5], [6,7,8,9]]
+
+        # the name of each feature
+        self._feature_name = []
+
+        # the name of each class
+        self._class_name = ["no", "yes"]
+
+        # specify the categorical features with their indices
+        self._categorical_features = []
+
+    # params
+    @property
+    def params(self):
+        """Get or set the number of total features."""
+        return self._params
+
+    @params.setter
+    def params(self, value):
+        self._params = value
+
+    # input_bounds
+    @property
+    def input_bounds(self):
+        """Get or set the valid region (bounds) of each feature."""
+        return self._input_bounds
+
+    @input_bounds.setter
+    def input_bounds(self, new_bounds):
+        self._input_bounds = new_bounds
+
+    # feature_name
+    @property
+    def feature_name(self):
+        """Get or set the name of each feature."""
+        return self._feature_name
+
+    @feature_name.setter
+    def feature_name(self, new_feature_name):
+        self._feature_name = new_feature_name
+
+    # class_name
+    @property
+    def class_name(self):
+        """Get or set the name of each class."""
+        return self._class_name
+
+    @class_name.setter
+    def class_name(self, new_class_name):
+        self._class_name = new_class_name
+
+    # categorical_features
+    @property
+    def categorical_features(self):
+        """Get or set the list of categorical feature indices."""
+        return self._categorical_features
+
+    @categorical_features.setter
+    def categorical_features(self, new_cat_features):
+        self._categorical_features = new_cat_features
+
 class compas:
     """
     Configuration of dataset compas
