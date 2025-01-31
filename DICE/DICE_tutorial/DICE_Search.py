@@ -212,7 +212,6 @@ def m_instance_real_counterfactual(sample, sens_params, conf, system_message, la
     # Convert the sample data back to categorical data.
     decoded_sample = decode_sample(sample, label_encoders, categorical_unique_values, col_names)
     print('\n\nDECODED SAMPLE:', decoded_sample, '\n\n')
-
     formatted_data = data_formatter(decoded_sample, sens_params, col_names)
     formatted_data = str(formatted_data)
     print('\n\nFORMATTED DATA:', formatted_data, '\n\n')
@@ -470,12 +469,13 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
     data = {"census":census_data2, "credit":credit_data, "bank":bank_data2, "compas":compas_data, 
             "default": default_data, "heart":heart_data, "diabetes":diabetes_data, 
             "students":students_data, "meps15":meps15_data, "meps16":meps16_data}
+    # NOTE: Grabs the config of each dataset.
     data_config = {"census":census, "credit":credit, "bank":bank, "compas":compas, "default":default,
                   "heart":heart , "diabetes":diabetes,"students":students, "meps15":meps15, "meps16":meps16}
     # prepare the testing data and model
+    # X, Y, input_shape, nb_classes = data[dataset]()
     X, Y, input_shape, nb_classes, system_message, label_encoders, categorical_unique_values, col_names = data[dataset]()
-    print("\n\n THIS IS THE X: ", X[:5], "\n\n")
-    #X, Y, input_shape = data[dataset]()
+
     tf.set_random_seed(1234)
 
     config = tf.ConfigProto(device_count = {'GPU': 0})
@@ -571,16 +571,16 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
             print('Input ',seed_num)
             index = inputs[num]
             sample = X[ index : index + 1]
-            print("\n\n THIS IS THE SAMPLE: ", sample[:5], "\n\n")
-
+            
             # start global perturbation
-            for iter in range( max_iter + 1 ):            
+            for iter in range( max_iter + 1 ):  
+                          
                 if time.time()-time1 > timeout :
                     break
+                
                 # m_sample = m_instance( np.array(sample) , sens_params, data_config[dataset] )
                 m_sample = m_instance_real_counterfactual(np.array(sample), sens_params, data_config[dataset], system_message, label_encoders, categorical_unique_values, col_names)
-                # TODO: Remove below, it was used for testing.
-                # continue
+
                 pred = pred_prob( sess, x, preds, m_sample , input_shape )
                 clus_dic = clustering( pred, m_sample, sens_params, epsillon )
 
@@ -656,7 +656,7 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
                             index = index + 1
 
                     cal_grad[0][index]  = np.random.choice([1.0, -1.0])
-
+                # NOTE: Here the sample is checked to make sure each feature is in range.
                 sample[0] = clip(sample[0] + perturbation_size * cal_grad[0], data_config[dataset]).astype("int")
 
             seed_num += 1
