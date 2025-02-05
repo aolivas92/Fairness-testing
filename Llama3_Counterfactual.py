@@ -5,7 +5,7 @@ from huggingface_hub import login
 import time
 import ollama
 
-login(token='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')
+login(token='')
 
 
 # Original Prompt
