@@ -34,7 +34,8 @@ from DICE_data.meps16 import meps16_data
 
 from DICE_model.tutorial_models import dnn
 from DICE_utils.utils_tf import model_prediction, model_argmax , layer_out
-from DICE_utils.config import census, credit, bank, compas, default, heart, diabetes, students , meps15, meps16
+from DICE_utils.config import census, credit, compas, default, heart, diabetes, students , meps15, meps16
+from DICE_utils.config2 import bank
 from DICE_tutorial.utils import cluster, gradient_graph
 import argparse
 import re
@@ -203,7 +204,15 @@ census_mapping = {
     
 }
 
-def m_instance_real_counterfactual(sample, sens_params, conf, system_message, label_encoders, categorical_unique_values, col_names):
+def m_instance_real_counterfactual(sample, sens_params, conf):
+    # system_message, label_encoders, categorical_unique_values, col_names
+    # Grab the data configuration
+    print('\n\nCONF PARAMS:', conf.params, '\n\n')
+    system_message = conf.system_message
+    label_encoders = conf.label_encoders
+    categorical_unique_values = conf.categorical_unique_values
+    col_names = conf.feature_name
+
     #TODO: Delete later, used for testing.
     print('\n\nSAMPLE:', sample, '\n\n')
     print('\n\nSENS_PARAM:', sens_params, '\n\n')
@@ -473,8 +482,7 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
     data_config = {"census":census, "credit":credit, "bank":bank, "compas":compas, "default":default,
                   "heart":heart , "diabetes":diabetes,"students":students, "meps15":meps15, "meps16":meps16}
     # prepare the testing data and model
-    # X, Y, input_shape, nb_classes = data[dataset]()
-    X, Y, input_shape, nb_classes, system_message, label_encoders, categorical_unique_values, col_names = data[dataset]()
+    X, Y, input_shape, nb_classes = data[dataset]()
 
     tf.set_random_seed(1234)
 
@@ -579,7 +587,7 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
                     break
                 
                 # m_sample = m_instance( np.array(sample) , sens_params, data_config[dataset] )
-                m_sample = m_instance_real_counterfactual(np.array(sample), sens_params, data_config[dataset], system_message, label_encoders, categorical_unique_values, col_names)
+                m_sample = m_instance_real_counterfactual(np.array(sample), sens_params, data_config[dataset])
 
                 pred = pred_prob( sess, x, preds, m_sample , input_shape )
                 clus_dic = clustering( pred, m_sample, sens_params, epsillon )
