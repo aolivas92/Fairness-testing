@@ -35,7 +35,7 @@ from DICE_data.meps16 import meps16_data
 from DICE_model.tutorial_models import dnn
 from DICE_utils.utils_tf import model_prediction, model_argmax , layer_out
 from DICE_utils.config import census, credit, compas, default, heart, diabetes, students , meps15, meps16
-from DICE_utils.config2 import bank
+from DICE_utils.config2 import bank as bank2
 from DICE_tutorial.utils import cluster, gradient_graph
 import argparse
 import re
@@ -474,12 +474,13 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
     :param max_local: the maximum number of samples for local search
     :param max_iter: the maximum iteration of global perturbation
     """
-    # TODO: Return the census_data to the original version.
+    # TODO: Return the census_data and bank_data to the original version.
     data = {"census":census_data2, "credit":credit_data, "bank":bank_data2, "compas":compas_data, 
             "default": default_data, "heart":heart_data, "diabetes":diabetes_data, 
             "students":students_data, "meps15":meps15_data, "meps16":meps16_data}
     # NOTE: Grabs the config of each dataset.
-    data_config = {"census":census, "credit":credit, "bank":bank, "compas":compas, "default":default,
+    # TODO: Return the bank to the original version.
+    data_config = {"census":census, "credit":credit, "bank":bank2, "compas":compas, "default":default,
                   "heart":heart , "diabetes":diabetes,"students":students, "meps15":meps15, "meps16":meps16}
     # prepare the testing data and model
     X, Y, input_shape, nb_classes = data[dataset]()
