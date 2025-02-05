@@ -1,6 +1,12 @@
+class census:
+    """
+    A new class that replicates the data from the original './config.py' census
+    class but uses '@property' for getters and setters
+    """
+
 class bank:
     """
-    A new class that repl8icates the data from the original './config.py' bank
+    A new class that replicates the data from the original './config.py' bank
     class but uses '@property' for getters and setters.
     """
 
