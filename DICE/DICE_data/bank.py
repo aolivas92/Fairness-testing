@@ -169,7 +169,7 @@ def bank_data2():
     # print(bank.feature_name)
     # # print(bank.system_message)
     # print(bank.label_encoders)
-    print(bank.categorical_unique_values)
+    # print(bank.categorical_unique_values)
 
     return X, Y, input_shape, nb_classes
 
