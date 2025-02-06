@@ -205,46 +205,37 @@ census_mapping = {
 }
 
 def m_instance_real_counterfactual(sample, sens_params, conf):
-    # system_message, label_encoders, categorical_unique_values, col_names
     # Grab the data configuration
-    print('\n\nCONF PARAMS:', conf.params, '\n\n')
     system_message = conf.system_message
     label_encoders = conf.label_encoders
     categorical_unique_values = conf.categorical_unique_values
     col_names = conf.feature_name
 
     #TODO: Delete later, used for testing.
-    print('\n\nSAMPLE:', sample, '\n\n')
-    print('\n\nSENS_PARAM:', sens_params, '\n\n')
-    print('\n\nCONF:', conf, '\n\n')
+    print('\n\nSAMPLE:', sample)
+    print('SENS_PARAM:', sens_params)
+    # print('\n\nCONF:', conf, '\n\n')
 
     # Convert the sample data back to categorical data.
     decoded_sample = decode_sample(sample, label_encoders, categorical_unique_values, col_names)
-    print('\n\nDECODED SAMPLE:', decoded_sample, '\n\n')
+    print('\n\nDECODED SAMPLE:', decoded_sample)
     formatted_data = data_formatter(decoded_sample, sens_params, col_names)
     formatted_data = str(formatted_data)
-    print('\n\nFORMATTED DATA:', formatted_data, '\n\n')
+    print('\n\nFORMATTED DATA:', formatted_data)
 
     response = llama31_8b_generator(system_message, 
                                     user_message=formatted_data, 
                                     col_names=col_names, 
                                     label_encoders=label_encoders, 
                                     categorical_unique_values=categorical_unique_values)
-    print('\n\nRESPONSE:', response, '\n\n')
 
-    # TODO: add the original sample.
-    m_sample = [[list(response.values())]]
+    # Convert the original sample and the generated counterfactual into the correct types.
+    og_sample = np.array(sample, dtype=np.float64)
+    new_sample = np.array([np.array(list(response.values()), dtype=np.float64)])
+    m_sample = np.array([og_sample, new_sample])
     print('\n\nM SAMPLE:', m_sample, '\n\n')
 
     return m_sample
-
-    # TODO:
-    # Input: sample- that we need to get the counterfactual of, sens_params(protected) - sec, age, race
-
-    # LLM
-
-    # Should return array of counterfactuals, for example return for different ages 
-    pass
 
 def decode_sample(sample, label_encoders, categorical_unique_values, col_names):
     decoded_sample = list(sample[0])
@@ -264,7 +255,7 @@ def encode_sample(sample, label_encoders, categorical_unique_values):
     for col, encoder in label_encoders.items():
         cat_value = encode_sample[col]
         closest_cat_value = [find_closest_regex_match(cat_value, categorical_unique_values[col])]
-        print('GENERATED CAT VALUE:', cat_value, '\t\tCLOSEST_CAT_VALUE:', closest_cat_value)
+        # print('GENERATED CAT VALUE:', cat_value, '\t\tCLOSEST_CAT_VALUE:', closest_cat_value)
         encoded_value = encoder.transform(closest_cat_value)[0]
         encode_sample[col] = encoded_value
 
@@ -333,6 +324,7 @@ def llama31_8b_generator(system_message, user_message, col_names, label_encoders
     while not valid_response:
         response = ollama.chat(model='llama3.1:8b', messages=message, format='json')
         converted_response = json.loads(response['message']['content'])
+        print('\n\nRESPONSE:', converted_response)
         
         # Verify that the generated response is valid.
         try:
@@ -343,9 +335,9 @@ def llama31_8b_generator(system_message, user_message, col_names, label_encoders
 
             # Encode the response
             encoded_sample = encode_sample(converted_response, label_encoders, categorical_unique_values)
-            print('\n\nENCODED SAMPLE:', encoded_sample, '\n\n')
+            print('\n\nENCODED SAMPLE:', encoded_sample)
         except Exception as e:
-            print('\n\nFAILED ENCODE SAMPLE:', e, '\n\n')
+            print('\n\nFAILED TO ENCODE SAMPLE:', e, '\n\n')
             valid_response = False
 
         # NOTE: MAX Retries removed since less fails were happening.
