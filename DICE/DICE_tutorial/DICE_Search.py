@@ -36,6 +36,7 @@ from DICE_model.tutorial_models import dnn
 from DICE_utils.utils_tf import model_prediction, model_argmax , layer_out
 from DICE_utils.config import census, credit, compas, default, heart, diabetes, students , meps15, meps16
 from DICE_utils.config2 import bank as bank2
+from DICE_utils.config2 import census as census2
 from DICE_tutorial.utils import cluster, gradient_graph
 import argparse
 import re
@@ -472,7 +473,7 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
             "students":students_data, "meps15":meps15_data, "meps16":meps16_data}
     # NOTE: Grabs the config of each dataset.
     # TODO: Return the bank to the original version.
-    data_config = {"census":census, "credit":credit, "bank":bank2, "compas":compas, "default":default,
+    data_config = {"census":census2, "credit":credit, "bank":bank2, "compas":compas, "default":default,
                   "heart":heart , "diabetes":diabetes,"students":students, "meps15":meps15, "meps16":meps16}
     # prepare the testing data and model
     X, Y, input_shape, nb_classes = data[dataset]()
@@ -581,6 +582,10 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
                 
                 # m_sample = m_instance( np.array(sample) , sens_params, data_config[dataset] )
                 m_sample = m_instance_real_counterfactual(np.array(sample), sens_params, data_config[dataset])
+                print('M_SAMPLE TYPE: ', type(m_sample))
+                print('M_SAMPLE[0] TYPE: ', type(m_sample[0]))
+                print('M_SAMPLE[0][0] TYPE: ', type(m_sample[0][0]))
+                print('M_SAMPLE[0][0][0] TYPE: ', type(m_sample[0][0][0]))
 
                 pred = pred_prob( sess, x, preds, m_sample , input_shape )
                 clus_dic = clustering( pred, m_sample, sens_params, epsillon )
