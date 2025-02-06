@@ -73,6 +73,9 @@ def census_data2():
             raw_data.append(L)
 
     df = pd.DataFrame(raw_data, columns=col_names)
+    # TODO: Used for testing, the original config doesn't have the 'eduction.num' column.
+    df.drop('education.num', axis=1, inplace=True)
+    col_names.remove('education.num')
 
     # Replace the ages with old/young if they are above/below 40 years old.
     df['age'] = df['age'].astype(int)
