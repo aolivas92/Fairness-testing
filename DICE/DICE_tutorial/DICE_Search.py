@@ -315,8 +315,8 @@ def data_formatter(sample, sens_params, col_names):
     return formatted_data
 
 def llama31_8b_generator(system_message, user_message, col_names, label_encoders, categorical_unique_values):
-    # TODO: remove the retries if not using it.
     retries = 0
+    max_retries = 5
     valid_response = False
 
     message = [
@@ -344,8 +344,11 @@ def llama31_8b_generator(system_message, user_message, col_names, label_encoders
             print('\n\nFAILED TO ENCODE SAMPLE:', e, '\n\n')
             valid_response = False
 
-        # NOTE: MAX Retries removed since less fails were happening.
         retries += 1
+        if retries >= max_retries:
+            print('\n\nFAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT\n\n')
+            return None
+
     
     return encoded_sample
 
