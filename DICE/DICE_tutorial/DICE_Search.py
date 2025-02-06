@@ -263,8 +263,11 @@ def encode_sample(sample, label_encoders, categorical_unique_values):
     return encode_sample
 
 def find_closest_regex_match(sample, choices, max_errors = 10):
+    # Escape the sample to treat special characters literally
+    escaped_sample = regex.escape(sample)
+
     # Fuzzy Patter Format: (patter){e<=max_errors}
-    fuzzy_pattern = f"({sample}){{e<={max_errors}}}"
+    fuzzy_pattern = f"({escaped_sample}){{e<={max_errors}}}"
 
     # Compile the pattern
     compiled_pattern = regex.compile(fuzzy_pattern)
@@ -582,10 +585,10 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
                 
                 # m_sample = m_instance( np.array(sample) , sens_params, data_config[dataset] )
                 m_sample = m_instance_real_counterfactual(np.array(sample), sens_params, data_config[dataset])
-                print('M_SAMPLE TYPE: ', type(m_sample))
-                print('M_SAMPLE[0] TYPE: ', type(m_sample[0]))
-                print('M_SAMPLE[0][0] TYPE: ', type(m_sample[0][0]))
-                print('M_SAMPLE[0][0][0] TYPE: ', type(m_sample[0][0][0]))
+                # print('M_SAMPLE TYPE: ', type(m_sample))
+                # print('M_SAMPLE[0] TYPE: ', type(m_sample[0]))
+                # print('M_SAMPLE[0][0] TYPE: ', type(m_sample[0][0]))
+                # print('M_SAMPLE[0][0][0] TYPE: ', type(m_sample[0][0][0]))
 
                 pred = pred_prob( sess, x, preds, m_sample , input_shape )
                 clus_dic = clustering( pred, m_sample, sens_params, epsillon )
