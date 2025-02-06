@@ -55,7 +55,7 @@ def bank_data2():
     col_names = None
 
     # Read in the raw data and format it
-    with open("../datasets/bank.data.csv", "r") as ins:
+    with open("../datasets/bank.csv", "r") as ins:
         for line in ins:
             line = line.strip()
             line1 = line.split(';')
@@ -173,4 +173,3 @@ def bank_data2():
 
     return X, Y, input_shape, nb_classes
 
-bank_data2()
