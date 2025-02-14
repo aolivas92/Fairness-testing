@@ -159,8 +159,4 @@ def heart_data2():
     heart.label_encoders = label_encoders
     heart.categorical_unique_values = categorical_unique_values
 
-    print(categorical_unique_values)
-
     return X, Y, input_shape, nb_classes
-
-heart_data2()
