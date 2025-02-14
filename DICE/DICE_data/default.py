@@ -55,10 +55,10 @@ def default_data2():
     with open("../datasets/default.csv", "r") as ins:
         for line in ins:
             line = line.strip()
-            line1 = line.split(';')
+            line1 = line.split(',')
             
             # Strip double quotes from each value
-            line1 = [part.strip('"') for part in line1]
+            line1 = [part.strip('"').lower() for part in line1]
 
             if (i == 0):
                 col_names = line1
@@ -70,8 +70,8 @@ def default_data2():
 
     df = pd.DataFrame(raw_data, columns=col_names)
     # ID needs to be removed
-    df.drop('ID', axis=1, inplace=True)
-    col_names.remove('ID')
+    df.drop('id', axis=1, inplace=True)
+    col_names.remove('id')
 
     # Replace the ages with old/young if they are above/below 40 years old.
     df['age'] = df['age'].astype(int)
