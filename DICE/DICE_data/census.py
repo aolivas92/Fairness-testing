@@ -44,11 +44,7 @@ def census_data2():
             X, 
             Y, 
             input shape, 
-            number of classes,
-            system message for LLM, 
-            encoder used to transform the data,
-            the unique values used to encode the data, 
-            the name of the columns
+            number of classes
     """
 
     raw_data = []
