@@ -54,10 +54,10 @@ def heart_data2():
     with open("../datasets/heart.csv", "r") as ins:
         for line in ins:
             line = line.strip()
-            line1 = line.split(';')
+            line1 = line.split(',')
             
             # Strip double quotes from each value
-            line1 = [part.strip('"') for part in line1]
+            line1 = line1
 
             if (i == 0):
                 col_names = line1
