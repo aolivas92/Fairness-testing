@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 import math
+import csv
 import sys
 sys.path.append("../")
 
@@ -52,21 +53,14 @@ def heart_data2():
     col_names = None
 
     # Read in the raw data and format it
-    with open("../datasets/heart.csv", "r") as ins:
-        for line in ins:
-            line = line.strip()
-            line1 = line.split(',')
-            
-            # Strip double quotes from each value
-            line1 = line1
-
-            if (i == 0):
-                col_names = line1
-                i += 1
-                continue
-            # L = map(int, line1[:-1])
-            L = [i for i in line1]
-            raw_data.append(L)
+    with open("../datasets/heart.csv", "r", newline="") as ins:
+        reader = csv.reader(ins)  # csv.reader automatically handles quoted fields
+        for i, row in enumerate(reader):
+            if i == 0:
+                # First row is column headers
+                col_names = row
+            else:
+                raw_data.append(row)
 
     df = pd.DataFrame(raw_data, columns=col_names)
 
@@ -126,8 +120,8 @@ def heart_data2():
     input_bounds = []
 
     for col in col_names[:-1]: # ignores the y value
-        minimum = float(math.floor(df_encoded[col].min()))
-        maximum = float(math.ceil(df_encoded[col].max()))
+        minimum = math.floor(float(df_encoded[col].min()))
+        maximum = math.ceil(float(df_encoded[col].max()))
 
         # -----------system_message-----------
         if col in categorical_unique_values.keys():
@@ -161,3 +155,5 @@ def heart_data2():
     heart.categorical_unique_values = categorical_unique_values
 
     return X, Y, input_shape, nb_classes
+
+heart_data2()

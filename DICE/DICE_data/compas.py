@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 import csv
+import math
 import sys
 sys.path.append("../")
 
@@ -116,8 +117,8 @@ def compas_data2():
     input_bounds = []
 
     for col in col_names[:-1]: # ignores the y value
-        minimum = float(df_encoded[col].min())
-        maximum = float(df_encoded[col].max())
+        minimum = math.floor(float(df_encoded[col].min()))
+        maximum = math.ceil(float(df_encoded[col].max()))
 
         # -----------system_message-----------
         if col in categorical_unique_values.keys():
