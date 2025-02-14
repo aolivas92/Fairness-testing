@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
+import csv
 import sys
 sys.path.append("../")
 
@@ -53,28 +54,16 @@ def compas_data2():
     col_names = None
 
     # Read in the raw data and format it
-    with open("../datasets/compas-scores-raw.csv", "r") as ins:
-        for line in ins:
-            line = line.strip()
-            line1 = line.split(';')
-            
-            # Strip double quotes from each value
-            line1 = [part.strip('"') for part in line1]
-
-            if (i == 0):
-                col_names = line1
-                i += 1
-                continue
-            # L = map(int, line1[:-1])
-            L = [i for i in line1]
-            raw_data.append(L)
-
+    with open("../datasets/compas-scores-raw.csv", "r", newline="") as ins:
+        reader = csv.reader(ins)  # csv.reader automatically handles quoted fields
+        for i, row in enumerate(reader):
+            if i == 0:
+                # First row is column headers
+                col_names = row
+            else:
+                raw_data.append(row)
+    
     df = pd.DataFrame(raw_data, columns=col_names)
-
-    # Replace the ages with old/young if they are above/below 40 years old.
-    df['age'] = df['age'].astype(int)
-    df['age'] = df['age'].apply(lambda x: 'old' if x >=40 else 'young')
-
 
     # Try to find the categorical columns 5 times.
     X_raw = df.iloc[:, :-1]
@@ -133,8 +122,6 @@ def compas_data2():
         # -----------system_message-----------
         if col in categorical_unique_values.keys():
             list_of_attributes_with_values += f" {col} ({categorical_unique_values[col]})"
-        elif col.lower() == "age":
-            list_of_attributes_with_values += f" {col} (categorical value, if the user is younger than 40 than they classify as young and if the user is older than 40 than they classify as old.)"
         else:
             list_of_attributes_with_values += f" {col} (numerical value, range is {minimum} - {maximum})"
         
