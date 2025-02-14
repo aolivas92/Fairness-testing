@@ -82,7 +82,7 @@ def bank_data2():
         i *= 5
         for indx, value in enumerate(X_raw.iloc[i]):
             try:
-                int(value)
+                float(value)
             except Exception:
                 col_name = col_names[indx]
                 if col_name not in categorical_cols:
@@ -126,8 +126,8 @@ def bank_data2():
     input_bounds = []
 
     for col in col_names[:-1]: # ignores the y value
-        minimum = int(df_encoded[col].min())
-        maximum = int(df_encoded[col].max())
+        minimum = float(df_encoded[col].min())
+        maximum = float(df_encoded[col].max())
 
         # -----------system_message-----------
         if col in categorical_unique_values.keys():
