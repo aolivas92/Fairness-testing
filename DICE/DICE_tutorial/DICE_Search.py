@@ -19,14 +19,12 @@ import json
 import anthropic
 import regex
 
-from DICE_data.census import census_data
-from DICE_data.census import census_data2
+from DICE_data.census import census_data, census_data2
 from DICE_data.credit import credit_data
-from DICE_data.compas import compas_data
-from DICE_data.default import default_data
-from DICE_data.bank import bank_data
-from DICE_data.bank import bank_data2
-from DICE_data.heart import heart_data
+from DICE_data.compas import compas_data, compas_data2
+from DICE_data.default import default_data, default_data2
+from DICE_data.bank import bank_data, bank_data2
+from DICE_data.heart import heart_data, heart_data2
 from DICE_data.diabetes import diabetes_data
 from DICE_data.students import students_data
 from DICE_data.meps15 import meps15_data
@@ -34,9 +32,9 @@ from DICE_data.meps16 import meps16_data
 
 from DICE_model.tutorial_models import dnn
 from DICE_utils.utils_tf import model_prediction, model_argmax , layer_out
-from DICE_utils.config import census, credit, compas, default, heart, diabetes, students , meps15, meps16
-from DICE_utils.config2 import bank as bank2
-from DICE_utils.config2 import census as census2
+# TODO: Restore config import
+from DICE_utils.config import credit, diabetes, students , meps15, meps16
+from DICE_utils.config2 import bank, census, heart, default, compas
 from DICE_tutorial.utils import cluster, gradient_graph
 import argparse
 import re
@@ -474,12 +472,12 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
     :param max_iter: the maximum iteration of global perturbation
     """
     # TODO: Return the census_data and bank_data to the original version.
-    data = {"census":census_data2, "credit":credit_data, "bank":bank_data2, "compas":compas_data, 
-            "default": default_data, "heart":heart_data, "diabetes":diabetes_data, 
+    data = {"census":census_data2, "credit":credit_data, "bank":bank_data2, "compas":compas_data2, 
+            "default": default_data2, "heart":heart_data2, "diabetes":diabetes_data, 
             "students":students_data, "meps15":meps15_data, "meps16":meps16_data}
     # NOTE: Grabs the config of each dataset.
     # TODO: Return the bank to the original version.
-    data_config = {"census":census2, "credit":credit, "bank":bank2, "compas":compas, "default":default,
+    data_config = {"census":census, "credit":credit, "bank":bank, "compas":compas, "default":default,
                   "heart":heart , "diabetes":diabetes,"students":students, "meps15":meps15, "meps16":meps16}
     # prepare the testing data and model
     X, Y, input_shape, nb_classes = data[dataset]()
