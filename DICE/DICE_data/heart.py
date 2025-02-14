@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
+import math
 import sys
 sys.path.append("../")
 
@@ -125,8 +126,8 @@ def heart_data2():
     input_bounds = []
 
     for col in col_names[:-1]: # ignores the y value
-        minimum = float(df_encoded[col].min())
-        maximum = float(df_encoded[col].max())
+        minimum = float(math.floor(df_encoded[col].min()))
+        maximum = float(math.ceil(df_encoded[col].max()))
 
         # -----------system_message-----------
         if col in categorical_unique_values.keys():
