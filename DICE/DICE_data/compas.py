@@ -1,5 +1,5 @@
 import numpy as np
-import sys
+import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 import sys
 sys.path.append("../")
@@ -126,7 +126,6 @@ def compas_data2():
     nb_classes = 2
 
     # Build the system message and the input_bounds based on the attributes in the data.
-    # system_message = "You are a counterfactual estimator trained to generate hypothetical scenarios based on bank marketing-style data attributes, assisting users in exploring alternative realities. Your task is to adjust one or more specified attributes in the user-provided input data to create a realistic counterfactual estimate while maintaining logical and statistical consistency. When altering the specified attributes, you should also adjust other related attributes to reflect realistic statistical patterns observed in the population. For example, when generating the counterfactual, not only adjust the specified attribute(s) but also modify other related attributes to create a realistic scenario based on demographic and occupational statistics. For instance, if the 'day' attribute changes from '15' to '5', consider that individuals with earlier call days may have different contact durations, different month cycles, and other relevant attributes accordingly to maintain realism. Each user input contains a JSON dictionary with detailed demographic, socioeconomic, and marketing attributes of a real-world individual. Ensure logical and statistical consistency across all attributes when adjusting them (e.g., education level should align with age and job, day should align with campaign, and consider interdependencies between features). Use knowledge of typical demographic patterns to adjust related attributes, creating a plausible and realistic counterfactual individual. Return a JSON dictionary formatted exactly like the input, with only the specified and related attributes altered to reflect realistic statistical adjustments. Do not add explanations, comments, or any additional information beyond the altered JSON data. The data attributes include: age (continuous numerical value, if the user is younger than 40 then the counterfactual age will be 50 and if the user is older than 40 then the counterfactual age will be 25), job (employment category, e.g., 'management', 'blue-collar', 'entrepreneur'), marital (e.g., 'single', 'married', 'divorced'), education (highest education level completed), default (has credit in default? 'yes' or 'no'), balance (bank account balance), housing (has housing loan? 'yes' or 'no'), loan (has personal loan? 'yes' or 'no'), contact (contact communication type, e.g., 'cellular', 'telephone'), day (last contact day of the month), month (last contact month of year, e.g., 'may', 'jul'), duration (last contact duration in seconds), campaign (number of contacts performed during this campaign), pdays (days passed since last contact from a previous campaign), previous (number of contacts performed before this campaign), and poutcome (outcome of the previous marketing campaign). Attributes must align logically (e.g., an older individual might have a higher balance, a person with a 'management' job could have a higher education level, day should reflect typical call patterns). Respond only with the adjusted data in JSON format, formatted exactly as follows with double quotes: {\"age\": ..., \"job\": ..., \"marital\": ..., \"education\": ..., \"default\": ..., \"balance\": ..., \"housing\": ..., \"loan\": ..., \"contact\": ..., \"day\": ..., \"month\": ..., \"duration\": ..., \"campaign\": ..., \"pdays\": ..., \"previous\": ..., \"poutcome\": ..., \"Counterfactual.request\": ...}. Focus on delivering concise, realistic outputs that align with the user’s request and reflect statistical realities."
     list_of_attributes_with_values = ""
     list_of_attributes_formatted = "{"
     input_bounds = []
@@ -157,20 +156,13 @@ def compas_data2():
     
 
     # Pass the Known information to the config file.
-    bank.params = len(col_names[:-1])
-    bank.input_bounds = input_bounds
-    bank.feature_name = col_names[:-1]
-    # bank.class_name =
-    # bank.categorical_features =
-    bank.system_message = system_message
-    bank.label_encoders = label_encoders
-    bank.categorical_unique_values = categorical_unique_values
-    
-    # print(bank.params)
-    # print(bank.input_bounds)
-    # print(bank.feature_name)
-    # # print(bank.system_message)
-    # print(bank.label_encoders)
-    # print(bank.categorical_unique_values)
+    compas.params = len(col_names[:-1])
+    compas.input_bounds = input_bounds
+    compas.feature_name = col_names[:-1]
+    # compas.class_name =
+    # compas.categorical_features =
+    compas.system_message = system_message
+    compas.label_encoders = label_encoders
+    compas.categorical_unique_values = categorical_unique_values
 
     return X, Y, input_shape, nb_classes
