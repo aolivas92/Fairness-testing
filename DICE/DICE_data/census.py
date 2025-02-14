@@ -54,14 +54,21 @@ def census_data2():
     col_names = None
 
     # Read in the raw data and format it
-    with open("../datasets/heart.csv", "r", newline="") as ins:
-        reader = csv.reader(ins)  # csv.reader automatically handles quoted fields
-        for i, row in enumerate(reader):
-            if i == 0:
-                # First row is column headers
-                col_names = row
-            else:
-                raw_data.append(row)
+    with open("../datasets/census.csv", "r") as ins:
+        for line in ins:
+            line = line.strip()
+            line1 = line.split(',')
+            
+            # Strip double quotes from each value
+            line1 = [part.strip('"') for part in line1]
+
+            if (i == 0):
+                col_names = line1
+                i += 1
+                continue
+            # L = map(int, line1[:-1])
+            L = [i for i in line1]
+            raw_data.append(L)
 
     df = pd.DataFrame(raw_data, columns=col_names)
     # TODO: Used for testing, the original config doesn't have the 'eduction.num' column.
