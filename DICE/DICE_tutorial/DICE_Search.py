@@ -222,11 +222,16 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
     formatted_data = str(formatted_data)
     print('\n\nFORMATTED DATA:', formatted_data)
 
-    response = llama31_8b_generator(system_message, 
-                                    user_message=formatted_data, 
-                                    col_names=col_names, 
-                                    label_encoders=label_encoders, 
-                                    categorical_unique_values=categorical_unique_values)
+    # response = llama31_8b_generator(system_message, 
+    #                                 user_message=formatted_data, 
+    #                                 col_names=col_names, 
+    #                                 label_encoders=label_encoders, 
+    #                                 categorical_unique_values=categorical_unique_values)
+    response = claude3_generator(system_message,
+                                 user_message=formatted_data,
+                                 col_names=col_names,
+                                 label_encoders=label_encoders,
+                                 categorical_unique_values=categorical_unique_values)
 
     # Convert the original sample and the generated counterfactual into the correct types.
     og_sample = np.array(sample, dtype=np.float64)
@@ -392,7 +397,7 @@ def claude3_generator(system_message, user_message, col_names, label_encoders, c
             print('\n\nFAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT\n\n')
             return None
 
-    return converted_response
+    return encode_sample
 
 def check_response(converted_response, col_names, dictionary=True):
     valid = True
