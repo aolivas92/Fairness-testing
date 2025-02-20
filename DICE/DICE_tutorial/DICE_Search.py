@@ -361,7 +361,7 @@ def claude3_generator(system_message, user_message, col_names, label_encoders, c
     retries = 0
 
     # Grab the key from the local file.
-    keyfile = open('claude_key.txt', 'r')
+    keyfile = open('../../Counterfactual_data/claude_key.txt', 'r')
     api_key = keyfile.readline().rstrip()
     keyfile.close()
     client = anthropic.Anthropic(api_key=api_key)
@@ -381,7 +381,7 @@ def claude3_generator(system_message, user_message, col_names, label_encoders, c
             print('\n\nRESPONSE:', converted_response)
 
             # Check that all the columns are included
-            valid_response = check_response(converted_response, col_names, dictionary=False)
+            valid_response = check_response(converted_response, col_names)
 
             # Encode the response
             encoded_sample = encode_sample(converted_response, label_encoders, categorical_unique_values)    
@@ -397,7 +397,7 @@ def claude3_generator(system_message, user_message, col_names, label_encoders, c
             print('\n\nFAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT\n\n')
             return None
 
-    return encode_sample
+    return encoded_sample
 
 def check_response(converted_response, col_names, dictionary=True):
     valid = True
