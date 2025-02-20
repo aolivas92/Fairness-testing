@@ -350,15 +350,18 @@ def llama31_8b_generator(system_message, user_message, col_names, label_encoders
     
     return encoded_sample
 
-def claude3_generator(system_message, user_message):
+def claude3_generator(system_message, user_message, col_names, label_encoders, categorical_unique_values):
     valid_response = False
+    max_retries = 5
     retries = 0
 
+    # Grab the key from the local file.
     keyfile = open('claude_key.txt', 'r')
     api_key = keyfile.readline().rstrip()
     keyfile.close()
     client = anthropic.Anthropic(api_key=api_key)
 
+    # Set up the user message.
     user_message = [{'role': 'user', 'content': user_message}]
 
     while not valid_response:
@@ -369,8 +372,15 @@ def claude3_generator(system_message, user_message):
             max_tokens=2000,
         )
         try:
-                converted_response = json.loads(response.content[0].text)
-                valid_response = check_response(converted_response, dictionary=False)
+            converted_response = json.loads(response.content[0].text)
+            print('\n\nRESPONSE:', converted_response)
+
+            # Check that all the columns are included
+            valid_response = check_response(converted_response, col_names, dictionary=False)
+
+            # Encode the response
+            encoded_sample = encode_sample(converted_response, label_encoders, categorical_unique_values)    
+            print('\n\nENCODED SAMPLE:', encoded_sample, '\n\n')
         except json.decoder.JSONDecodeError:
             print("ERROR: response not complete and JSON can't convert it")
             print(response.content[0].text)
@@ -378,6 +388,9 @@ def claude3_generator(system_message, user_message):
             print("ERROR: ", e)
 
         retries += 1
+        if retries >= max_retries:
+            print('\n\nFAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT\n\n')
+            return None
 
     return converted_response
 
