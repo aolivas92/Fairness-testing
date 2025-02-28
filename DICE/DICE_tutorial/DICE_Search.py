@@ -223,9 +223,9 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
     # print('\n\nFORMATTED DATA:', formatted_data)
 
     valid_response = False
-    max_retries = 5
+    max_retries = 10
     tries = 0
-    llm = 0
+    llm = 1
     error = ""
 
     # Run the LLM and check the response.
@@ -284,7 +284,8 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
     og_sample = np.array(sample, dtype=np.float64)
     new_sample = np.array([np.array(list(encoded_response.values()), dtype=np.float64)])
     m_sample = np.array([og_sample, new_sample])
-    print('\n\nM SAMPLE:', m_sample, '\n\n')
+    # print('\n\nM SAMPLE:', m_sample, '\n\n')
+    print('Finished generating Counter Factual Successfully.')
 
     return m_sample
 
@@ -423,9 +424,12 @@ def claude3_generator(system_message, user_message, col_names, label_encoders, c
         messages=user_message,
         max_tokens=2000,
     )
-        # try:
-        #     converted_response = json.loads(response.content[0].text)
-        #     print('\n\nRESPONSE:', converted_response)
+    try:
+        converted_response = json.loads(response.content[0].text)
+        # print('\n\nRESPONSE:', converted_response)
+    except Exception as e:
+        print("FAILED TO CONVERT: ", e)
+        return None
 
         #     # Check that all the columns are included
         #     valid_response = check_response(converted_response, col_names)
@@ -444,7 +448,7 @@ def claude3_generator(system_message, user_message, col_names, label_encoders, c
         #     print('\n\nFAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT\n\n')
         #     return None
 
-    return response
+    return converted_response
 
 def check_response(converted_response, col_names, dictionary=True):
     valid = True
