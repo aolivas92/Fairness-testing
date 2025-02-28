@@ -222,20 +222,49 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
     formatted_data = str(formatted_data)
     print('\n\nFORMATTED DATA:', formatted_data)
 
-    # response = llama31_8b_generator(system_message, 
-    #                                 user_message=formatted_data, 
-    #                                 col_names=col_names, 
-    #                                 label_encoders=label_encoders, 
-    #                                 categorical_unique_values=categorical_unique_values)
-    response = claude3_generator(system_message,
-                                 user_message=formatted_data,
-                                 col_names=col_names,
-                                 label_encoders=label_encoders,
-                                 categorical_unique_values=categorical_unique_values)
+    valid_response = False
+    max_retries = 5
+    retries = 0
+    llm = 0
+
+    # Run the LLM and check the response.
+    while not valid_response:
+        if llm == 0:
+            converted_response = llama31_8b_generator(system_message, 
+                                            user_message=formatted_data, 
+                                            col_names=col_names, 
+                                            label_encoders=label_encoders, 
+                                            categorical_unique_values=categorical_unique_values)
+        elif llm == 1:
+            converted_response = claude3_generator(system_message,
+                                        user_message=formatted_data,
+                                        col_names=col_names,
+                                        label_encoders=label_encoders,
+                                        categorical_unique_values=categorical_unique_values)
+            
+        # Verify that the generated response is valid.
+        try:
+            # Check that all the columns are included and that the sens_param is included
+            valid_response = check_response(converted_response, col_names)
+            if not valid_response:
+                print('\n\nFAILED TO VERIFY ALL COLUMNS.\n\n')
+                continue
+
+            # Encode the response
+            encoded_response = encode_sample(converted_response, label_encoders, categorical_unique_values)
+            print('\n\nENCODED SAMPLE:', encoded_response)
+        except Exception as e:
+            print('\n\nFAILED TO ENCODE SAMPLE:', e, '\n\n')
+            valid_response = False
+
+        retries += 1
+        if retries >= max_retries:
+            print('\n\nFAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT\n\n')
+            return None
 
     # Convert the original sample and the generated counterfactual into the correct types.
     og_sample = np.array(sample, dtype=np.float64)
-    new_sample = np.array([np.array(list(response.values()), dtype=np.float64)])
+    new_sample = np.array([np.array(list(encoded_response.values()), dtype=np.float64)])
     m_sample = np.array([og_sample, new_sample])
     print('\n\nM SAMPLE:', m_sample, '\n\n')
 
@@ -328,32 +357,32 @@ def llama31_8b_generator(system_message, user_message, col_names, label_encoders
     ]
 
     # Keep trying until all the column names appear in the response and all the responses can be converted.
-    while not valid_response:
-        response = ollama.chat(model='llama3.1:8b', messages=message, format='json')
-        converted_response = json.loads(response['message']['content'])
-        print('\n\nRESPONSE:', converted_response)
+    # while not valid_response:
+    response = ollama.chat(model='llama3.1:8b', messages=message, format='json')
+    converted_response = json.loads(response['message']['content'])
+    print('\n\nRESPONSE:', converted_response)
         
-        # Verify that the generated response is valid.
-        try:
-            # Check that all the columns are included
-            valid_response = check_response(converted_response, col_names)
-            if not valid_response:
-                continue
+        # # Verify that the generated response is valid.
+        # try:
+        #     # Check that all the columns are included
+        #     valid_response = check_response(converted_response, col_names)
+        #     if not valid_response:
+        #         continue
 
-            # Encode the response
-            encoded_sample = encode_sample(converted_response, label_encoders, categorical_unique_values)
-            print('\n\nENCODED SAMPLE:', encoded_sample)
-        except Exception as e:
-            print('\n\nFAILED TO ENCODE SAMPLE:', e, '\n\n')
-            valid_response = False
+        #     # Encode the response
+        #     encoded_sample = encode_sample(converted_response, label_encoders, categorical_unique_values)
+        #     print('\n\nENCODED SAMPLE:', encoded_sample)
+        # except Exception as e:
+        #     print('\n\nFAILED TO ENCODE SAMPLE:', e, '\n\n')
+        #     valid_response = False
 
-        retries += 1
-        if retries >= max_retries:
-            print('\n\nFAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT\n\n')
-            return None
+        # retries += 1
+        # if retries >= max_retries:
+        #     print('\n\nFAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT\n\n')
+        #     return None
 
     
-    return encoded_sample
+    return converted_response
 
 def claude3_generator(system_message, user_message, col_names, label_encoders, categorical_unique_values):
     valid_response = False
@@ -369,35 +398,35 @@ def claude3_generator(system_message, user_message, col_names, label_encoders, c
     # Set up the user message.
     user_message = [{'role': 'user', 'content': user_message}]
 
-    while not valid_response:
-        response = client.messages.create(
-            model='claude-3-haiku-20240307',
-            system=system_message,
-            messages=user_message,
-            max_tokens=2000,
-        )
-        try:
-            converted_response = json.loads(response.content[0].text)
-            print('\n\nRESPONSE:', converted_response)
+    # while not valid_response:
+    response = client.messages.create(
+        model='claude-3-haiku-20240307',
+        system=system_message,
+        messages=user_message,
+        max_tokens=2000,
+    )
+        # try:
+        #     converted_response = json.loads(response.content[0].text)
+        #     print('\n\nRESPONSE:', converted_response)
 
-            # Check that all the columns are included
-            valid_response = check_response(converted_response, col_names)
+        #     # Check that all the columns are included
+        #     valid_response = check_response(converted_response, col_names)
 
-            # Encode the response
-            encoded_sample = encode_sample(converted_response, label_encoders, categorical_unique_values)    
-            print('\n\nENCODED SAMPLE:', encoded_sample, '\n\n')
-        except json.decoder.JSONDecodeError:
-            print("ERROR: response not complete and JSON can't convert it")
-            print(response.content[0].text)
-        except Exception as e:
-            print("ERROR: ", e)
+        #     # Encode the response
+        #     encoded_sample = encode_sample(converted_response, label_encoders, categorical_unique_values)    
+        #     print('\n\nENCODED SAMPLE:', encoded_sample, '\n\n')
+        # except json.decoder.JSONDecodeError:
+        #     print("ERROR: response not complete and JSON can't convert it")
+        #     print(response.content[0].text)
+        # except Exception as e:
+        #     print("ERROR: ", e)
 
-        retries += 1
-        if retries >= max_retries:
-            print('\n\nFAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT\n\n')
-            return None
+        # retries += 1
+        # if retries >= max_retries:
+        #     print('\n\nFAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT\n\n')
+        #     return None
 
-    return encoded_sample
+    return response
 
 def check_response(converted_response, col_names, dictionary=True):
     valid = True
