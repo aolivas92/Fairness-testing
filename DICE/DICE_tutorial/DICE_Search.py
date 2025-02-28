@@ -244,7 +244,7 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
             
         # Verify that the generated response is valid.
         try:
-            # Check that all the columns are included and that the sens_param is included
+            # Check that all the columns are included.
             valid_response = check_response(converted_response, col_names)
             if not valid_response:
                 print('\n\nFAILED TO VERIFY ALL COLUMNS.\n\n')
@@ -253,6 +253,15 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
             # Encode the response
             encoded_response = encode_sample(converted_response, label_encoders, categorical_unique_values)
             print('\n\nENCODED SAMPLE:', encoded_response)
+
+            # Check that the new sensitive parameter is different than the original.
+            response = list(encoded_response.values())
+            for sens_param in sens_params:
+                if sample[0][sens_param] == response[sens_param]:
+                    print('\n\nFAILED TO CHANGE SENSITIVE PARAMETER.\n\n')
+                    valid_response = False
+                    continue
+                    
         except Exception as e:
             print('\n\nFAILED TO ENCODE SAMPLE:', e, '\n\n')
             valid_response = False
