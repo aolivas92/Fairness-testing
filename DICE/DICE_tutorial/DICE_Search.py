@@ -211,24 +211,30 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
     col_names = conf.feature_name
 
     #TODO: Delete later, used for testing.
-    print('\n\nSAMPLE:', sample)
-    print('SENS_PARAM:', sens_params)
+    # print('\n\nSAMPLE:', sample)
+    # print('SENS_PARAM:', sens_params)
     # print('\n\nCONF:', conf, '\n\n')
 
     # Convert the sample data back to categorical data.
     decoded_sample = decode_sample(sample, label_encoders, categorical_unique_values, col_names)
-    print('\n\nDECODED SAMPLE:', decoded_sample)
+    # print('\n\nDECODED SAMPLE:', decoded_sample)
     formatted_data = data_formatter(decoded_sample, sens_params, col_names)
     formatted_data = str(formatted_data)
-    print('\n\nFORMATTED DATA:', formatted_data)
+    # print('\n\nFORMATTED DATA:', formatted_data)
 
     valid_response = False
     max_retries = 5
-    retries = 0
+    tries = 0
     llm = 0
+    error = ""
 
     # Run the LLM and check the response.
     while not valid_response:
+        tries += 1
+
+        # Add error to system message so the LLM can fix it.
+        system_message = system_message + " " + error
+
         if llm == 0:
             converted_response = llama31_8b_generator(system_message, 
                                             user_message=formatted_data, 
@@ -247,27 +253,30 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
             # Check that all the columns are included.
             valid_response = check_response(converted_response, col_names)
             if not valid_response:
-                print('\n\nFAILED TO VERIFY ALL COLUMNS.\n\n')
+                error = "FAILED TO VERIFY ALL FEATURES."
+                print(f'\n\n{error}\n\n')
                 continue
 
             # Encode the response
             encoded_response = encode_sample(converted_response, label_encoders, categorical_unique_values)
-            print('\n\nENCODED SAMPLE:', encoded_response)
+            # print('\n\nENCODED SAMPLE:', encoded_response)
 
             # Check that the new sensitive parameter is different than the original.
             response = list(encoded_response.values())
             for sens_param in sens_params:
                 if sample[0][sens_param] == response[sens_param]:
-                    print('\n\nFAILED TO CHANGE SENSITIVE PARAMETER.\n\n')
+                    error = "FAILED TO CHANGE SENSITIVE PARAMETER."
+                    print(f'\n\n{error}\n\n')
                     valid_response = False
                     continue
-                    
+
         except Exception as e:
-            print('\n\nFAILED TO ENCODE SAMPLE:', e, '\n\n')
+            error = f'FAILED TO ENCODE SAMPLE: {e}'
+            print(f'\n\n{error}\n\n')
             valid_response = False
 
-        retries += 1
-        if retries >= max_retries:
+        
+        if tries >= max_retries:
             print('\n\nFAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT\n\n')
             return None
 
@@ -369,7 +378,7 @@ def llama31_8b_generator(system_message, user_message, col_names, label_encoders
     # while not valid_response:
     response = ollama.chat(model='llama3.1:8b', messages=message, format='json')
     converted_response = json.loads(response['message']['content'])
-    print('\n\nRESPONSE:', converted_response)
+    # print('\n\nRESPONSE:', converted_response)
         
         # # Verify that the generated response is valid.
         # try:
