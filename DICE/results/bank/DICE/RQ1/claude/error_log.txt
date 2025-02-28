@@ -1,0 +1,7 @@
+Iteration 1 failed due to command error.
+Iteration 1 failed due to command error.
+Iteration 2 failed due to command error.
+Iteration 3 failed due to command error.
+Iteration 4 failed due to command error.
+Iteration 11 failed due to command error.
+Iteration 12 failed due to command error.
