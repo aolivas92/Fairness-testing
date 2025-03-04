@@ -1,0 +1,695 @@
+2025-03-04 19:48:16,643 - INFO - Restoring parameters from ../models/bank/test.model
+2025-03-04 19:48:16,697 - INFO - M_INSTANCE CALL: 1
+2025-03-04 19:48:16,697 - INFO - SAMPLE: [[ 1.000e+00  1.000e+01  1.000e+00  0.000e+00  0.000e+00  1.787e+03
+   0.000e+00  0.000e+00  0.000e+00  1.900e+01  1.000e+01  7.900e+01
+   1.000e+00 -1.000e+00  0.000e+00  3.000e+00]]
+2025-03-04 19:48:16,698 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'unemployed', 'marital': 'married', 'education': 'primary', 'default': 'no', 'balance': 1787, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 19, 'month': 'oct', 'duration': 79, 'campaign': 1, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-04 19:48:16,698 - INFO - LLM RUN: 1
+2025-03-04 19:48:18,334 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:48:18,335 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': -999, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 8, 'month': 'jun', 'duration': 395, 'campaign': 9, 'pdays': 99, 'previous': 9, 'poutcome': 'failure'}
+2025-03-04 19:48:18,339 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:48:18,428 - INFO - M_INSTANCE CALL: 2
+2025-03-04 19:48:18,429 - INFO - SAMPLE: [[  1.   9.   2.   1.   0. 999.   0.   0.   0.   9.   9.  80.   1.  -1.
+    0.   3.]]
+2025-03-04 19:48:18,429 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'technician', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'nov', 'duration': 80, 'campaign': 1, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-04 19:48:18,429 - INFO - LLM RUN: 1
+2025-03-04 19:48:20,063 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:48:20,063 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'tertiary', 'default': 'yes', 'balance': -999, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 1, 'month': 'dec', 'duration': 998, 'campaign': 9, 'pdays': 99, 'previous': 9, 'poutcome': 'success'}
+2025-03-04 19:48:20,064 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:48:20,122 - INFO - M_INSTANCE CALL: 3
+2025-03-04 19:48:20,123 - INFO - SAMPLE: [[  0.  10.   2.   2.   0. 998.   0.   0.   1.   9.  10.  79.   2.   0.
+    1.   3.]]
+2025-03-04 19:48:20,124 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'unemployed', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 998, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'oct', 'duration': 79, 'campaign': 2, 'pdays': 0, 'previous': 1, 'poutcome': 'unknown'}
+2025-03-04 19:48:20,124 - INFO - LLM RUN: 1
+2025-03-04 19:48:21,761 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:48:21,762 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': -1, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'may', 'duration': 119, 'campaign': 8, 'pdays': 70, 'previous': 3, 'poutcome': 'success'}
+2025-03-04 19:48:21,763 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:48:21,821 - INFO - M_INSTANCE CALL: 4
+2025-03-04 19:48:21,822 - INFO - SAMPLE: [[  0.   9.   2.   1.   0. 997.   0.   0.   2.   8.  11.  78.   3.   1.
+    0.   3.]]
+2025-03-04 19:48:21,823 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'technician', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 997, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 8, 'month': 'sep', 'duration': 78, 'campaign': 3, 'pdays': 1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-04 19:48:21,823 - INFO - LLM RUN: 1
+2025-03-04 19:48:23,466 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:48:23,467 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'admin.', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': -999, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 5, 'month': 'apr', 'duration': 50, 'campaign': 2, 'pdays': -1, 'previous': 3, 'poutcome': 'success'}
+2025-03-04 19:48:23,469 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:48:31,711 - INFO - M_INSTANCE CALL: 5
+2025-03-04 19:48:31,712 - INFO - SAMPLE: [[  0.   8.   2.   0.   0. 996.   0.   0.   2.   7.  11.  77.   4.   2.
+    1.   2.]]
+2025-03-04 19:48:31,713 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'student', 'marital': 'single', 'education': 'primary', 'default': 'no', 'balance': 996, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-04 19:48:31,713 - INFO - LLM RUN: 1
+2025-03-04 19:48:33,333 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:48:33,333 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': -999, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-04 19:48:33,334 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-04 19:48:33,334 - INFO - LLM RUN: 2
+2025-03-04 19:48:34,986 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:48:34,987 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'unemployed', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 998, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 3, 'month': 'apr', 'duration': 70, 'campaign': 8, 'pdays': -1, 'previous': 5, 'poutcome': 'failure'}
+2025-03-04 19:48:34,988 - INFO - Finished generating Counter Factual Successfully. Tries: 2
+2025-03-04 19:48:46,784 - INFO - M_INSTANCE CALL: 6
+2025-03-04 19:48:46,785 - INFO - SAMPLE: [[  0.   7.   2.   0.   1. 995.   0.   0.   2.   6.  11.  78.   5.   1.
+    2.   1.]]
+2025-03-04 19:48:46,785 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'services', 'marital': 'single', 'education': 'primary', 'default': 'yes', 'balance': 995, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 6, 'month': 'sep', 'duration': 78, 'campaign': 5, 'pdays': 1, 'previous': 2, 'poutcome': 'other'}
+2025-03-04 19:48:46,786 - INFO - LLM RUN: 1
+2025-03-04 19:48:48,394 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:48:48,395 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 250, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 3, 'month': 'jun', 'duration': 45, 'campaign': 8, 'pdays': -1, 'previous': 5, 'poutcome': 'success'}
+2025-03-04 19:48:48,396 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:48:56,782 - INFO - M_INSTANCE CALL: 7
+2025-03-04 19:48:56,782 - INFO - SAMPLE: [[  0.   6.   2.   0.   0. 994.   0.   0.   2.   5.  11.  77.   6.   0.
+    1.   2.]]
+2025-03-04 19:48:56,783 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'self-employed', 'marital': 'single', 'education': 'primary', 'default': 'no', 'balance': 994, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 5, 'month': 'sep', 'duration': 77, 'campaign': 6, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-04 19:48:56,783 - INFO - LLM RUN: 1
+2025-03-04 19:48:58,422 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:48:58,422 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': -500, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 5, 'month': 'sep', 'duration': 77, 'campaign': 6, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-04 19:48:58,423 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:49:06,610 - INFO - M_INSTANCE CALL: 8
+2025-03-04 19:49:06,610 - INFO - SAMPLE: [[  0.   5.   2.   0.   1. 993.   0.   0.   2.   4.  11.  78.   7.  -1.
+    2.   1.]]
+2025-03-04 19:49:06,611 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'primary', 'default': 'yes', 'balance': 993, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 4, 'month': 'sep', 'duration': 78, 'campaign': 7, 'pdays': -1, 'previous': 2, 'poutcome': 'other'}
+2025-03-04 19:49:06,611 - INFO - LLM RUN: 1
+2025-03-04 19:49:08,247 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:49:08,248 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 700, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 4, 'month': 'apr', 'duration': 90, 'campaign': 8, 'pdays': 30, 'previous': 5, 'poutcome': 'success'}
+2025-03-04 19:49:08,249 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:49:23,393 - INFO - M_INSTANCE CALL: 9
+2025-03-04 19:49:23,393 - INFO - SAMPLE: [[  0.   4.   2.   0.   0. 992.   0.   0.   2.   3.  11.  79.   8.  -1.
+    1.   0.]]
+2025-03-04 19:49:23,394 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'management', 'marital': 'single', 'education': 'primary', 'default': 'no', 'balance': 992, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 3, 'month': 'sep', 'duration': 79, 'campaign': 8, 'pdays': -1, 'previous': 1, 'poutcome': 'failure'}
+2025-03-04 19:49:23,394 - INFO - LLM RUN: 1
+2025-03-04 19:49:25,010 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:49:25,011 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'admin.', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': -999, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 1, 'month': 'apr', 'duration': 998, 'campaign': 9, 'pdays': 99, 'previous': 9, 'poutcome': 'success'}
+2025-03-04 19:49:25,012 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:49:40,045 - INFO - M_INSTANCE CALL: 10
+2025-03-04 19:49:40,045 - INFO - SAMPLE: [[  0.   3.   2.   0.   1. 991.   1.   1.   2.   4.  11.  80.   7.  -1.
+    0.   0.]]
+2025-03-04 19:49:40,046 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'housemaid', 'marital': 'single', 'education': 'primary', 'default': 'yes', 'balance': 991, 'housing': 'yes', 'loan': 'yes', 'contact': 'unknown', 'day': 4, 'month': 'sep', 'duration': 80, 'campaign': 7, 'pdays': -1, 'previous': 0, 'poutcome': 'failure'}
+2025-03-04 19:49:40,046 - INFO - LLM RUN: 1
+2025-03-04 19:49:41,637 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:49:41,637 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 1, 'month': 'apr', 'duration': 99, 'campaign': 8, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-04 19:49:41,638 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:49:41,697 - INFO - M_INSTANCE CALL: 11
+2025-03-04 19:49:41,697 - INFO - SAMPLE: [[  0.   2.   2.   0.   0. 990.   0.   0.   2.   3.  11.  79.   8.  -1.
+    0.   1.]]
+2025-03-04 19:49:41,698 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'entrepreneur', 'marital': 'single', 'education': 'primary', 'default': 'no', 'balance': 990, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 3, 'month': 'sep', 'duration': 79, 'campaign': 8, 'pdays': -1, 'previous': 0, 'poutcome': 'other'}
+2025-03-04 19:49:41,698 - INFO - LLM RUN: 1
+2025-03-04 19:49:43,316 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:49:43,316 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'admin.', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 990, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 3, 'month': 'sep', 'duration': 79, 'campaign': 8, 'pdays': -1, 'previous': 0, 'poutcome': 'other'}
+2025-03-04 19:49:43,317 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:49:55,023 - INFO - M_INSTANCE CALL: 12
+2025-03-04 19:49:55,024 - INFO - SAMPLE: [[1.000e+00 7.000e+00 1.000e+00 1.000e+00 0.000e+00 4.789e+03 1.000e+00
+  1.000e+00 0.000e+00 1.100e+01 8.000e+00 2.200e+02 1.000e+00 3.390e+02
+  4.000e+00 0.000e+00]]
+2025-03-04 19:49:55,024 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'services', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 4789, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 11, 'month': 'may', 'duration': 220, 'campaign': 1, 'pdays': 339, 'previous': 4, 'poutcome': 'failure'}
+2025-03-04 19:49:55,024 - INFO - LLM RUN: 1
+2025-03-04 19:49:56,661 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:49:56,661 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'tertiary', 'default': 'yes', 'balance': -1, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 8, 'month': 'jan', 'duration': 20, 'campaign': 9, 'pdays': 49, 'previous': 0, 'poutcome': 'success'}
+2025-03-04 19:49:56,662 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:49:56,721 - INFO - M_INSTANCE CALL: 13
+2025-03-04 19:49:56,721 - INFO - SAMPLE: [[  0.   7.   1.   1.   0. 999.   1.   1.   0.   9.   8. 220.   1.  99.
+    4.   0.]]
+2025-03-04 19:49:56,722 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'services', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 220, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-04 19:49:56,722 - INFO - LLM RUN: 1
+2025-03-04 19:49:58,358 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:49:58,358 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'technician', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': -999, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 7, 'month': 'jun', 'duration': 180, 'campaign': 5, 'pdays': 19, 'previous': 3, 'poutcome': 'success'}
+2025-03-04 19:49:58,359 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:49:58,419 - INFO - M_INSTANCE CALL: 14
+2025-03-04 19:49:58,419 - INFO - SAMPLE: [[  0.   6.   1.   1.   0. 999.   1.   1.   0.   9.   8. 220.   1.  99.
+    4.   0.]]
+2025-03-04 19:49:58,420 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'self-employed', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 220, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-04 19:49:58,420 - INFO - LLM RUN: 1
+2025-03-04 19:50:00,063 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:00,064 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'self-employed', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': -1, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 220, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-04 19:50:00,066 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-04 19:50:00,066 - INFO - LLM RUN: 2
+2025-03-04 19:50:01,687 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:01,688 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': -999, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 1, 'month': 'oct', 'duration': 10, 'campaign': 9, 'pdays': -99, 'previous': 0, 'poutcome': 'success'}
+2025-03-04 19:50:01,689 - INFO - Finished generating Counter Factual Successfully. Tries: 2
+2025-03-04 19:50:01,747 - INFO - M_INSTANCE CALL: 15
+2025-03-04 19:50:01,748 - INFO - SAMPLE: [[  1.   6.   1.   1.   0. 999.   1.   1.   0.   9.   8. 220.   1.  99.
+    4.   0.]]
+2025-03-04 19:50:01,749 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'self-employed', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 220, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-04 19:50:01,749 - INFO - LLM RUN: 1
+2025-03-04 19:50:03,385 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:03,385 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': -1, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'may', 'duration': 10, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'success'}
+2025-03-04 19:50:03,386 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:50:03,446 - INFO - M_INSTANCE CALL: 16
+2025-03-04 19:50:03,446 - INFO - SAMPLE: [[  1.   6.   1.   1.   0. 999.   1.   1.   0.   9.   8. 220.   1.  99.
+    4.   0.]]
+2025-03-04 19:50:03,447 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'self-employed', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 220, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-04 19:50:03,447 - INFO - LLM RUN: 1
+2025-03-04 19:50:05,052 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:05,053 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': -1, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 9, 'month': 'may', 'duration': 220, 'campaign': 3, 'pdays': 99, 'previous': 6, 'poutcome': 'success'}
+2025-03-04 19:50:05,054 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:50:05,112 - INFO - M_INSTANCE CALL: 17
+2025-03-04 19:50:05,113 - INFO - SAMPLE: [[  1.   6.   1.   1.   0. 999.   1.   1.   0.   9.   8. 221.   1.  99.
+    4.   0.]]
+2025-03-04 19:50:05,114 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'self-employed', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 221, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-04 19:50:05,114 - INFO - LLM RUN: 1
+2025-03-04 19:50:06,730 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:06,730 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': -1, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 8, 'month': 'jan', 'duration': 117, 'campaign': 5, 'pdays': 30, 'previous': 0, 'poutcome': 'success'}
+2025-03-04 19:50:06,731 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:50:06,791 - INFO - M_INSTANCE CALL: 18
+2025-03-04 19:50:06,791 - INFO - SAMPLE: [[  1.   6.   1.   1.   0. 999.   1.   1.   0.   8.   8. 221.   1.  99.
+    4.   0.]]
+2025-03-04 19:50:06,792 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'self-employed', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 8, 'month': 'may', 'duration': 221, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-04 19:50:06,792 - INFO - LLM RUN: 1
+2025-03-04 19:50:08,382 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:08,382 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'technician', 'marital': 'married', 'education': 'secondary', 'default': 'yes', 'balance': -999, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 8, 'month': 'may', 'duration': 221, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-04 19:50:08,383 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:50:08,442 - INFO - M_INSTANCE CALL: 19
+2025-03-04 19:50:08,443 - INFO - SAMPLE: [[  1.   6.   1.   1.   0. 999.   1.   1.   0.   8.   7. 221.   1.  99.
+    4.   0.]]
+2025-03-04 19:50:08,444 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'self-employed', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 8, 'month': 'mar', 'duration': 221, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-04 19:50:08,444 - INFO - LLM RUN: 1
+2025-03-04 19:50:10,062 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:10,062 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'admin.', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 8, 'month': 'jun', 'duration': 221, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-04 19:50:10,063 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:50:10,123 - INFO - M_INSTANCE CALL: 20
+2025-03-04 19:50:10,123 - INFO - SAMPLE: [[  1.   6.   1.   2.   0. 999.   1.   1.   0.   8.   7. 221.   1.  99.
+    4.   0.]]
+2025-03-04 19:50:10,124 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'self-employed', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 8, 'month': 'mar', 'duration': 221, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-04 19:50:10,124 - INFO - LLM RUN: 1
+2025-03-04 19:50:11,725 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:11,725 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'unknown', 'default': 'yes', 'balance': -999, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 3, 'month': 'dec', 'duration': 15, 'campaign': 8, 'pdays': -1, 'previous': 0, 'poutcome': 'success'}
+2025-03-04 19:50:11,726 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:50:11,785 - INFO - M_INSTANCE CALL: 21
+2025-03-04 19:50:11,785 - INFO - SAMPLE: [[  1.   6.   1.   2.   0. 999.   1.   1.   0.   7.   7. 221.   1.  99.
+    4.   0.]]
+2025-03-04 19:50:11,786 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'self-employed', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 7, 'month': 'mar', 'duration': 221, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-04 19:50:11,786 - INFO - LLM RUN: 1
+2025-03-04 19:50:13,375 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:13,375 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'unknown', 'default': 'yes', 'balance': -999, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 5, 'month': 'oct', 'duration': 10, 'campaign': 8, 'pdays': -99, 'previous': 9, 'poutcome': 'other'}
+2025-03-04 19:50:13,376 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:50:13,435 - INFO - M_INSTANCE CALL: 22
+2025-03-04 19:50:13,436 - INFO - SAMPLE: [[  1.   6.   1.   2.   0. 999.   1.   1.   0.   8.   7. 221.   1.  99.
+    4.   0.]]
+2025-03-04 19:50:13,437 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'self-employed', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 8, 'month': 'mar', 'duration': 221, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-04 19:50:13,437 - INFO - LLM RUN: 1
+2025-03-04 19:50:15,055 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:15,055 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': -1, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 8, 'month': 'oct', 'duration': 221, 'campaign': 5, 'pdays': -1, 'previous': 9, 'poutcome': 'failure'}
+2025-03-04 19:50:15,056 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:50:15,057 - INFO - M_INSTANCE CALL: 23
+2025-03-04 19:50:15,057 - INFO - SAMPLE: [[  1.   4.   2.   2.   0. 747.   0.   0.   0.  23.   3. 141.   2. 176.
+    3.   0.]]
+2025-03-04 19:50:15,058 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'management', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 23, 'month': 'feb', 'duration': 141, 'campaign': 2, 'pdays': 176, 'previous': 3, 'poutcome': 'failure'}
+2025-03-04 19:50:15,058 - INFO - LLM RUN: 1
+2025-03-04 19:50:16,664 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:16,664 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'unknown', 'default': 'yes', 'balance': -1, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 3, 'month': 'nov', 'duration': 234, 'campaign': 5, 'pdays': -1, 'previous': 9, 'poutcome': 'other'}
+2025-03-04 19:50:16,665 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:50:24,923 - INFO - M_INSTANCE CALL: 24
+2025-03-04 19:50:24,923 - INFO - SAMPLE: [[  1.   5.   2.   2.   0. 747.   0.   0.   0.   9.   3. 141.   2.  99.
+    3.   0.]]
+2025-03-04 19:50:24,924 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'retired', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'feb', 'duration': 141, 'campaign': 2, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-04 19:50:24,924 - INFO - LLM RUN: 1
+2025-03-04 19:50:26,562 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:26,562 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': -1, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 7, 'month': 'aug', 'duration': 421, 'campaign': 8, 'pdays': -1, 'previous': 0, 'poutcome': 'success'}
+2025-03-04 19:50:26,563 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-04 19:50:26,563 - INFO - LLM RUN: 2
+2025-03-04 19:50:28,205 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:28,206 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': -100, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'dec', 'duration': 141, 'campaign': 2, 'pdays': 99, 'previous': 3, 'poutcome': 'success'}
+2025-03-04 19:50:28,206 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-04 19:50:28,206 - INFO - LLM RUN: 3
+2025-03-04 19:50:29,845 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:29,846 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': -15, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 5, 'month': 'oct', 'duration': 191, 'campaign': 8, 'pdays': 90, 'previous': 4, 'poutcome': 'success'}
+2025-03-04 19:50:29,847 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-04 19:50:29,847 - INFO - LLM RUN: 4
+2025-03-04 19:50:31,459 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:31,459 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'primary', 'default': 'yes', 'balance': -1, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 5, 'month': 'jun', 'duration': 221, 'campaign': 8, 'pdays': 90, 'previous': 0, 'poutcome': 'success'}
+2025-03-04 19:50:31,460 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-04 19:50:31,460 - INFO - LLM RUN: 5
+2025-03-04 19:50:33,105 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:33,105 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': -999, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'oct', 'duration': 141, 'campaign': 2, 'pdays': 99, 'previous': 3, 'poutcome': 'success'}
+2025-03-04 19:50:33,106 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-04 19:50:33,106 - INFO - LLM RUN: 6
+2025-03-04 19:50:34,748 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:34,749 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': -999, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'jan', 'duration': 141, 'campaign': 8, 'pdays': -1, 'previous': 7, 'poutcome': 'failure'}
+2025-03-04 19:50:34,749 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-04 19:50:34,750 - INFO - LLM RUN: 7
+2025-03-04 19:50:36,408 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:36,409 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'tertiary', 'default': 'yes', 'balance': -1, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'dec', 'duration': 141, 'campaign': 2, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-04 19:50:36,410 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-04 19:50:36,410 - INFO - LLM RUN: 8
+2025-03-04 19:50:38,049 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:38,050 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': -123, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 5, 'month': 'oct', 'duration': 141, 'campaign': 8, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-04 19:50:38,051 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-04 19:50:38,051 - INFO - LLM RUN: 9
+2025-03-04 19:50:39,717 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:39,717 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'feb', 'duration': 141, 'campaign': 2, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-04 19:50:39,718 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-04 19:50:39,719 - INFO - LLM RUN: 10
+2025-03-04 19:50:41,314 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:41,314 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'admin.', 'marital': 'married', 'education': 'secondary', 'default': 'yes', 'balance': -1, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 5, 'month': 'nov', 'duration': 321, 'campaign': 8, 'pdays': -1, 'previous': 9, 'poutcome': 'success'}
+2025-03-04 19:50:41,315 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-04 19:50:41,315 - INFO - M_INSTANCE CALL: 25
+2025-03-04 19:50:41,315 - INFO - SAMPLE: [[  1.   5.   2.   2.   0. 747.   0.   0.   0.   9.   3. 141.   2.  99.
+    3.   0.]]
+2025-03-04 19:50:41,316 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'retired', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'feb', 'duration': 141, 'campaign': 2, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-04 19:50:41,316 - INFO - LLM RUN: 1
+2025-03-04 19:50:42,955 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:42,956 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': -456, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 5, 'month': 'dec', 'duration': 234, 'campaign': 8, 'pdays': -99, 'previous': 9, 'poutcome': 'success'}
+2025-03-04 19:50:42,957 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-04 19:50:42,957 - INFO - LLM RUN: 2
+2025-03-04 19:50:44,596 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:44,597 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': -500, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 5, 'month': 'aug', 'duration': 217, 'campaign': 8, 'pdays': 48, 'previous': 6, 'poutcome': 'other'}
+2025-03-04 19:50:44,598 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-04 19:50:44,598 - INFO - LLM RUN: 3
+2025-03-04 19:50:46,237 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:46,238 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 747, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 1, 'month': 'may', 'duration': 141, 'campaign': 2, 'pdays': -99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-04 19:50:46,239 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-04 19:50:46,239 - INFO - LLM RUN: 4
+2025-03-04 19:50:47,879 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:47,879 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': -123, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 5, 'month': 'oct', 'duration': 219, 'campaign': 9, 'pdays': -99, 'previous': 7, 'poutcome': 'success'}
+2025-03-04 19:50:47,880 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-04 19:50:47,880 - INFO - LLM RUN: 5
+2025-03-04 19:50:49,548 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:49,548 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'tertiary', 'default': 'yes', 'balance': -123, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'feb', 'duration': 141, 'campaign': 8, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-04 19:50:49,549 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-04 19:50:49,549 - INFO - LLM RUN: 6
+2025-03-04 19:50:51,188 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:51,189 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': -1, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'feb', 'duration': 141, 'campaign': 2, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-04 19:50:51,190 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-04 19:50:51,190 - INFO - LLM RUN: 7
+2025-03-04 19:50:52,829 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:52,830 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'admin.', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'feb', 'duration': 141, 'campaign': 2, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-04 19:50:52,831 - INFO - Finished generating Counter Factual Successfully. Tries: 7
+2025-03-04 19:50:52,890 - INFO - M_INSTANCE CALL: 26
+2025-03-04 19:50:52,890 - INFO - SAMPLE: [[  1.   4.   2.   2.   0. 747.   0.   0.   0.   9.   3. 141.   2.  99.
+    3.   0.]]
+2025-03-04 19:50:52,891 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'management', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'feb', 'duration': 141, 'campaign': 2, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-04 19:50:52,891 - INFO - LLM RUN: 1
+2025-03-04 19:50:54,499 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:50:54,500 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'yes', 'balance': -1, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 5, 'month': 'dec', 'duration': 55, 'campaign': 8, 'pdays': -99, 'previous': 7, 'poutcome': 'success'}
+2025-03-04 19:50:54,501 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:51:02,871 - INFO - M_INSTANCE CALL: 27
+2025-03-04 19:51:02,871 - INFO - SAMPLE: [[  1.   4.   2.   2.   0. 747.   0.   0.   0.   9.   3. 140.   2.  99.
+    3.   0.]]
+2025-03-04 19:51:02,872 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'management', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'feb', 'duration': 140, 'campaign': 2, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-04 19:51:02,872 - INFO - LLM RUN: 1
+2025-03-04 19:51:04,461 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:51:04,461 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'unknown', 'default': 'yes', 'balance': -1, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 4, 'month': 'aug', 'duration': 650, 'campaign': 5, 'pdays': -1, 'previous': 8, 'poutcome': 'success'}
+2025-03-04 19:51:04,462 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:51:12,760 - INFO - M_INSTANCE CALL: 28
+2025-03-04 19:51:12,760 - INFO - SAMPLE: [[  1.   4.   2.   2.   0. 747.   0.   0.   0.   9.   3. 139.   2.  99.
+    3.   0.]]
+2025-03-04 19:51:12,761 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'management', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'feb', 'duration': 139, 'campaign': 2, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-04 19:51:12,761 - INFO - LLM RUN: 1
+2025-03-04 19:51:14,379 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:51:14,380 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'technician', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 147, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 1, 'month': 'nov', 'duration': 79, 'campaign': 8, 'pdays': -1, 'previous': 9, 'poutcome': 'success'}
+2025-03-04 19:51:14,381 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:51:14,440 - INFO - M_INSTANCE CALL: 29
+2025-03-04 19:51:14,441 - INFO - SAMPLE: [[  1.   3.   2.   2.   0. 747.   0.   0.   0.   9.   3. 139.   2.  99.
+    3.   0.]]
+2025-03-04 19:51:14,441 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'housemaid', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'feb', 'duration': 139, 'campaign': 2, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-04 19:51:14,442 - INFO - LLM RUN: 1
+2025-03-04 19:51:16,046 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:51:16,047 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'unknown', 'default': 'yes', 'balance': -100, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 1, 'month': 'nov', 'duration': 599, 'campaign': 9, 'pdays': -99, 'previous': 8, 'poutcome': 'success'}
+2025-03-04 19:51:16,048 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:51:24,289 - INFO - M_INSTANCE CALL: 30
+2025-03-04 19:51:24,290 - INFO - SAMPLE: [[  1.   3.   2.   2.   0. 747.   0.   0.   0.   9.   3. 139.   3.  99.
+    3.   0.]]
+2025-03-04 19:51:24,291 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'housemaid', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'feb', 'duration': 139, 'campaign': 3, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-04 19:51:24,291 - INFO - LLM RUN: 1
+2025-03-04 19:51:25,907 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:51:25,908 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'feb', 'duration': 139, 'campaign': 3, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-04 19:51:25,908 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:51:25,968 - INFO - M_INSTANCE CALL: 31
+2025-03-04 19:51:25,969 - INFO - SAMPLE: [[  1.   3.   1.   2.   0. 747.   0.   0.   0.   9.   3. 139.   3.  99.
+    3.   0.]]
+2025-03-04 19:51:25,969 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'housemaid', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'feb', 'duration': 139, 'campaign': 3, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-04 19:51:25,969 - INFO - LLM RUN: 1
+2025-03-04 19:51:27,587 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:51:27,587 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'primary', 'default': 'yes', 'balance': -1, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 5, 'month': 'nov', 'duration': 219, 'campaign': 7, 'pdays': 45, 'previous': 9, 'poutcome': 'success'}
+2025-03-04 19:51:27,588 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:51:27,647 - INFO - M_INSTANCE CALL: 32
+2025-03-04 19:51:27,648 - INFO - SAMPLE: [[  1.   3.   1.   2.   0. 747.   0.   0.   0.   9.   2. 139.   3.  99.
+    3.   0.]]
+2025-03-04 19:51:27,648 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'housemaid', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'dec', 'duration': 139, 'campaign': 3, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-04 19:51:27,649 - INFO - LLM RUN: 1
+2025-03-04 19:51:29,236 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:51:29,237 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'dec', 'duration': 139, 'campaign': 3, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-04 19:51:29,238 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:51:29,297 - INFO - M_INSTANCE CALL: 33
+2025-03-04 19:51:29,297 - INFO - SAMPLE: [[  1.   3.   1.   2.   0. 747.   0.   0.   0.   9.   1. 139.   3.  99.
+    3.   0.]]
+2025-03-04 19:51:29,298 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'housemaid', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'aug', 'duration': 139, 'campaign': 3, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-04 19:51:29,298 - INFO - LLM RUN: 1
+2025-03-04 19:51:30,915 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:51:30,916 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 747, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 9, 'month': 'aug', 'duration': 139, 'campaign': 3, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-04 19:51:30,917 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:51:30,918 - INFO - M_INSTANCE CALL: 34
+2025-03-04 19:51:30,918 - INFO - SAMPLE: [[  1.   9.   1.   1.   0. 147.   1.   0.   0.   6.   8. 151.   2.  -1.
+    0.   3.]]
+2025-03-04 19:51:30,919 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'technician', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 147, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 6, 'month': 'may', 'duration': 151, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-04 19:51:30,919 - INFO - LLM RUN: 1
+2025-03-04 19:51:32,538 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:51:32,539 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'technician', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 147, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 6, 'month': 'may', 'duration': 151, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-04 19:51:32,540 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-04 19:51:32,540 - INFO - LLM RUN: 2
+2025-03-04 19:51:34,177 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:51:34,177 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': 123, 'housing': 'no', 'loan': 'yes', 'contact': 'telephone', 'day': 8, 'month': 'dec', 'duration': 117, 'campaign': 5, 'pdays': 89, 'previous': 3, 'poutcome': 'success'}
+2025-03-04 19:51:34,178 - INFO - Finished generating Counter Factual Successfully. Tries: 2
+2025-03-04 19:51:42,659 - INFO - M_INSTANCE CALL: 35
+2025-03-04 19:51:42,660 - INFO - SAMPLE: [[  1.  10.   0.   2.   1. 148.   1.   1.   0.   5.   9. 150.   3.   0.
+    1.   2.]]
+2025-03-04 19:51:42,661 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'unemployed', 'marital': 'divorced', 'education': 'tertiary', 'default': 'yes', 'balance': 148, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 5, 'month': 'nov', 'duration': 150, 'campaign': 3, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-04 19:51:42,661 - INFO - LLM RUN: 1
+2025-03-04 19:51:44,314 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:51:44,314 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'divorced', 'education': 'tertiary', 'default': 'no', 'balance': -53, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 5, 'month': 'nov', 'duration': 150, 'campaign': 3, 'pdays': 0, 'previous': 1, 'poutcome': 'failure'}
+2025-03-04 19:51:44,315 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:53:20,284 - INFO - M_INSTANCE CALL: 36
+2025-03-04 19:53:20,285 - INFO - SAMPLE: [[  1.   9.   0.   1.   1. 149.   0.   1.   0.   6.  10. 149.   2.  -1.
+    0.   3.]]
+2025-03-04 19:53:20,286 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'technician', 'marital': 'divorced', 'education': 'secondary', 'default': 'yes', 'balance': 149, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 6, 'month': 'oct', 'duration': 149, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-04 19:53:20,286 - INFO - LLM RUN: 1
+2025-03-04 19:53:21,923 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:53:21,923 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 500, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 8, 'month': 'aug', 'duration': 375, 'campaign': 6, 'pdays': 50, 'previous': 9, 'poutcome': 'success'}
+2025-03-04 19:53:21,924 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:54:48,032 - INFO - M_INSTANCE CALL: 37
+2025-03-04 19:54:48,033 - INFO - SAMPLE: [[  1.  10.   0.   2.   1. 148.   1.   1.   1.   7.   9. 150.   3.   0.
+    1.   2.]]
+2025-03-04 19:54:48,034 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'unemployed', 'marital': 'divorced', 'education': 'tertiary', 'default': 'yes', 'balance': 148, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 7, 'month': 'nov', 'duration': 150, 'campaign': 3, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-04 19:54:48,034 - INFO - LLM RUN: 1
+2025-03-04 19:54:49,682 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:54:49,682 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'self-employed', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': -100, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'apr', 'duration': 150, 'campaign': 3, 'pdays': -1, 'previous': 0, 'poutcome': 'failure'}
+2025-03-04 19:54:49,684 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:54:57,997 - INFO - M_INSTANCE CALL: 38
+2025-03-04 19:54:57,998 - INFO - SAMPLE: [[  1.   9.   0.   1.   1. 149.   0.   1.   0.   8.  10. 149.   2.  -1.
+    0.   3.]]
+2025-03-04 19:54:57,999 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'technician', 'marital': 'divorced', 'education': 'secondary', 'default': 'yes', 'balance': 149, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 8, 'month': 'oct', 'duration': 149, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-04 19:54:57,999 - INFO - LLM RUN: 1
+2025-03-04 19:54:59,634 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:54:59,635 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'technician', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 250, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 5, 'month': 'may', 'duration': 199, 'campaign': 4, 'pdays': -1, 'previous': 0, 'poutcome': 'success'}
+2025-03-04 19:54:59,636 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-04 19:54:59,636 - INFO - LLM RUN: 2
+2025-03-04 19:55:01,274 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:55:01,275 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': -999, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 4, 'month': 'jan', 'duration': 994, 'campaign': 9, 'pdays': 99, 'previous': 9, 'poutcome': 'success'}
+2025-03-04 19:55:01,276 - INFO - Finished generating Counter Factual Successfully. Tries: 2
+2025-03-04 19:55:10,165 - INFO - M_INSTANCE CALL: 39
+2025-03-04 19:55:10,165 - INFO - SAMPLE: [[  1.  10.   0.   2.   1. 150.   1.   1.   0.   9.   9. 150.   3.   0.
+    1.   2.]]
+2025-03-04 19:55:10,166 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'unemployed', 'marital': 'divorced', 'education': 'tertiary', 'default': 'yes', 'balance': 150, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'nov', 'duration': 150, 'campaign': 3, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-04 19:55:10,166 - INFO - LLM RUN: 1
+2025-03-04 19:55:11,774 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:55:11,775 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'unknown', 'default': 'no', 'balance': -20, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 1, 'month': 'jan', 'duration': 20, 'campaign': 9, 'pdays': -50, 'previous': 8, 'poutcome': 'failure'}
+2025-03-04 19:55:11,776 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:55:20,179 - INFO - M_INSTANCE CALL: 40
+2025-03-04 19:55:20,180 - INFO - SAMPLE: [[  1.   9.   0.   1.   0. 151.   0.   1.   0.   9.  10. 149.   2.  -1.
+    0.   3.]]
+2025-03-04 19:55:20,181 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'technician', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 151, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'oct', 'duration': 149, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-04 19:55:20,181 - INFO - LLM RUN: 1
+2025-03-04 19:55:21,817 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:55:21,818 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 151, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'oct', 'duration': 149, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-04 19:55:21,819 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:55:30,175 - INFO - M_INSTANCE CALL: 41
+2025-03-04 19:55:30,176 - INFO - SAMPLE: [[  1.  10.   0.   2.   1. 150.   1.   1.   0.   9.   9. 150.   3.   0.
+    1.   2.]]
+2025-03-04 19:55:30,177 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'unemployed', 'marital': 'divorced', 'education': 'tertiary', 'default': 'yes', 'balance': 150, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'nov', 'duration': 150, 'campaign': 3, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-04 19:55:30,177 - INFO - LLM RUN: 1
+2025-03-04 19:55:31,783 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:55:31,784 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'primary', 'default': 'no', 'balance': -100, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 1, 'month': 'jan', 'duration': 500, 'campaign': 8, 'pdays': 50, 'previous': 6, 'poutcome': 'failure'}
+2025-03-04 19:55:31,784 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:55:31,844 - INFO - M_INSTANCE CALL: 42
+2025-03-04 19:55:31,844 - INFO - SAMPLE: [[  1.   9.   0.   1.   0. 151.   0.   1.   0.   9.  10. 149.   2.  -1.
+    0.   3.]]
+2025-03-04 19:55:31,845 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'technician', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 151, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'oct', 'duration': 149, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-04 19:55:31,845 - INFO - LLM RUN: 1
+2025-03-04 19:55:33,452 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:55:33,452 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'primary', 'default': 'yes', 'balance': -999, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 5, 'month': 'may', 'duration': 10, 'campaign': 8, 'pdays': 99, 'previous': 9, 'poutcome': 'failure'}
+2025-03-04 19:55:33,453 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:55:33,513 - INFO - M_INSTANCE CALL: 43
+2025-03-04 19:55:33,513 - INFO - SAMPLE: [[  1.  10.   0.   2.   1. 150.   1.   1.   0.   9.   9. 150.   3.   0.
+    1.   2.]]
+2025-03-04 19:55:33,514 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'unemployed', 'marital': 'divorced', 'education': 'tertiary', 'default': 'yes', 'balance': 150, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'nov', 'duration': 150, 'campaign': 3, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-04 19:55:33,514 - INFO - LLM RUN: 1
+2025-03-04 19:55:35,120 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:55:35,120 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': -450, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 5, 'month': 'aug', 'duration': 20, 'campaign': 8, 'pdays': 50, 'previous': 4, 'poutcome': 'failure'}
+2025-03-04 19:55:35,121 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:55:35,181 - INFO - M_INSTANCE CALL: 44
+2025-03-04 19:55:35,181 - INFO - SAMPLE: [[  1.   9.   0.   1.   0. 151.   0.   1.   0.   9.  10. 149.   2.  -1.
+    0.   3.]]
+2025-03-04 19:55:35,182 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'technician', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 151, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'oct', 'duration': 149, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-04 19:55:35,182 - INFO - LLM RUN: 1
+2025-03-04 19:55:36,817 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:55:36,817 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'tertiary', 'default': 'yes', 'balance': 599, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 8, 'month': 'jan', 'duration': 450, 'campaign': 5, 'pdays': -1, 'previous': 0, 'poutcome': 'success'}
+2025-03-04 19:55:36,818 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:55:36,819 - INFO - M_INSTANCE CALL: 45
+2025-03-04 19:55:36,819 - INFO - SAMPLE: [[1.00e+00 4.00e+00 2.00e+00 2.00e+00 0.00e+00 1.35e+03 1.00e+00 0.00e+00
+  0.00e+00 1.60e+01 0.00e+00 1.85e+02 1.00e+00 3.30e+02 1.00e+00 0.00e+00]]
+2025-03-04 19:55:36,820 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'management', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 1350, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 16, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 330, 'previous': 1, 'poutcome': 'failure'}
+2025-03-04 19:55:36,820 - INFO - LLM RUN: 1
+2025-03-04 19:55:38,468 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:55:38,468 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'admin.', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 1350, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 16, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 330, 'previous': 1, 'poutcome': 'failure'}
+2025-03-04 19:55:38,469 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:55:38,529 - INFO - M_INSTANCE CALL: 46
+2025-03-04 19:55:38,529 - INFO - SAMPLE: [[  1.   4.   2.   2.   0. 999.   1.   0.   0.   9.   0. 185.   1.  99.
+    1.   0.]]
+2025-03-04 19:55:38,530 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'management', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'failure'}
+2025-03-04 19:55:38,530 - INFO - LLM RUN: 1
+2025-03-04 19:55:40,157 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:55:40,157 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'tertiary', 'default': 'yes', 'balance': -999, 'housing': 'no', 'loan': 'yes', 'contact': 'telephone', 'day': 1, 'month': 'nov', 'duration': 350, 'campaign': 4, 'pdays': -99, 'previous': 8, 'poutcome': 'success'}
+2025-03-04 19:55:40,158 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:55:40,218 - INFO - M_INSTANCE CALL: 47
+2025-03-04 19:55:40,218 - INFO - SAMPLE: [[  1.   4.   2.   2.   0. 999.   1.   0.   0.   9.   1. 185.   1.  99.
+    1.   0.]]
+2025-03-04 19:55:40,219 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'management', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'aug', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'failure'}
+2025-03-04 19:55:40,219 - INFO - LLM RUN: 1
+2025-03-04 19:55:41,808 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:55:41,809 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'primary', 'default': 'yes', 'balance': -999, 'housing': 'no', 'loan': 'yes', 'contact': 'telephone', 'day': 5, 'month': 'nov', 'duration': 320, 'campaign': 6, 'pdays': -1, 'previous': 9, 'poutcome': 'other'}
+2025-03-04 19:55:41,810 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:55:41,869 - INFO - M_INSTANCE CALL: 48
+2025-03-04 19:55:41,870 - INFO - SAMPLE: [[  0.   4.   2.   2.   0. 999.   1.   0.   0.   9.   1. 185.   1.  98.
+    1.   0.]]
+2025-03-04 19:55:41,871 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'management', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'aug', 'duration': 185, 'campaign': 1, 'pdays': 98, 'previous': 1, 'poutcome': 'failure'}
+2025-03-04 19:55:41,871 - INFO - LLM RUN: 1
+2025-03-04 19:55:43,491 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:55:43,492 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': -1, 'housing': 'no', 'loan': 'yes', 'contact': 'telephone', 'day': 3, 'month': 'jan', 'duration': 98, 'campaign': 5, 'pdays': -1, 'previous': 8, 'poutcome': 'other'}
+2025-03-04 19:55:43,493 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:55:51,817 - INFO - M_INSTANCE CALL: 49
+2025-03-04 19:55:51,818 - INFO - SAMPLE: [[  0.   3.   2.   2.   0. 999.   1.   0.   0.   9.   1. 185.   1.  98.
+    1.   0.]]
+2025-03-04 19:55:51,818 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'housemaid', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'aug', 'duration': 185, 'campaign': 1, 'pdays': 98, 'previous': 1, 'poutcome': 'failure'}
+2025-03-04 19:55:51,819 - INFO - LLM RUN: 1
+2025-03-04 19:55:53,439 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:55:53,439 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'technician', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'aug', 'duration': 185, 'campaign': 1, 'pdays': 98, 'previous': 1, 'poutcome': 'success'}
+2025-03-04 19:55:53,440 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:55:53,499 - INFO - M_INSTANCE CALL: 50
+2025-03-04 19:55:53,500 - INFO - SAMPLE: [[  0.   3.   2.   2.   0. 999.   1.   0.   0.   9.   2. 185.   1.  98.
+    1.   0.]]
+2025-03-04 19:55:53,501 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'housemaid', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'dec', 'duration': 185, 'campaign': 1, 'pdays': 98, 'previous': 1, 'poutcome': 'failure'}
+2025-03-04 19:55:53,501 - INFO - LLM RUN: 1
+2025-03-04 19:55:55,075 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:55:55,076 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': -999, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 3, 'month': 'jun', 'duration': 35, 'campaign': 4, 'pdays': -1, 'previous': 8, 'poutcome': 'success'}
+2025-03-04 19:55:55,076 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:55:55,136 - INFO - M_INSTANCE CALL: 51
+2025-03-04 19:55:55,136 - INFO - SAMPLE: [[  1.   3.   2.   2.   0. 999.   1.   0.   0.   9.   2. 185.   1.  99.
+    1.   0.]]
+2025-03-04 19:55:55,137 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'housemaid', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'dec', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'failure'}
+2025-03-04 19:55:55,137 - INFO - LLM RUN: 1
+2025-03-04 19:55:56,772 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:55:56,772 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': -999, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 3, 'month': 'jan', 'duration': 375, 'campaign': 5, 'pdays': 0, 'previous': 8, 'poutcome': 'success'}
+2025-03-04 19:55:56,773 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:55:56,833 - INFO - M_INSTANCE CALL: 52
+2025-03-04 19:55:56,833 - INFO - SAMPLE: [[  1.   3.   2.   2.   0. 999.   1.   0.   0.   9.   2. 185.   1.  98.
+    1.   0.]]
+2025-03-04 19:55:56,834 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'housemaid', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'dec', 'duration': 185, 'campaign': 1, 'pdays': 98, 'previous': 1, 'poutcome': 'failure'}
+2025-03-04 19:55:56,834 - INFO - LLM RUN: 1
+2025-03-04 19:55:58,419 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:55:58,420 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'primary', 'default': 'yes', 'balance': -999, 'housing': 'no', 'loan': 'yes', 'contact': 'telephone', 'day': 1, 'month': 'jan', 'duration': 185, 'campaign': 9, 'pdays': 98, 'previous': 9, 'poutcome': 'other'}
+2025-03-04 19:55:58,421 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:55:58,481 - INFO - M_INSTANCE CALL: 53
+2025-03-04 19:55:58,481 - INFO - SAMPLE: [[  0.   3.   2.   2.   0. 999.   1.   0.   0.   9.   2. 185.   1.  98.
+    1.   0.]]
+2025-03-04 19:55:58,482 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'housemaid', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'dec', 'duration': 185, 'campaign': 1, 'pdays': 98, 'previous': 1, 'poutcome': 'failure'}
+2025-03-04 19:55:58,482 - INFO - LLM RUN: 1
+2025-03-04 19:56:00,113 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:56:00,114 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'admin.', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': -999, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'dec', 'duration': 185, 'campaign': 1, 'pdays': 98, 'previous': 1, 'poutcome': 'failure'}
+2025-03-04 19:56:00,115 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:56:00,175 - INFO - M_INSTANCE CALL: 54
+2025-03-04 19:56:00,175 - INFO - SAMPLE: [[  0.   3.   2.   2.   0. 999.   1.   0.   0.   9.   2. 185.   1.  98.
+    1.   0.]]
+2025-03-04 19:56:00,176 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'housemaid', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'dec', 'duration': 185, 'campaign': 1, 'pdays': 98, 'previous': 1, 'poutcome': 'failure'}
+2025-03-04 19:56:00,176 - INFO - LLM RUN: 1
+2025-03-04 19:56:01,739 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:56:01,740 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'admin.', 'marital': 'single', 'education': 'secondary', 'default': 'yes', 'balance': -999, 'housing': 'no', 'loan': 'yes', 'contact': 'telephone', 'day': 8, 'month': 'aug', 'duration': 25, 'campaign': 7, 'pdays': 50, 'previous': 3, 'poutcome': 'success'}
+2025-03-04 19:56:01,741 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:56:01,801 - INFO - M_INSTANCE CALL: 55
+2025-03-04 19:56:01,802 - INFO - SAMPLE: [[  0.   3.   2.   2.   0. 999.   1.   0.   0.   9.   1. 185.   1.  98.
+    1.   0.]]
+2025-03-04 19:56:01,803 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'housemaid', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'aug', 'duration': 185, 'campaign': 1, 'pdays': 98, 'previous': 1, 'poutcome': 'failure'}
+2025-03-04 19:56:01,803 - INFO - LLM RUN: 1
+2025-03-04 19:56:03,377 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:56:03,378 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'yes', 'balance': -999, 'housing': 'no', 'loan': 'yes', 'contact': 'telephone', 'day': 8, 'month': 'oct', 'duration': 25, 'campaign': 5, 'pdays': -98, 'previous': 4, 'poutcome': 'success'}
+2025-03-04 19:56:03,379 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:56:03,379 - INFO - M_INSTANCE CALL: 56
+2025-03-04 19:56:03,380 - INFO - SAMPLE: [[  1.   6.   1.   2.   0. 307.   1.   0.   0.  14.   8. 341.   1. 330.
+    2.   1.]]
+2025-03-04 19:56:03,381 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'self-employed', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 307, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 14, 'month': 'may', 'duration': 341, 'campaign': 1, 'pdays': 330, 'previous': 2, 'poutcome': 'other'}
+2025-03-04 19:56:03,381 - INFO - LLM RUN: 1
+2025-03-04 19:56:05,027 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:56:05,028 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': -1, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 14, 'month': 'may', 'duration': 341, 'campaign': 1, 'pdays': 330, 'previous': 2, 'poutcome': 'other'}
+2025-03-04 19:56:05,029 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:56:05,089 - INFO - M_INSTANCE CALL: 57
+2025-03-04 19:56:05,089 - INFO - SAMPLE: [[  1.   6.   1.   2.   0. 307.   1.   0.   0.   9.   8. 342.   1.  99.
+    2.   1.]]
+2025-03-04 19:56:05,090 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'self-employed', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 307, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 342, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'other'}
+2025-03-04 19:56:05,090 - INFO - LLM RUN: 1
+2025-03-04 19:56:06,679 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:56:06,679 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'secondary', 'default': 'yes', 'balance': -999, 'housing': 'no', 'loan': 'yes', 'contact': 'telephone', 'day': 5, 'month': 'nov', 'duration': 123, 'campaign': 6, 'pdays': -1, 'previous': 8, 'poutcome': 'failure'}
+2025-03-04 19:56:06,680 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:56:06,740 - INFO - M_INSTANCE CALL: 58
+2025-03-04 19:56:06,741 - INFO - SAMPLE: [[  1.   6.   1.   2.   0. 307.   1.   0.   0.   9.   8. 342.   2.  99.
+    2.   1.]]
+2025-03-04 19:56:06,741 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'self-employed', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 307, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 342, 'campaign': 2, 'pdays': 99, 'previous': 2, 'poutcome': 'other'}
+2025-03-04 19:56:06,742 - INFO - LLM RUN: 1
+2025-03-04 19:56:08,328 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:56:08,328 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'secondary', 'default': 'yes', 'balance': -1, 'housing': 'no', 'loan': 'yes', 'contact': 'telephone', 'day': 5, 'month': 'oct', 'duration': 19, 'campaign': 8, 'pdays': 0, 'previous': 4, 'poutcome': 'failure'}
+2025-03-04 19:56:08,329 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:56:08,389 - INFO - M_INSTANCE CALL: 59
+2025-03-04 19:56:08,390 - INFO - SAMPLE: [[  1.   6.   1.   2.   0. 307.   1.   0.   0.   9.   8. 343.   2.  99.
+    2.   1.]]
+2025-03-04 19:56:08,390 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'self-employed', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 307, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 343, 'campaign': 2, 'pdays': 99, 'previous': 2, 'poutcome': 'other'}
+2025-03-04 19:56:08,390 - INFO - LLM RUN: 1
+2025-03-04 19:56:09,978 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:56:09,978 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'secondary', 'default': 'yes', 'balance': -100, 'housing': 'no', 'loan': 'yes', 'contact': 'telephone', 'day': 5, 'month': 'jun', 'duration': 10, 'campaign': 1, 'pdays': 0, 'previous': 9, 'poutcome': 'failure'}
+2025-03-04 19:56:09,979 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:56:10,040 - INFO - M_INSTANCE CALL: 60
+2025-03-04 19:56:10,040 - INFO - SAMPLE: [[  0.   6.   1.   2.   0. 307.   1.   0.   0.   9.   8. 343.   2.  98.
+    2.   1.]]
+2025-03-04 19:56:10,041 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'self-employed', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 307, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 343, 'campaign': 2, 'pdays': 98, 'previous': 2, 'poutcome': 'other'}
+2025-03-04 19:56:10,041 - INFO - LLM RUN: 1
+2025-03-04 19:56:11,690 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:56:11,690 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'self-employed', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 307, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 343, 'campaign': 2, 'pdays': 98, 'previous': 2, 'poutcome': 'other'}
+2025-03-04 19:56:11,692 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-04 19:56:11,692 - INFO - LLM RUN: 2
+2025-03-04 19:56:13,287 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:56:13,287 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'single', 'education': 'secondary', 'default': 'yes', 'balance': -14, 'housing': 'no', 'loan': 'yes', 'contact': 'telephone', 'day': 5, 'month': 'jun', 'duration': 118, 'campaign': 8, 'pdays': -1, 'previous': 9, 'poutcome': 'success'}
+2025-03-04 19:56:13,288 - INFO - Finished generating Counter Factual Successfully. Tries: 2
+2025-03-04 19:56:21,457 - INFO - M_INSTANCE CALL: 61
+2025-03-04 19:56:21,458 - INFO - SAMPLE: [[  0.   6.   1.   2.   0. 307.   1.   0.   0.   9.   8. 343.   2.  98.
+    2.   1.]]
+2025-03-04 19:56:21,459 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'self-employed', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 307, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 343, 'campaign': 2, 'pdays': 98, 'previous': 2, 'poutcome': 'other'}
+2025-03-04 19:56:21,459 - INFO - LLM RUN: 1
+2025-03-04 19:56:23,081 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:56:23,082 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'primary', 'default': 'no', 'balance': -1, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 343, 'campaign': 2, 'pdays': 98, 'previous': 2, 'poutcome': 'other'}
+2025-03-04 19:56:23,083 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:56:23,143 - INFO - M_INSTANCE CALL: 62
+2025-03-04 19:56:23,143 - INFO - SAMPLE: [[  0.   6.   1.   2.   0. 307.   1.   0.   0.   9.   9. 343.   2.  98.
+    2.   1.]]
+2025-03-04 19:56:23,144 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'self-employed', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 307, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'nov', 'duration': 343, 'campaign': 2, 'pdays': 98, 'previous': 2, 'poutcome': 'other'}
+2025-03-04 19:56:23,144 - INFO - LLM RUN: 1
+2025-03-04 19:56:24,734 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:56:24,734 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': -1, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 3, 'month': 'apr', 'duration': 191, 'campaign': 4, 'pdays': 85, 'previous': 2, 'poutcome': 'other'}
+2025-03-04 19:56:24,735 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:56:24,796 - INFO - M_INSTANCE CALL: 63
+2025-03-04 19:56:24,797 - INFO - SAMPLE: [[  0.   6.   1.   2.   0. 307.   1.   0.   0.   8.   9. 343.   2.  98.
+    2.   1.]]
+2025-03-04 19:56:24,797 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'self-employed', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 307, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'nov', 'duration': 343, 'campaign': 2, 'pdays': 98, 'previous': 2, 'poutcome': 'other'}
+2025-03-04 19:56:24,798 - INFO - LLM RUN: 1
+2025-03-04 19:56:26,387 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:56:26,388 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'technician', 'marital': 'single', 'education': 'secondary', 'default': 'yes', 'balance': -1, 'housing': 'no', 'loan': 'yes', 'contact': 'telephone', 'day': 4, 'month': 'aug', 'duration': 187, 'campaign': 7, 'pdays': -1, 'previous': 8, 'poutcome': 'success'}
+2025-03-04 19:56:26,389 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:56:34,613 - INFO - M_INSTANCE CALL: 64
+2025-03-04 19:56:34,613 - INFO - SAMPLE: [[  0.   6.   0.   2.   0. 307.   1.   0.   0.   8.   9. 343.   2.  98.
+    2.   1.]]
+2025-03-04 19:56:34,614 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'self-employed', 'marital': 'divorced', 'education': 'tertiary', 'default': 'no', 'balance': 307, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'nov', 'duration': 343, 'campaign': 2, 'pdays': 98, 'previous': 2, 'poutcome': 'other'}
+2025-03-04 19:56:34,614 - INFO - LLM RUN: 1
+2025-03-04 19:56:36,230 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:56:36,230 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'admin.', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': -1, 'housing': 'no', 'loan': 'yes', 'contact': 'telephone', 'day': 5, 'month': 'dec', 'duration': 219, 'campaign': 8, 'pdays': -1, 'previous': 8, 'poutcome': 'failure'}
+2025-03-04 19:56:36,231 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:56:44,507 - INFO - M_INSTANCE CALL: 65
+2025-03-04 19:56:44,507 - INFO - SAMPLE: [[  0.   6.   0.   2.   0. 307.   1.   0.   0.   8.   9. 342.   2.  98.
+    2.   1.]]
+2025-03-04 19:56:44,508 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'self-employed', 'marital': 'divorced', 'education': 'tertiary', 'default': 'no', 'balance': 307, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'nov', 'duration': 342, 'campaign': 2, 'pdays': 98, 'previous': 2, 'poutcome': 'other'}
+2025-03-04 19:56:44,508 - INFO - LLM RUN: 1
+2025-03-04 19:56:46,083 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:56:46,083 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'yes', 'balance': -1, 'housing': 'no', 'loan': 'yes', 'contact': 'telephone', 'day': 4, 'month': 'apr', 'duration': 127, 'campaign': 9, 'pdays': -1, 'previous': 8, 'poutcome': 'failure'}
+2025-03-04 19:56:46,084 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:56:46,145 - INFO - M_INSTANCE CALL: 66
+2025-03-04 19:56:46,145 - INFO - SAMPLE: [[  1.   6.   0.   2.   0. 307.   1.   0.   0.   8.   9. 342.   2.  98.
+    2.   1.]]
+2025-03-04 19:56:46,146 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'self-employed', 'marital': 'divorced', 'education': 'tertiary', 'default': 'no', 'balance': 307, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'nov', 'duration': 342, 'campaign': 2, 'pdays': 98, 'previous': 2, 'poutcome': 'other'}
+2025-03-04 19:56:46,146 - INFO - LLM RUN: 1
+2025-03-04 19:56:47,801 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:56:47,802 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'self-employed', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': -1, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'nov', 'duration': 342, 'campaign': 2, 'pdays': 98, 'previous': 2, 'poutcome': 'failure'}
+2025-03-04 19:56:47,804 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-04 19:56:47,804 - INFO - LLM RUN: 2
+2025-03-04 19:56:49,488 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:56:49,488 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'technician', 'marital': 'divorced', 'education': 'tertiary', 'default': 'no', 'balance': -1, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'nov', 'duration': 342, 'campaign': 2, 'pdays': 98, 'previous': 2, 'poutcome': 'other'}
+2025-03-04 19:56:49,489 - INFO - Finished generating Counter Factual Successfully. Tries: 2
+2025-03-04 19:56:49,490 - INFO - M_INSTANCE CALL: 67
+2025-03-04 19:56:49,491 - INFO - SAMPLE: [[  0.   4.   1.   2.   0. 194.   0.   1.   0.  29.   1. 189.   2.  -1.
+    0.   3.]]
+2025-03-04 19:56:49,492 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'management', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 194, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 29, 'month': 'aug', 'duration': 189, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-04 19:56:49,492 - INFO - LLM RUN: 1
+2025-03-04 19:56:51,107 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:56:51,107 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'single', 'education': 'secondary', 'default': 'yes', 'balance': -43, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 29, 'month': 'aug', 'duration': 189, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'failure'}
+2025-03-04 19:56:51,108 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:56:51,169 - INFO - M_INSTANCE CALL: 68
+2025-03-04 19:56:51,169 - INFO - SAMPLE: [[  0.   5.   1.   3.   0. 195.   1.   1.   0.   9.   2. 188.   2.   0.
+    1.   2.]]
+2025-03-04 19:56:51,170 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'unknown', 'default': 'no', 'balance': 195, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'dec', 'duration': 188, 'campaign': 2, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-04 19:56:51,170 - INFO - LLM RUN: 1
+2025-03-04 19:56:52,805 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:56:52,805 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'admin.', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 195, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'dec', 'duration': 188, 'campaign': 2, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-04 19:56:52,806 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:57:01,096 - INFO - M_INSTANCE CALL: 69
+2025-03-04 19:57:01,097 - INFO - SAMPLE: [[  0.   4.   2.   2.   1. 196.   1.   1.   0.   9.   1. 187.   1.   1.
+    2.   1.]]
+2025-03-04 19:57:01,098 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'management', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': 196, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'aug', 'duration': 187, 'campaign': 1, 'pdays': 1, 'previous': 2, 'poutcome': 'other'}
+2025-03-04 19:57:01,098 - INFO - LLM RUN: 1
+2025-03-04 19:57:02,746 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:57:02,746 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'admin.', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': -34.0, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 5, 'month': 'apr', 'duration': 187, 'campaign': 8, 'pdays': -1, 'previous': 2, 'poutcome': 'failure'}
+2025-03-04 19:57:02,747 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:57:13,365 - INFO - M_INSTANCE CALL: 70
+2025-03-04 19:57:13,365 - INFO - SAMPLE: [[  0.   3.   2.   1.   0. 197.   1.   1.   0.   9.   0. 186.   1.   2.
+    3.   2.]]
+2025-03-04 19:57:13,366 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'housemaid', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 197, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 186, 'campaign': 1, 'pdays': 2, 'previous': 3, 'poutcome': 'success'}
+2025-03-04 19:57:13,366 - INFO - LLM RUN: 1
+2025-03-04 19:57:15,004 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:57:15,005 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'blue-collar', 'marital': 'married', 'education': 'tertiary', 'default': 'yes', 'balance': -43, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 2, 'month': 'may', 'duration': 39, 'campaign': 8, 'pdays': -1, 'previous': 9, 'poutcome': 'failure'}
+2025-03-04 19:57:15,006 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:57:23,076 - INFO - M_INSTANCE CALL: 71
+2025-03-04 19:57:23,076 - INFO - SAMPLE: [[  0.   2.   2.   0.   1. 196.   0.   0.   1.   9.   1. 187.   2.   1.
+    2.   3.]]
+2025-03-04 19:57:23,077 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'entrepreneur', 'marital': 'single', 'education': 'primary', 'default': 'yes', 'balance': 196, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'aug', 'duration': 187, 'campaign': 2, 'pdays': 1, 'previous': 2, 'poutcome': 'unknown'}
+2025-03-04 19:57:23,077 - INFO - LLM RUN: 1
+2025-03-04 19:57:24,713 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:57:24,714 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': -1, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 5, 'month': 'jun', 'duration': 95, 'campaign': 8, 'pdays': -1, 'previous': 9, 'poutcome': 'other'}
+2025-03-04 19:57:24,714 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:57:32,859 - INFO - M_INSTANCE CALL: 72
+2025-03-04 19:57:32,859 - INFO - SAMPLE: [[  0.   3.   2.   1.   1. 195.   1.   0.   2.   8.   2. 186.   3.   2.
+    3.   2.]]
+2025-03-04 19:57:32,860 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'housemaid', 'marital': 'single', 'education': 'secondary', 'default': 'yes', 'balance': 195, 'housing': 'yes', 'loan': 'no', 'contact': 'unknown', 'day': 8, 'month': 'dec', 'duration': 186, 'campaign': 3, 'pdays': 2, 'previous': 3, 'poutcome': 'success'}
+2025-03-04 19:57:32,860 - INFO - LLM RUN: 1
+2025-03-04 19:57:34,518 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:57:34,519 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'technician', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': -14, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 4, 'month': 'may', 'duration': 79, 'campaign': 8, 'pdays': 94, 'previous': 0, 'poutcome': 'failure'}
+2025-03-04 19:57:34,520 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:57:42,923 - INFO - M_INSTANCE CALL: 73
+2025-03-04 19:57:42,924 - INFO - SAMPLE: [[  0.   2.   2.   0.   1. 194.   0.   0.   2.   9.   1. 185.   2.   3.
+    4.   3.]]
+2025-03-04 19:57:42,925 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'entrepreneur', 'marital': 'single', 'education': 'primary', 'default': 'yes', 'balance': 194, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 9, 'month': 'aug', 'duration': 185, 'campaign': 2, 'pdays': 3, 'previous': 4, 'poutcome': 'unknown'}
+2025-03-04 19:57:42,925 - INFO - LLM RUN: 1
+2025-03-04 19:57:44,557 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:57:44,558 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': -1, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'jun', 'duration': 30, 'campaign': 5, 'pdays': 9, 'previous': 0, 'poutcome': 'success'}
+2025-03-04 19:57:44,558 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:57:52,858 - INFO - M_INSTANCE CALL: 74
+2025-03-04 19:57:52,859 - INFO - SAMPLE: [[  0.   3.   1.   0.   1. 193.   1.   0.   2.   9.   2. 186.   3.   2.
+    3.   3.]]
+2025-03-04 19:57:52,859 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'housemaid', 'marital': 'married', 'education': 'primary', 'default': 'yes', 'balance': 193, 'housing': 'yes', 'loan': 'no', 'contact': 'unknown', 'day': 9, 'month': 'dec', 'duration': 186, 'campaign': 3, 'pdays': 2, 'previous': 3, 'poutcome': 'unknown'}
+2025-03-04 19:57:52,860 - INFO - LLM RUN: 1
+2025-03-04 19:57:54,466 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:57:54,466 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'primary', 'default': 'no', 'balance': -1, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'dec', 'duration': 186, 'campaign': 3, 'pdays': 2, 'previous': 3, 'poutcome': 'success'}
+2025-03-04 19:57:54,467 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:58:02,721 - INFO - M_INSTANCE CALL: 75
+2025-03-04 19:58:02,721 - INFO - SAMPLE: [[  0.   2.   2.   0.   1. 192.   0.   0.   2.   9.   1. 185.   2.   3.
+    4.   3.]]
+2025-03-04 19:58:02,722 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'entrepreneur', 'marital': 'single', 'education': 'primary', 'default': 'yes', 'balance': 192, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 9, 'month': 'aug', 'duration': 185, 'campaign': 2, 'pdays': 3, 'previous': 4, 'poutcome': 'unknown'}
+2025-03-04 19:58:02,722 - INFO - LLM RUN: 1
+2025-03-04 19:58:04,354 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:58:04,354 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 200, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 5, 'month': 'apr', 'duration': 95, 'campaign': 8, 'pdays': -1, 'previous': 2, 'poutcome': 'success'}
+2025-03-04 19:58:04,355 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-04 19:58:12,645 - INFO - M_INSTANCE CALL: 76
+2025-03-04 19:58:12,646 - INFO - SAMPLE: [[  0.   3.   1.   0.   1. 191.   1.   0.   2.   9.   2. 186.   3.   2.
+    3.   3.]]
+2025-03-04 19:58:12,647 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'housemaid', 'marital': 'married', 'education': 'primary', 'default': 'yes', 'balance': 191, 'housing': 'yes', 'loan': 'no', 'contact': 'unknown', 'day': 9, 'month': 'dec', 'duration': 186, 'campaign': 3, 'pdays': 2, 'previous': 3, 'poutcome': 'unknown'}
+2025-03-04 19:58:12,647 - INFO - LLM RUN: 1
+2025-03-04 19:58:14,251 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-03-04 19:58:14,251 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': -1, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 5, 'month': 'jun', 'duration': 99, 'campaign': 7, 'pdays': 40, 'previous': 6, 'poutcome': 'success'}
+2025-03-04 19:58:14,252 - INFO - Finished generating Counter Factual Successfully. Tries: 1
