@@ -18,6 +18,8 @@ import ollama
 import json
 import anthropic
 import regex
+# TODO: Delete Later
+import logging
 
 from DICE_data.census import census_data, census_data2
 from DICE_data.credit import credit_data
@@ -45,6 +47,13 @@ parser.add_argument("-sensitive_index", help='The index for sensitive features',
 parser.add_argument("-timeout", help='Max. running time', default = 3600, required=False)
 parser.add_argument("-RQ", help='1 for RQ, 2 for RQ2', default = 1, required=False)
 args = parser.parse_args()
+
+# TODO: Delete Later
+logging.basicConfig(filename="logfile.log", 
+                    level=logging.INFO,
+                    format='%(asctime)s - %(levelname)s - %(message)s'
+                    )
+counterfactual_number = 0
 
 FLAGS = flags.FLAGS
 
@@ -210,6 +219,12 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
     categorical_unique_values = conf.categorical_unique_values
     col_names = conf.feature_name
 
+    # TODO: Delete later
+    global counterfactual_number
+    counterfactual_number += 1
+    logging.info(f'M_INSTANCE CALL: {counterfactual_number}')
+    logging.info(f'SAMPLE: {sample}')
+
     #TODO: Delete later, used for testing.
     # print('\n\nSAMPLE:', sample)
     # print('SENS_PARAM:', sens_params)
@@ -221,6 +236,7 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
     formatted_data = data_formatter(decoded_sample, sens_params, col_names)
     formatted_data = str(formatted_data)
     # print('\n\nFORMATTED DATA:', formatted_data)
+    logging.info(f'DECODED SAMPLE FORMATTED: {formatted_data}')
 
     valid_response = False
     max_retries = 10
@@ -231,6 +247,7 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
     # Run the LLM and check the response.
     while not valid_response:
         tries += 1
+        logging.info(f'LLM RUN: {tries}')
 
         # Add error to system message so the LLM can fix it.
         system_message = system_message + " " + error
@@ -248,13 +265,16 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
                                         label_encoders=label_encoders,
                                         categorical_unique_values=categorical_unique_values)
             
+        logging.info(f'Generated Counterfactual: {converted_response}')
+            
         # Verify that the generated response is valid.
         try:
             # Check that all the columns are included.
             valid_response = check_response(converted_response, col_names)
             if not valid_response:
-                error = "FAILED TO VERIFY ALL FEATURES."
+                error_msg = "FAILED TO VERIFY ALL FEATURES."
                 print(f'\n\n{error}\n\n')
+                logging.error(error_msg)
                 continue
 
             # Encode the response
@@ -265,19 +285,23 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
             response = list(encoded_response.values())
             for sens_param in sens_params:
                 if sample[0][sens_param] == response[sens_param]:
-                    error = "FAILED TO CHANGE SENSITIVE PARAMETER."
-                    print(f'\n\n{error}\n\n')
+                    error_msg = "FAILED TO CHANGE SENSITIVE PARAMETER."
+                    print(f'\n\n{error_msg}\n\n')
+                    logging.error(error_msg)
                     valid_response = False
                     continue
 
         except Exception as e:
-            error = f'FAILED TO ENCODE SAMPLE: {e}'
-            print(f'\n\n{error}\n\n')
+            error_msg = f'FAILED TO ENCODE SAMPLE: {e}'
+            print(f'\n\n{error_msg}\n\n')
+            logging.error(error_msg)
             valid_response = False
 
         
         if tries >= max_retries:
-            print('\n\nFAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT\n\n')
+            error_msg = "FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT"
+            print(f'\n\n{error_msg}\n\n')
+            logging.critical(error_msg)
             return None
 
     # Convert the original sample and the generated counterfactual into the correct types.
@@ -286,6 +310,7 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
     m_sample = np.array([og_sample, new_sample])
     # print('\n\nM SAMPLE:', m_sample, '\n\n')
     print('Finished generating Counter Factual Successfully.')
+    logging.info(f'Finished generating Counter Factual Successfully. Tries: {tries}')
 
     return m_sample
 
@@ -340,7 +365,10 @@ def find_closest_regex_match(sample, choices, max_errors = 10):
                 best_choice = choice
 
     if best_choice is None:
-        raise Exception(f"Failed to find a closest match for: {sample}")
+        error_msg = f"Failed to find a closest match for: {sample}"
+        logging.error(error_msg)
+        raise Exception(error_msg)
+    
 
     return best_choice
 
@@ -659,6 +687,10 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
                 # print('M_SAMPLE[0] TYPE: ', type(m_sample[0]))
                 # print('M_SAMPLE[0][0] TYPE: ', type(m_sample[0][0]))
                 # print('M_SAMPLE[0][0][0] TYPE: ', type(m_sample[0][0][0]))
+
+                # TODO: Add a continue if nothing is returned from m_sample.
+                if m_sample is None:
+                    continue
 
                 pred = pred_prob( sess, x, preds, m_sample , input_shape )
                 clus_dic = clustering( pred, m_sample, sens_params, epsillon )
