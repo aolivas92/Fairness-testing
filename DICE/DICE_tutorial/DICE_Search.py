@@ -239,7 +239,7 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
     logging.info(f'DECODED SAMPLE FORMATTED: {formatted_data}')
 
     valid_response = False
-    max_retries = 10
+    max_retries = 3
     tries = 0
     llm = 1
     error = ""
@@ -394,9 +394,9 @@ def data_formatter(sample, sens_params, col_names):
     return formatted_data
 
 def llama31_8b_generator(system_message, user_message, col_names, label_encoders, categorical_unique_values):
-    retries = 0
-    max_retries = 5
-    valid_response = False
+    # retries = 0
+    # max_retries = 3
+    # valid_response = False
 
     message = [
         {'role': 'system', 'content': system_message},
