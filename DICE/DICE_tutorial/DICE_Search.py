@@ -49,7 +49,7 @@ parser.add_argument("-RQ", help='1 for RQ, 2 for RQ2', default = 1, required=Fal
 args = parser.parse_args()
 
 # TODO: Delete Later
-logging.basicConfig(filename="logfile.log", 
+logging.basicConfig(filename="../results/bank/DICE/RQ1/1_10runs/logfile.log", 
                     level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s'
                     )
