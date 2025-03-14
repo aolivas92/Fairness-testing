@@ -11,6 +11,7 @@ type="llama"
 
 # Ensure output directory exists
 mkdir -p "$OUTPUT_DIR"
+mkdir -p "$type"
 
 # Loop to run the command 10 times
 for i in {1..10}; do
