@@ -117,11 +117,14 @@ def process_log_file(log_path, excel_path, file_index):
 
     print(f"Processed {log_path} and saved data to {excel_path}")
 
+llm_type = 'llama'
+# llm_type = 'claude'
+
 # Process all log files
 for i in range(1, 11):
     # Specify paths
-    log_file_path = f"../results/bank/DICE/RQ1/claude_10max/{i}_10runs_claude/logfile.log"
-    excel_file_path = "../results/bank/DICE/RQ1/claude_10max/log_results.xlsx"
+    log_file_path = f"../results/bank/DICE/RQ1/{llm_type}_3max/{i}_10runs_{llm_type}/logfile.log"
+    excel_file_path = f"../results/bank/DICE/RQ1/{llm_type}_3max/{llm_type}_log_results.xlsx"
 
     # Process the log file with its index for positioning
     process_log_file(log_file_path, excel_file_path, i)

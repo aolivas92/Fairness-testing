@@ -241,13 +241,19 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
     valid_response = False
     max_retries = 3
     tries = 0
-    llm = 1
+    llm = 0
     error = ""
 
     # Run the LLM and check the response.
     while not valid_response:
         tries += 1
         logging.info(f'LLM RUN: {tries}')
+
+        if tries > max_retries:
+            error_msg = "FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT"
+            print(f'\n\n{error_msg}\n\n')
+            logging.critical(error_msg)
+            return None
 
         # Add error to system message so the LLM can fix it.
         system_message = system_message + " " + error
@@ -296,13 +302,6 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
             print(f'\n\n{error_msg}\n\n')
             logging.error(error_msg)
             valid_response = False
-
-        
-        if tries >= max_retries:
-            error_msg = "FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT"
-            print(f'\n\n{error_msg}\n\n')
-            logging.critical(error_msg)
-            return None
 
     # Convert the original sample and the generated counterfactual into the correct types.
     og_sample = np.array(sample, dtype=np.float64)
