@@ -1,0 +1,1293 @@
+2025-03-14 02:24:55,642 - INFO - Restoring parameters from ../models/bank/test.model
+2025-03-14 02:24:55,696 - INFO - M_INSTANCE CALL: 1
+2025-03-14 02:24:55,696 - INFO - SAMPLE: [[ 1.000e+00  1.000e+01  1.000e+00  0.000e+00  0.000e+00  1.787e+03
+   0.000e+00  0.000e+00  0.000e+00  1.900e+01  1.000e+01  7.900e+01
+   1.000e+00 -1.000e+00  0.000e+00  3.000e+00]]
+2025-03-14 02:24:55,697 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'unemployed', 'marital': 'married', 'education': 'primary', 'default': 'no', 'balance': 1787, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 19, 'month': 'oct', 'duration': 79, 'campaign': 1, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:24:55,697 - INFO - LLM RUN: 1
+2025-03-14 02:24:56,721 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:24:56,724 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'housemaid', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 1787, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 19, 'month': 'oct', 'duration': 79, 'campaign': 1, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:24:56,726 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:24:56,816 - INFO - M_INSTANCE CALL: 2
+2025-03-14 02:24:56,816 - INFO - SAMPLE: [[  1.   9.   2.   1.   0. 999.   0.   0.   0.   9.   9.  80.   1.  -1.
+    0.   3.]]
+2025-03-14 02:24:56,817 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'technician', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'nov', 'duration': 80, 'campaign': 1, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:24:56,817 - INFO - LLM RUN: 1
+2025-03-14 02:24:57,875 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:24:57,875 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'admin.', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 852, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'nov', 'duration': 80, 'campaign': 1, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:24:57,877 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:24:57,934 - INFO - M_INSTANCE CALL: 3
+2025-03-14 02:24:57,934 - INFO - SAMPLE: [[  1.  10.   2.   2.   0. 998.   0.   0.   1.   9.  10.  79.   2.   0.
+    1.   3.]]
+2025-03-14 02:24:57,935 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'unemployed', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 998, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'oct', 'duration': 79, 'campaign': 2, 'pdays': 0, 'previous': 1, 'poutcome': 'unknown'}
+2025-03-14 02:24:57,935 - INFO - LLM RUN: 1
+2025-03-14 02:24:59,030 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:24:59,031 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 998, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'oct', 'duration': 79, 'campaign': 2, 'pdays': 0, 'previous': 1, 'poutcome': 'unknown'}
+2025-03-14 02:24:59,032 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:24:59,089 - INFO - M_INSTANCE CALL: 4
+2025-03-14 02:24:59,089 - INFO - SAMPLE: [[  1.   9.   2.   1.   0. 997.   0.   0.   2.   8.  11.  78.   3.   1.
+    0.   3.]]
+2025-03-14 02:24:59,090 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'technician', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 997, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 8, 'month': 'sep', 'duration': 78, 'campaign': 3, 'pdays': 1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:24:59,090 - INFO - LLM RUN: 1
+2025-03-14 02:25:00,287 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:00,288 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 997, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 8, 'month': 'sep', 'duration': 78, 'campaign': 3, 'pdays': 1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:25:00,289 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:25:00,347 - INFO - M_INSTANCE CALL: 5
+2025-03-14 02:25:00,347 - INFO - SAMPLE: [[  1.   8.   2.   0.   0. 996.   0.   0.   2.   7.  11.  77.   4.   2.
+    1.   2.]]
+2025-03-14 02:25:00,348 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'primary', 'default': 'no', 'balance': 996, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:00,348 - INFO - LLM RUN: 1
+2025-03-14 02:25:01,420 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:01,421 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 800, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:01,422 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:01,422 - INFO - LLM RUN: 2
+2025-03-14 02:25:02,584 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:02,585 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 896, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:02,586 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:02,586 - INFO - LLM RUN: 3
+2025-03-14 02:25:03,662 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:03,663 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 1248, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'sep', 'duration': 88, 'campaign': 4, 'pdays': 3, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:03,664 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:03,664 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:25:03,664 - INFO - M_INSTANCE CALL: 6
+2025-03-14 02:25:03,664 - INFO - SAMPLE: [[  1.   8.   2.   0.   0. 996.   0.   0.   2.   7.  11.  77.   4.   2.
+    1.   2.]]
+2025-03-14 02:25:03,665 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'primary', 'default': 'no', 'balance': 996, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:03,665 - INFO - LLM RUN: 1
+2025-03-14 02:25:05,365 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:05,365 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 996, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:05,366 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:05,366 - INFO - LLM RUN: 2
+2025-03-14 02:25:06,561 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:06,562 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 996, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:06,562 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:06,563 - INFO - LLM RUN: 3
+2025-03-14 02:25:07,685 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:07,685 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 996, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:07,687 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:07,687 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:25:07,687 - INFO - M_INSTANCE CALL: 7
+2025-03-14 02:25:07,687 - INFO - SAMPLE: [[  1.   8.   2.   0.   0. 996.   0.   0.   2.   7.  11.  77.   4.   2.
+    1.   2.]]
+2025-03-14 02:25:07,688 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'primary', 'default': 'no', 'balance': 996, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:07,688 - INFO - LLM RUN: 1
+2025-03-14 02:25:09,060 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:09,060 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 996, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:09,061 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:09,061 - INFO - LLM RUN: 2
+2025-03-14 02:25:10,736 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:10,737 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 996, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:10,737 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:10,738 - INFO - LLM RUN: 3
+2025-03-14 02:25:11,699 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:11,699 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 996, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 3, 'pdays': 2, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:25:11,700 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:11,701 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:25:11,701 - INFO - M_INSTANCE CALL: 8
+2025-03-14 02:25:11,701 - INFO - SAMPLE: [[  1.   8.   2.   0.   0. 996.   0.   0.   2.   7.  11.  77.   4.   2.
+    1.   2.]]
+2025-03-14 02:25:11,702 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'primary', 'default': 'no', 'balance': 996, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:11,702 - INFO - LLM RUN: 1
+2025-03-14 02:25:12,723 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:12,723 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 1025, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 5, 'month': 'sep', 'duration': 108, 'campaign': 3, 'pdays': 0, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:25:12,724 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:12,724 - INFO - LLM RUN: 2
+2025-03-14 02:25:13,761 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:13,762 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 1096, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 15, 'month': 'jun', 'duration': 99, 'campaign': 4, 'pdays': 1, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:13,763 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:13,763 - INFO - LLM RUN: 3
+2025-03-14 02:25:15,242 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:15,242 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 996, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:15,243 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:15,243 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:25:15,243 - INFO - M_INSTANCE CALL: 9
+2025-03-14 02:25:15,243 - INFO - SAMPLE: [[  1.   8.   2.   0.   0. 996.   0.   0.   2.   7.  11.  77.   4.   2.
+    1.   2.]]
+2025-03-14 02:25:15,244 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'primary', 'default': 'no', 'balance': 996, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:15,244 - INFO - LLM RUN: 1
+2025-03-14 02:25:16,754 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:16,755 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 1200, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'sep', 'duration': 85, 'campaign': 4, 'pdays': 4, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:16,756 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:16,756 - INFO - LLM RUN: 2
+2025-03-14 02:25:17,787 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:17,788 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 996, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:17,789 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:17,789 - INFO - LLM RUN: 3
+2025-03-14 02:25:18,837 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:18,838 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 796, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:18,839 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:18,839 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:25:18,839 - INFO - M_INSTANCE CALL: 10
+2025-03-14 02:25:18,840 - INFO - SAMPLE: [[  1.   8.   2.   0.   0. 996.   0.   0.   2.   7.  11.  77.   4.   2.
+    1.   2.]]
+2025-03-14 02:25:18,840 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'primary', 'default': 'no', 'balance': 996, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:18,840 - INFO - LLM RUN: 1
+2025-03-14 02:25:19,981 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:19,982 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 996, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:19,983 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:19,983 - INFO - LLM RUN: 2
+2025-03-14 02:25:21,022 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:21,022 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 996, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:21,023 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:21,023 - INFO - LLM RUN: 3
+2025-03-14 02:25:22,170 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:22,171 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 996, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:22,171 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:22,171 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:25:22,172 - INFO - M_INSTANCE CALL: 11
+2025-03-14 02:25:22,172 - INFO - SAMPLE: [[  1.   8.   2.   0.   0. 996.   0.   0.   2.   7.  11.  77.   4.   2.
+    1.   2.]]
+2025-03-14 02:25:22,173 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'primary', 'default': 'no', 'balance': 996, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:22,173 - INFO - LLM RUN: 1
+2025-03-14 02:25:23,743 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:23,744 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 1236, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:23,745 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:23,745 - INFO - LLM RUN: 2
+2025-03-14 02:25:25,260 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:25,261 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'admin.', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 996, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'sep', 'duration': 77, 'campaign': 4, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:25:25,262 - INFO - Finished generating Counter Factual Successfully. Tries: 2
+2025-03-14 02:25:25,263 - INFO - M_INSTANCE CALL: 12
+2025-03-14 02:25:25,263 - INFO - SAMPLE: [[1.000e+00 7.000e+00 1.000e+00 1.000e+00 0.000e+00 4.789e+03 1.000e+00
+  1.000e+00 0.000e+00 1.100e+01 8.000e+00 2.200e+02 1.000e+00 3.390e+02
+  4.000e+00 0.000e+00]]
+2025-03-14 02:25:25,264 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'services', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 4789, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 11, 'month': 'may', 'duration': 220, 'campaign': 1, 'pdays': 339, 'previous': 4, 'poutcome': 'failure'}
+2025-03-14 02:25:25,264 - INFO - LLM RUN: 1
+2025-03-14 02:25:26,307 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:26,307 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'admin.', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 4020, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 11, 'month': 'may', 'duration': 220, 'campaign': 1, 'pdays': 339, 'previous': 4, 'poutcome': 'failure'}
+2025-03-14 02:25:26,308 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:25:26,367 - INFO - M_INSTANCE CALL: 13
+2025-03-14 02:25:26,367 - INFO - SAMPLE: [[  1.   7.   1.   1.   0. 999.   1.   1.   0.   9.   7. 220.   1.  99.
+    4.   0.]]
+2025-03-14 02:25:26,368 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'services', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'mar', 'duration': 220, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-14 02:25:26,368 - INFO - LLM RUN: 1
+2025-03-14 02:25:27,485 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:27,489 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 100, 'housing': 'yes', 'loan': 'no', 'contact': 'unknown', 'day': 9, 'month': 'mar', 'duration': 220, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'unknown'}
+2025-03-14 02:25:27,490 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:25:27,550 - INFO - M_INSTANCE CALL: 14
+2025-03-14 02:25:27,550 - INFO - SAMPLE: [[  0.   7.   1.   1.   0. 999.   1.   1.   0.   9.   7. 220.   1.  99.
+    4.   0.]]
+2025-03-14 02:25:27,551 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'services', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'mar', 'duration': 220, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-14 02:25:27,551 - INFO - LLM RUN: 1
+2025-03-14 02:25:28,811 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:28,811 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'housemaid', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 799, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'mar', 'duration': 190, 'campaign': 1, 'pdays': 79, 'previous': 3, 'poutcome': 'failure'}
+2025-03-14 02:25:28,812 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:25:28,870 - INFO - M_INSTANCE CALL: 15
+2025-03-14 02:25:28,871 - INFO - SAMPLE: [[  0.   6.   1.   1.   0. 999.   1.   1.   0.   9.   7. 220.   1.  99.
+    4.   0.]]
+2025-03-14 02:25:28,871 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'self-employed', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'mar', 'duration': 220, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-14 02:25:28,872 - INFO - LLM RUN: 1
+2025-03-14 02:25:30,082 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:30,083 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'widowed', 'education': 'primary', 'default': 'no', 'balance': 199, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 5, 'month': 'oct', 'duration': 120, 'campaign': 1, 'pdays': 30, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:25:30,084 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:25:30,142 - INFO - M_INSTANCE CALL: 16
+2025-03-14 02:25:30,142 - INFO - SAMPLE: [[  0.   6.   2.   1.   0. 999.   1.   1.   0.   9.   7. 220.   1.  99.
+    4.   0.]]
+2025-03-14 02:25:30,143 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'self-employed', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'mar', 'duration': 220, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-14 02:25:30,143 - INFO - LLM RUN: 1
+2025-03-14 02:25:31,215 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:31,219 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'mar', 'duration': 220, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-14 02:25:31,220 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:25:31,280 - INFO - M_INSTANCE CALL: 17
+2025-03-14 02:25:31,280 - INFO - SAMPLE: [[  0.   6.   2.   0.   0. 999.   1.   1.   0.   9.   7. 220.   1.  99.
+    4.   0.]]
+2025-03-14 02:25:31,281 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'self-employed', 'marital': 'single', 'education': 'primary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'mar', 'duration': 220, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-14 02:25:31,281 - INFO - LLM RUN: 1
+2025-03-14 02:25:32,357 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:32,357 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'admin.', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 900, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'mar', 'duration': 180, 'campaign': 1, 'pdays': 90, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:25:32,358 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:25:32,416 - INFO - M_INSTANCE CALL: 18
+2025-03-14 02:25:32,417 - INFO - SAMPLE: [[  0.   6.   2.   0.   0. 999.   0.   1.   0.   9.   7. 220.   1.  99.
+    4.   0.]]
+2025-03-14 02:25:32,418 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'self-employed', 'marital': 'single', 'education': 'primary', 'default': 'no', 'balance': 999, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'mar', 'duration': 220, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-14 02:25:32,418 - INFO - LLM RUN: 1
+2025-03-14 02:25:33,452 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:33,453 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'widowed', 'education': 'secondary', 'default': 'no', 'balance': 800, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'mar', 'duration': 180, 'campaign': 1, 'pdays': 80, 'previous': 3, 'poutcome': 'other'}
+2025-03-14 02:25:33,453 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:25:33,511 - INFO - M_INSTANCE CALL: 19
+2025-03-14 02:25:33,512 - INFO - SAMPLE: [[  0.   5.   2.   0.   0. 999.   0.   1.   0.   9.   7. 220.   1.  99.
+    4.   0.]]
+2025-03-14 02:25:33,512 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'primary', 'default': 'no', 'balance': 999, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'mar', 'duration': 220, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-14 02:25:33,513 - INFO - LLM RUN: 1
+2025-03-14 02:25:34,504 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:34,505 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 550, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'may', 'duration': 180, 'campaign': 2, 'pdays': 50, 'previous': 2, 'poutcome': 'success'}
+2025-03-14 02:25:34,506 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:34,506 - INFO - LLM RUN: 2
+2025-03-14 02:25:36,001 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:36,001 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'mar', 'duration': 220, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-14 02:25:36,002 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:36,002 - INFO - LLM RUN: 3
+2025-03-14 02:25:36,984 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:36,984 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 900, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 12, 'month': 'jun', 'duration': 180, 'campaign': 1, 'pdays': 90, 'previous': 3, 'poutcome': 'other'}
+2025-03-14 02:25:36,985 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:36,985 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:25:36,985 - INFO - M_INSTANCE CALL: 20
+2025-03-14 02:25:36,985 - INFO - SAMPLE: [[  0.   5.   2.   0.   0. 999.   0.   1.   0.   9.   7. 220.   1.  99.
+    4.   0.]]
+2025-03-14 02:25:36,986 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'primary', 'default': 'no', 'balance': 999, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'mar', 'duration': 220, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-14 02:25:36,986 - INFO - LLM RUN: 1
+2025-03-14 02:25:38,001 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:38,002 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 777, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'apr', 'duration': 180, 'campaign': 1, 'pdays': 59, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:25:38,003 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:38,003 - INFO - LLM RUN: 2
+2025-03-14 02:25:39,105 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:39,105 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 880, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'jul', 'duration': 140, 'campaign': 2, 'pdays': 50, 'previous': 2, 'poutcome': 'success'}
+2025-03-14 02:25:39,106 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:39,106 - INFO - LLM RUN: 3
+2025-03-14 02:25:40,130 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:40,131 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 1500, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'mar', 'duration': 220, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'success'}
+2025-03-14 02:25:40,131 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:40,131 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:25:40,132 - INFO - M_INSTANCE CALL: 21
+2025-03-14 02:25:40,132 - INFO - SAMPLE: [[  0.   5.   2.   0.   0. 999.   0.   1.   0.   9.   7. 220.   1.  99.
+    4.   0.]]
+2025-03-14 02:25:40,133 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'primary', 'default': 'no', 'balance': 999, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'mar', 'duration': 220, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-14 02:25:40,133 - INFO - LLM RUN: 1
+2025-03-14 02:25:41,177 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:41,178 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 799, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'mar', 'duration': 220, 'campaign': 1, 'pdays': 59, 'previous': 2, 'poutcome': 'success'}
+2025-03-14 02:25:41,179 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:41,179 - INFO - LLM RUN: 2
+2025-03-14 02:25:42,278 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:42,279 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'housemaid', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 600, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'nov', 'duration': 180, 'campaign': 2, 'pdays': 77, 'previous': 3, 'poutcome': 'other'}
+2025-03-14 02:25:42,280 - INFO - Finished generating Counter Factual Successfully. Tries: 2
+2025-03-14 02:25:42,339 - INFO - M_INSTANCE CALL: 22
+2025-03-14 02:25:42,339 - INFO - SAMPLE: [[  0.   4.   2.   0.   0. 999.   0.   1.   0.   9.   7. 220.   1.  99.
+    4.   0.]]
+2025-03-14 02:25:42,340 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'management', 'marital': 'single', 'education': 'primary', 'default': 'no', 'balance': 999, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'mar', 'duration': 220, 'campaign': 1, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-14 02:25:42,340 - INFO - LLM RUN: 1
+2025-03-14 02:25:43,629 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:43,630 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'admin.', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 750, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'nov', 'duration': 180, 'campaign': 2, 'pdays': 60, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:25:43,631 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:25:43,632 - INFO - M_INSTANCE CALL: 23
+2025-03-14 02:25:43,632 - INFO - SAMPLE: [[  1.   4.   2.   2.   0. 747.   0.   0.   0.  23.   3. 141.   2. 176.
+    3.   0.]]
+2025-03-14 02:25:43,633 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'management', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 23, 'month': 'feb', 'duration': 141, 'campaign': 2, 'pdays': 176, 'previous': 3, 'poutcome': 'failure'}
+2025-03-14 02:25:43,633 - INFO - LLM RUN: 1
+2025-03-14 02:25:44,703 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:44,704 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 23, 'month': 'feb', 'duration': 141, 'campaign': 2, 'pdays': 176, 'previous': 3, 'poutcome': 'failure'}
+2025-03-14 02:25:44,705 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:25:44,766 - INFO - M_INSTANCE CALL: 24
+2025-03-14 02:25:44,766 - INFO - SAMPLE: [[  1.   4.   2.   2.   1. 747.   0.   0.   0.   9.   3. 141.   2.  99.
+    3.   0.]]
+2025-03-14 02:25:44,767 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'management', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'feb', 'duration': 141, 'campaign': 2, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-14 02:25:44,767 - INFO - LLM RUN: 1
+2025-03-14 02:25:45,866 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:45,867 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'admin.', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': 547, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'feb', 'duration': 141, 'campaign': 2, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-14 02:25:45,868 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:25:45,926 - INFO - M_INSTANCE CALL: 25
+2025-03-14 02:25:45,927 - INFO - SAMPLE: [[  1.   4.   2.   2.   1. 747.   0.   0.   0.   9.   3. 141.   2.  99.
+    3.   0.]]
+2025-03-14 02:25:45,928 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'management', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'feb', 'duration': 141, 'campaign': 2, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-14 02:25:45,928 - INFO - LLM RUN: 1
+2025-03-14 02:25:47,174 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:47,175 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'feb', 'duration': 141, 'campaign': 2, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-14 02:25:47,175 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:25:47,233 - INFO - M_INSTANCE CALL: 26
+2025-03-14 02:25:47,234 - INFO - SAMPLE: [[  1.   5.   2.   2.   1. 747.   0.   0.   0.   9.   3. 141.   2.  99.
+    3.   0.]]
+2025-03-14 02:25:47,235 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'retired', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'feb', 'duration': 141, 'campaign': 2, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-14 02:25:47,235 - INFO - LLM RUN: 1
+2025-03-14 02:25:48,771 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:48,772 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'widowed', 'education': 'secondary', 'default': 'no', 'balance': 1347, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 19, 'month': 'nov', 'duration': 321, 'campaign': 4, 'pdays': 49, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:25:48,773 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:48,773 - INFO - LLM RUN: 2
+2025-03-14 02:25:50,316 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:50,317 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 498, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 6, 'month': 'aug', 'duration': 187, 'campaign': 3, 'pdays': 30, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:25:50,318 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:50,318 - INFO - LLM RUN: 3
+2025-03-14 02:25:51,349 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:51,349 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 1000, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 5, 'month': 'jun', 'duration': 200, 'campaign': 3, 'pdays': 30, 'previous': 2, 'poutcome': 'success'}
+2025-03-14 02:25:51,350 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:25:51,350 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:25:51,350 - INFO - M_INSTANCE CALL: 27
+2025-03-14 02:25:51,350 - INFO - SAMPLE: [[  1.   5.   2.   2.   1. 747.   0.   0.   0.   9.   3. 141.   2.  99.
+    3.   0.]]
+2025-03-14 02:25:51,351 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'retired', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'feb', 'duration': 141, 'campaign': 2, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-14 02:25:51,351 - INFO - LLM RUN: 1
+2025-03-14 02:25:52,395 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:52,395 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'services', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 382, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 5, 'month': 'aug', 'duration': 179, 'campaign': 3, 'pdays': 30, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:25:52,396 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:25:52,454 - INFO - M_INSTANCE CALL: 28
+2025-03-14 02:25:52,455 - INFO - SAMPLE: [[  0.   5.   2.   2.   1. 747.   0.   0.   0.   9.   3. 141.   3.  99.
+    3.   0.]]
+2025-03-14 02:25:52,456 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'feb', 'duration': 141, 'campaign': 3, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-14 02:25:52,456 - INFO - LLM RUN: 1
+2025-03-14 02:25:53,450 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:53,451 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 394, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'feb', 'duration': 141, 'campaign': 3, 'pdays': 99, 'previous': 3, 'poutcome': 'success'}
+2025-03-14 02:25:53,452 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:25:53,513 - INFO - M_INSTANCE CALL: 29
+2025-03-14 02:25:53,514 - INFO - SAMPLE: [[  0.   4.   2.   2.   1. 747.   0.   0.   0.   9.   3. 141.   3.  99.
+    3.   0.]]
+2025-03-14 02:25:53,515 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'management', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'feb', 'duration': 141, 'campaign': 3, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-14 02:25:53,515 - INFO - LLM RUN: 1
+2025-03-14 02:25:54,700 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:54,701 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'feb', 'duration': 141, 'campaign': 3, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-14 02:25:54,702 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:25:54,760 - INFO - M_INSTANCE CALL: 30
+2025-03-14 02:25:54,761 - INFO - SAMPLE: [[  0.   4.   2.   2.   1. 747.   0.   0.   0.   9.   3. 142.   3.  99.
+    3.   0.]]
+2025-03-14 02:25:54,761 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'management', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'feb', 'duration': 142, 'campaign': 3, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-14 02:25:54,761 - INFO - LLM RUN: 1
+2025-03-14 02:25:55,864 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:55,865 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 200, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 6, 'month': 'aug', 'duration': 80, 'campaign': 1, 'pdays': 20, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:25:55,866 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:25:55,924 - INFO - M_INSTANCE CALL: 31
+2025-03-14 02:25:55,924 - INFO - SAMPLE: [[  1.   4.   2.   2.   1. 747.   0.   0.   0.   8.   3. 142.   3.  99.
+    3.   0.]]
+2025-03-14 02:25:55,925 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'management', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'feb', 'duration': 142, 'campaign': 3, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-14 02:25:55,925 - INFO - LLM RUN: 1
+2025-03-14 02:25:57,051 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:57,052 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'admin.', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': 747, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'feb', 'duration': 142, 'campaign': 3, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-14 02:25:57,052 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:25:57,110 - INFO - M_INSTANCE CALL: 32
+2025-03-14 02:25:57,111 - INFO - SAMPLE: [[  1.   4.   2.   2.   1. 747.   0.   1.   0.   8.   3. 142.   3.  99.
+    3.   0.]]
+2025-03-14 02:25:57,111 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'management', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': 747, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 8, 'month': 'feb', 'duration': 142, 'campaign': 3, 'pdays': 99, 'previous': 3, 'poutcome': 'failure'}
+2025-03-14 02:25:57,112 - INFO - LLM RUN: 1
+2025-03-14 02:25:58,194 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:58,195 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'blue-collar', 'marital': 'single', 'education': 'secondary', 'default': 'yes', 'balance': 550, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 8, 'month': 'feb', 'duration': 130, 'campaign': 3, 'pdays': 80, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:25:58,196 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:25:58,257 - INFO - M_INSTANCE CALL: 33
+2025-03-14 02:25:58,258 - INFO - SAMPLE: [[  1.   4.   2.   2.   1. 747.   0.   1.   0.   8.   3. 142.   3.  99.
+    4.   0.]]
+2025-03-14 02:25:58,259 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'management', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': 747, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 8, 'month': 'feb', 'duration': 142, 'campaign': 3, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-14 02:25:58,259 - INFO - LLM RUN: 1
+2025-03-14 02:25:59,496 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:25:59,497 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': 665, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 8, 'month': 'feb', 'duration': 142, 'campaign': 3, 'pdays': 99, 'previous': 4, 'poutcome': 'failure'}
+2025-03-14 02:25:59,498 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:25:59,499 - INFO - M_INSTANCE CALL: 34
+2025-03-14 02:25:59,499 - INFO - SAMPLE: [[  1.   9.   1.   1.   0. 147.   1.   0.   0.   6.   8. 151.   2.  -1.
+    0.   3.]]
+2025-03-14 02:25:59,500 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'technician', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 147, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 6, 'month': 'may', 'duration': 151, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:25:59,500 - INFO - LLM RUN: 1
+2025-03-14 02:26:00,552 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:26:00,553 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 147, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 6, 'month': 'may', 'duration': 151, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:26:00,553 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:26:00,612 - INFO - M_INSTANCE CALL: 35
+2025-03-14 02:26:00,612 - INFO - SAMPLE: [[  1.  10.   0.   2.   1. 148.   1.   1.   0.   5.   9. 150.   3.   0.
+    1.   2.]]
+2025-03-14 02:26:00,613 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'unemployed', 'marital': 'divorced', 'education': 'tertiary', 'default': 'yes', 'balance': 148, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 5, 'month': 'nov', 'duration': 150, 'campaign': 3, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:26:00,613 - INFO - LLM RUN: 1
+2025-03-14 02:26:01,825 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:26:01,826 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'divorced', 'education': 'tertiary', 'default': 'yes', 'balance': 148, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 5, 'month': 'nov', 'duration': 120, 'campaign': 3, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:26:01,827 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:26:10,605 - INFO - M_INSTANCE CALL: 36
+2025-03-14 02:26:10,606 - INFO - SAMPLE: [[  1.   9.   0.   1.   1. 149.   0.   1.   0.   6.  10. 149.   2.  -1.
+    0.   3.]]
+2025-03-14 02:26:10,606 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'technician', 'marital': 'divorced', 'education': 'secondary', 'default': 'yes', 'balance': 149, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 6, 'month': 'oct', 'duration': 149, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:26:10,607 - INFO - LLM RUN: 1
+2025-03-14 02:26:11,675 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:26:11,676 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'services', 'marital': 'single', 'education': 'primary', 'default': 'no', 'balance': 249, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 7, 'month': 'nov', 'duration': 249, 'campaign': 3, 'pdays': 10, 'previous': 1, 'poutcome': 'failure'}
+2025-03-14 02:26:11,677 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:26:35,969 - INFO - M_INSTANCE CALL: 37
+2025-03-14 02:26:35,970 - INFO - SAMPLE: [[  1.  10.   0.   2.   1. 148.   1.   1.   1.   7.   9. 150.   3.   0.
+    1.   2.]]
+2025-03-14 02:26:35,971 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'unemployed', 'marital': 'divorced', 'education': 'tertiary', 'default': 'yes', 'balance': 148, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 7, 'month': 'nov', 'duration': 150, 'campaign': 3, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:26:35,971 - INFO - LLM RUN: 1
+2025-03-14 02:26:37,204 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:26:37,205 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'single', 'education': 'secondary', 'default': 'yes', 'balance': 113, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 7, 'month': 'nov', 'duration': 127, 'campaign': 3, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:26:37,206 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:26:45,355 - INFO - M_INSTANCE CALL: 38
+2025-03-14 02:26:45,355 - INFO - SAMPLE: [[  1.   9.   0.   1.   1. 149.   0.   1.   0.   8.  10. 149.   2.  -1.
+    0.   3.]]
+2025-03-14 02:26:45,356 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'technician', 'marital': 'divorced', 'education': 'secondary', 'default': 'yes', 'balance': 149, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 8, 'month': 'oct', 'duration': 149, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:26:45,357 - INFO - LLM RUN: 1
+2025-03-14 02:26:46,542 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:26:46,543 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'admin.', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 312, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 8, 'month': 'oct', 'duration': 149, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'success'}
+2025-03-14 02:26:46,544 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:26:55,215 - INFO - M_INSTANCE CALL: 39
+2025-03-14 02:26:55,215 - INFO - SAMPLE: [[  1.  10.   0.   2.   1. 150.   1.   1.   0.   9.   9. 150.   3.   0.
+    1.   2.]]
+2025-03-14 02:26:55,216 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'unemployed', 'marital': 'divorced', 'education': 'tertiary', 'default': 'yes', 'balance': 150, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'nov', 'duration': 150, 'campaign': 3, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:26:55,216 - INFO - LLM RUN: 1
+2025-03-14 02:26:56,372 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:26:56,373 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'widowed', 'education': 'secondary', 'default': 'no', 'balance': 50, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 5, 'month': 'apr', 'duration': 75, 'campaign': 1, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:26:56,374 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:27:05,758 - INFO - M_INSTANCE CALL: 40
+2025-03-14 02:27:05,758 - INFO - SAMPLE: [[  1.   9.   0.   1.   0. 151.   0.   1.   0.   9.  10. 149.   2.  -1.
+    0.   3.]]
+2025-03-14 02:27:05,759 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'technician', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 151, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'oct', 'duration': 149, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:27:05,759 - INFO - LLM RUN: 1
+2025-03-14 02:27:06,819 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:06,819 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'admin.', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 1251, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'oct', 'duration': 149, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:27:06,820 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:27:15,296 - INFO - M_INSTANCE CALL: 41
+2025-03-14 02:27:15,296 - INFO - SAMPLE: [[  1.  10.   0.   2.   1. 150.   1.   1.   0.   9.   9. 150.   3.   0.
+    1.   2.]]
+2025-03-14 02:27:15,297 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'unemployed', 'marital': 'divorced', 'education': 'tertiary', 'default': 'yes', 'balance': 150, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'nov', 'duration': 150, 'campaign': 3, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:27:15,297 - INFO - LLM RUN: 1
+2025-03-14 02:27:16,733 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:16,735 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 250, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 5, 'month': 'aug', 'duration': 100, 'campaign': 2, 'pdays': 10, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:27:16,736 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:27:16,796 - INFO - M_INSTANCE CALL: 42
+2025-03-14 02:27:16,796 - INFO - SAMPLE: [[  1.   9.   0.   1.   0. 151.   0.   1.   0.   9.  10. 149.   2.  -1.
+    0.   3.]]
+2025-03-14 02:27:16,797 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'technician', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 151, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'oct', 'duration': 149, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:27:16,797 - INFO - LLM RUN: 1
+2025-03-14 02:27:17,923 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:17,924 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'services', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 121, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 5, 'month': 'dec', 'duration': 179, 'campaign': 3, 'pdays': 10, 'previous': 1, 'poutcome': 'failure'}
+2025-03-14 02:27:17,925 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:27:17,984 - INFO - M_INSTANCE CALL: 43
+2025-03-14 02:27:17,985 - INFO - SAMPLE: [[  1.  10.   0.   2.   1. 150.   1.   1.   0.   9.   9. 150.   3.   0.
+    1.   2.]]
+2025-03-14 02:27:17,986 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'unemployed', 'marital': 'divorced', 'education': 'tertiary', 'default': 'yes', 'balance': 150, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'nov', 'duration': 150, 'campaign': 3, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:27:17,986 - INFO - LLM RUN: 1
+2025-03-14 02:27:19,057 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:19,058 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'single', 'education': 'secondary', 'default': 'yes', 'balance': 100, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 1, 'month': 'may', 'duration': 200, 'campaign': 2, 'pdays': 10, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:19,058 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:27:19,120 - INFO - M_INSTANCE CALL: 44
+2025-03-14 02:27:19,120 - INFO - SAMPLE: [[  1.   9.   0.   1.   0. 151.   0.   1.   0.   9.  10. 149.   2.  -1.
+    0.   3.]]
+2025-03-14 02:27:19,121 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'technician', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 151, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'oct', 'duration': 149, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:27:19,121 - INFO - LLM RUN: 1
+2025-03-14 02:27:20,126 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:20,126 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'admin.', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 151, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'oct', 'duration': 149, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:27:20,127 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:27:20,128 - INFO - M_INSTANCE CALL: 45
+2025-03-14 02:27:20,128 - INFO - SAMPLE: [[1.00e+00 4.00e+00 2.00e+00 2.00e+00 0.00e+00 1.35e+03 1.00e+00 0.00e+00
+  0.00e+00 1.60e+01 0.00e+00 1.85e+02 1.00e+00 3.30e+02 1.00e+00 0.00e+00]]
+2025-03-14 02:27:20,129 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'management', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 1350, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 16, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 330, 'previous': 1, 'poutcome': 'failure'}
+2025-03-14 02:27:20,129 - INFO - LLM RUN: 1
+2025-03-14 02:27:21,764 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:21,764 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'admin.', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 1220, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 16, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 330, 'previous': 1, 'poutcome': 'failure'}
+2025-03-14 02:27:21,765 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:27:21,824 - INFO - M_INSTANCE CALL: 46
+2025-03-14 02:27:21,825 - INFO - SAMPLE: [[  1.   4.   2.   2.   0. 999.   1.   0.   0.   9.   0. 185.   1.  99.
+    0.   0.]]
+2025-03-14 02:27:21,826 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'management', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:21,826 - INFO - LLM RUN: 1
+2025-03-14 02:27:23,261 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:23,261 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'admin.', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 899, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:23,262 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:27:23,322 - INFO - M_INSTANCE CALL: 47
+2025-03-14 02:27:23,322 - INFO - SAMPLE: [[  1.   4.   2.   3.   0. 999.   1.   0.   0.   9.   0. 185.   1.  99.
+    0.   0.]]
+2025-03-14 02:27:23,323 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'management', 'marital': 'single', 'education': 'unknown', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:23,323 - INFO - LLM RUN: 1
+2025-03-14 02:27:24,355 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:24,356 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'technician', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 500, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:24,357 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:27:24,418 - INFO - M_INSTANCE CALL: 48
+2025-03-14 02:27:24,418 - INFO - SAMPLE: [[  1.   4.   2.   3.   0. 999.   1.   0.   0.   9.   0. 185.   1.  99.
+    0.   0.]]
+2025-03-14 02:27:24,419 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'management', 'marital': 'single', 'education': 'unknown', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:24,419 - INFO - LLM RUN: 1
+2025-03-14 02:27:25,432 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:25,432 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'admin.', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 800, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 180, 'campaign': 1, 'pdays': 80, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:25,433 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:27:25,493 - INFO - M_INSTANCE CALL: 49
+2025-03-14 02:27:25,493 - INFO - SAMPLE: [[  1.   4.   1.   3.   0. 999.   1.   0.   0.   9.   0. 185.   1.  99.
+    0.   0.]]
+2025-03-14 02:27:25,494 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'management', 'marital': 'married', 'education': 'unknown', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:25,494 - INFO - LLM RUN: 1
+2025-03-14 02:27:26,729 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:26,730 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'admin.', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 700, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 6, 'month': 'apr', 'duration': 175, 'campaign': 1, 'pdays': 50, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:26,730 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:27:26,790 - INFO - M_INSTANCE CALL: 50
+2025-03-14 02:27:26,790 - INFO - SAMPLE: [[  0.   4.   0.   3.   0. 999.   1.   0.   0.   9.   0. 185.   1.  99.
+    0.   0.]]
+2025-03-14 02:27:26,791 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'management', 'marital': 'divorced', 'education': 'unknown', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:26,791 - INFO - LLM RUN: 1
+2025-03-14 02:27:27,834 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:27,838 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:27,839 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:27:27,900 - INFO - M_INSTANCE CALL: 51
+2025-03-14 02:27:27,900 - INFO - SAMPLE: [[  0.   5.   0.   3.   0. 999.   1.   0.   0.   9.   0. 185.   1.  99.
+    0.   0.]]
+2025-03-14 02:27:27,901 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'unknown', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:27,901 - INFO - LLM RUN: 1
+2025-03-14 02:27:28,938 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:28,939 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 800, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 75, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:27:28,940 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:27:28,940 - INFO - LLM RUN: 2
+2025-03-14 02:27:30,179 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:30,179 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 900, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 90, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:27:30,180 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:27:30,180 - INFO - LLM RUN: 3
+2025-03-14 02:27:31,483 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:31,483 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 700, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:31,484 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:27:31,484 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:27:31,484 - INFO - M_INSTANCE CALL: 52
+2025-03-14 02:27:31,484 - INFO - SAMPLE: [[  0.   5.   0.   3.   0. 999.   1.   0.   0.   9.   0. 185.   1.  99.
+    0.   0.]]
+2025-03-14 02:27:31,485 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'unknown', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:31,485 - INFO - LLM RUN: 1
+2025-03-14 02:27:33,138 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:33,140 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'tertiary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:33,140 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:27:33,141 - INFO - LLM RUN: 2
+2025-03-14 02:27:34,264 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:34,265 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:34,266 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:27:34,266 - INFO - LLM RUN: 3
+2025-03-14 02:27:35,272 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:35,273 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'tertiary', 'default': 'no', 'balance': 899, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'jun', 'duration': 165, 'campaign': 1, 'pdays': 89, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:27:35,274 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:27:35,274 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:27:35,274 - INFO - M_INSTANCE CALL: 53
+2025-03-14 02:27:35,274 - INFO - SAMPLE: [[  0.   5.   0.   3.   0. 999.   1.   0.   0.   9.   0. 185.   1.  99.
+    0.   0.]]
+2025-03-14 02:27:35,275 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'unknown', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:35,275 - INFO - LLM RUN: 1
+2025-03-14 02:27:36,384 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:36,385 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 745, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:36,386 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:27:36,386 - INFO - LLM RUN: 2
+2025-03-14 02:27:37,454 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:37,455 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 500, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 60, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:27:37,456 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:27:37,456 - INFO - LLM RUN: 3
+2025-03-14 02:27:38,569 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:38,570 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 600, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:38,571 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:27:38,571 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:27:38,571 - INFO - M_INSTANCE CALL: 54
+2025-03-14 02:27:38,571 - INFO - SAMPLE: [[  0.   5.   0.   3.   0. 999.   1.   0.   0.   9.   0. 185.   1.  99.
+    0.   0.]]
+2025-03-14 02:27:38,572 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'unknown', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:38,572 - INFO - LLM RUN: 1
+2025-03-14 02:27:39,779 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:39,780 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 500, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:39,781 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:27:39,781 - INFO - LLM RUN: 2
+2025-03-14 02:27:40,946 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:40,946 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:40,947 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:27:40,947 - INFO - LLM RUN: 3
+2025-03-14 02:27:42,128 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:42,129 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 800, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:42,130 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:27:42,130 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:27:42,130 - INFO - M_INSTANCE CALL: 55
+2025-03-14 02:27:42,130 - INFO - SAMPLE: [[  0.   5.   0.   3.   0. 999.   1.   0.   0.   9.   0. 185.   1.  99.
+    0.   0.]]
+2025-03-14 02:27:42,131 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'unknown', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:42,131 - INFO - LLM RUN: 1
+2025-03-14 02:27:43,189 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:43,190 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 800, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:27:43,190 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:27:43,190 - INFO - LLM RUN: 2
+2025-03-14 02:27:44,325 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:44,325 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 799, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 59, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:27:44,326 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:27:44,326 - INFO - LLM RUN: 3
+2025-03-14 02:27:45,395 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:45,396 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 185, 'campaign': 1, 'pdays': 99, 'previous': 0, 'poutcome': 'failure'}
+2025-03-14 02:27:45,397 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:27:45,397 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:27:45,397 - INFO - M_INSTANCE CALL: 56
+2025-03-14 02:27:45,397 - INFO - SAMPLE: [[  1.   6.   1.   2.   0. 307.   1.   0.   0.  14.   8. 341.   1. 330.
+    2.   1.]]
+2025-03-14 02:27:45,398 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'self-employed', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 307, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 14, 'month': 'may', 'duration': 341, 'campaign': 1, 'pdays': 330, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:27:45,398 - INFO - LLM RUN: 1
+2025-03-14 02:27:46,559 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:46,560 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 259, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 14, 'month': 'may', 'duration': 341, 'campaign': 1, 'pdays': 330, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:27:46,560 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:27:46,622 - INFO - M_INSTANCE CALL: 57
+2025-03-14 02:27:46,623 - INFO - SAMPLE: [[  1.   6.   1.   2.   0. 307.   1.   0.   0.   9.   8. 341.   1.  99.
+    2.   1.]]
+2025-03-14 02:27:46,624 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'self-employed', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 307, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 341, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:27:46,624 - INFO - LLM RUN: 1
+2025-03-14 02:27:47,703 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:47,703 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 307, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 341, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:27:47,704 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:27:47,764 - INFO - M_INSTANCE CALL: 58
+2025-03-14 02:27:47,764 - INFO - SAMPLE: [[  1.   6.   0.   2.   0. 307.   1.   0.   0.   9.   8. 341.   1.  99.
+    2.   1.]]
+2025-03-14 02:27:47,765 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'self-employed', 'marital': 'divorced', 'education': 'tertiary', 'default': 'no', 'balance': 307, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 341, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:27:47,765 - INFO - LLM RUN: 1
+2025-03-14 02:27:48,831 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:48,832 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'entrepreneur', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 400, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 11, 'month': 'may', 'duration': 281, 'campaign': 2, 'pdays': 45, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:27:48,836 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:27:48,895 - INFO - M_INSTANCE CALL: 59
+2025-03-14 02:27:48,895 - INFO - SAMPLE: [[  1.   6.   0.   2.   0. 307.   1.   0.   0.   9.   8. 341.   1.  99.
+    2.   1.]]
+2025-03-14 02:27:48,896 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'self-employed', 'marital': 'divorced', 'education': 'tertiary', 'default': 'no', 'balance': 307, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 341, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:27:48,896 - INFO - LLM RUN: 1
+2025-03-14 02:27:50,071 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:50,072 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 207, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jun', 'duration': 301, 'campaign': 1, 'pdays': 90, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:27:50,073 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:27:50,132 - INFO - M_INSTANCE CALL: 60
+2025-03-14 02:27:50,132 - INFO - SAMPLE: [[  1.   6.   0.   2.   1. 307.   1.   0.   0.   9.   8. 341.   1.  99.
+    2.   1.]]
+2025-03-14 02:27:50,133 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'self-employed', 'marital': 'divorced', 'education': 'tertiary', 'default': 'yes', 'balance': 307, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 341, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:27:50,133 - INFO - LLM RUN: 1
+2025-03-14 02:27:51,880 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:51,880 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'admin.', 'marital': 'divorced', 'education': 'tertiary', 'default': 'yes', 'balance': 237, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 341, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:27:51,881 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:27:51,944 - INFO - M_INSTANCE CALL: 61
+2025-03-14 02:27:51,944 - INFO - SAMPLE: [[  1.   6.   0.   2.   1. 307.   1.   0.   0.   9.   8. 341.   1.  99.
+    2.   1.]]
+2025-03-14 02:27:51,945 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'self-employed', 'marital': 'divorced', 'education': 'tertiary', 'default': 'yes', 'balance': 307, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 341, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:27:51,945 - INFO - LLM RUN: 1
+2025-03-14 02:27:53,029 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:53,030 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'single', 'education': 'tertiary', 'default': 'no', 'balance': 1200, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 341, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:27:53,031 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:27:53,091 - INFO - M_INSTANCE CALL: 62
+2025-03-14 02:27:53,091 - INFO - SAMPLE: [[  1.   7.   0.   2.   1. 307.   1.   0.   0.   9.   8. 341.   1.  99.
+    2.   1.]]
+2025-03-14 02:27:53,092 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'services', 'marital': 'divorced', 'education': 'tertiary', 'default': 'yes', 'balance': 307, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 341, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:27:53,092 - INFO - LLM RUN: 1
+2025-03-14 02:27:54,115 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:54,116 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'admin.', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': 307, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 341, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:27:54,117 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:27:54,176 - INFO - M_INSTANCE CALL: 63
+2025-03-14 02:27:54,177 - INFO - SAMPLE: [[  1.   7.   0.   2.   1. 307.   1.   1.   0.   9.   8. 341.   1.  99.
+    2.   1.]]
+2025-03-14 02:27:54,178 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'services', 'marital': 'divorced', 'education': 'tertiary', 'default': 'yes', 'balance': 307, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 341, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:27:54,178 - INFO - LLM RUN: 1
+2025-03-14 02:27:55,348 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:55,349 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'admin.', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': 307, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 341, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:27:55,350 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:27:55,412 - INFO - M_INSTANCE CALL: 64
+2025-03-14 02:27:55,412 - INFO - SAMPLE: [[  1.   7.   0.   2.   1. 307.   1.   1.   0.   9.   8. 341.   1.  99.
+    2.   1.]]
+2025-03-14 02:27:55,413 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'services', 'marital': 'divorced', 'education': 'tertiary', 'default': 'yes', 'balance': 307, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 341, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:27:55,413 - INFO - LLM RUN: 1
+2025-03-14 02:27:56,680 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:56,681 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'tertiary', 'default': 'no', 'balance': 1000, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 341, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:27:56,682 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:27:56,742 - INFO - M_INSTANCE CALL: 65
+2025-03-14 02:27:56,742 - INFO - SAMPLE: [[  0.   7.   0.   2.   1. 307.   1.   1.   0.   9.   8. 341.   1.  99.
+    2.   1.]]
+2025-03-14 02:27:56,743 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'services', 'marital': 'divorced', 'education': 'tertiary', 'default': 'yes', 'balance': 307, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 341, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:27:56,743 - INFO - LLM RUN: 1
+2025-03-14 02:27:57,787 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:57,788 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'tertiary', 'default': 'yes', 'balance': 307, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 341, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:27:57,788 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:27:57,848 - INFO - M_INSTANCE CALL: 66
+2025-03-14 02:27:57,848 - INFO - SAMPLE: [[  0.   7.   0.   2.   1. 307.   1.   1.   0.   9.   8. 341.   1.  99.
+    2.   1.]]
+2025-03-14 02:27:57,849 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'services', 'marital': 'divorced', 'education': 'tertiary', 'default': 'yes', 'balance': 307, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 341, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:27:57,849 - INFO - LLM RUN: 1
+2025-03-14 02:27:58,900 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:27:58,901 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'tertiary', 'default': 'yes', 'balance': 307, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 341, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:27:58,902 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:27:58,903 - INFO - M_INSTANCE CALL: 67
+2025-03-14 02:27:58,903 - INFO - SAMPLE: [[  0.   4.   1.   2.   0. 194.   0.   1.   0.  29.   1. 189.   2.  -1.
+    0.   3.]]
+2025-03-14 02:27:58,904 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'management', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 194, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 29, 'month': 'aug', 'duration': 189, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:27:58,904 - INFO - LLM RUN: 1
+2025-03-14 02:28:00,009 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:28:00,010 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 250, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 29, 'month': 'aug', 'duration': 189, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:28:00,011 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:28:00,078 - INFO - M_INSTANCE CALL: 68
+2025-03-14 02:28:00,079 - INFO - SAMPLE: [[  0.   5.   0.   3.   0. 195.   1.   1.   0.   9.   2. 188.   3.   0.
+    1.   2.]]
+2025-03-14 02:28:00,080 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'retired', 'marital': 'divorced', 'education': 'unknown', 'default': 'no', 'balance': 195, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'dec', 'duration': 188, 'campaign': 3, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:28:00,080 - INFO - LLM RUN: 1
+2025-03-14 02:28:01,057 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:28:01,058 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'admin.', 'marital': 'divorced', 'education': 'secondary', 'default': 'no', 'balance': 175, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'dec', 'duration': 188, 'campaign': 3, 'pdays': 2, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:28:01,059 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:28:09,361 - INFO - M_INSTANCE CALL: 69
+2025-03-14 02:28:09,361 - INFO - SAMPLE: [[  0.   4.   1.   2.   1. 196.   1.   1.   0.   9.   1. 187.   2.   1.
+    2.   1.]]
+2025-03-14 02:28:09,362 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'management', 'marital': 'married', 'education': 'tertiary', 'default': 'yes', 'balance': 196, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'aug', 'duration': 187, 'campaign': 2, 'pdays': 1, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:28:09,362 - INFO - LLM RUN: 1
+2025-03-14 02:28:11,194 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:28:11,196 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'tertiary', 'default': 'yes', 'balance': 196, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'aug', 'duration': 187, 'campaign': 2, 'pdays': 1, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:28:11,197 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:28:11,259 - INFO - M_INSTANCE CALL: 70
+2025-03-14 02:28:11,259 - INFO - SAMPLE: [[  0.   3.   2.   1.   0. 197.   1.   1.   0.   9.   0. 186.   1.   2.
+    3.   2.]]
+2025-03-14 02:28:11,260 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'housemaid', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 197, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 186, 'campaign': 1, 'pdays': 2, 'previous': 3, 'poutcome': 'success'}
+2025-03-14 02:28:11,260 - INFO - LLM RUN: 1
+2025-03-14 02:28:12,425 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:28:12,426 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'widowed', 'education': 'primary', 'default': 'no', 'balance': 197, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'apr', 'duration': 186, 'campaign': 1, 'pdays': 2, 'previous': 3, 'poutcome': 'success'}
+2025-03-14 02:28:12,427 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:28:20,654 - INFO - M_INSTANCE CALL: 71
+2025-03-14 02:28:20,655 - INFO - SAMPLE: [[  0.   2.   2.   0.   1. 196.   0.   0.   1.   9.   1. 187.   2.   1.
+    2.   3.]]
+2025-03-14 02:28:20,656 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'entrepreneur', 'marital': 'single', 'education': 'primary', 'default': 'yes', 'balance': 196, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'aug', 'duration': 187, 'campaign': 2, 'pdays': 1, 'previous': 2, 'poutcome': 'unknown'}
+2025-03-14 02:28:20,656 - INFO - LLM RUN: 1
+2025-03-14 02:28:22,300 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:28:22,301 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'secondary', 'default': 'yes', 'balance': 196, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'aug', 'duration': 187, 'campaign': 2, 'pdays': 1, 'previous': 2, 'poutcome': 'unknown'}
+2025-03-14 02:28:22,302 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:28:30,491 - INFO - M_INSTANCE CALL: 72
+2025-03-14 02:28:30,492 - INFO - SAMPLE: [[  0.   3.   2.   1.   1. 195.   1.   0.   2.   8.   2. 186.   3.   2.
+    3.   2.]]
+2025-03-14 02:28:30,493 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'housemaid', 'marital': 'single', 'education': 'secondary', 'default': 'yes', 'balance': 195, 'housing': 'yes', 'loan': 'no', 'contact': 'unknown', 'day': 8, 'month': 'dec', 'duration': 186, 'campaign': 3, 'pdays': 2, 'previous': 3, 'poutcome': 'success'}
+2025-03-14 02:28:30,493 - INFO - LLM RUN: 1
+2025-03-14 02:28:31,764 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:28:31,765 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 1500, 'housing': 'yes', 'loan': 'no', 'contact': 'unknown', 'day': 8, 'month': 'dec', 'duration': 186, 'campaign': 3, 'pdays': 2, 'previous': 3, 'poutcome': 'success'}
+2025-03-14 02:28:31,765 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:28:39,915 - INFO - M_INSTANCE CALL: 73
+2025-03-14 02:28:39,915 - INFO - SAMPLE: [[  0.   2.   2.   0.   1. 194.   0.   0.   2.   9.   1. 185.   2.   3.
+    4.   3.]]
+2025-03-14 02:28:39,916 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'entrepreneur', 'marital': 'single', 'education': 'primary', 'default': 'yes', 'balance': 194, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 9, 'month': 'aug', 'duration': 185, 'campaign': 2, 'pdays': 3, 'previous': 4, 'poutcome': 'unknown'}
+2025-03-14 02:28:39,916 - INFO - LLM RUN: 1
+2025-03-14 02:28:41,105 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:28:41,106 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'primary', 'default': 'yes', 'balance': 194, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 9, 'month': 'aug', 'duration': 185, 'campaign': 2, 'pdays': 3, 'previous': 4, 'poutcome': 'unknown'}
+2025-03-14 02:28:41,107 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:28:49,264 - INFO - M_INSTANCE CALL: 74
+2025-03-14 02:28:49,265 - INFO - SAMPLE: [[  0.   3.   1.   0.   1. 193.   1.   0.   2.   9.   2. 186.   3.   2.
+    3.   3.]]
+2025-03-14 02:28:49,266 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'housemaid', 'marital': 'married', 'education': 'primary', 'default': 'yes', 'balance': 193, 'housing': 'yes', 'loan': 'no', 'contact': 'unknown', 'day': 9, 'month': 'dec', 'duration': 186, 'campaign': 3, 'pdays': 2, 'previous': 3, 'poutcome': 'unknown'}
+2025-03-14 02:28:49,266 - INFO - LLM RUN: 1
+2025-03-14 02:28:50,414 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:28:50,415 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'primary', 'default': 'yes', 'balance': 193, 'housing': 'yes', 'loan': 'no', 'contact': 'unknown', 'day': 9, 'month': 'dec', 'duration': 186, 'campaign': 3, 'pdays': 2, 'previous': 3, 'poutcome': 'unknown'}
+2025-03-14 02:28:50,416 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:28:59,404 - INFO - M_INSTANCE CALL: 75
+2025-03-14 02:28:59,405 - INFO - SAMPLE: [[  0.   2.   2.   0.   1. 192.   0.   0.   2.   9.   1. 185.   2.   3.
+    4.   3.]]
+2025-03-14 02:28:59,406 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'entrepreneur', 'marital': 'single', 'education': 'primary', 'default': 'yes', 'balance': 192, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 9, 'month': 'aug', 'duration': 185, 'campaign': 2, 'pdays': 3, 'previous': 4, 'poutcome': 'unknown'}
+2025-03-14 02:28:59,406 - INFO - LLM RUN: 1
+2025-03-14 02:29:00,530 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:29:00,531 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'widowed', 'education': 'primary', 'default': 'no', 'balance': 192, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'aug', 'duration': 185, 'campaign': 2, 'pdays': 3, 'previous': 4, 'poutcome': 'failure'}
+2025-03-14 02:29:00,532 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:29:00,593 - INFO - M_INSTANCE CALL: 76
+2025-03-14 02:29:00,593 - INFO - SAMPLE: [[  0.   3.   1.   0.   1. 191.   1.   0.   2.   8.   2. 186.   3.   2.
+    3.   3.]]
+2025-03-14 02:29:00,594 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'housemaid', 'marital': 'married', 'education': 'primary', 'default': 'yes', 'balance': 191, 'housing': 'yes', 'loan': 'no', 'contact': 'unknown', 'day': 8, 'month': 'dec', 'duration': 186, 'campaign': 3, 'pdays': 2, 'previous': 3, 'poutcome': 'unknown'}
+2025-03-14 02:29:00,594 - INFO - LLM RUN: 1
+2025-03-14 02:29:02,166 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:29:02,167 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'housemaid', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 1065, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'dec', 'duration': 178, 'campaign': 3, 'pdays': 6, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:29:02,167 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:29:02,168 - INFO - LLM RUN: 2
+2025-03-14 02:29:03,236 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:29:03,237 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'primary', 'default': 'yes', 'balance': 191, 'housing': 'yes', 'loan': 'no', 'contact': 'unknown', 'day': 8, 'month': 'dec', 'duration': 186, 'campaign': 3, 'pdays': 2, 'previous': 3, 'poutcome': 'unknown'}
+2025-03-14 02:29:03,238 - INFO - Finished generating Counter Factual Successfully. Tries: 2
+2025-03-14 02:29:03,298 - INFO - M_INSTANCE CALL: 77
+2025-03-14 02:29:03,299 - INFO - SAMPLE: [[  0.   2.   2.   0.   1. 190.   0.   0.   2.   9.   1. 185.   2.   3.
+    4.   3.]]
+2025-03-14 02:29:03,300 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'entrepreneur', 'marital': 'single', 'education': 'primary', 'default': 'yes', 'balance': 190, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 9, 'month': 'aug', 'duration': 185, 'campaign': 2, 'pdays': 3, 'previous': 4, 'poutcome': 'unknown'}
+2025-03-14 02:29:03,300 - INFO - LLM RUN: 1
+2025-03-14 02:29:04,317 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:29:04,317 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'primary', 'default': 'yes', 'balance': 190, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 9, 'month': 'aug', 'duration': 185, 'campaign': 2, 'pdays': 3, 'previous': 4, 'poutcome': 'unknown'}
+2025-03-14 02:29:04,318 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:29:04,319 - INFO - M_INSTANCE CALL: 78
+2025-03-14 02:29:04,320 - INFO - SAMPLE: [[  0.   7.   1.   0.   0. -88.   1.   1.   0.  17.   0. 313.   1. 147.
+    2.   0.]]
+2025-03-14 02:29:04,320 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'services', 'marital': 'married', 'education': 'primary', 'default': 'no', 'balance': -88, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 17, 'month': 'apr', 'duration': 313, 'campaign': 1, 'pdays': 147, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:29:04,320 - INFO - LLM RUN: 1
+2025-03-14 02:29:06,067 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:29:06,068 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'housemaid', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 113, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 17, 'month': 'apr', 'duration': 313, 'campaign': 1, 'pdays': 147, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:29:06,069 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:29:06,130 - INFO - M_INSTANCE CALL: 79
+2025-03-14 02:29:06,130 - INFO - SAMPLE: [[  0.   7.   1.   0.   0.  -1.   1.   1.   0.   9.   0. 313.   1.  99.
+    2.   0.]]
+2025-03-14 02:29:06,131 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'services', 'marital': 'married', 'education': 'primary', 'default': 'no', 'balance': -1, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 313, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:29:06,131 - INFO - LLM RUN: 1
+2025-03-14 02:29:07,441 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:29:07,442 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'housemaid', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 125, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 313, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:29:07,443 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:29:07,503 - INFO - M_INSTANCE CALL: 80
+2025-03-14 02:29:07,503 - INFO - SAMPLE: [[  0.   7.   1.   0.   0.  -1.   1.   0.   0.   9.   0. 313.   1.  99.
+    2.   0.]]
+2025-03-14 02:29:07,504 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'services', 'marital': 'married', 'education': 'primary', 'default': 'no', 'balance': -1, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 313, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:29:07,504 - INFO - LLM RUN: 1
+2025-03-14 02:29:08,609 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:29:08,610 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 5000, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 313, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:29:08,611 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:29:08,673 - INFO - M_INSTANCE CALL: 81
+2025-03-14 02:29:08,673 - INFO - SAMPLE: [[  0.   8.   1.   0.   0.  -1.   1.   0.   0.   9.   0. 313.   1.  99.
+    2.   0.]]
+2025-03-14 02:29:08,674 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'student', 'marital': 'married', 'education': 'primary', 'default': 'no', 'balance': -1, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 313, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:29:08,674 - INFO - LLM RUN: 1
+2025-03-14 02:29:10,502 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:29:10,503 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'primary', 'default': 'no', 'balance': 12000, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'apr', 'duration': 313, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:29:10,503 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:29:10,564 - INFO - M_INSTANCE CALL: 82
+2025-03-14 02:29:10,564 - INFO - SAMPLE: [[  0.   8.   1.   0.   0.  -1.   1.   0.   0.   9.   0. 313.   1.  99.
+    2.   0.]]
+2025-03-14 02:29:10,565 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'student', 'marital': 'married', 'education': 'primary', 'default': 'no', 'balance': -1, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 313, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:29:10,565 - INFO - LLM RUN: 1
+2025-03-14 02:29:11,702 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:29:11,703 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'widowed', 'education': 'secondary', 'default': 'no', 'balance': 10000, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 313, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:29:11,704 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:29:11,765 - INFO - M_INSTANCE CALL: 83
+2025-03-14 02:29:11,765 - INFO - SAMPLE: [[  0.   8.   1.   0.   0.   0.   1.   0.   0.   9.   0. 313.   1.  99.
+    2.   0.]]
+2025-03-14 02:29:11,766 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'student', 'marital': 'married', 'education': 'primary', 'default': 'no', 'balance': 0, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 313, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:29:11,766 - INFO - LLM RUN: 1
+2025-03-14 02:29:13,087 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:29:13,087 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'primary', 'default': 'no', 'balance': 100, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'apr', 'duration': 313, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:29:13,088 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:29:13,148 - INFO - M_INSTANCE CALL: 84
+2025-03-14 02:29:13,148 - INFO - SAMPLE: [[  0.   8.   1.   0.   0.   0.   1.   0.   1.   9.   0. 313.   1.  99.
+    2.   0.]]
+2025-03-14 02:29:13,149 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'student', 'marital': 'married', 'education': 'primary', 'default': 'no', 'balance': 0, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'apr', 'duration': 313, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:29:13,149 - INFO - LLM RUN: 1
+2025-03-14 02:29:14,471 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:29:14,472 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'primary', 'default': 'no', 'balance': 0, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'apr', 'duration': 313, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:29:14,473 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:29:14,536 - INFO - M_INSTANCE CALL: 85
+2025-03-14 02:29:14,536 - INFO - SAMPLE: [[  0.   8.   1.   0.   0.   0.   1.   0.   1.   9.   0. 313.   1.  99.
+    2.   0.]]
+2025-03-14 02:29:14,537 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'student', 'marital': 'married', 'education': 'primary', 'default': 'no', 'balance': 0, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'apr', 'duration': 313, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:29:14,537 - INFO - LLM RUN: 1
+2025-03-14 02:29:15,781 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:29:15,781 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'widowed', 'education': 'primary', 'default': 'no', 'balance': 100, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'apr', 'duration': 313, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:29:15,782 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:29:15,842 - INFO - M_INSTANCE CALL: 86
+2025-03-14 02:29:15,843 - INFO - SAMPLE: [[  0.   8.   1.   0.   0.   0.   0.   0.   1.   9.   0. 313.   1.  99.
+    2.   0.]]
+2025-03-14 02:29:15,844 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'student', 'marital': 'married', 'education': 'primary', 'default': 'no', 'balance': 0, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'apr', 'duration': 313, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:29:15,844 - INFO - LLM RUN: 1
+2025-03-14 02:29:17,304 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:29:17,304 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'primary', 'default': 'no', 'balance': 600, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 6, 'month': 'dec', 'duration': 100, 'campaign': 2, 'pdays': 20, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:29:17,306 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:29:17,366 - INFO - M_INSTANCE CALL: 87
+2025-03-14 02:29:17,366 - INFO - SAMPLE: [[  0.   8.   1.   1.   0.   0.   0.   0.   1.   9.   0. 313.   1.  99.
+    2.   0.]]
+2025-03-14 02:29:17,367 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'student', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 0, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'apr', 'duration': 313, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:29:17,367 - INFO - LLM RUN: 1
+2025-03-14 02:29:18,371 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:29:18,374 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 15000, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'apr', 'duration': 313, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:29:18,375 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:29:18,437 - INFO - M_INSTANCE CALL: 88
+2025-03-14 02:29:18,438 - INFO - SAMPLE: [[  0.   8.   1.   1.   0.   0.   1.   0.   1.   9.   0. 313.   1.  99.
+    2.   0.]]
+2025-03-14 02:29:18,439 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'student', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 0, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'apr', 'duration': 313, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:29:18,439 - INFO - LLM RUN: 1
+2025-03-14 02:29:19,644 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:29:19,645 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 15000, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'apr', 'duration': 313, 'campaign': 1, 'pdays': 99, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:29:19,646 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:29:19,646 - INFO - M_INSTANCE CALL: 89
+2025-03-14 02:29:19,647 - INFO - SAMPLE: [[ 1.000e+00  4.000e+00  1.000e+00  2.000e+00  0.000e+00  1.476e+03
+   1.000e+00  1.000e+00  2.000e+00  3.000e+00  6.000e+00  1.990e+02
+   4.000e+00 -1.000e+00  0.000e+00  3.000e+00]]
+2025-03-14 02:29:19,647 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'management', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 1476, 'housing': 'yes', 'loan': 'yes', 'contact': 'unknown', 'day': 3, 'month': 'jun', 'duration': 199, 'campaign': 4, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:29:19,648 - INFO - LLM RUN: 1
+2025-03-14 02:29:20,783 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:29:20,784 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 1476, 'housing': 'yes', 'loan': 'yes', 'contact': 'unknown', 'day': 3, 'month': 'jun', 'duration': 199, 'campaign': 4, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:29:20,785 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:29:20,845 - INFO - M_INSTANCE CALL: 90
+2025-03-14 02:29:20,845 - INFO - SAMPLE: [[  1.   5.   2.   3.   0. 999.   0.   0.   1.   2.   5. 198.   5.   0.
+    1.   3.]]
+2025-03-14 02:29:20,846 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'retired', 'marital': 'single', 'education': 'unknown', 'default': 'no', 'balance': 999, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 2, 'month': 'jul', 'duration': 198, 'campaign': 5, 'pdays': 0, 'previous': 1, 'poutcome': 'unknown'}
+2025-03-14 02:29:20,846 - INFO - LLM RUN: 1
+2025-03-14 02:29:22,121 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:29:22,122 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 2, 'month': 'jul', 'duration': 198, 'campaign': 5, 'pdays': 0, 'previous': 1, 'poutcome': 'unknown'}
+2025-03-14 02:29:22,122 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:29:22,123 - INFO - LLM RUN: 2
+2025-03-14 02:29:23,216 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:29:23,217 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'widowed', 'education': 'secondary', 'default': 'no', 'balance': 50000, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 2, 'month': 'jul', 'duration': 198, 'campaign': 5, 'pdays': 0, 'previous': 1, 'poutcome': 'unknown'}
+2025-03-14 02:29:23,218 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:29:23,218 - INFO - LLM RUN: 3
+2025-03-14 02:29:24,344 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:29:24,344 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 500, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 2, 'month': 'jul', 'duration': 198, 'campaign': 5, 'pdays': 0, 'previous': 1, 'poutcome': 'unknown'}
+2025-03-14 02:29:24,345 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:29:24,345 - INFO - M_INSTANCE CALL: 91
+2025-03-14 02:29:24,346 - INFO - SAMPLE: [[  1.   5.   2.   3.   0. 999.   0.   0.   1.   2.   5. 198.   5.   0.
+    1.   3.]]
+2025-03-14 02:29:24,346 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'retired', 'marital': 'single', 'education': 'unknown', 'default': 'no', 'balance': 999, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 2, 'month': 'jul', 'duration': 198, 'campaign': 5, 'pdays': 0, 'previous': 1, 'poutcome': 'unknown'}
+2025-03-14 02:29:24,346 - INFO - LLM RUN: 1
+2025-03-14 02:29:25,364 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:29:25,364 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 2, 'month': 'jul', 'duration': 198, 'campaign': 5, 'pdays': 0, 'previous': 1, 'poutcome': 'unknown'}
+2025-03-14 02:29:25,365 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:29:25,365 - INFO - LLM RUN: 2
+2025-03-14 02:29:26,534 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:29:26,535 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 600, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 2, 'month': 'jul', 'duration': 198, 'campaign': 5, 'pdays': 0, 'previous': 1, 'poutcome': 'unknown'}
+2025-03-14 02:29:26,536 - INFO - Finished generating Counter Factual Successfully. Tries: 2
+2025-03-14 02:29:34,775 - INFO - M_INSTANCE CALL: 92
+2025-03-14 02:29:34,775 - INFO - SAMPLE: [[  1.   4.   2.   2.   1. 998.   1.   1.   2.   3.   4. 199.   6.  -1.
+    0.   2.]]
+2025-03-14 02:29:34,776 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'management', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': 998, 'housing': 'yes', 'loan': 'yes', 'contact': 'unknown', 'day': 3, 'month': 'jan', 'duration': 199, 'campaign': 6, 'pdays': -1, 'previous': 0, 'poutcome': 'success'}
+2025-03-14 02:29:34,776 - INFO - LLM RUN: 1
+2025-03-14 02:29:35,869 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:29:35,870 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': 700, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 3, 'month': 'jan', 'duration': 170, 'campaign': 5, 'pdays': 20, 'previous': 1, 'poutcome': 'failure'}
+2025-03-14 02:29:35,871 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:30:06,614 - INFO - M_INSTANCE CALL: 93
+2025-03-14 02:30:06,614 - INFO - SAMPLE: [[  1.   5.   1.   3.   0. 997.   0.   0.   2.   2.   3. 200.   7.   0.
+    1.   1.]]
+2025-03-14 02:30:06,615 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'retired', 'marital': 'married', 'education': 'unknown', 'default': 'no', 'balance': 997, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 2, 'month': 'feb', 'duration': 200, 'campaign': 7, 'pdays': 0, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:30:06,615 - INFO - LLM RUN: 1
+2025-03-14 02:30:07,626 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:30:07,626 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 997, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 2, 'month': 'feb', 'duration': 300, 'campaign': 7, 'pdays': 0, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:30:07,627 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:30:07,627 - INFO - LLM RUN: 2
+2025-03-14 02:30:09,360 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:30:09,361 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 997, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 3, 'month': 'feb', 'duration': 250, 'campaign': 6, 'pdays': 10, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:30:09,362 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:30:09,362 - INFO - LLM RUN: 3
+2025-03-14 02:30:10,803 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:30:10,803 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 997, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 2, 'month': 'feb', 'duration': 200, 'campaign': 7, 'pdays': 0, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:30:10,804 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:30:10,804 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:30:10,804 - INFO - M_INSTANCE CALL: 94
+2025-03-14 02:30:10,804 - INFO - SAMPLE: [[  1.   5.   1.   3.   0. 997.   0.   0.   2.   2.   3. 200.   7.   0.
+    1.   1.]]
+2025-03-14 02:30:10,805 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'retired', 'marital': 'married', 'education': 'unknown', 'default': 'no', 'balance': 997, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 2, 'month': 'feb', 'duration': 200, 'campaign': 7, 'pdays': 0, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:30:10,805 - INFO - LLM RUN: 1
+2025-03-14 02:30:12,037 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:30:12,038 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 997, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 2, 'month': 'feb', 'duration': 200, 'campaign': 7, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:30:12,039 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:30:12,039 - INFO - LLM RUN: 2
+2025-03-14 02:30:13,101 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:30:13,102 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 997, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 2, 'month': 'feb', 'duration': 200, 'campaign': 7, 'pdays': 0, 'previous': 1, 'poutcome': 'unknown'}
+2025-03-14 02:30:13,103 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:30:13,103 - INFO - LLM RUN: 3
+2025-03-14 02:30:14,273 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:30:14,273 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 947, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 3, 'month': 'feb', 'duration': 150, 'campaign': 5, 'pdays': 1, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:30:14,274 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:30:14,274 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:30:14,274 - INFO - M_INSTANCE CALL: 95
+2025-03-14 02:30:14,274 - INFO - SAMPLE: [[  1.   5.   1.   3.   0. 997.   0.   0.   2.   2.   3. 200.   7.   0.
+    1.   1.]]
+2025-03-14 02:30:14,275 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'retired', 'marital': 'married', 'education': 'unknown', 'default': 'no', 'balance': 997, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 2, 'month': 'feb', 'duration': 200, 'campaign': 7, 'pdays': 0, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:30:14,275 - INFO - LLM RUN: 1
+2025-03-14 02:30:15,880 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:30:15,881 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 997, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 2, 'month': 'feb', 'duration': 200, 'campaign': 7, 'pdays': 0, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:30:15,882 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:30:15,882 - INFO - LLM RUN: 2
+2025-03-14 02:30:16,932 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:30:16,933 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 997, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 2, 'month': 'feb', 'duration': 200, 'campaign': 7, 'pdays': 0, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:30:16,934 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:30:16,934 - INFO - LLM RUN: 3
+2025-03-14 02:30:18,320 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:30:18,321 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 997, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 5, 'month': 'jun', 'duration': 270, 'campaign': 5, 'pdays': 30, 'previous': 2, 'poutcome': 'success'}
+2025-03-14 02:30:18,322 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:30:18,322 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:30:18,322 - INFO - M_INSTANCE CALL: 96
+2025-03-14 02:30:18,322 - INFO - SAMPLE: [[  1.   5.   1.   3.   0. 997.   0.   0.   2.   2.   3. 200.   7.   0.
+    1.   1.]]
+2025-03-14 02:30:18,323 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'retired', 'marital': 'married', 'education': 'unknown', 'default': 'no', 'balance': 997, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 2, 'month': 'feb', 'duration': 200, 'campaign': 7, 'pdays': 0, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:30:18,323 - INFO - LLM RUN: 1
+2025-03-14 02:30:19,921 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:30:19,922 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 997, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 2, 'month': 'feb', 'duration': 200, 'campaign': 7, 'pdays': 0, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:30:19,923 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:30:19,923 - INFO - LLM RUN: 2
+2025-03-14 02:30:21,038 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:30:21,039 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 997, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 2, 'month': 'feb', 'duration': 200, 'campaign': 7, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:30:21,040 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:30:21,040 - INFO - LLM RUN: 3
+2025-03-14 02:30:22,180 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:30:22,180 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 997, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 2, 'month': 'feb', 'duration': 200, 'campaign': 7, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:30:22,181 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:30:22,181 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:30:22,181 - INFO - M_INSTANCE CALL: 97
+2025-03-14 02:30:22,182 - INFO - SAMPLE: [[  1.   5.   1.   3.   0. 997.   0.   0.   2.   2.   3. 200.   7.   0.
+    1.   1.]]
+2025-03-14 02:30:22,182 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'retired', 'marital': 'married', 'education': 'unknown', 'default': 'no', 'balance': 997, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 2, 'month': 'feb', 'duration': 200, 'campaign': 7, 'pdays': 0, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:30:22,182 - INFO - LLM RUN: 1
+2025-03-14 02:30:23,376 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:30:23,377 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 997, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 2, 'month': 'feb', 'duration': 200, 'campaign': 7, 'pdays': 0, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:30:23,378 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:30:23,378 - INFO - LLM RUN: 2
+2025-03-14 02:30:24,442 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:30:24,442 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 997, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 2, 'month': 'feb', 'duration': 200, 'campaign': 7, 'pdays': 0, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:30:24,443 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:30:24,443 - INFO - LLM RUN: 3
+2025-03-14 02:30:25,497 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:30:25,498 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 997, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 2, 'month': 'feb', 'duration': 200, 'campaign': 7, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:30:25,498 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:30:25,499 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:30:25,499 - INFO - M_INSTANCE CALL: 98
+2025-03-14 02:30:25,499 - INFO - SAMPLE: [[  1.   5.   1.   3.   0. 997.   0.   0.   2.   2.   3. 200.   7.   0.
+    1.   1.]]
+2025-03-14 02:30:25,500 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'retired', 'marital': 'married', 'education': 'unknown', 'default': 'no', 'balance': 997, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 2, 'month': 'feb', 'duration': 200, 'campaign': 7, 'pdays': 0, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:30:25,500 - INFO - LLM RUN: 1
+2025-03-14 02:30:26,534 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:30:26,535 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 997, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 2, 'month': 'feb', 'duration': 200, 'campaign': 7, 'pdays': 0, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:30:26,535 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:30:26,536 - INFO - LLM RUN: 2
+2025-03-14 02:30:27,591 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:30:27,591 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 999, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 5, 'month': 'aug', 'duration': 250, 'campaign': 5, 'pdays': 30, 'previous': 2, 'poutcome': 'success'}
+2025-03-14 02:30:27,592 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:30:27,592 - INFO - LLM RUN: 3
+2025-03-14 02:30:28,798 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:30:28,799 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 997, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 5, 'month': 'apr', 'duration': 150, 'campaign': 5, 'pdays': 15, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:30:28,799 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:30:28,799 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:30:28,800 - INFO - M_INSTANCE CALL: 99
+2025-03-14 02:30:28,800 - INFO - SAMPLE: [[  1.   5.   1.   3.   0. 997.   0.   0.   2.   2.   3. 200.   7.   0.
+    1.   1.]]
+2025-03-14 02:30:28,801 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'retired', 'marital': 'married', 'education': 'unknown', 'default': 'no', 'balance': 997, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 2, 'month': 'feb', 'duration': 200, 'campaign': 7, 'pdays': 0, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:30:28,801 - INFO - LLM RUN: 1
+2025-03-14 02:30:29,869 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:30:29,870 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 2000, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 2, 'month': 'feb', 'duration': 120, 'campaign': 3, 'pdays': 10, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:30:29,871 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:30:29,871 - INFO - LLM RUN: 2
+2025-03-14 02:30:31,508 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:30:31,509 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'services', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 697, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 3, 'month': 'apr', 'duration': 160, 'campaign': 5, 'pdays': 20, 'previous': 2, 'poutcome': 'success'}
+2025-03-14 02:30:31,510 - INFO - Finished generating Counter Factual Successfully. Tries: 2
+2025-03-14 02:30:39,563 - INFO - M_INSTANCE CALL: 100
+2025-03-14 02:30:39,563 - INFO - SAMPLE: [[  0.   2.   1.   2.   0. 221.   1.   0.   2.  14.   8.  57.   2.  -1.
+    0.   3.]]
+2025-03-14 02:30:39,564 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'entrepreneur', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 221, 'housing': 'yes', 'loan': 'no', 'contact': 'unknown', 'day': 14, 'month': 'may', 'duration': 57, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:30:39,564 - INFO - LLM RUN: 1
+2025-03-14 02:30:41,320 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:30:41,321 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 221, 'housing': 'yes', 'loan': 'no', 'contact': 'unknown', 'day': 14, 'month': 'may', 'duration': 57, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:30:41,322 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:30:41,385 - INFO - M_INSTANCE CALL: 101
+2025-03-14 02:30:41,385 - INFO - SAMPLE: [[  0.   3.   0.   3.   1. 222.   1.   1.   2.   9.   7.  56.   3.   0.
+    1.   2.]]
+2025-03-14 02:30:41,386 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'housemaid', 'marital': 'divorced', 'education': 'unknown', 'default': 'yes', 'balance': 222, 'housing': 'yes', 'loan': 'yes', 'contact': 'unknown', 'day': 9, 'month': 'mar', 'duration': 56, 'campaign': 3, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:30:41,386 - INFO - LLM RUN: 1
+2025-03-14 02:30:42,476 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:30:42,477 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'widowed', 'education': 'secondary', 'default': 'no', 'balance': 101, 'housing': 'yes', 'loan': 'no', 'contact': 'telephone', 'day': 6, 'month': 'may', 'duration': 102, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:30:42,478 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:31:07,042 - INFO - M_INSTANCE CALL: 102
+2025-03-14 02:31:07,042 - INFO - SAMPLE: [[  0.   2.   1.   2.   0. 221.   0.   0.   2.   9.   8.  55.   4.   1.
+    2.   3.]]
+2025-03-14 02:31:07,043 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'entrepreneur', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 221, 'housing': 'no', 'loan': 'no', 'contact': 'unknown', 'day': 9, 'month': 'may', 'duration': 55, 'campaign': 4, 'pdays': 1, 'previous': 2, 'poutcome': 'unknown'}
+2025-03-14 02:31:07,043 - INFO - LLM RUN: 1
+2025-03-14 02:31:08,121 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:31:08,122 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'tertiary', 'default': 'no', 'balance': 249, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 2, 'month': 'jun', 'duration': 75, 'campaign': 3, 'pdays': -1, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:31:08,123 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:31:16,245 - INFO - M_INSTANCE CALL: 103
+2025-03-14 02:31:16,246 - INFO - SAMPLE: [[  0.   1.   2.   1.   1. 220.   1.   0.   2.   9.   9.  56.   5.   0.
+    3.   2.]]
+2025-03-14 02:31:16,247 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'blue-collar', 'marital': 'single', 'education': 'secondary', 'default': 'yes', 'balance': 220, 'housing': 'yes', 'loan': 'no', 'contact': 'unknown', 'day': 9, 'month': 'nov', 'duration': 56, 'campaign': 5, 'pdays': 0, 'previous': 3, 'poutcome': 'success'}
+2025-03-14 02:31:16,247 - INFO - LLM RUN: 1
+2025-03-14 02:31:17,305 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:31:17,306 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 1200, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 3, 'month': 'sep', 'duration': 180, 'campaign': 3, 'pdays': 30, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:31:17,307 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:31:25,497 - INFO - M_INSTANCE CALL: 104
+2025-03-14 02:31:25,498 - INFO - SAMPLE: [[  0.   2.   1.   2.   1. 221.   1.   1.   1.   9.   8.  57.   4.   1.
+    2.   1.]]
+2025-03-14 02:31:25,499 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'entrepreneur', 'marital': 'married', 'education': 'tertiary', 'default': 'yes', 'balance': 221, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 9, 'month': 'may', 'duration': 57, 'campaign': 4, 'pdays': 1, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:31:25,499 - INFO - LLM RUN: 1
+2025-03-14 02:31:26,474 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:31:26,475 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'tertiary', 'default': 'yes', 'balance': 220, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 9, 'month': 'may', 'duration': 57, 'campaign': 4, 'pdays': 1, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:31:26,476 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:32:04,750 - INFO - M_INSTANCE CALL: 105
+2025-03-14 02:32:04,750 - INFO - SAMPLE: [[  0.   2.   1.   2.   1. 221.   1.   1.   0.   9.   8.  57.   4.   1.
+    2.   1.]]
+2025-03-14 02:32:04,751 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'entrepreneur', 'marital': 'married', 'education': 'tertiary', 'default': 'yes', 'balance': 221, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 57, 'campaign': 4, 'pdays': 1, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:32:04,751 - INFO - LLM RUN: 1
+2025-03-14 02:32:06,187 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:32:06,188 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'tertiary', 'default': 'yes', 'balance': 221, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 57, 'campaign': 4, 'pdays': 1, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:32:06,189 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:32:34,425 - INFO - M_INSTANCE CALL: 106
+2025-03-14 02:32:34,426 - INFO - SAMPLE: [[  0.   1.   2.   1.   1. 220.   0.   0.   1.   9.   9.  56.   5.   2.
+    3.   2.]]
+2025-03-14 02:32:34,427 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'blue-collar', 'marital': 'single', 'education': 'secondary', 'default': 'yes', 'balance': 220, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'nov', 'duration': 56, 'campaign': 5, 'pdays': 2, 'previous': 3, 'poutcome': 'success'}
+2025-03-14 02:32:34,427 - INFO - LLM RUN: 1
+2025-03-14 02:32:35,606 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:32:35,607 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'blue-collar', 'marital': 'widowed', 'education': 'primary', 'default': 'yes', 'balance': 500, 'housing': 'no', 'loan': 'no', 'contact': 'telephone', 'day': 9, 'month': 'nov', 'duration': 156, 'campaign': 3, 'pdays': 7, 'previous': 1, 'poutcome': 'failure'}
+2025-03-14 02:32:35,608 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:32:35,608 - INFO - LLM RUN: 2
+2025-03-14 02:32:36,658 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:32:36,659 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'widowed', 'education': 'primary', 'default': 'no', 'balance': 280, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'nov', 'duration': 86, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:32:36,660 - INFO - Finished generating Counter Factual Successfully. Tries: 2
+2025-03-14 02:32:44,765 - INFO - M_INSTANCE CALL: 107
+2025-03-14 02:32:44,765 - INFO - SAMPLE: [[  0.   0.   1.   0.   0. 221.   0.   1.   0.   9.   8.  55.   4.   1.
+    2.   3.]]
+2025-03-14 02:32:44,766 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'admin.', 'marital': 'married', 'education': 'primary', 'default': 'no', 'balance': 221, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 55, 'campaign': 4, 'pdays': 1, 'previous': 2, 'poutcome': 'unknown'}
+2025-03-14 02:32:44,766 - INFO - LLM RUN: 1
+2025-03-14 02:32:45,868 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:32:45,868 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'primary', 'default': 'no', 'balance': 221, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 55, 'campaign': 4, 'pdays': 1, 'previous': 2, 'poutcome': 'unknown'}
+2025-03-14 02:32:45,869 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:32:53,977 - INFO - M_INSTANCE CALL: 108
+2025-03-14 02:32:53,978 - INFO - SAMPLE: [[  0.   1.   2.   0.   1. 220.   1.   0.   0.   9.   9.  56.   3.   0.
+    3.   2.]]
+2025-03-14 02:32:53,978 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'blue-collar', 'marital': 'single', 'education': 'primary', 'default': 'yes', 'balance': 220, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'nov', 'duration': 56, 'campaign': 3, 'pdays': 0, 'previous': 3, 'poutcome': 'success'}
+2025-03-14 02:32:53,979 - INFO - LLM RUN: 1
+2025-03-14 02:32:55,061 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:32:55,062 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'blue-collar', 'marital': 'single', 'education': 'secondary', 'default': 'yes', 'balance': 220, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'nov', 'duration': 56, 'campaign': 3, 'pdays': 0, 'previous': 3, 'poutcome': 'success'}
+2025-03-14 02:32:55,063 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:32:55,063 - INFO - LLM RUN: 2
+2025-03-14 02:32:57,059 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:32:57,059 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'housemaid', 'marital': 'divorced', 'education': 'secondary', 'default': 'yes', 'balance': 120, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 6, 'month': 'jun', 'duration': 98, 'campaign': 2, 'pdays': 15, 'previous': 2, 'poutcome': 'failure'}
+2025-03-14 02:32:57,060 - INFO - Finished generating Counter Factual Successfully. Tries: 2
+2025-03-14 02:33:05,857 - INFO - M_INSTANCE CALL: 109
+2025-03-14 02:33:05,858 - INFO - SAMPLE: [[  0.   2.   1.   1.   1. 221.   1.   1.   1.   9.   8.  57.   4.   1.
+    2.   1.]]
+2025-03-14 02:33:05,859 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'entrepreneur', 'marital': 'married', 'education': 'secondary', 'default': 'yes', 'balance': 221, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 9, 'month': 'may', 'duration': 57, 'campaign': 4, 'pdays': 1, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:33:05,859 - INFO - LLM RUN: 1
+2025-03-14 02:33:07,003 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:07,004 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'services', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 143, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'may', 'duration': 57, 'campaign': 4, 'pdays': 1, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:33:07,005 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:33:15,104 - INFO - M_INSTANCE CALL: 110
+2025-03-14 02:33:15,105 - INFO - SAMPLE: [[  0.   2.   1.   1.   1. 221.   1.   1.   1.   9.   7.  57.   4.   1.
+    2.   1.]]
+2025-03-14 02:33:15,106 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'entrepreneur', 'marital': 'married', 'education': 'secondary', 'default': 'yes', 'balance': 221, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 9, 'month': 'mar', 'duration': 57, 'campaign': 4, 'pdays': 1, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:33:15,106 - INFO - LLM RUN: 1
+2025-03-14 02:33:16,938 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:16,939 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'admin.', 'marital': 'married', 'education': 'tertiary', 'default': 'yes', 'balance': 221, 'housing': 'yes', 'loan': 'yes', 'contact': 'telephone', 'day': 9, 'month': 'mar', 'duration': 57, 'campaign': 4, 'pdays': 1, 'previous': 2, 'poutcome': 'other'}
+2025-03-14 02:33:16,940 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:33:16,941 - INFO - M_INSTANCE CALL: 111
+2025-03-14 02:33:16,941 - INFO - SAMPLE: [[  1.   7.   1.   1.   0. 132.   0.   0.   0.   7.   5. 148.   1. 152.
+    1.   1.]]
+2025-03-14 02:33:16,942 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'services', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 152, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:16,942 - INFO - LLM RUN: 1
+2025-03-14 02:33:18,326 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:18,327 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'housemaid', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 7, 'month': 'jul', 'duration': 123, 'campaign': 1, 'pdays': 152, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:18,328 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:33:18,388 - INFO - M_INSTANCE CALL: 112
+2025-03-14 02:33:18,389 - INFO - SAMPLE: [[  1.   7.   1.   1.   0. 132.   0.   0.   0.   8.   5. 148.   1.  99.
+    1.   1.]]
+2025-03-14 02:33:18,390 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'services', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:18,390 - INFO - LLM RUN: 1
+2025-03-14 02:33:19,516 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:19,517 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'admin.', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:19,517 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:33:19,578 - INFO - M_INSTANCE CALL: 113
+2025-03-14 02:33:19,578 - INFO - SAMPLE: [[  1.   8.   1.   1.   0. 132.   0.   0.   0.   8.   5. 148.   1.  99.
+    1.   1.]]
+2025-03-14 02:33:19,579 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'student', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:19,579 - INFO - LLM RUN: 1
+2025-03-14 02:33:20,702 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:20,703 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:20,704 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:20,704 - INFO - LLM RUN: 2
+2025-03-14 02:33:22,579 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:22,579 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:22,580 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:22,581 - INFO - LLM RUN: 3
+2025-03-14 02:33:23,618 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:23,618 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:23,619 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:23,619 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:33:23,619 - INFO - M_INSTANCE CALL: 114
+2025-03-14 02:33:23,619 - INFO - SAMPLE: [[  1.   8.   1.   1.   0. 132.   0.   0.   0.   8.   5. 148.   1.  99.
+    1.   1.]]
+2025-03-14 02:33:23,620 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'student', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:23,620 - INFO - LLM RUN: 1
+2025-03-14 02:33:24,705 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:24,706 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:24,707 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:24,707 - INFO - LLM RUN: 2
+2025-03-14 02:33:25,827 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:25,827 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:25,828 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:25,828 - INFO - LLM RUN: 3
+2025-03-14 02:33:26,901 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:26,901 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:26,902 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:26,902 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:33:26,902 - INFO - M_INSTANCE CALL: 115
+2025-03-14 02:33:26,902 - INFO - SAMPLE: [[  1.   8.   1.   1.   0. 132.   0.   0.   0.   8.   5. 148.   1.  99.
+    1.   1.]]
+2025-03-14 02:33:26,903 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'student', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:26,903 - INFO - LLM RUN: 1
+2025-03-14 02:33:28,094 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:28,095 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:28,095 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:28,095 - INFO - LLM RUN: 2
+2025-03-14 02:33:29,097 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:29,098 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:29,099 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:29,099 - INFO - LLM RUN: 3
+2025-03-14 02:33:30,266 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:30,267 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:30,267 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:30,267 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:33:30,268 - INFO - M_INSTANCE CALL: 116
+2025-03-14 02:33:30,268 - INFO - SAMPLE: [[  1.   8.   1.   1.   0. 132.   0.   0.   0.   8.   5. 148.   1.  99.
+    1.   1.]]
+2025-03-14 02:33:30,269 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'student', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:30,269 - INFO - LLM RUN: 1
+2025-03-14 02:33:31,345 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:31,345 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:31,346 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:31,346 - INFO - LLM RUN: 2
+2025-03-14 02:33:32,460 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:32,462 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:32,463 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:32,463 - INFO - LLM RUN: 3
+2025-03-14 02:33:34,169 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:34,170 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:34,171 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:34,171 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:33:34,171 - INFO - M_INSTANCE CALL: 117
+2025-03-14 02:33:34,171 - INFO - SAMPLE: [[  1.   8.   1.   1.   0. 132.   0.   0.   0.   8.   5. 148.   1.  99.
+    1.   1.]]
+2025-03-14 02:33:34,172 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'student', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:34,172 - INFO - LLM RUN: 1
+2025-03-14 02:33:35,241 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:35,241 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:35,242 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:35,242 - INFO - LLM RUN: 2
+2025-03-14 02:33:36,381 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:36,382 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:36,383 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:36,383 - INFO - LLM RUN: 3
+2025-03-14 02:33:37,651 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:37,652 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:37,653 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:37,653 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:33:37,653 - INFO - M_INSTANCE CALL: 118
+2025-03-14 02:33:37,653 - INFO - SAMPLE: [[  1.   8.   1.   1.   0. 132.   0.   0.   0.   8.   5. 148.   1.  99.
+    1.   1.]]
+2025-03-14 02:33:37,654 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'student', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:37,654 - INFO - LLM RUN: 1
+2025-03-14 02:33:38,822 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:38,823 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:38,823 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:38,823 - INFO - LLM RUN: 2
+2025-03-14 02:33:39,849 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:39,850 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:39,851 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:39,851 - INFO - LLM RUN: 3
+2025-03-14 02:33:41,160 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:41,160 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:41,161 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:41,161 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:33:41,161 - INFO - M_INSTANCE CALL: 119
+2025-03-14 02:33:41,162 - INFO - SAMPLE: [[  1.   8.   1.   1.   0. 132.   0.   0.   0.   8.   5. 148.   1.  99.
+    1.   1.]]
+2025-03-14 02:33:41,162 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'student', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:41,162 - INFO - LLM RUN: 1
+2025-03-14 02:33:42,255 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:42,256 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:42,257 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:42,257 - INFO - LLM RUN: 2
+2025-03-14 02:33:43,476 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:43,476 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:43,477 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:43,477 - INFO - LLM RUN: 3
+2025-03-14 02:33:44,561 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:44,562 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 1320, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:44,563 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:44,563 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:33:44,563 - INFO - M_INSTANCE CALL: 120
+2025-03-14 02:33:44,563 - INFO - SAMPLE: [[  1.   8.   1.   1.   0. 132.   0.   0.   0.   8.   5. 148.   1.  99.
+    1.   1.]]
+2025-03-14 02:33:44,564 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'student', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:44,564 - INFO - LLM RUN: 1
+2025-03-14 02:33:45,735 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:45,736 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:45,736 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:45,736 - INFO - LLM RUN: 2
+2025-03-14 02:33:46,797 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:46,798 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:46,799 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:46,799 - INFO - LLM RUN: 3
+2025-03-14 02:33:47,898 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:47,899 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 232, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:47,899 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:47,899 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:33:47,900 - INFO - M_INSTANCE CALL: 121
+2025-03-14 02:33:47,900 - INFO - SAMPLE: [[  1.   8.   1.   1.   0. 132.   0.   0.   0.   8.   5. 148.   1.  99.
+    1.   1.]]
+2025-03-14 02:33:47,901 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'job': 'student', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:47,901 - INFO - LLM RUN: 1
+2025-03-14 02:33:48,994 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:48,994 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:48,995 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:48,995 - INFO - LLM RUN: 2
+2025-03-14 02:33:49,996 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:49,996 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:49,997 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:49,997 - INFO - LLM RUN: 3
+2025-03-14 02:33:51,009 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:51,010 - INFO - Generated Counterfactual: {'age': 'young', 'job': 'student', 'marital': 'single', 'education': 'secondary', 'default': 'no', 'balance': 132, 'housing': 'no', 'loan': 'no', 'contact': 'cellular', 'day': 8, 'month': 'jul', 'duration': 148, 'campaign': 1, 'pdays': 99, 'previous': 1, 'poutcome': 'other'}
+2025-03-14 02:33:51,011 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-14 02:33:51,011 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-14 02:33:51,011 - INFO - M_INSTANCE CALL: 122
+2025-03-14 02:33:51,011 - INFO - SAMPLE: [[  0.   0.   1.   1.   0. 105.   0.   1.   0.  21.   1.  74.   2.  -1.
+    0.   3.]]
+2025-03-14 02:33:51,012 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'admin.', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 105, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 21, 'month': 'aug', 'duration': 74, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:33:51,012 - INFO - LLM RUN: 1
+2025-03-14 02:33:52,123 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:52,124 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 105, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 21, 'month': 'aug', 'duration': 74, 'campaign': 2, 'pdays': -1, 'previous': 0, 'poutcome': 'unknown'}
+2025-03-14 02:33:52,125 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:33:52,186 - INFO - M_INSTANCE CALL: 123
+2025-03-14 02:33:52,187 - INFO - SAMPLE: [[  0.   1.   2.   2.   1. 106.   1.   1.   0.   9.   2.  73.   1.   0.
+    1.   2.]]
+2025-03-14 02:33:52,188 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'blue-collar', 'marital': 'single', 'education': 'tertiary', 'default': 'yes', 'balance': 106, 'housing': 'yes', 'loan': 'yes', 'contact': 'cellular', 'day': 9, 'month': 'dec', 'duration': 73, 'campaign': 1, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:33:52,188 - INFO - LLM RUN: 1
+2025-03-14 02:33:53,302 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:33:53,303 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'widowed', 'education': 'tertiary', 'default': 'no', 'balance': 1000, 'housing': 'yes', 'loan': 'no', 'contact': 'cellular', 'day': 9, 'month': 'dec', 'duration': 73, 'campaign': 1, 'pdays': 0, 'previous': 1, 'poutcome': 'success'}
+2025-03-14 02:33:53,304 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-03-14 02:34:01,836 - INFO - M_INSTANCE CALL: 124
+2025-03-14 02:34:01,837 - INFO - SAMPLE: [[  0.   0.   1.   1.   0. 107.   0.   1.   0.   8.   3.  74.   1.  -1.
+    0.   1.]]
+2025-03-14 02:34:01,838 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'job': 'admin.', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 107, 'housing': 'no', 'loan': 'yes', 'contact': 'cellular', 'day': 8, 'month': 'feb', 'duration': 74, 'campaign': 1, 'pdays': -1, 'previous': 0, 'poutcome': 'other'}
+2025-03-14 02:34:01,838 - INFO - LLM RUN: 1
+2025-03-14 02:34:02,897 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-14 02:34:02,898 - INFO - Generated Counterfactual: {'age': 'old', 'job': 'retired', 'marital': 'married', 'education': 'secondary', 'default': 'no', 'balance': 107, 'housing': 'no', 'loan': 'yes', 'contact': 'telephone', 'day': 8, 'month': 'feb', 'duration': 74, 'campaign': 1, 'pdays': -1, 'previous': 0, 'poutcome': 'other'}
+2025-03-14 02:34:02,899 - INFO - Finished generating Counter Factual Successfully. Tries: 1
