@@ -243,7 +243,7 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
     max_retries = 3
     tries = 0
     llm = 0
-    error = ""
+    error_msg = ""
 
     # Run the LLM and check the response.
     while not valid_response:
@@ -257,7 +257,7 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
             return None
 
         # Add error to system message so the LLM can fix it.
-        system_message = system_message + " " + error
+        system_message = system_message + " " + error_msg
 
         if llm == 0:
             converted_response = llama31_8b_generator(system_message, 
@@ -280,7 +280,7 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
             valid_response = check_response(converted_response, col_names)
             if not valid_response:
                 error_msg = "FAILED TO VERIFY ALL FEATURES."
-                print(f'\n\n{error}\n\n')
+                print(f'\n\n{error_msg}\n\n')
                 logging.error(error_msg)
                 continue
 
