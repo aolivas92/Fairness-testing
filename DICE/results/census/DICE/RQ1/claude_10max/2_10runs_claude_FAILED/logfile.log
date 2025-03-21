@@ -1,0 +1,518 @@
+2025-03-21 04:25:57,565 - INFO - Restoring parameters from ../models/census/test.model
+2025-03-21 04:25:57,620 - INFO - M_INSTANCE CALL: 1
+2025-03-21 04:25:57,621 - INFO - SAMPLE: [[0.00000e+00 1.00000e+00 4.22013e+05 1.10000e+01 0.00000e+00 1.00000e+01
+  1.00000e+00 4.00000e+00 0.00000e+00 0.00000e+00 3.68300e+03 4.00000e+01
+  3.90000e+01]]
+2025-03-21 04:25:57,622 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Prof-specialty', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-03-21 04:25:57,622 - INFO - LLM RUN: 1
+2025-03-21 04:25:59,018 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:25:59,021 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 1589, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:25:59,024 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:25:59,024 - INFO - LLM RUN: 2
+2025-03-21 04:26:00,259 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:00,260 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:00,261 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:00,261 - INFO - LLM RUN: 3
+2025-03-21 04:26:02,221 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:02,222 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Masters', 'marital.status': 'Divorced', 'occupation': 'Exec-managerial', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:02,223 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:02,223 - INFO - LLM RUN: 4
+2025-03-21 04:26:03,533 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:03,534 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 2150, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:03,535 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:03,535 - INFO - LLM RUN: 5
+2025-03-21 04:26:05,422 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:05,423 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Local-gov', 'fnlwgt': 422013, 'education': 'Some-college', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:05,424 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:05,424 - INFO - LLM RUN: 6
+2025-03-21 04:26:06,712 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:06,713 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:06,714 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:06,714 - INFO - LLM RUN: 7
+2025-03-21 04:26:08,023 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:08,024 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Widowed', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 1290, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:08,025 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:08,025 - INFO - LLM RUN: 8
+2025-03-21 04:26:09,254 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:09,255 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 1500, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:09,256 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:09,256 - INFO - LLM RUN: 9
+2025-03-21 04:26:10,608 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:10,609 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Widowed', 'occupation': 'Adm-clerical', 'relationship': 'Other-relative', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 1742, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:10,625 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:10,625 - INFO - LLM RUN: 10
+2025-03-21 04:26:11,951 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:11,952 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:11,953 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:11,953 - INFO - LLM RUN: 11
+2025-03-21 04:26:11,953 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-21 04:26:11,953 - INFO - M_INSTANCE CALL: 2
+2025-03-21 04:26:11,953 - INFO - SAMPLE: [[0.00000e+00 1.00000e+00 4.22013e+05 1.10000e+01 0.00000e+00 1.00000e+01
+  1.00000e+00 4.00000e+00 0.00000e+00 0.00000e+00 3.68300e+03 4.00000e+01
+  3.90000e+01]]
+2025-03-21 04:26:11,954 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Prof-specialty', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-03-21 04:26:11,954 - INFO - LLM RUN: 1
+2025-03-21 04:26:13,174 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:13,175 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 37, 'native.country': 'United-States'}
+2025-03-21 04:26:13,176 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:13,176 - INFO - LLM RUN: 2
+2025-03-21 04:26:14,502 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:14,502 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Local-gov', 'fnlwgt': 412345, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 2500, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:14,504 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:14,504 - INFO - LLM RUN: 3
+2025-03-21 04:26:15,763 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:15,763 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Prof-specialty', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:15,795 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:15,795 - INFO - LLM RUN: 4
+2025-03-21 04:26:17,034 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:17,036 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 1297, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:17,037 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:17,037 - INFO - LLM RUN: 5
+2025-03-21 04:26:18,434 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:18,434 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 2342, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:18,435 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:18,436 - INFO - LLM RUN: 6
+2025-03-21 04:26:20,355 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:20,355 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:20,357 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:20,357 - INFO - LLM RUN: 7
+2025-03-21 04:26:21,795 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:21,795 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 38, 'native.country': 'United-States'}
+2025-03-21 04:26:21,796 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:21,796 - INFO - LLM RUN: 8
+2025-03-21 04:26:23,258 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:23,258 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:23,260 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:23,260 - INFO - LLM RUN: 9
+2025-03-21 04:26:25,394 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:25,395 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Some-college', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:25,396 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:25,396 - INFO - LLM RUN: 10
+2025-03-21 04:26:26,614 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:26,615 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Widowed', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 1092, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:26,616 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:26,616 - INFO - LLM RUN: 11
+2025-03-21 04:26:26,616 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-21 04:26:26,616 - INFO - M_INSTANCE CALL: 3
+2025-03-21 04:26:26,617 - INFO - SAMPLE: [[0.00000e+00 1.00000e+00 4.22013e+05 1.10000e+01 0.00000e+00 1.00000e+01
+  1.00000e+00 4.00000e+00 0.00000e+00 0.00000e+00 3.68300e+03 4.00000e+01
+  3.90000e+01]]
+2025-03-21 04:26:26,617 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Prof-specialty', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-03-21 04:26:26,617 - INFO - LLM RUN: 1
+2025-03-21 04:26:28,008 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:28,009 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:28,010 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:28,010 - INFO - LLM RUN: 2
+2025-03-21 04:26:30,065 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:30,066 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 0, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:30,067 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:30,067 - INFO - LLM RUN: 3
+2025-03-21 04:26:32,047 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:32,048 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:32,049 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:32,049 - INFO - LLM RUN: 4
+2025-03-21 04:26:33,460 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:33,461 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:33,462 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:33,463 - INFO - LLM RUN: 5
+2025-03-21 04:26:34,755 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:34,756 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Admin-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:34,953 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:34,953 - INFO - LLM RUN: 6
+2025-03-21 04:26:36,196 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:36,197 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Widowed', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:36,198 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:36,198 - INFO - LLM RUN: 7
+2025-03-21 04:26:38,097 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:38,097 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 2103, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:38,099 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:38,099 - INFO - LLM RUN: 8
+2025-03-21 04:26:39,336 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:39,336 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:39,338 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:39,338 - INFO - LLM RUN: 9
+2025-03-21 04:26:40,729 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:40,730 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 2042, 'hours.per.week': 37, 'native.country': 'United-States'}
+2025-03-21 04:26:40,731 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:40,731 - INFO - LLM RUN: 10
+2025-03-21 04:26:42,821 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:42,821 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 1652, 'hours.per.week': 37, 'native.country': 'United-States'}
+2025-03-21 04:26:42,823 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:42,823 - INFO - LLM RUN: 11
+2025-03-21 04:26:42,823 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-21 04:26:42,823 - INFO - M_INSTANCE CALL: 4
+2025-03-21 04:26:42,823 - INFO - SAMPLE: [[0.00000e+00 1.00000e+00 4.22013e+05 1.10000e+01 0.00000e+00 1.00000e+01
+  1.00000e+00 4.00000e+00 0.00000e+00 0.00000e+00 3.68300e+03 4.00000e+01
+  3.90000e+01]]
+2025-03-21 04:26:42,824 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Prof-specialty', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-03-21 04:26:42,824 - INFO - LLM RUN: 1
+2025-03-21 04:26:44,221 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:44,222 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 36, 'native.country': 'United-States'}
+2025-03-21 04:26:44,223 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:44,223 - INFO - LLM RUN: 2
+2025-03-21 04:26:46,087 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:46,088 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 1842, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:46,089 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:46,089 - INFO - LLM RUN: 3
+2025-03-21 04:26:47,393 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:47,394 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:47,395 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:47,395 - INFO - LLM RUN: 4
+2025-03-21 04:26:48,906 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:48,907 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:48,908 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:48,908 - INFO - LLM RUN: 5
+2025-03-21 04:26:50,282 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:50,283 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Prof-specialty', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-03-21 04:26:50,315 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:50,315 - INFO - LLM RUN: 6
+2025-03-21 04:26:51,701 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:51,701 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Masters', 'marital.status': 'Divorced', 'occupation': 'Prof-specialty', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:51,733 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:51,733 - INFO - LLM RUN: 7
+2025-03-21 04:26:53,226 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:53,226 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:53,228 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:53,228 - INFO - LLM RUN: 8
+2025-03-21 04:26:55,045 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:55,045 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:55,047 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:55,047 - INFO - LLM RUN: 9
+2025-03-21 04:26:56,433 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:56,434 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 37, 'native.country': 'United-States'}
+2025-03-21 04:26:56,435 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:56,435 - INFO - LLM RUN: 10
+2025-03-21 04:26:58,327 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:26:58,328 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:26:58,329 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:26:58,329 - INFO - LLM RUN: 11
+2025-03-21 04:26:58,329 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-21 04:26:58,330 - INFO - M_INSTANCE CALL: 5
+2025-03-21 04:26:58,330 - INFO - SAMPLE: [[0.00000e+00 1.00000e+00 4.22013e+05 1.10000e+01 0.00000e+00 1.00000e+01
+  1.00000e+00 4.00000e+00 0.00000e+00 0.00000e+00 3.68300e+03 4.00000e+01
+  3.90000e+01]]
+2025-03-21 04:26:58,331 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Prof-specialty', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-03-21 04:26:58,331 - INFO - LLM RUN: 1
+2025-03-21 04:27:00,332 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:00,333 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Local-gov', 'fnlwgt': 364205, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3012, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:00,334 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:00,334 - INFO - LLM RUN: 2
+2025-03-21 04:27:01,616 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:01,617 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 2457, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:01,618 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:01,618 - INFO - LLM RUN: 3
+2025-03-21 04:27:02,990 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:02,990 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 2500, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:02,992 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:02,992 - INFO - LLM RUN: 4
+2025-03-21 04:27:04,249 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:04,250 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 1408, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:04,251 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:04,251 - INFO - LLM RUN: 5
+2025-03-21 04:27:05,453 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:05,453 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 0, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:05,455 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:05,455 - INFO - LLM RUN: 6
+2025-03-21 04:27:07,368 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:07,369 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 37, 'native.country': 'United-States'}
+2025-03-21 04:27:07,370 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:07,370 - INFO - LLM RUN: 7
+2025-03-21 04:27:08,882 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:08,883 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 1342, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:08,884 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:08,884 - INFO - LLM RUN: 8
+2025-03-21 04:27:10,449 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:10,454 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 356782, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Prof-specialty', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 38, 'native.country': 'United-States'}
+2025-03-21 04:27:10,486 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:10,486 - INFO - LLM RUN: 9
+2025-03-21 04:27:12,777 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:12,777 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Local-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:12,779 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:12,779 - INFO - LLM RUN: 10
+2025-03-21 04:27:14,182 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:14,183 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 683, 'hours.per.week': 38, 'native.country': 'United-States'}
+2025-03-21 04:27:14,184 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:14,184 - INFO - LLM RUN: 11
+2025-03-21 04:27:14,185 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-21 04:27:14,185 - INFO - M_INSTANCE CALL: 6
+2025-03-21 04:27:14,185 - INFO - SAMPLE: [[0.00000e+00 1.00000e+00 4.22013e+05 1.10000e+01 0.00000e+00 1.00000e+01
+  1.00000e+00 4.00000e+00 0.00000e+00 0.00000e+00 3.68300e+03 4.00000e+01
+  3.90000e+01]]
+2025-03-21 04:27:14,186 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Prof-specialty', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-03-21 04:27:14,186 - INFO - LLM RUN: 1
+2025-03-21 04:27:15,514 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:15,514 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:15,515 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:15,515 - INFO - LLM RUN: 2
+2025-03-21 04:27:16,935 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:16,936 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:16,937 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:16,937 - INFO - LLM RUN: 3
+2025-03-21 04:27:18,438 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:18,438 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:18,439 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:18,439 - INFO - LLM RUN: 4
+2025-03-21 04:27:19,752 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:19,753 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 37, 'native.country': 'United-States'}
+2025-03-21 04:27:19,755 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:19,755 - INFO - LLM RUN: 5
+2025-03-21 04:27:21,005 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:21,005 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 1236, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:21,006 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:21,006 - INFO - LLM RUN: 6
+2025-03-21 04:27:22,150 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:22,151 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Masters', 'marital.status': 'Divorced', 'occupation': 'Prof-specialty', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 36, 'native.country': 'United-States'}
+2025-03-21 04:27:22,182 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:22,183 - INFO - LLM RUN: 7
+2025-03-21 04:27:23,573 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:23,574 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 1254, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:23,575 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:23,575 - INFO - LLM RUN: 8
+2025-03-21 04:27:24,979 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:24,979 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:24,981 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:24,981 - INFO - LLM RUN: 9
+2025-03-21 04:27:26,246 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:26,247 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:26,248 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:26,248 - INFO - LLM RUN: 10
+2025-03-21 04:27:27,576 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:27,576 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:27,578 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:27,578 - INFO - LLM RUN: 11
+2025-03-21 04:27:27,578 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-21 04:27:27,578 - INFO - M_INSTANCE CALL: 7
+2025-03-21 04:27:27,578 - INFO - SAMPLE: [[0.00000e+00 1.00000e+00 4.22013e+05 1.10000e+01 0.00000e+00 1.00000e+01
+  1.00000e+00 4.00000e+00 0.00000e+00 0.00000e+00 3.68300e+03 4.00000e+01
+  3.90000e+01]]
+2025-03-21 04:27:27,579 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Prof-specialty', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-03-21 04:27:27,579 - INFO - LLM RUN: 1
+2025-03-21 04:27:29,033 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:29,034 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 412013, 'education': 'Bachelors', 'marital.status': 'Widowed', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 1442, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:29,035 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:29,035 - INFO - LLM RUN: 2
+2025-03-21 04:27:30,861 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:30,862 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:30,863 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:30,863 - INFO - LLM RUN: 3
+2025-03-21 04:27:32,774 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:32,775 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 2500, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:32,776 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:32,776 - INFO - LLM RUN: 4
+2025-03-21 04:27:34,161 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:34,161 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Local-gov', 'fnlwgt': 422013, 'education': 'Some-college', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 1689, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:34,163 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:34,163 - INFO - LLM RUN: 5
+2025-03-21 04:27:35,955 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:35,956 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Admin-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 1298, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:36,151 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:36,151 - INFO - LLM RUN: 6
+2025-03-21 04:27:37,612 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:37,612 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Prof-specialty', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-03-21 04:27:37,644 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:37,644 - INFO - LLM RUN: 7
+2025-03-21 04:27:39,263 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:39,263 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Widowed', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 2986, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:39,264 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:39,264 - INFO - LLM RUN: 8
+2025-03-21 04:27:40,692 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:40,692 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:40,693 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:40,694 - INFO - LLM RUN: 9
+2025-03-21 04:27:42,278 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:42,279 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:42,280 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:42,280 - INFO - LLM RUN: 10
+2025-03-21 04:27:43,634 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:43,634 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:43,636 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:43,636 - INFO - LLM RUN: 11
+2025-03-21 04:27:43,636 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-21 04:27:43,636 - INFO - M_INSTANCE CALL: 8
+2025-03-21 04:27:43,636 - INFO - SAMPLE: [[0.00000e+00 1.00000e+00 4.22013e+05 1.10000e+01 0.00000e+00 1.00000e+01
+  1.00000e+00 4.00000e+00 0.00000e+00 0.00000e+00 3.68300e+03 4.00000e+01
+  3.90000e+01]]
+2025-03-21 04:27:43,637 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Prof-specialty', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-03-21 04:27:43,637 - INFO - LLM RUN: 1
+2025-03-21 04:27:45,142 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:45,142 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 2300, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:45,143 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:45,144 - INFO - LLM RUN: 2
+2025-03-21 04:27:46,278 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:46,278 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Prof-specialty', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 38, 'native.country': 'United-States'}
+2025-03-21 04:27:46,310 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:46,310 - INFO - LLM RUN: 3
+2025-03-21 04:27:48,085 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:48,085 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:48,086 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:48,087 - INFO - LLM RUN: 4
+2025-03-21 04:27:50,119 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:50,120 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Admin-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 1200, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:50,314 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:50,314 - INFO - LLM RUN: 5
+2025-03-21 04:27:52,625 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:52,627 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:52,628 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:52,628 - INFO - LLM RUN: 6
+2025-03-21 04:27:54,002 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:54,003 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 1500, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:54,004 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:54,004 - INFO - LLM RUN: 7
+2025-03-21 04:27:55,998 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:55,999 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Widowed', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 2258, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:56,000 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:56,001 - INFO - LLM RUN: 8
+2025-03-21 04:27:57,324 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:57,325 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 37, 'native.country': 'United-States'}
+2025-03-21 04:27:57,326 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:57,326 - INFO - LLM RUN: 9
+2025-03-21 04:27:58,999 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:27:59,000 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Widowed', 'occupation': 'Admin-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 2500, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:27:59,197 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:27:59,197 - INFO - LLM RUN: 10
+2025-03-21 04:28:00,481 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:00,482 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 322013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 1500, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:28:00,483 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:00,483 - INFO - LLM RUN: 11
+2025-03-21 04:28:00,483 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-21 04:28:00,483 - INFO - M_INSTANCE CALL: 9
+2025-03-21 04:28:00,483 - INFO - SAMPLE: [[0.00000e+00 1.00000e+00 4.22013e+05 1.10000e+01 0.00000e+00 1.00000e+01
+  1.00000e+00 4.00000e+00 0.00000e+00 0.00000e+00 3.68300e+03 4.00000e+01
+  3.90000e+01]]
+2025-03-21 04:28:00,484 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Prof-specialty', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-03-21 04:28:00,484 - INFO - LLM RUN: 1
+2025-03-21 04:28:02,479 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:02,480 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:28:02,481 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:02,481 - INFO - LLM RUN: 2
+2025-03-21 04:28:03,686 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:03,686 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Widowed', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:28:03,688 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:03,688 - INFO - LLM RUN: 3
+2025-03-21 04:28:04,983 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:04,983 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Widowed', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 0, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:28:04,985 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:04,985 - INFO - LLM RUN: 4
+2025-03-21 04:28:07,055 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:07,056 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Widowed', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 1202, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:28:07,057 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:07,057 - INFO - LLM RUN: 5
+2025-03-21 04:28:08,962 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:08,963 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Masters', 'marital.status': 'Divorced', 'occupation': 'Prof-specialty', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-03-21 04:28:08,994 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:08,994 - INFO - LLM RUN: 6
+2025-03-21 04:28:10,209 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:10,210 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Widowed', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 0, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:28:10,211 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:10,211 - INFO - LLM RUN: 7
+2025-03-21 04:28:11,572 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:11,573 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:28:11,574 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:11,574 - INFO - LLM RUN: 8
+2025-03-21 04:28:12,765 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:12,766 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Divorced', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 38, 'native.country': 'United-States'}
+2025-03-21 04:28:12,768 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:12,768 - INFO - LLM RUN: 9
+2025-03-21 04:28:14,176 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:14,177 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 2145, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:28:14,178 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:14,178 - INFO - LLM RUN: 10
+2025-03-21 04:28:15,661 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:15,662 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 2500, 'hours.per.week': 36, 'native.country': 'United-States'}
+2025-03-21 04:28:15,663 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:15,664 - INFO - LLM RUN: 11
+2025-03-21 04:28:15,664 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-21 04:28:15,664 - INFO - M_INSTANCE CALL: 10
+2025-03-21 04:28:15,664 - INFO - SAMPLE: [[0.00000e+00 1.00000e+00 4.22013e+05 1.10000e+01 0.00000e+00 1.00000e+01
+  1.00000e+00 4.00000e+00 0.00000e+00 0.00000e+00 3.68300e+03 4.00000e+01
+  3.90000e+01]]
+2025-03-21 04:28:15,665 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Prof-specialty', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-03-21 04:28:15,665 - INFO - LLM RUN: 1
+2025-03-21 04:28:17,581 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:17,583 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Admin-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 1500, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:28:17,777 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:17,777 - INFO - LLM RUN: 2
+2025-03-21 04:28:19,038 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:19,038 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 37, 'native.country': 'United-States'}
+2025-03-21 04:28:19,039 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:19,039 - INFO - LLM RUN: 3
+2025-03-21 04:28:20,896 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:20,896 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Masters', 'marital.status': 'Divorced', 'occupation': 'Exec-managerial', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-03-21 04:28:20,898 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:20,898 - INFO - LLM RUN: 4
+2025-03-21 04:28:22,188 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:22,188 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:28:22,189 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:22,190 - INFO - LLM RUN: 5
+2025-03-21 04:28:23,964 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:23,964 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Widowed', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:28:23,965 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:23,966 - INFO - LLM RUN: 6
+2025-03-21 04:28:25,308 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:25,308 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Prof-specialty', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:28:25,340 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:25,340 - INFO - LLM RUN: 7
+2025-03-21 04:28:26,644 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:26,645 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 2130, 'hours.per.week': 37, 'native.country': 'United-States'}
+2025-03-21 04:28:26,647 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:26,647 - INFO - LLM RUN: 8
+2025-03-21 04:28:27,973 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:27,974 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:28:27,975 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:27,975 - INFO - LLM RUN: 9
+2025-03-21 04:28:29,402 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:29,403 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 37, 'native.country': 'United-States'}
+2025-03-21 04:28:29,404 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:29,404 - INFO - LLM RUN: 10
+2025-03-21 04:28:30,690 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:30,691 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:28:30,692 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:30,692 - INFO - LLM RUN: 11
+2025-03-21 04:28:30,692 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT
+2025-03-21 04:28:30,692 - INFO - M_INSTANCE CALL: 11
+2025-03-21 04:28:30,692 - INFO - SAMPLE: [[0.00000e+00 1.00000e+00 4.22013e+05 1.10000e+01 0.00000e+00 1.00000e+01
+  1.00000e+00 4.00000e+00 0.00000e+00 0.00000e+00 3.68300e+03 4.00000e+01
+  3.90000e+01]]
+2025-03-21 04:28:30,693 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Prof-specialty', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-03-21 04:28:30,693 - INFO - LLM RUN: 1
+2025-03-21 04:28:32,616 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:32,617 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:28:32,618 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:32,618 - INFO - LLM RUN: 2
+2025-03-21 04:28:33,948 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:33,949 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Admin-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 37, 'native.country': 'United-States'}
+2025-03-21 04:28:34,145 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:34,145 - INFO - LLM RUN: 3
+2025-03-21 04:28:36,593 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:36,593 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'State-gov', 'fnlwgt': 335482, 'education': 'Bachelors', 'marital.status': 'Widowed', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:28:36,595 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:36,595 - INFO - LLM RUN: 4
+2025-03-21 04:28:37,938 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:37,942 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 1245, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:28:37,943 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:37,943 - INFO - LLM RUN: 5
+2025-03-21 04:28:39,430 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:39,431 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:28:39,432 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:39,432 - INFO - LLM RUN: 6
+2025-03-21 04:28:40,988 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:40,989 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:28:40,990 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:40,990 - INFO - LLM RUN: 7
+2025-03-21 04:28:42,593 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:42,594 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 37, 'native.country': 'United-States'}
+2025-03-21 04:28:42,595 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:42,595 - INFO - LLM RUN: 8
+2025-03-21 04:28:44,504 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:44,504 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 2500, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:28:44,506 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:44,506 - INFO - LLM RUN: 9
+2025-03-21 04:28:45,842 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:45,843 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:28:45,844 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:45,844 - INFO - LLM RUN: 10
+2025-03-21 04:28:47,608 - INFO - HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2025-03-21 04:28:47,609 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Adm-clerical', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 1652, 'hours.per.week': 35, 'native.country': 'United-States'}
+2025-03-21 04:28:47,610 - ERROR - FAILED TO CHANGE SENSITIVE PARAMETER.
+2025-03-21 04:28:47,610 - INFO - LLM RUN: 11
+2025-03-21 04:28:47,610 - CRITICAL - FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT

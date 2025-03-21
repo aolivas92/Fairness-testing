@@ -240,7 +240,7 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
     logging.info(f'DECODED SAMPLE FORMATTED: {formatted_data}')
 
     valid_response = False
-    max_retries = 3
+    max_retries = 10
     tries = 0
     llm = 0
     error_msg = ""
