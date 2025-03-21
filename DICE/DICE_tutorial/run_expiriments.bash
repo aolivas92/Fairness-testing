@@ -8,8 +8,8 @@ OUTPUT_DIR="../results/census/DICE/RQ1"
 COMMAND="python3 DICE_Search.py -dataset=census -sensitive_index=9 -timeout=600 -RQ=1"
 
 # Type of llm
-# type="claude"
-type="llama"
+type="claude"
+# type="llama"
 
 # Ensure output directory exists
 mkdir -p "$OUTPUT_DIR"

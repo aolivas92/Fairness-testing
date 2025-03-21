@@ -242,7 +242,7 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
     valid_response = False
     max_retries = 10
     tries = 0
-    llm = 0
+    llm = 1
     error = ""
 
     # Run the LLM and check the response.
