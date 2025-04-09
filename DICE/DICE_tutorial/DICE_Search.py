@@ -251,7 +251,10 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
         logging.info(f'LLM RUN: {tries}')
 
         if tries > max_retries:
-            error_msg = "FAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT"
+            error_msg = (
+                "The counterfactual you generated is missing one or more required features. "
+                "Ensure that the generated counterfactual includes every feature exactly as specified in 'col_names'."
+                )   
             print(f'\n\n{error_msg}\n\n')
             logging.critical(error_msg)
             return None
@@ -279,7 +282,10 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
             # Check that all the columns are included.
             valid_response = check_response(converted_response, col_names)
             if not valid_response:
-                error_msg = "FAILED TO VERIFY ALL FEATURES."
+                error_msg = (
+                    "The generated counterfactual did not change the sensitive attribute(s). "
+                    "You must ensure sensitive attribute(s) provided in 'sens_params' differ from the original value(s)."
+                    )
                 print(f'\n\n{error_msg}\n\n')
                 logging.error(error_msg)
                 continue
@@ -292,7 +298,11 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
             response = list(encoded_response.values())
             for sens_param in sens_params:
                 if sample[0][sens_param] == response[sens_param]:
-                    error_msg = "FAILED TO CHANGE SENSITIVE PARAMETER."
+                    error_msg = (
+                        f"Encoding the generated counterfactual failed due to an invalid format or value. "
+                        f"Please ensure all provided values match the expected categorical and numerical types. "
+                        f"Specific error: {e}"
+                        )
                     print(f'\n\n{error_msg}\n\n')
                     logging.error(error_msg)
                     valid_response = False
