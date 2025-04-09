@@ -50,7 +50,8 @@ args = parser.parse_args()
 
 # TODO: Delete Later
 logging.basicConfig(#filename="../results/bank/DICE/RQ1/1_10runs/logfile.log", 
-                    filename="../results/census/DICE/RQ1/9_10runs/logfile.log",
+                    # filename="../results/census/DICE/RQ1/9_10runs/logfile.log",
+                    filename="../compas/DICE/RQ1/",
                     level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s'
                     )
@@ -299,9 +300,8 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
             for sens_param in sens_params:
                 if sample[0][sens_param] == response[sens_param]:
                     error_msg = (
-                        f"Encoding the generated counterfactual failed due to an invalid format or value. "
-                        f"Please ensure all provided values match the expected categorical and numerical types. "
-                        f"Specific error: {e}"
+                        "The generated counterfactual did not change the sensitive attribute(s). "
+                        "You must ensure sensitive attribute(s) provided in 'sens_params' differ from the original value(s)."
                         )
                     print(f'\n\n{error_msg}\n\n')
                     logging.error(error_msg)
@@ -309,7 +309,11 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
                     continue
 
         except Exception as e:
-            error_msg = f'FAILED TO ENCODE SAMPLE: {e}'
+            error_msg = (
+                f"Encoding the generated counterfactual failed due to an invalid format or value. "
+                f"Please ensure all provided values match the expected categorical and numerical types. "
+                f"Specific error: {e}"
+                )
             print(f'\n\n{error_msg}\n\n')
             logging.error(error_msg)
             valid_response = False
