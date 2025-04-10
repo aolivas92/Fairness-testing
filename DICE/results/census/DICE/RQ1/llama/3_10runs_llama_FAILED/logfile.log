@@ -1,0 +1,98 @@
+2025-04-10 00:19:14,251 - INFO - Restoring parameters from ../models/census/test.model
+2025-04-10 00:19:14,305 - INFO - M_INSTANCE CALL: 1
+2025-04-10 00:19:14,305 - INFO - SAMPLE: [[0.00000e+00 1.00000e+00 4.22013e+05 1.10000e+01 0.00000e+00 1.00000e+01
+  1.00000e+00 4.00000e+00 0.00000e+00 0.00000e+00 3.68300e+03 4.00000e+01
+  3.90000e+01]]
+2025-04-10 00:19:14,306 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 422013, 'education': 'HS-grad', 'marital.status': 'Divorced', 'occupation': 'Prof-specialty', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 3683, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-04-10 00:19:14,306 - INFO - LLM RUN: 1
+2025-04-10 00:19:16,002 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-10 00:19:16,002 - INFO - Generated Counterfactual: {'age': 'young', 'workclass': 'Self-emp-not-inc', 'fnlwgt': 245621, 'education': 'Some-college', 'marital.status': 'Never-married', 'occupation': 'Sales', 'relationship': 'Unmarried', 'race': 'Black', 'sex': 'Male', 'capital.gain': 4756, 'capital.loss': 0, 'hours.per.week': 50, 'native.country': 'Puerto-Rico'}
+2025-04-10 00:19:16,045 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-04-10 00:19:16,133 - INFO - M_INSTANCE CALL: 2
+2025-04-10 00:19:16,134 - INFO - SAMPLE: [[0.0000e+00 1.0000e+00 9.9987e+04 1.1000e+01 1.0000e+00 1.0000e+01
+  1.0000e+00 4.0000e+00 0.0000e+00 0.0000e+00 9.7400e+02 4.0000e+01
+  3.9000e+01]]
+2025-04-10 00:19:16,134 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 99987, 'education': 'HS-grad', 'marital.status': 'Married-AF-spouse', 'occupation': 'Prof-specialty', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 974, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-04-10 00:19:16,135 - INFO - LLM RUN: 1
+2025-04-10 00:19:17,806 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-10 00:19:17,806 - INFO - Generated Counterfactual: {'age': 'young', 'workclass': 'Federal-gov', 'fnlwgt': 100009, 'education': 'Some-college', 'marital.status': 'Married-AF-spouse', 'occupation': 'Service', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Male', 'capital.gain': 0, 'capital.loss': 974, 'hours.per.week': 50, 'native.country': 'United-States'}
+2025-04-10 00:19:17,840 - ERROR - The generated counterfactual did not change the sensitive attribute(s). You must ensure sensitive attribute(s) provided in 'sens_params' differ from the original value(s).
+2025-04-10 00:19:17,840 - INFO - LLM RUN: 2
+2025-04-10 00:19:19,686 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-10 00:19:19,687 - INFO - Generated Counterfactual: {'age': 'young', 'workclass': 'Federal-gov', 'fnlwgt': 99987, 'education': 'Some-college', 'marital.status': 'Never-married', 'occupation': 'Sales', 'relationship': 'Unmarried', 'race': 'White', 'sex': 'Male', 'capital.gain': 0, 'capital.loss': 974, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-04-10 00:19:19,693 - ERROR - The generated counterfactual did not change the sensitive attribute(s). You must ensure sensitive attribute(s) provided in 'sens_params' differ from the original value(s).
+2025-04-10 00:19:19,693 - INFO - LLM RUN: 3
+2025-04-10 00:19:21,541 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-10 00:19:21,541 - INFO - Generated Counterfactual: {'age': 'young', 'workclass': 'Self-emp-not-inc', 'fnlwgt': 49987, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Sales', 'relationship': 'Own-child', 'race': 'Black', 'sex': 'Male', 'capital.gain': 5000, 'capital.loss': 0, 'hours.per.week': 60, 'native.country': 'Canada'}
+2025-04-10 00:19:21,575 - INFO - Finished generating Counter Factual Successfully. Tries: 3
+2025-04-10 00:19:21,632 - INFO - M_INSTANCE CALL: 3
+2025-04-10 00:19:21,633 - INFO - SAMPLE: [[0.0000e+00 1.0000e+00 9.9987e+04 1.1000e+01 1.0000e+00 1.0000e+01
+  1.0000e+00 4.0000e+00 0.0000e+00 0.0000e+00 9.7400e+02 4.0000e+01
+  3.9000e+01]]
+2025-04-10 00:19:21,633 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 99987, 'education': 'HS-grad', 'marital.status': 'Married-AF-spouse', 'occupation': 'Prof-specialty', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 974, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-04-10 00:19:21,634 - INFO - LLM RUN: 1
+2025-04-10 00:19:23,313 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-10 00:19:23,313 - INFO - Generated Counterfactual: {'age': 'young', 'workclass': 'Self-emp-not-inc', 'fnlwgt': 10500, 'education': 'Bachelors', 'marital.status': 'Never-married', 'occupation': 'Sales', 'relationship': 'Own-child', 'race': 'Black', 'sex': 'Male', 'capital.gain': 99999, 'capital.loss': 0, 'hours.per.week': 60, 'native.country': 'Puerto-Rico'}
+2025-04-10 00:19:23,354 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-04-10 00:19:23,412 - INFO - M_INSTANCE CALL: 4
+2025-04-10 00:19:23,412 - INFO - SAMPLE: [[0.0000e+00 1.0000e+00 9.9987e+04 1.1000e+01 1.0000e+00 1.1000e+01
+  1.0000e+00 4.0000e+00 0.0000e+00 0.0000e+00 9.7400e+02 4.0000e+01
+  3.9000e+01]]
+2025-04-10 00:19:23,413 - INFO - DECODED SAMPLE FORMATTED: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 99987, 'education': 'HS-grad', 'marital.status': 'Married-AF-spouse', 'occupation': 'Protective-serv', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 974, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-04-10 00:19:23,413 - INFO - LLM RUN: 1
+2025-04-10 00:19:25,105 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-10 00:19:25,107 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 99987, 'education': 'Some-college', 'marital.status': 'Married-AF-spouse', 'occupation': 'Prof-specialty', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Male', 'capital.gain': 0, 'capital.loss': 974, 'hours.per.week': 50, 'native.country': 'United-States'}
+2025-04-10 00:19:25,173 - ERROR - The generated counterfactual did not change the sensitive attribute(s). You must ensure sensitive attribute(s) provided in 'sens_params' differ from the original value(s).
+2025-04-10 00:19:25,173 - INFO - LLM RUN: 2
+2025-04-10 00:19:27,099 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-10 00:19:27,099 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Federal-gov', 'fnlwgt': 99987, 'education': 'Some-college', 'marital.status': 'Married-civ-spouse', 'occupation': 'Prof-specialty', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Male', 'capital.gain': 0, 'capital.loss': 974, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-04-10 00:19:27,162 - ERROR - The generated counterfactual did not change the sensitive attribute(s). You must ensure sensitive attribute(s) provided in 'sens_params' differ from the original value(s).
+2025-04-10 00:19:27,162 - INFO - LLM RUN: 3
+2025-04-10 00:19:28,882 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-10 00:19:28,882 - INFO - Generated Counterfactual: {'age': 'young', 'workclass': 'Private', 'fnlwgt': 99987, 'education': 'Some-college', 'marital.status': 'Married-civ-spouse', 'occupation': 'Adm-clerical', 'relationship': 'Husband', 'race': 'White', 'sex': 'Male', 'capital.gain': 0, 'capital.loss': 974, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-04-10 00:19:28,916 - ERROR - The generated counterfactual did not change the sensitive attribute(s). You must ensure sensitive attribute(s) provided in 'sens_params' differ from the original value(s).
+2025-04-10 00:19:28,916 - INFO - LLM RUN: 4
+2025-04-10 00:19:30,853 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-10 00:19:30,854 - INFO - Generated Counterfactual: {'age': 'young', 'workclass': 'Self-emp-not-inc', 'fnlwgt': 50000, 'education': 'Some-college', 'marital.status': 'Married-civ-spouse', 'occupation': 'Adm-clerical', 'relationship': 'Own-child', 'race': 'Black', 'sex': 'Male', 'capital.gain': 50000, 'capital.loss': 0, 'hours.per.week': 50, 'native.country': 'Mexico'}
+2025-04-10 00:19:30,919 - INFO - Finished generating Counter Factual Successfully. Tries: 4
+2025-04-10 00:19:37,806 - INFO - M_INSTANCE CALL: 5
+2025-04-10 00:19:37,806 - INFO - SAMPLE: [[1.0000e+00 1.0000e+00 9.9987e+04 1.1000e+01 1.0000e+00 1.1000e+01
+  1.0000e+00 4.0000e+00 0.0000e+00 0.0000e+00 9.7400e+02 4.0000e+01
+  3.9000e+01]]
+2025-04-10 00:19:37,807 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'workclass': 'Federal-gov', 'fnlwgt': 99987, 'education': 'HS-grad', 'marital.status': 'Married-AF-spouse', 'occupation': 'Protective-serv', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 0, 'capital.loss': 974, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-04-10 00:19:37,807 - INFO - LLM RUN: 1
+2025-04-10 00:19:39,430 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-10 00:19:39,431 - INFO - Generated Counterfactual: {'age': 'old', 'workclass': 'Private', 'fnlwgt': 49987, 'education': 'Bachelors', 'marital.status': 'Divorced', 'occupation': 'Prof-specialty', 'relationship': 'Husband', 'race': 'Black', 'sex': 'Male', 'capital.gain': 99999, 'capital.loss': 0, 'hours.per.week': 50, 'native.country': 'Greece'}
+2025-04-10 00:19:39,463 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-04-10 00:19:46,314 - INFO - M_INSTANCE CALL: 6
+2025-04-10 00:19:46,314 - INFO - SAMPLE: [[1.0000e+00 1.0000e+00 9.9987e+04 1.1000e+01 1.0000e+00 1.1000e+01
+  1.0000e+00 4.0000e+00 0.0000e+00 1.0000e+00 9.7400e+02 4.0000e+01
+  3.9000e+01]]
+2025-04-10 00:19:46,315 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'workclass': 'Federal-gov', 'fnlwgt': 99987, 'education': 'HS-grad', 'marital.status': 'Married-AF-spouse', 'occupation': 'Protective-serv', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Female', 'capital.gain': 1, 'capital.loss': 974, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-04-10 00:19:46,315 - INFO - LLM RUN: 1
+2025-04-10 00:19:48,240 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-10 00:19:48,241 - INFO - Generated Counterfactual: {'age': 'young', 'workclass': 'Federal-gov', 'fnlwgt': 99987, 'education': 'Some-college', 'marital.status': 'Married-AF-spouse', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'White', 'sex': 'Male', 'capital.gain': 0, 'capital.loss': 974, 'hours.per.week': 45, 'native.country': 'United-States'}
+2025-04-10 00:19:48,273 - INFO - Finished generating Counter Factual Successfully. Tries: 1
+2025-04-10 00:19:48,332 - INFO - M_INSTANCE CALL: 7
+2025-04-10 00:19:48,332 - INFO - SAMPLE: [[1.0000e+00 1.0000e+00 9.9987e+04 1.1000e+01 1.0000e+00 1.1000e+01
+  1.0000e+00 3.0000e+00 0.0000e+00 1.0000e+00 9.7400e+02 4.0000e+01
+  3.9000e+01]]
+2025-04-10 00:19:48,333 - INFO - DECODED SAMPLE FORMATTED: {'age': 'young', 'workclass': 'Federal-gov', 'fnlwgt': 99987, 'education': 'HS-grad', 'marital.status': 'Married-AF-spouse', 'occupation': 'Protective-serv', 'relationship': 'Not-in-family', 'race': 'Other', 'sex': 'Female', 'capital.gain': 1, 'capital.loss': 974, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-04-10 00:19:48,333 - INFO - LLM RUN: 1
+2025-04-10 00:19:50,048 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-10 00:19:50,049 - INFO - Generated Counterfactual: {'age': 'young', 'workclass': 'Federal-gov', 'fnlwgt': 99987, 'education': 'Bachelors', 'marital.status': 'Married-AF-spouse', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'Other', 'sex': 'Female', 'capital.gain': 1, 'capital.loss': 974, 'hours.per.week': 30, 'native.country': 'United-States'}
+2025-04-10 00:19:50,081 - ERROR - The generated counterfactual did not change the sensitive attribute(s). You must ensure sensitive attribute(s) provided in 'sens_params' differ from the original value(s).
+2025-04-10 00:19:50,082 - INFO - LLM RUN: 2
+2025-04-10 00:19:51,993 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-10 00:19:51,993 - INFO - Generated Counterfactual: {'age': 'young', 'workclass': 'Private', 'fnlwgt': 99987, 'education': 'Bachelors', 'marital.status': 'Married-civ-spouse', 'occupation': 'Adm-clerical', 'relationship': 'Husband', 'race': 'White', 'sex': 'Male', 'capital.gain': 1, 'capital.loss': 974, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-04-10 00:19:52,026 - ERROR - The generated counterfactual did not change the sensitive attribute(s). You must ensure sensitive attribute(s) provided in 'sens_params' differ from the original value(s).
+2025-04-10 00:19:52,026 - INFO - LLM RUN: 3
+2025-04-10 00:19:53,887 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-10 00:19:53,888 - INFO - Generated Counterfactual: {'age': 'young', 'workclass': 'Federal-gov', 'fnlwgt': 99987, 'education': 'HS-grad', 'marital.status': 'Never-married', 'occupation': 'Other-service', 'relationship': 'Not-in-family', 'race': 'Other', 'sex': 'Male', 'capital.gain': 1, 'capital.loss': 974, 'hours.per.week': 40, 'native.country': 'United-States'}
+2025-04-10 00:19:53,896 - ERROR - The generated counterfactual did not change the sensitive attribute(s). You must ensure sensitive attribute(s) provided in 'sens_params' differ from the original value(s).
+2025-04-10 00:19:53,896 - INFO - LLM RUN: 4
+2025-04-10 00:19:55,835 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+2025-04-10 00:19:55,836 - INFO - Generated Counterfactual: {'age': 'young', 'workclass': 'Federal-gov', 'fnlwgt': 99987, 'education': 'HS-grad', 'marital.status': 'Married-AF-spouse', 'occupation': 'Adm-clerical', 'relationship': 'Not-in-family', 'race': 'Other', 'sex': 'Male', 'capital.gain': 1, 'capital.loss': 974, 'hours.per.week': 50, 'native.country': 'United-States'}
+2025-04-10 00:19:55,868 - ERROR - The generated counterfactual did not change the sensitive attribute(s). You must ensure sensitive attribute(s) provided in 'sens_params' differ from the original value(s).
+2025-04-10 00:19:55,868 - INFO - LLM RUN: 5
+2025-04-10 00:19:58,090 - INFO - HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
