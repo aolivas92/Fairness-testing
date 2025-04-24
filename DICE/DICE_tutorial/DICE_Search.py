@@ -284,8 +284,8 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
             valid_response = check_response(converted_response, col_names)
             if not valid_response:
                 error_msg = (
-                    "The generated counterfactual did not change the sensitive attribute(s). "
-                    "You must ensure sensitive attribute(s) provided in 'sens_params' differ from the original value(s)."
+                    "The counterfactual generated is missing required columns or has invalid formatting. "
+                    "Please ensure all required data fields are included and properly formatted in the response."
                     )
                 print(f'\n\n{error_msg}\n\n')
                 logging.error(error_msg)
@@ -295,18 +295,28 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
             encoded_response = encode_sample(converted_response, label_encoders, categorical_unique_values)
             # print('\n\nENCODED SAMPLE:', encoded_response)
 
-            # Check that the new sensitive parameter is different than the original.
-            response = list(encoded_response.values())
             for sens_param in sens_params:
-                if sample[0][sens_param] == response[sens_param]:
+                sens_col_name = col_names= [sens_param]
+
+                original_value = decode_sample[sens_param]
+                counterfactual_value = converted_response[sens_col_name]
+
+                # Use regex to compare the original counterfactual and the new one, make sure they are different
+                max_errors = 2 # Allow for two similar characters
+                escaped_original = regex.escape(original_value)
+                fuzzy_pattern = f"({escaped_original}){{e<={max_errors}}}"
+                match = regex.match(fuzzy_pattern, counterfactual_value)
+                
+                if match:
                     error_msg = (
-                        "The generated counterfactual did not change the sensitive attribute(s). "
-                        "You must ensure sensitive attribute(s) provided in 'sens_params' differ from the original value(s)."
+                        f"The generated counterfactual didn't sufficiently change the sensitive attribute '{sens_col_name}'. "
+                        f"Original value: '{original_value}', Counterfactual value: '{counterfactual_value}'. "
+                        f"The values are too similar - please ensure they are substantially different."
                         )
                     print(f'\n\n{error_msg}\n\n')
                     logging.error(error_msg)
                     valid_response = False
-                    continue
+                    break
 
         except Exception as e:
             error_msg = (
@@ -405,7 +415,8 @@ def data_formatter(sample, sens_params, col_names):
             formatted_data[category] = int(sample[indx])
         except Exception:
             formatted_data[category] = sample[indx]
-    print(f'\n\n SENS_PARAM: {counterfactuals} \n formatted data: \n {formatted_data} \n\n')
+    
+    formatted_data['Counterfactual.request'] = counterfactuals
 
     return formatted_data
 
