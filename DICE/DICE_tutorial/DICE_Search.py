@@ -398,12 +398,14 @@ def data_formatter(sample, sens_params, col_names):
     # Join into a single comma-separated string
     counterfactuals = ",".join(cf_list)
 
+
     formatted_data = dict()
     for category, indx in map.items():
         try:
             formatted_data[category] = int(sample[indx])
         except Exception:
             formatted_data[category] = sample[indx]
+    print(f'\n\n SENS_PARAM: {counterfactuals} \n formatted data: \n {formatted_data} \n\n')
 
     return formatted_data
 
