@@ -50,7 +50,7 @@ args = parser.parse_args()
 
 # TODO: Delete Later
 logging.basicConfig(#filename="../results/bank/DICE/RQ1/1_10runs/logfile.log", 
-                    filename="../results/census/DICE/RQ1/9_10runs/logfile.log",
+                    filename="../results/census/DICE/RQ1/8_10runs/logfile.log",
                     # filename="../compas/DICE/RQ1/",
                     level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s'

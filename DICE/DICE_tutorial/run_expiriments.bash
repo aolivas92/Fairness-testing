@@ -19,7 +19,7 @@ mkdir -p "$type"
 for i in {1..10}; do
     # Temporary directory for this iteration
     # TEMP_OUTPUT_DIR="${OUTPUT_DIR}/1_10runs"
-    TEMP_OUTPUT_DIR="${OUTPUT_DIR}/9_10runs"
+    TEMP_OUTPUT_DIR="${OUTPUT_DIR}/8_10runs"
     FINAL_OUTPUT_DIR="${OUTPUT_DIR}/${type}/${i}_10runs_${type}"
     mkdir "$TEMP_OUTPUT_DIR"
     
