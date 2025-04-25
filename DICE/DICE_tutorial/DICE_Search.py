@@ -296,10 +296,10 @@ def m_instance_real_counterfactual(sample, sens_params, conf):
             # print('\n\nENCODED SAMPLE:', encoded_response)
 
             for sens_param in sens_params:
-                sens_col_name = col_names= [sens_param]
+                sens_col_name = col_names[sens_param]
 
-                original_value = decode_sample[sens_param]
-                counterfactual_value = converted_response[sens_col_name]
+                original_value = str(decoded_sample[sens_param])
+                counterfactual_value = str(converted_response[sens_col_name])
 
                 # Use regex to compare the original counterfactual and the new one, make sure they are different
                 max_errors = 2 # Allow for two similar characters
