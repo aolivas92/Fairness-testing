@@ -5,7 +5,7 @@
 OUTPUT_DIR="../results/census/DICE/RQ1"
 # Base command to run
 # COMMAND="python3 DICE_Search.py -dataset=bank -sensitive_index=1 -timeout=600 -RQ=1"
-COMMAND="python3 DICE_Search.py -dataset=census -sensitive_index=9 -timeout=600 -RQ=1"
+COMMAND="python3 DICE_Search.py -dataset=census -sensitive_index=8 -timeout=600 -RQ=1"
 
 # Type of llm
 # type="claude"
