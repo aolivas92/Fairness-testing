@@ -353,12 +353,9 @@ def encode_sample(sample, label_encoders, categorical_unique_values):
     # NOTE: Fails to encode a variable that it hasn't seen before.
     encode_sample = sample.copy()
 
-    # Remove 'Counterfactual.request' if the LLM gives it or any other useless columns
-    for key in list(encode_sample.keys()):
-        if key not in label_encoders and key not in categorical_unique_values:
-            if key != 'Counterfactual.request':
-                print(f'WARNING: Unexpected filed in response: {key}')
-            del encode_sample[key]
+    # Remove 'Counterfactual.request' if the LLM gives it
+    if 'Counterfactual.request' in encode_sample.keys():
+        del encode_sample['Counterfactual.request']
 
     for col, encoder in label_encoders.items():
         cat_value = encode_sample[col]
