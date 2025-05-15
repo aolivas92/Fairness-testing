@@ -576,6 +576,7 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
     y = tf.placeholder(tf.float32, shape=(None, nb_classes))
     model = dnn(input_shape, nb_classes)   
 
+    # ! ERROR: The `saver.restore()` is currently causing an error because there is no "../models/lawschool/test.model"
     preds = model(x)
     saver = tf.train.Saver()
     model_path = model_path + dataset + "/test.model"
