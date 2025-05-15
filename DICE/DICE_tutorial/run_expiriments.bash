@@ -20,7 +20,7 @@ for i in {1..10}; do
     # Temporary directory for this iteration
     TEMP_OUTPUT_DIR="${OUTPUT_DIR}/${sensitive_index}_10runs"
     FINAL_OUTPUT_DIR="${OUTPUT_DIR}/${type}/${i}_10runs_${type}"
-    mkdir "$TEMP_OUTPUT_DIR"
+    mkdir -p "$TEMP_OUTPUT_DIR"
     
     echo "Running iteration $i..."
     echo "$COMMAND"
@@ -40,6 +40,7 @@ for i in {1..10}; do
         fi
     else
         echo "Iteration $i failed. Output not saved."
+        mkdir -p "${OUTPUT_DIR}/${type}"
         mv "$TEMP_OUTPUT_DIR" "${FINAL_OUTPUT_DIR}_FAILED"
         echo "Iteration $i failed due to command error." >> "${OUTPUT_DIR}/${type}/error_log.txt"
     fi
