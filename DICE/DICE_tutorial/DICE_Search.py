@@ -49,16 +49,8 @@ parser.add_argument("-timeout", help='Max. running time', default = 3600, requir
 parser.add_argument("-RQ", help='1 for RQ, 2 for RQ2', default = 1, required=False)
 args = parser.parse_args()
 
-
 FLAGS = flags.FLAGS
 
-# TODO: Delete Later
-dataset = FLAGS.dataset
-sensitive_index = FLAGS.sensitive_index
-logging.basicConfig(filename=f"../results/{dataset}/DICE/RQ1/{sensitive_index}_10runs/logfile.log",
-                    level=logging.INFO,
-                    format='%(asctime)s - %(levelname)s - %(message)s'
-                    )
 counterfactual_number = 0
 
 # step size of perturbation
@@ -1015,6 +1007,13 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
 
                 
 def main(argv=None):
+    dataset = FLAGS.dataset
+    sensitive_index = FLAGS.sensitive_index
+    logging.basicConfig(filename=f"../results/{dataset}/DICE/RQ1/{sensitive_index}_10runs/logfile.log",
+                        level=logging.INFO,
+                        format='%(asctime)s - %(levelname)s - %(message)s'
+                        )
+
     dnn_fair_testing(dataset = FLAGS.dataset, 
                      sens_params = FLAGS.sens_params,
                      model_path  = FLAGS.model_path,
