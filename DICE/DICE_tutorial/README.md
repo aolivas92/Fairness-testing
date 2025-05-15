@@ -131,7 +131,7 @@ from DICE_utils.config2 import lawschool
 
 2. **Update the `data` and `data_config` variables** before the call to `m_instance()`.
 
-3. **Update the log output path** (typically around line 53, but may vary depending on recent edits).
+3. **Verify the log output path** (It shouldn't need updating as it uses the dataset and sens_params that are passed.)
 
 ---
 
@@ -157,11 +157,13 @@ This script:
 
 ### Required Setup:
 Make sure the following are defined:
-- The output directory path (must match the one `DICE_Search` uses)
-- The command to run
+- The dataset you want to use, will give it to the command and is used for searching in the folders. 
+- The sensitive_index, will give it to the command and is used for searching for the file.
 - The LLM used
+- The output directory path (must match the one `DICE_Search` uses, shouldn't need updating if the top three are set up correctly).
+- The command to run (shouldn't need updating if the top three are set up correctly).
 
-> The output directory must already exist before running this script.
+> I usually create the output directory before running it, it will create the directory for you in case you miss this step.
 
 ---
 
