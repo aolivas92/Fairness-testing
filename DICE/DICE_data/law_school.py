@@ -39,8 +39,6 @@ def law_school_data2():
             raw_data.append(L)
 
     df = pd.DataFrame(raw_data, columns=col_names)
-    print("COLUMNS:\n", df.columns, "\n\n\n")
-    print(df.head())
 
     # Ensure 'bar_passed' is the label column and moved to the end
     target_col = 'bar_passed'
