@@ -11,10 +11,10 @@ completion_pattern = re.compile(r"CRITICAL - FAILED TO GENERATE COUNTER FACTUAL,
 
 # Specific error messages
 error_types = {
-    "FAILED FEATURES.": re.compile(r"ERROR - FAILED TO VERIFY ALL FEATURES."),
-    "FAILED SENS. PARAMETER.": re.compile(r"ERROR - FAILED TO CHANGE SENSITIVE PARAMETER."),
-    "FAILED ENCODING.": re.compile(r"ERROR - FAILED TO ENCODE SAMPLE: (.+)"),
-    "FAILED CLOSEST MATCH": re.compile(r"ERROR - Failed to find a closest match for: (.+)")
+    "FAILED FEATURES.": re.compile(r"missing one or more required features|missing required columns|invalid formatting", re.IGNORECASE),
+    "FAILED SENS. PARAMETER.": re.compile(r"didn't sufficiently change the sensitive attribute", re.IGNORECASE),
+    "FAILED ENCODING.": re.compile(r"encoding.*failed.*invalid format", re.IGNORECASE),
+    "FAILED CLOSEST MATCH": re.compile(r"Failed to find a closest match for", re.IGNORECASE)
 }
 
 # Function to process a log file
