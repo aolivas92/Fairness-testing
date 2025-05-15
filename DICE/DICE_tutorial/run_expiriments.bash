@@ -1,15 +1,15 @@
 #!/bin/bash
 
+dataset="lawschool" # bank, census, lawschool
+sensitive_index=4 # bank: 1, census: 8, lawschool: 4
+
 # Directory to store results
-# OUTPUT_DIR="../results/bank/DICE/RQ1"
-OUTPUT_DIR="../results/census/DICE/RQ1"
+OUTPUT_DIR="../results/${dataset}/DICE/RQ1"
 # Base command to run
-# COMMAND="python3 DICE_Search.py -dataset=bank -sensitive_index=1 -timeout=600 -RQ=1"
-COMMAND="python3 DICE_Search.py -dataset=census -sensitive_index=8 -timeout=600 -RQ=1"
+COMMAND="python3 DICE_Search.py -dataset=${dataset} -sensitive_index=${sensitive_index} -timeout=600 -RQ=1"
 
 # Type of llm
-# type="claude"
-type="llama"
+type="llama" # llama, claude
 
 # Ensure output directory exists
 mkdir -p "$OUTPUT_DIR"
@@ -18,8 +18,7 @@ mkdir -p "$type"
 # Loop to run the command 10 times
 for i in {1..10}; do
     # Temporary directory for this iteration
-    # TEMP_OUTPUT_DIR="${OUTPUT_DIR}/1_10runs"
-    TEMP_OUTPUT_DIR="${OUTPUT_DIR}/8_10runs"
+    TEMP_OUTPUT_DIR="${OUTPUT_DIR}/${sensitive_index}_10runs"
     FINAL_OUTPUT_DIR="${OUTPUT_DIR}/${type}/${i}_10runs_${type}"
     mkdir "$TEMP_OUTPUT_DIR"
     
