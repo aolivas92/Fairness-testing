@@ -31,12 +31,13 @@ from DICE_data.diabetes import diabetes_data
 from DICE_data.students import students_data
 from DICE_data.meps15 import meps15_data
 from DICE_data.meps16 import meps16_data
+from DICE_data.law_school import law_school_data
 
 from DICE_model.tutorial_models import dnn
 from DICE_utils.utils_tf import model_prediction, model_argmax , layer_out
 # TODO: Restore config import
 from DICE_utils.config import credit, diabetes, students , meps15, meps16
-from DICE_utils.config2 import bank, census, heart, default, compas
+from DICE_utils.config2 import bank, census, heart, default, compas, lawschool
 from DICE_tutorial.utils import cluster, gradient_graph
 import argparse
 import re
@@ -602,11 +603,11 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
     # TODO: Return the census_data and bank_data to the original version.
     data = {"census":census_data2, "credit":credit_data, "bank":bank_data2, "compas":compas_data2, 
             "default": default_data2, "heart":heart_data2, "diabetes":diabetes_data, 
-            "students":students_data, "meps15":meps15_data, "meps16":meps16_data}
+            "students":students_data, "meps15":meps15_data, "meps16":meps16_data, "lawschool":law_school_data}
     # NOTE: Grabs the config of each dataset.
     # TODO: Return the bank to the original version.
     data_config = {"census":census, "credit":credit, "bank":bank, "compas":compas, "default":default,
-                  "heart":heart , "diabetes":diabetes,"students":students, "meps15":meps15, "meps16":meps16}
+                  "heart":heart , "diabetes":diabetes,"students":students, "meps15":meps15, "meps16":meps16, "lawschool":lawschool}
     # prepare the testing data and model
     X, Y, input_shape, nb_classes = data[dataset]()
 
@@ -835,6 +836,7 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
             global_sam = np.array(global_inputs_list).astype('int32')
             # Storing result for RQ1 table
             print('Analyzing the search results....')
+            continue
 
             with open('../results/' + dataset + '/DICE/RQ1/'+ ''.join(str(i) for i in sens_params)+'_10runs'+'/global_inputs_90_'+str(trial)+'.csv', 'w') as f:
                 writer = csv.writer(f)
@@ -947,8 +949,9 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
 
             local_sam = np.array(local_inputs_list).astype('int32')
             global_sam = np.array(global_inputs_list).astype('int32')
-            # Storing result for RQ1 table
+            # Storing result for RQ1 table\
             print('Analyzing the search results....')
+            continue
 
             with open('../results/' + dataset + '/DICE/RQ2/'+ ''.join(str(i) for i in sens_params)+'_10runs'+'/global_inputs_90_'+str(trial)+'.csv', 'w') as f:
                 writer = csv.writer(f)
