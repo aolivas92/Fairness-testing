@@ -154,18 +154,9 @@ def bank_data2():
     bank.params = len(col_names[:-1])
     bank.input_bounds = input_bounds
     bank.feature_name = col_names[:-1]
-    # bank.class_name =
-    # bank.categorical_features =
     bank.system_message = system_message
     bank.label_encoders = label_encoders
     bank.categorical_unique_values = categorical_unique_values
-    
-    # print(bank.params)
-    # print(bank.input_bounds)
-    # print(bank.feature_name)
-    # # print(bank.system_message)
-    # print(bank.label_encoders)
-    # print(bank.categorical_unique_values)
 
     return X, Y, input_shape, nb_classes
 

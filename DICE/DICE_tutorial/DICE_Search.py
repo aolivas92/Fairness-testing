@@ -439,27 +439,6 @@ def llama31_8b_generator(system_message, user_message, col_names, label_encoders
     # while not valid_response:
     response = ollama.chat(model='llama3.1:8b', messages=message, format='json')
     converted_response = json.loads(response['message']['content'])
-    # print('\n\nRESPONSE:', converted_response)
-        
-        # # Verify that the generated response is valid.
-        # try:
-        #     # Check that all the columns are included
-        #     valid_response = check_response(converted_response, col_names)
-        #     if not valid_response:
-        #         continue
-
-        #     # Encode the response
-        #     encoded_sample = encode_sample(converted_response, label_encoders, categorical_unique_values)
-        #     print('\n\nENCODED SAMPLE:', encoded_sample)
-        # except Exception as e:
-        #     print('\n\nFAILED TO ENCODE SAMPLE:', e, '\n\n')
-        #     valid_response = False
-
-        # retries += 1
-        # if retries >= max_retries:
-        #     print('\n\nFAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT\n\n')
-        #     return None
-
     
     return converted_response
 
@@ -490,23 +469,6 @@ def claude3_generator(system_message, user_message, col_names, label_encoders, c
     except Exception as e:
         print("FAILED TO CONVERT: ", e)
         return None
-
-        #     # Check that all the columns are included
-        #     valid_response = check_response(converted_response, col_names)
-
-        #     # Encode the response
-        #     encoded_sample = encode_sample(converted_response, label_encoders, categorical_unique_values)    
-        #     print('\n\nENCODED SAMPLE:', encoded_sample, '\n\n')
-        # except json.decoder.JSONDecodeError:
-        #     print("ERROR: response not complete and JSON can't convert it")
-        #     print(response.content[0].text)
-        # except Exception as e:
-        #     print("ERROR: ", e)
-
-        # retries += 1
-        # if retries >= max_retries:
-        #     print('\n\nFAILED TO GENERATE COUNTER FACTUAL, MAX RETRIES HIT\n\n')
-        #     return None
 
     return converted_response
 

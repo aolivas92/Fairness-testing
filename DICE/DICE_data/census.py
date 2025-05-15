@@ -160,17 +160,8 @@ def census_data2():
     census.params = len(col_names[:-1])
     census.input_bounds = input_bounds
     census.feature_name = col_names[:-1]
-    # census.class_name =
-    # census.categorical_features =
     census.system_message = system_message
     census.label_encoders = label_encoders
     census.categorical_unique_values = categorical_unique_values
-    
-    # print(census.params)
-    # print(census.input_bounds)
-    # print(census.feature_name)
-    # # print(census.system_message)
-    # print(census.label_encoders)
-    # print(census.categorical_unique_values)
 
     return X, Y, input_shape, nb_classes
