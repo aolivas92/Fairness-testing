@@ -59,11 +59,6 @@ def law_school_data2():
     # Replace the ages with old/young if they are above/below 40 years old.
     df['age'] = df['age'].apply(categorize_age)
 
-    # TODO: Delete later.
-    print("UPDATED COLUMNS:\n", df.columns, "\n\n\n")
-    print(df.head())
-    print(col_names)
-
     # Try to find the categorical columns 5 times.
     X_raw = df.iloc[:, :-1]
     categorical_cols = []
