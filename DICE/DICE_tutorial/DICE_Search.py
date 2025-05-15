@@ -31,7 +31,7 @@ from DICE_data.diabetes import diabetes_data
 from DICE_data.students import students_data
 from DICE_data.meps15 import meps15_data
 from DICE_data.meps16 import meps16_data
-from DICE_data.law_school import law_school_data
+from DICE_data.law_school import law_school_data2
 
 from DICE_model.tutorial_models import dnn
 from DICE_utils.utils_tf import model_prediction, model_argmax , layer_out
@@ -49,16 +49,17 @@ parser.add_argument("-timeout", help='Max. running time', default = 3600, requir
 parser.add_argument("-RQ", help='1 for RQ, 2 for RQ2', default = 1, required=False)
 args = parser.parse_args()
 
+
+FLAGS = flags.FLAGS
+
 # TODO: Delete Later
-logging.basicConfig(#filename="../results/bank/DICE/RQ1/1_10runs/logfile.log", 
-                    filename="../results/census/DICE/RQ1/8_10runs/logfile.log",
-                    # filename="../compas/DICE/RQ1/",
+dataset = FLAGS.dataset
+sensitive_index = FLAGS.sensitive_index
+logging.basicConfig(filename=f"../results/{dataset}/DICE/RQ1/{sensitive_index}_10runs/logfile.log",
                     level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s'
                     )
 counterfactual_number = 0
-
-FLAGS = flags.FLAGS
 
 # step size of perturbation
 perturbation_size = 1
@@ -565,7 +566,7 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
     # TODO: Return the census_data and bank_data to the original version.
     data = {"census":census_data2, "credit":credit_data, "bank":bank_data2, "compas":compas_data2, 
             "default": default_data2, "heart":heart_data2, "diabetes":diabetes_data, 
-            "students":students_data, "meps15":meps15_data, "meps16":meps16_data, "lawschool":law_school_data}
+            "students":students_data, "meps15":meps15_data, "meps16":meps16_data, "lawschool":law_school_data2}
     # NOTE: Grabs the config of each dataset.
     # TODO: Return the bank to the original version.
     data_config = {"census":census, "credit":credit, "bank":bank, "compas":compas, "default":default,
