@@ -1008,7 +1008,7 @@ def dnn_fair_testing(dataset, sens_params, model_path, cluster_num,
                 
 def main(argv=None):
     dataset = FLAGS.dataset
-    sensitive_index = FLAGS.sensitive_index
+    sensitive_index = FLAGS.sens_params
     logging.basicConfig(filename=f"../results/{dataset}/DICE/RQ1/{sensitive_index}_10runs/logfile.log",
                         level=logging.INFO,
                         format='%(asctime)s - %(levelname)s - %(message)s'
